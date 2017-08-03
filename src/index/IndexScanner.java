@@ -522,15 +522,16 @@ public class IndexScanner extends TreeScanner {
 
     @Override
     public void visitLetExpr(LetExpr t) {
-        if (inMethod == 0) {
-            return;
-        }
-        stack.push(trie.root, pos(t));
-        addChild(t);
-        scan(t.defs);
-        scan(t.expr);
-        addChildEnd(t);
-        stack.pop();
+        // LetExpr is not a part of public API
+//        if (inMethod == 0) {
+//            return;
+//        }
+//        stack.push(trie.root, pos(t));
+//        addChild(t);
+//        scan(t.defs);
+//        scan(t.expr);
+//        addChildEnd(t);
+//        stack.pop();
     }
 
     @Override

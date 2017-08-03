@@ -83,6 +83,6 @@ public class Pos implements Serializable {
     public String toString() {
         return String.format(
                 "[mid: %d, file: %s, start: %d, end: %d, startline: %d, endline: %d]",
-                mid, file, start, end, getStartLine(), getEndLine());
+                mid, file, start, end, startLine, endLine);
     }
 }

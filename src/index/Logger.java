@@ -59,12 +59,12 @@ public class Logger {
         String method = formatMethod(t);
         String fqn = String.format("%s.%s", clazz, method);
         methods.addLast(fqn);
-        if (fqn.startsWith("service.A")) {
+        if (fqn.startsWith("#service.A.next")) {
 //            System.out.println("--- trie ---");
 //            trie.print();
 //            System.out.println("--- end of trie ---");
             System.out.printf("--- entering method: %s ---%n", fqn);
-//            output = true;
+            output = true;
         }
     }
 
@@ -90,9 +90,9 @@ public class Logger {
         String fqn = methods.removeLast();
         if (output) {
             System.out.printf("--- exiting method: %s ---%n", fqn);
-            System.out.println("--- trie ---");
-            trie.print();
-            System.out.println("--- end of trie ---");
+//            System.out.println("--- trie ---");
+//            trie.print();
+//            System.out.println("--- end of trie ---");
             output = false;
         }
     }

@@ -50,7 +50,7 @@ public class Table {
             String var = name.substring(0, i);
             level = findLevel(var);
         } else {
-            level = currentLevel;
+            level = 0;
         }
         Entry e = store(name, kind, level);
         return e.norm();

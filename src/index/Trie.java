@@ -9,6 +9,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -43,7 +44,7 @@ public class Trie implements Serializable {
     public CloneSet detectClonesType2(int minSize) {
         CloneSet clones = new CloneSet();
         List<TrieNode> nodes = new ArrayList<>();
-        List<Set<Pos>> positions = new ArrayList<>();
+        List<Pos[]> positions = new ArrayList<>();
         TrieEdge edge = root.findEdge("METHOD");
         if (edge == null) {
             return clones;
@@ -52,9 +53,9 @@ public class Trie implements Serializable {
         positions.add(edge.getPositions());
         while (!nodes.isEmpty()) {
             TrieNode node = nodes.remove(0);
-            Set<Pos> pp = positions.remove(0);
+            Pos[] pp = positions.remove(0);
             if (node.isLeaf()) {
-                if (pp.size() > 1 && minimumSize(pp) >= minSize) {
+                if (pp.length > 1 && minimumSize(pp) >= minSize) {
                     Clone clone = new Clone(0, pp);
                     clones.addClone(clone);
                 }
@@ -68,7 +69,7 @@ public class Trie implements Serializable {
         return clones;
     }
 
-    private long minimumSize(Set<Pos> pp) {
+    private long minimumSize(Pos[] pp) {
         long minSize = Long.MAX_VALUE;
         for (Pos p : pp) {
             long size = p.getLines();
@@ -112,7 +113,7 @@ public class Trie implements Serializable {
     private List<Method> createMethodList(int minSize) {
         List<Method> mm = new ArrayList<>();
         List<TrieNode> nodes = new ArrayList<>();
-        List<Set<Pos>> positions = new ArrayList<>();
+        List<Pos[]> positions = new ArrayList<>();
         TrieEdge edge = root.findEdge("METHOD");
         if (edge == null) {
             return mm;
@@ -125,7 +126,7 @@ public class Trie implements Serializable {
         tokens.add(seq);
         while (!nodes.isEmpty()) {
             TrieNode node = nodes.remove(0);
-            Set<Pos> pp = positions.remove(0);
+            Pos[] pp = positions.remove(0);
             List<String> tt = tokens.remove(0);
             if (node.isLeaf()) {
                 MethodTokens mt = new MethodTokens(tt);
@@ -189,11 +190,9 @@ public class Trie implements Serializable {
                 for (Integer mid : mt2.getMids()) {
                     MethodPair pair = new MethodPair(m.getMid(), mid);
                     if (!pairs.contains(pair)) {
-                        Set<Pos> pp = new HashSet<>();
-                        Pos pos = pmap.get(m.getMid());
-                        pp.add(pos);
-                        Pos pos2 = pmap.get(mid);
-                        pp.add(pos2);
+                        Pos[] pp = new Pos[2];
+                        pp[0] = pmap.get(m.getMid());
+                        pp[1] = pmap.get(mid);
                         int d = mt.getDistanceTo(mt2);
                         if (d <= distance) {
                             Clone clone = new Clone(d, pp);
@@ -245,7 +244,7 @@ public class Trie implements Serializable {
 
     public void printMethods(List<String> tokens) {
         TrieNode p = root;
-        Set<Pos> pos = null;
+        Pos[] pos = null;
         for (String token : tokens) {
             TrieEdge edge = p.findEdge(token);
             p = edge.getDestination();
@@ -253,13 +252,13 @@ public class Trie implements Serializable {
         }
         List<TrieNode> nodes = new ArrayList<>();
         nodes.add(p);
-        List<Set<Pos>> positions = new ArrayList<>();
+        List<Pos[]> positions = new ArrayList<>();
         positions.add(pos);
         while (!nodes.isEmpty()) {
             TrieNode node = nodes.remove(0);
-            Set<Pos> ps = positions.remove(0);
+            Pos[] ps = positions.remove(0);
             if (node.isLeaf()) {
-                System.out.printf("pos: %s%n", ps);
+                System.out.printf("pos: %s%n", Arrays.asList(ps));
             }
             for (TrieEdge edge : node.getEdges()) {
                 nodes.add(edge.getDestination());
@@ -322,22 +321,5 @@ public class Trie implements Serializable {
             }
             return 0;
         }
-    }
-
-    public int countSingleEdgeNodes() {
-        int count = 0;
-        List<TrieNode> nodes = new ArrayList<>();
-        nodes.add(root);
-        while (!nodes.isEmpty()) {
-            TrieNode node = nodes.remove(0);
-            Set<TrieEdge> edges = node.getEdges();
-            if (edges.size() == 1) {
-                count++;
-            }
-            for (TrieEdge e : node.getEdges()) {
-                nodes.add(e.getDestination());
-            }
-        }
-        return count;
     }
 }

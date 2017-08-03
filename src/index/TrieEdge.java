@@ -1,8 +1,6 @@
 package index;
 
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  * The edge of the TRIE.
@@ -15,7 +13,7 @@ public class TrieEdge implements Comparable<TrieEdge>, Serializable {
     private static int count;
     private final String label;
     private final TrieNode destination;
-    private final Set<Pos> positions = new HashSet<>();
+    private Pos[] positions = new Pos[0];
 
     public TrieEdge(String label, TrieNode destination) {
         this.label = label;
@@ -35,12 +33,15 @@ public class TrieEdge implements Comparable<TrieEdge>, Serializable {
         return destination;
     }
 
-    public Set<Pos> getPositions() {
+    public Pos[] getPositions() {
         return positions;
     }
 
     public void addPosition(Pos position) {
-        positions.add(position);
+        Pos[] pp = new Pos[positions.length + 1];
+        System.arraycopy(positions, 0, pp, 0, positions.length);
+        pp[positions.length] = position;
+        positions = pp;
     }
 
     @Override

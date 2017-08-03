@@ -1,8 +1,6 @@
 package index;
 
 import java.io.Serializable;
-import java.util.Set;
-import java.util.TreeSet;
 
 /**
  * The node of the TRIE.
@@ -15,7 +13,7 @@ public class TrieNode implements Serializable {
     public static final Logger logger = Logger.getInstance();
     private static int count;
     private final int num;
-    private final Set<TrieEdge> edges = new TreeSet<>();
+    private TrieEdge[] edges = new TrieEdge[0];
 
     public TrieNode() {
         num = count++;
@@ -26,10 +24,10 @@ public class TrieNode implements Serializable {
     }
 
     public boolean isLeaf() {
-        return edges.isEmpty();
+        return edges.length == 0;
     }
 
-    public Set<TrieEdge> getEdges() {
+    public TrieEdge[] getEdges() {
         return edges;
     }
 
@@ -50,10 +48,17 @@ public class TrieNode implements Serializable {
             TrieNode dst = new TrieNode();
             logger.printf("adding edge %d -> %d (%s)%n", num, dst.num, label);
             e = new TrieEdge(label, dst);
-            edges.add(e);
+            addEdge(e);
         }
         e.addPosition(pos);
         return e.getDestination();
+    }
+
+    private void addEdge(TrieEdge e) {
+        TrieEdge[] ee = new TrieEdge[edges.length + 1];
+        System.arraycopy(edges, 0, ee, 0, edges.length);
+        ee[edges.length] = e;
+        edges = ee;
     }
 
     public int getNum() {

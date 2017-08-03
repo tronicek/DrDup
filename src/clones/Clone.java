@@ -1,6 +1,8 @@
 package clones;
 
 import index.Pos;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
@@ -12,9 +14,9 @@ import java.util.Set;
 public class Clone {
 
     private final Integer distance;
-    private final Set<Pos> positions;
+    private final Pos[] positions;
 
-    public Clone(Integer distance, Set<Pos> positions) {
+    public Clone(Integer distance, Pos[] positions) {
         this.distance = distance;
         this.positions = positions;
     }
@@ -23,7 +25,7 @@ public class Clone {
         return distance;
     }
 
-    public Set<Pos> getPositions() {
+    public Pos[] getPositions() {
         return positions;
     }
 
@@ -42,7 +44,11 @@ public class Clone {
         return false;
     }
 
-    private boolean equal(Set<Pos> pp1, Set<Pos> pp2) {
-        return pp1.containsAll(pp2) && pp2.containsAll(pp1);
+    private boolean equal(Pos[] pp1, Pos[] pp2) {
+        Set<Pos> s1 = new HashSet<>();
+        s1.addAll(Arrays.asList(pp1));
+        Set<Pos> s2 = new HashSet<>();
+        s2.addAll(Arrays.asList(pp2));
+        return s1.containsAll(s2) && s2.containsAll(s1);
     }
 }

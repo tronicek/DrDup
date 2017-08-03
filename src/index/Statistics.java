@@ -14,14 +14,14 @@ public class Statistics {
     private static final int THRESHOLD = 20000;
     private final List<Record> records = new ArrayList<>();
 
-    public void store(int astNodes, int trieNodes, int trieEdges, int positions) {
-        Record rec = new Record(astNodes, trieNodes, trieEdges, positions);
+    public void store(int lines, int astNodes, int trieNodes, int trieEdges, int positions) {
+        Record rec = new Record(lines, astNodes, trieNodes, trieEdges, positions);
         records.add(rec);
     }
 
     public void print() {
         int last = 0;
-        System.out.println("AST nodes, trie nodes, trie edges, positions");
+        System.out.println("lines, AST nodes, trie nodes, trie edges, positions");
         for (Record rec : records) {
             if (rec.astNodes - last > THRESHOLD) {
                 System.out.println(rec);
@@ -34,12 +34,14 @@ public class Statistics {
 
     static class Record {
 
+        int lines;
         int astNodes;
         int trieNodes;
         int trieEdges;
         int positions;
 
-        Record(int astNodes, int trieNodes, int trieEdges, int positions) {
+        Record(int lines, int astNodes, int trieNodes, int trieEdges, int positions) {
+            this.lines = lines;
             this.astNodes = astNodes;
             this.trieNodes = trieNodes;
             this.trieEdges = trieEdges;
@@ -48,7 +50,7 @@ public class Statistics {
 
         @Override
         public String toString() {
-            return String.format("%d\t%d\t%d\t%d", astNodes, trieNodes, trieEdges, positions);
+            return String.format("%d\t%d\t%d\t%d\t%d", lines, astNodes, trieNodes, trieEdges, positions);
         }
     }
 }

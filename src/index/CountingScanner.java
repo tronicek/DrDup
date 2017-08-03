@@ -55,38 +55,44 @@ import com.sun.tools.javac.tree.JCTree.JCWhileLoop;
 import com.sun.tools.javac.tree.JCTree.JCWildcard;
 import com.sun.tools.javac.tree.JCTree.LetExpr;
 import com.sun.tools.javac.tree.JCTree.TypeBoundKind;
+import com.sun.tools.javac.tree.TreeInfo;
 import com.sun.tools.javac.tree.TreeScanner;
 
 /**
- * The scanner that counts the number of AST nodes.
- * 
+ * The scanner that counts the number of lines and AST nodes.
+ *
  * @author Zdenek Tronicek, tronicek@tarleton.edu
  */
 public class CountingScanner extends TreeScanner {
 
-    private int count;
+    private int lines;
+    private int nodes;
 
-    public int getCount() {
-        return count;
+    public int getLines() {
+        return lines;
     }
-    
+
+    public int getNodes() {
+        return nodes;
+    }
+
     @Override
     public void visitAnnotatedType(JCAnnotatedType t) {
-        count++;
+        nodes++;
         scan(t.annotations);
         scan(t.underlyingType);
     }
 
     @Override
     public void visitAnnotation(JCAnnotation t) {
-        count++;
+        nodes++;
         scan(t.annotationType);
         scan(t.args);
     }
 
     @Override
     public void visitApply(JCMethodInvocation t) {
-        count++;
+        nodes++;
         scan(t.typeargs);
         scan(t.meth);
         scan(t.args);
@@ -94,60 +100,60 @@ public class CountingScanner extends TreeScanner {
 
     @Override
     public void visitAssert(JCAssert t) {
-        count++;
+        nodes++;
         scan(t.cond);
         scan(t.detail);
     }
 
     @Override
     public void visitAssign(JCAssign t) {
-        count++;
+        nodes++;
         scan(t.lhs);
         scan(t.rhs);
     }
 
     @Override
     public void visitAssignop(JCAssignOp t) {
-        count++;
+        nodes++;
         scan(t.lhs);
         scan(t.rhs);
     }
 
     @Override
     public void visitBinary(JCBinary t) {
-        count++;
+        nodes++;
         scan(t.lhs);
         scan(t.rhs);
     }
 
     @Override
     public void visitBlock(JCBlock t) {
-        count++;
+        nodes++;
         scan(t.stats);
     }
 
     @Override
     public void visitBreak(JCBreak t) {
-        count++;
+        nodes++;
     }
 
     @Override
     public void visitCase(JCCase t) {
-        count++;
+        nodes++;
         scan(t.pat);
         scan(t.stats);
     }
 
     @Override
     public void visitCatch(JCCatch t) {
-        count++;
+        nodes++;
         scan(t.param);
         scan(t.body);
     }
 
     @Override
     public void visitClassDef(JCClassDecl t) {
-        count++;
+        nodes++;
         scan(t.mods);
         scan(t.typarams);
         scan(t.extending);
@@ -157,7 +163,7 @@ public class CountingScanner extends TreeScanner {
 
     @Override
     public void visitConditional(JCConditional t) {
-        count++;
+        nodes++;
         scan(t.cond);
         scan(t.truepart);
         scan(t.falsepart);
@@ -165,12 +171,12 @@ public class CountingScanner extends TreeScanner {
 
     @Override
     public void visitContinue(JCContinue t) {
-        count++;
+        nodes++;
     }
 
     @Override
     public void visitDoLoop(JCDoWhileLoop t) {
-        count++;
+        nodes++;
         scan(t.body);
         scan(t.cond);
     }
@@ -181,13 +187,13 @@ public class CountingScanner extends TreeScanner {
 
     @Override
     public void visitExec(JCExpressionStatement t) {
-        count++;
+        nodes++;
         scan(t.expr);
     }
 
     @Override
     public void visitForLoop(JCForLoop t) {
-        count++;
+        nodes++;
         scan(t.init);
         scan(t.cond);
         scan(t.step);
@@ -196,7 +202,7 @@ public class CountingScanner extends TreeScanner {
 
     @Override
     public void visitForeachLoop(JCEnhancedForLoop t) {
-        count++;
+        nodes++;
         scan(t.var);
         scan(t.expr);
         scan(t.body);
@@ -204,12 +210,12 @@ public class CountingScanner extends TreeScanner {
 
     @Override
     public void visitIdent(JCIdent t) {
-        count++;
+        nodes++;
     }
 
     @Override
     public void visitIf(JCIf t) {
-        count++;
+        nodes++;
         scan(t.cond);
         scan(t.thenpart);
         scan(t.elsepart);
@@ -217,45 +223,45 @@ public class CountingScanner extends TreeScanner {
 
     @Override
     public void visitImport(JCImport t) {
-        count++;
+        nodes++;
         scan(t.qualid);
     }
 
     @Override
     public void visitIndexed(JCArrayAccess t) {
-        count++;
+        nodes++;
         scan(t.indexed);
         scan(t.index);
     }
 
     @Override
     public void visitLabelled(JCLabeledStatement t) {
-        count++;
+        nodes++;
         scan(t.body);
     }
 
     @Override
     public void visitLambda(JCLambda t) {
-        count++;
+        nodes++;
         scan(t.params);
         scan(t.body);
     }
 
     @Override
     public void visitLetExpr(LetExpr t) {
-        count++;
+        nodes++;
         scan(t.defs);
         scan(t.expr);
     }
 
     @Override
     public void visitLiteral(JCLiteral t) {
-        count++;
+        nodes++;
     }
 
     @Override
     public void visitMethodDef(JCMethodDecl t) {
-        count++;
+        nodes++;
         scan(t.mods);
         scan(t.typarams);
         scan(t.restype);
@@ -267,13 +273,13 @@ public class CountingScanner extends TreeScanner {
 
     @Override
     public void visitModifiers(JCModifiers t) {
-        count++;
+        nodes++;
         scan(t.annotations);
     }
 
     @Override
     public void visitNewArray(JCNewArray t) {
-        count++;
+        nodes++;
         scan(t.elemtype);
         scan(t.dims);
         scan(t.elems);
@@ -281,7 +287,7 @@ public class CountingScanner extends TreeScanner {
 
     @Override
     public void visitNewClass(JCNewClass t) {
-        count++;
+        nodes++;
         scan(t.encl);
         scan(t.clazz);
         scan(t.typeargs);
@@ -291,26 +297,26 @@ public class CountingScanner extends TreeScanner {
 
     @Override
     public void visitParens(JCParens t) {
-        count++;
+        nodes++;
         scan(t.expr);
     }
 
     @Override
     public void visitReference(JCMemberReference t) {
-        count++;
+        nodes++;
         scan(t.typeargs);
         scan(t.expr);
     }
 
     @Override
     public void visitReturn(JCReturn t) {
-        count++;
+        nodes++;
         scan(t.expr);
     }
 
     @Override
     public void visitSelect(JCFieldAccess t) {
-        count++;
+        nodes++;
         scan(t.selected);
     }
 
@@ -320,27 +326,32 @@ public class CountingScanner extends TreeScanner {
 
     @Override
     public void visitSwitch(JCSwitch t) {
-        count++;
+        nodes++;
         scan(t.selector);
         scan(t.cases);
     }
 
     @Override
     public void visitSynchronized(JCSynchronized t) {
-        count++;
+        nodes++;
         scan(t.lock);
         scan(t.body);
     }
 
     @Override
     public void visitThrow(JCThrow t) {
-        count++;
+        nodes++;
         scan(t.expr);
     }
 
     @Override
     public void visitTopLevel(JCCompilationUnit t) {
-        count++;
+        nodes++;
+        int startpos = TreeInfo.getStartPos(t);
+        int endpos = TreeInfo.getEndPos(t, t.endPositions);
+        int startLine = t.lineMap.getLineNumber(startpos);
+        int endLine = t.lineMap.getLineNumber(endpos);
+        lines += endLine - startLine + 1;
         scan(t.packageAnnotations);
         scan(t.pid);
         scan(t.defs);
@@ -353,7 +364,7 @@ public class CountingScanner extends TreeScanner {
 
     @Override
     public void visitTry(JCTry t) {
-        count++;
+        nodes++;
         scan(t.body);
         scan(t.catchers);
         scan(t.finalizer);
@@ -361,68 +372,68 @@ public class CountingScanner extends TreeScanner {
 
     @Override
     public void visitTypeApply(JCTypeApply t) {
-        count++;
+        nodes++;
         scan(t.clazz);
         scan(t.arguments);
     }
 
     @Override
     public void visitTypeArray(JCArrayTypeTree t) {
-        count++;
+        nodes++;
         scan(t.elemtype);
     }
 
     @Override
     public void visitTypeBoundKind(TypeBoundKind t) {
-        count++;
+        nodes++;
     }
 
     @Override
     public void visitTypeCast(JCTypeCast t) {
-        count++;
+        nodes++;
         scan(t.clazz);
         scan(t.expr);
     }
 
     @Override
     public void visitTypeIdent(JCPrimitiveTypeTree t) {
-        count++;
+        nodes++;
     }
 
     @Override
     public void visitTypeIntersection(JCTypeIntersection t) {
-        count++;
+        nodes++;
         scan(t.bounds);
     }
 
     @Override
     public void visitTypeParameter(JCTypeParameter t) {
-        count++;
+        nodes++;
         scan(t.bounds);
     }
 
     @Override
     public void visitTypeTest(JCInstanceOf t) {
-        count++;
+        nodes++;
         scan(t.expr);
         scan(t.clazz);
     }
 
     @Override
     public void visitTypeUnion(JCTypeUnion t) {
-        count++;
+        nodes++;
         scan(t.alternatives);
     }
 
     @Override
     public void visitUnary(JCUnary t) {
-        count++;
+        nodes++;
         scan(t.arg);
     }
 
     @Override
     public void visitVarDef(JCVariableDecl t) {
-        count++;
+        nodes++;
         scan(t.mods);
         scan(t.vartype);
         scan(t.nameexpr);
@@ -431,14 +442,14 @@ public class CountingScanner extends TreeScanner {
 
     @Override
     public void visitWhileLoop(JCWhileLoop t) {
-        count++;
+        nodes++;
         scan(t.cond);
         scan(t.body);
     }
 
     @Override
     public void visitWildcard(JCWildcard t) {
-        count++;
+        nodes++;
         scan(t.kind);
         scan(t.inner);
     }

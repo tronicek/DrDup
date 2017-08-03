@@ -153,7 +153,7 @@ public class Engine {
             cu.accept(scan);
             if (printStats) {
                 cu.accept(cscan);
-                stats.store(cscan.getCount(), TrieNode.getCount(), TrieEdge.getCount(), Pos.getCount());
+                stats.store(cscan.getLines(), cscan.getNodes(), TrieNode.getCount(), TrieEdge.getCount(), Pos.getCount());
             }
         }
         Trie trie = scan.getTrie();

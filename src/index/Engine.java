@@ -35,6 +35,7 @@ import nicad.NiCadConvertor;
 public class Engine {
 
     private final Properties conf;
+    private final String index;
     private final boolean printStats;
     private final boolean printTrie;
     private final int type;
@@ -47,6 +48,7 @@ public class Engine {
 
     public Engine(Properties conf) {
         this.conf = conf;
+        index = conf.getProperty("index", "full");
         printStats = Boolean.parseBoolean(conf.getProperty("printStats"));
         printTrie = Boolean.parseBoolean(conf.getProperty("printTrie"));
         type = Integer.parseInt(conf.getProperty("type", "2"));
@@ -147,7 +149,15 @@ public class Engine {
     public void perform() throws Exception {
         prepare();
         Statistics stats = new Statistics();
-        IndexScanner scan = new IndexScanner(conf);
+        IndexScanner scan;
+        switch (index) {
+            case "simplified":
+                scan = new SimplifiedIndexScanner(conf);
+                break;
+            case "full":
+            default:
+                scan = new FullIndexScanner(conf);
+        }
         CountingScanner cscan = new CountingScanner();
         for (JCCompilationUnit cu : units) {
             cu.accept(scan);
@@ -156,10 +166,10 @@ public class Engine {
                 stats.store(cscan.getLines(), cscan.getNodes(), TrieNode.getCount(), TrieEdge.getCount(), Pos.getCount());
             }
         }
-        Trie trie = scan.getTrie();
         if (printStats) {
             stats.print();
         }
+        Trie trie = scan.getTrie();
         if (printTrie) {
             trie.print();
         }

@@ -4,6 +4,11 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.Set;
 
+/**
+ * The implementation of a set.
+ *
+ * @author Zdenek Tronicek, tronicek@tarleton.edu
+ */
 public class FastSet<T> implements Set<T> {
 
     private Object[] items;

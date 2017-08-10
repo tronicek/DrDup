@@ -34,6 +34,24 @@ public class EngineTestType3 {
     }
 
     private int perform(Properties prop) throws Exception {
+        int size = testFullIndex(prop);
+        int size2 = testSimplifiedIndex(prop);
+        if (size != size2) {
+            throw new AssertionError();
+        }
+        return size;
+    }
+
+    private int testFullIndex(Properties prop) throws Exception {
+        Engine eng = new Engine(prop);
+        eng.perform();
+        CloneSet set = eng.getClones();
+        List<Clone> cc = set.getClones();
+        return cc.size();
+    }
+    
+    private int testSimplifiedIndex(Properties prop) throws Exception {
+        prop.setProperty("index", "simplified");
         Engine eng = new Engine(prop);
         eng.perform();
         CloneSet set = eng.getClones();

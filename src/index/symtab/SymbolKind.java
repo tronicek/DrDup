@@ -16,7 +16,8 @@ public enum SymbolKind {
     LOCAL_VARIABLE,
     ENUM_CONSTANT,
     RESOURCE_VARIABLE,
-    ID;
+    ID,
+    TYPE;
 
     public static SymbolKind instance(String str) {
         switch (str) {
@@ -40,6 +41,8 @@ public enum SymbolKind {
                 return RESOURCE_VARIABLE;
             case "ID":
                 return ID;
+            case "TYPE":
+                return TYPE;
         }
         assert false;
         return null;

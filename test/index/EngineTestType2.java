@@ -200,8 +200,8 @@ public class EngineTestType2 {
 
     @Test
     public void testPerform24() throws Exception {
-        int c = perform("strictly-consistent", "test/src/24");
-        assertEquals(1, c);
+        int c = perform("consistent", "test/src/24");
+        assertEquals(0, c);
     }
 
     @Test
@@ -486,5 +486,53 @@ public class EngineTestType2 {
     public void testPerform64() throws Exception {
         int c = perform("consistent", "test/src/64");
         assertEquals(0, c);
+    }
+
+    @Test
+    public void testPerform65() throws Exception {
+        int c = perform("blind", "test/src/65");
+        assertEquals(1, c);
+        c = perform("consistent", "test/src/65");
+        assertEquals(0, c);
+    }
+
+    @Test
+    public void testPerform66() throws Exception {
+        int c = perform("blind", "test/src/66");
+        assertEquals(1, c);
+        c = perform("consistent", "test/src/66");
+        assertEquals(0, c);
+    }
+
+    @Test
+    public void testPerform67() throws Exception {
+        int c = perform("blind", "test/src/67");
+        assertEquals(1, c);
+        c = perform("consistent", "test/src/67");
+        assertEquals(0, c);
+    }
+
+    @Test
+    public void testPerform68() throws Exception {
+        int c = perform("consistent", "test/src/68");
+        assertEquals(1, c);
+    }
+
+    @Test
+    public void testPerform69() throws Exception {
+        int c = perform("consistent", "test/src/69");
+        assertEquals(1, c);
+    }
+
+    @Test
+    public void testPerform70() throws Exception {
+        int c = perform("consistent", "test/src/70");
+        assertEquals(1, c);
+    }
+
+    @Test
+    public void testPerform71() throws Exception {
+        int c = perform("consistent", "test/src/71");
+        assertEquals(1, c);
     }
 }

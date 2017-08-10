@@ -455,7 +455,18 @@ public class IndexScanner extends TreeScanner {
     private void addIdentChild(JCIdent t) {
         Symbol sym = t.sym;
         ElementKind k = sym.getKind();
-        String s = renameStrategy.rename(k, t.name.toString(), sym.isStatic());
+        String name;
+        switch (k) {
+            case CLASS:
+            case ENUM:
+            case INTERFACE:
+            case TYPE_PARAMETER:
+                name = t.sym.type.toString();
+                break;
+            default:
+                name = t.name.toString();
+        }
+        String s = renameStrategy.rename(k, name, sym.isStatic());
         if (s != null) {
             addChild(s);
         }
@@ -523,15 +534,6 @@ public class IndexScanner extends TreeScanner {
     @Override
     public void visitLetExpr(LetExpr t) {
         // LetExpr is not a part of public API
-//        if (inMethod == 0) {
-//            return;
-//        }
-//        stack.push(trie.root, pos(t));
-//        addChild(t);
-//        scan(t.defs);
-//        scan(t.expr);
-//        addChildEnd(t);
-//        stack.pop();
     }
 
     @Override
@@ -671,7 +673,13 @@ public class IndexScanner extends TreeScanner {
         Symbol sym = t.sym;
         if (sym != null) {
             ElementKind k = sym.getKind();
-            String s = renameStrategy.rename(k, t.selected + "." + t.name, sym.isStatic());
+            String sel = t.selected.toString();
+            if ("super".equals(sel) || "this".equals(sel)) {
+                sel = t.name.toString();
+            } else {
+                sel = t.sym.owner + "." + t.name;
+            }
+            String s = renameStrategy.rename(k, sel, sym.isStatic());
             if (s != null) {
                 addChild(s);
             }

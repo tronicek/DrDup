@@ -7,7 +7,7 @@ import javax.lang.model.type.TypeKind;
 
 /**
  * The consistent rename strategy.
- * 
+ *
  * @author Zdenek Tronicek, tronicek@tarleton.edu
  */
 public class ConsistentRename extends RenameStrategy {
@@ -46,7 +46,7 @@ public class ConsistentRename extends RenameStrategy {
             case ENUM:
             case INTERFACE:
             case TYPE_PARAMETER:
-                return "TYPE#";
+                return symbolTable.lookup(name, SymbolKind.TYPE);
             case ENUM_CONSTANT:
             case EXCEPTION_PARAMETER:
             case FIELD:
@@ -63,11 +63,43 @@ public class ConsistentRename extends RenameStrategy {
 
     @Override
     public String renamePrimitiveType(TypeKind kind) {
-        return "TYPE#";
+        String name;
+        switch (kind) {
+            case BOOLEAN:
+                name = "java.lang.Boolean";
+                break;
+            case BYTE:
+                name = "java.lang.Byte";
+                break;
+            case CHAR:
+                name = "java.lang.Character";
+                break;
+            case DOUBLE:
+                name = "java.lang.Double";
+                break;
+            case FLOAT:
+                name = "java.lang.Float";
+                break;
+            case INT:
+                name = "java.lang.Integer";
+                break;
+            case LONG:
+                name = "java.lang.Long";
+                break;
+            case SHORT:
+                name = "java.lang.Short";
+                break;
+            case VOID:
+                name = "java.lang.Void";
+                break;
+            default:
+                name = kind.name();
+        }
+        return symbolTable.lookup(name, SymbolKind.TYPE);
     }
 
     @Override
     public String renameTypeArg(String name) {
-        return "TYPE#";
+        return symbolTable.lookup(name, SymbolKind.TYPE);
     }
 }

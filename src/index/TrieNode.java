@@ -13,7 +13,7 @@ public class TrieNode implements Serializable {
     public static final Logger logger = Logger.getInstance();
     private static int count;
     private final int num;
-    private TrieEdge[] edges = new TrieEdge[0];
+    private final FastSet<TrieEdge> edges = new FastSet<>(1);
 
     public TrieNode() {
         num = count++;
@@ -24,10 +24,10 @@ public class TrieNode implements Serializable {
     }
 
     public boolean isLeaf() {
-        return edges.length == 0;
+        return edges.isEmpty();
     }
 
-    public TrieEdge[] getEdges() {
+    public FastSet<TrieEdge> getEdges() {
         return edges;
     }
 
@@ -55,10 +55,7 @@ public class TrieNode implements Serializable {
     }
 
     private void addEdge(TrieEdge e) {
-        TrieEdge[] ee = new TrieEdge[edges.length + 1];
-        System.arraycopy(edges, 0, ee, 0, edges.length);
-        ee[edges.length] = e;
-        edges = ee;
+        edges.add(e);
     }
 
     public int getNum() {

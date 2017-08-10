@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
-import java.util.TreeSet;
 
 /**
  * The representation of method tokens.
@@ -16,7 +15,7 @@ public class MethodTokens {
     private static int count;
     private final int tid;
     private final List<String> tokens;
-    private final Set<Integer> mids = new TreeSet<>();
+    private final FastSet<Integer> mids = new FastSet<>(1);
     private final Map<Integer, Integer> distMap = new TreeMap<>();
 
     public MethodTokens(List<String> tokens) {

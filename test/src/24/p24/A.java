@@ -6,7 +6,7 @@ public class A {
         return s + i;
     }
     
-    String concat2(String s1, String s2) {
-        return s1 + s2;
+    String concat2(Integer i, String s) {
+        return i + s;
     }
 }

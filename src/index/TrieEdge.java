@@ -13,7 +13,7 @@ public class TrieEdge implements Comparable<TrieEdge>, Serializable {
     private static int count;
     private final String label;
     private final TrieNode destination;
-    private Pos[] positions = new Pos[0];
+    private final FastSet<Pos> positions = new FastSet<>(1);
 
     public TrieEdge(String label, TrieNode destination) {
         this.label = label;
@@ -33,15 +33,12 @@ public class TrieEdge implements Comparable<TrieEdge>, Serializable {
         return destination;
     }
 
-    public Pos[] getPositions() {
+    public FastSet<Pos> getPositions() {
         return positions;
     }
 
     public void addPosition(Pos position) {
-        Pos[] pp = new Pos[positions.length + 1];
-        System.arraycopy(positions, 0, pp, 0, positions.length);
-        pp[positions.length] = position;
-        positions = pp;
+        positions.add(position);
     }
 
     @Override

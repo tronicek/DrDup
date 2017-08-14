@@ -15,7 +15,7 @@ public class MethodTokens {
     private static int count;
     private final int tid;
     private final List<String> tokens;
-    private final FastSet<Integer> mids = new FastSet<>(1);
+    private Integer[] mids = new Integer[0];
     private final Map<Integer, Integer> distMap = new TreeMap<>();
 
     public MethodTokens(List<String> tokens) {
@@ -36,12 +36,15 @@ public class MethodTokens {
         return tokens.size();
     }
 
-    public Set<Integer> getMids() {
+    public Integer[] getMids() {
         return mids;
     }
 
     public void addMid(Integer mid) {
-        mids.add(mid);
+        Integer[] ii = new Integer[mids.length + 1];
+        System.arraycopy(mids, 0, ii, 0, mids.length);
+        ii[mids.length] = mid;
+        mids = ii;
     }
 
     public Set<Integer> getSimilarTokens() {

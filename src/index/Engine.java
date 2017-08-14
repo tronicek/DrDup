@@ -158,7 +158,7 @@ public class Engine {
             default:
                 scan = new FullIndexScanner(conf);
         }
-        CountingScanner cscan = new CountingScanner();
+        CountingScanner cscan = printStats ? new CountingScanner() : null;
         for (JCCompilationUnit cu : units) {
             cu.accept(scan);
             if (printStats) {

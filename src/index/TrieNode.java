@@ -10,10 +10,11 @@ import java.io.Serializable;
 public class TrieNode implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    public static final Logger logger = Logger.getInstance();
+    private static final Logger logger = Logger.getInstance();
     private static int count;
     private final int num;
-    private final FastSet<TrieEdge> edges = new FastSet<>(1);
+    private TrieEdge[] edges = new TrieEdge[1];
+    private int edgesCount;
 
     public TrieNode() {
         num = count++;
@@ -24,18 +25,23 @@ public class TrieNode implements Serializable {
     }
 
     public boolean isLeaf() {
-        return edges.isEmpty();
+        return edgesCount == 0;
     }
 
-    public FastSet<TrieEdge> getEdges() {
-        return edges;
+    public TrieEdge[] getEdges() {
+        if (edgesCount == edges.length) {
+            return edges;
+        }
+        TrieEdge[] ee = new TrieEdge[edgesCount];
+        System.arraycopy(edges, 0, ee, 0, edgesCount);
+        return ee;
     }
 
     public TrieEdge findEdge(String label) {
-        for (TrieEdge e : edges) {
-            String s = e.getLabel();
+        for (int i = 0; i < edgesCount; i++) {
+            String s = edges[i].getLabel();
             if (s.equals(label)) {
-                return e;
+                return edges[i];
             }
         }
         return null;
@@ -55,7 +61,13 @@ public class TrieNode implements Serializable {
     }
 
     private void addEdge(TrieEdge e) {
-        edges.add(e);
+        if (edgesCount == edges.length) {
+            TrieEdge[] ee = new TrieEdge[edges.length * 2];
+            System.arraycopy(edges, 0, ee, 0, edges.length);
+            edges = ee;
+        }
+        edges[edgesCount] = e;
+        edgesCount++;
     }
 
     public int getNum() {
@@ -64,11 +76,11 @@ public class TrieNode implements Serializable {
 
     public void print() {
         System.out.printf("node %d%n", num);
-        for (TrieEdge e : edges) {
-            e.print();
+        for (int i = 0; i < edgesCount; i++) {
+            edges[i].print();
         }
-        for (TrieEdge e : edges) {
-            TrieNode dst = e.getDestination();
+        for (int i = 0; i < edgesCount; i++) {
+            TrieNode dst = edges[i].getDestination();
             dst.print();
         }
     }

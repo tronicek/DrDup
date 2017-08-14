@@ -44,7 +44,7 @@ public class Trie implements Serializable {
     public CloneSet detectClonesType2(int minSize) {
         CloneSet clones = new CloneSet();
         List<TrieNode> nodes = new ArrayList<>();
-        List<FastSet<Pos>> positions = new ArrayList<>();
+        List<Pos[]> positions = new ArrayList<>();
         TrieEdge edge = root.findEdge("METHOD");
         if (edge == null) {
             return clones;
@@ -53,9 +53,9 @@ public class Trie implements Serializable {
         positions.add(edge.getPositions());
         while (!nodes.isEmpty()) {
             TrieNode node = nodes.remove(0);
-            FastSet<Pos> pp = positions.remove(0);
+            Pos[] pp = positions.remove(0);
             if (node.isLeaf()) {
-                if (pp.size() > 1 && minimumSize(pp) >= minSize) {
+                if (pp.length > 1 && minimumSize(pp) >= minSize) {
                     Clone clone = new Clone(0, pp);
                     clones.addClone(clone);
                 }
@@ -69,7 +69,7 @@ public class Trie implements Serializable {
         return clones;
     }
 
-    private long minimumSize(FastSet<Pos> pp) {
+    private long minimumSize(Pos[] pp) {
         long minSize = Long.MAX_VALUE;
         for (Pos p : pp) {
             long size = p.getLines();
@@ -113,7 +113,7 @@ public class Trie implements Serializable {
     private List<Method> createMethodList(int minSize) {
         List<Method> mm = new ArrayList<>();
         List<TrieNode> nodes = new ArrayList<>();
-        List<FastSet<Pos>> positions = new ArrayList<>();
+        List<Pos[]> positions = new ArrayList<>();
         TrieEdge edge = root.findEdge("METHOD");
         if (edge == null) {
             return mm;
@@ -126,7 +126,7 @@ public class Trie implements Serializable {
         tokens.add(seq);
         while (!nodes.isEmpty()) {
             TrieNode node = nodes.remove(0);
-            FastSet<Pos> pp = positions.remove(0);
+            Pos[] pp = positions.remove(0);
             List<String> tt = tokens.remove(0);
             if (node.isLeaf()) {
                 MethodTokens mt = new MethodTokens(tt);
@@ -190,11 +190,9 @@ public class Trie implements Serializable {
                 for (Integer mid : mt2.getMids()) {
                     MethodPair pair = new MethodPair(m.getMid(), mid);
                     if (!pairs.contains(pair)) {
-                        FastSet<Pos> pp = new FastSet<>(2);
-                        Pos p1 = pmap.get(m.getMid());
-                        Pos p2 = pmap.get(mid);
-                        pp.add(p1);
-                        pp.add(p2);
+                        Pos[] pp = new Pos[2];
+                        pp[0] = pmap.get(m.getMid());
+                        pp[1] = pmap.get(mid);
                         int d = mt.getDistanceTo(mt2);
                         if (d <= distance) {
                             Clone clone = new Clone(d, pp);
@@ -246,7 +244,7 @@ public class Trie implements Serializable {
 
     public void printMethods(List<String> tokens) {
         TrieNode p = root;
-        FastSet<Pos> pos = null;
+        Pos[] pos = null;
         for (String token : tokens) {
             TrieEdge edge = p.findEdge(token);
             p = edge.getDestination();
@@ -254,11 +252,11 @@ public class Trie implements Serializable {
         }
         List<TrieNode> nodes = new ArrayList<>();
         nodes.add(p);
-        List<FastSet<Pos>> positions = new ArrayList<>();
+        List<Pos[]> positions = new ArrayList<>();
         positions.add(pos);
         while (!nodes.isEmpty()) {
             TrieNode node = nodes.remove(0);
-            FastSet<Pos> ps = positions.remove(0);
+            Pos[] ps = positions.remove(0);
             if (node.isLeaf()) {
                 System.out.printf("pos: %s%n", Arrays.asList(ps));
             }

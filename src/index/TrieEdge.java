@@ -13,7 +13,8 @@ public class TrieEdge implements Comparable<TrieEdge>, Serializable {
     private static int count;
     private final String label;
     private final TrieNode destination;
-    private final FastSet<Pos> positions = new FastSet<>(1);
+    private Pos[] positions = new Pos[1];
+    private int positionsCount;
 
     public TrieEdge(String label, TrieNode destination) {
         this.label = label;
@@ -33,12 +34,23 @@ public class TrieEdge implements Comparable<TrieEdge>, Serializable {
         return destination;
     }
 
-    public FastSet<Pos> getPositions() {
-        return positions;
+    public Pos[] getPositions() {
+        if (positionsCount == positions.length) {
+            return positions;
+        }
+        Pos[] pp = new Pos[positionsCount];
+        System.arraycopy(positions, 0, pp, 0, positionsCount);
+        return pp;
     }
 
     public void addPosition(Pos position) {
-        positions.add(position);
+        if (positionsCount == positions.length) {
+            Pos[] pp = new Pos[positions.length * 2];
+            System.arraycopy(positions, 0, pp, 0, positions.length);
+            positions = pp;
+        }
+        positions[positionsCount] = position;
+        positionsCount++;
     }
 
     @Override
@@ -48,8 +60,8 @@ public class TrieEdge implements Comparable<TrieEdge>, Serializable {
 
     public void print() {
         System.out.printf("  edge: %s, destination: %d%n", label, destination.getNum());
-        for (Pos pos : positions) {
-            System.out.printf("    position: %s%n", pos);
+        for (int i = 0; i < positionsCount; i++) {
+            System.out.printf("    position: %s%n", positions[i]);
         }
     }
 }

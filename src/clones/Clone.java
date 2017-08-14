@@ -1,7 +1,8 @@
 package clones;
 
-import index.FastSet;
 import index.Pos;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -12,18 +13,18 @@ import java.util.Objects;
 public class Clone {
 
     private final Integer distance;
-    private final FastSet<Pos> positions;
+    private final Pos[] positions;
 
-    public Clone(Integer distance, FastSet<Pos> positions) {
+    public Clone(Integer distance, Pos[] positions) {
         this.distance = distance;
         this.positions = positions;
     }
-    
+
     public Integer getDistance() {
         return distance;
     }
 
-    public FastSet<Pos> getPositions() {
+    public Pos[] getPositions() {
         return positions;
     }
 
@@ -42,7 +43,9 @@ public class Clone {
         return false;
     }
 
-    private boolean equal(FastSet<Pos> pp1, FastSet<Pos> pp2) {
-        return pp1.containsAll(pp2) && pp2.containsAll(pp1);
+    private boolean equal(Pos[] pp1, Pos[] pp2) {
+        List<Pos> list1 = Arrays.asList(pp1);
+        List<Pos> list2 = Arrays.asList(pp2);
+        return list1.containsAll(list2) && list2.containsAll(list1);
     }
 }

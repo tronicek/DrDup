@@ -1,4 +1,4 @@
-package index;
+package plain;
 
 import com.sun.source.tree.Tree.Kind;
 import com.sun.tools.javac.code.Flags;
@@ -25,7 +25,6 @@ import com.sun.tools.javac.tree.JCTree.JCContinue;
 import com.sun.tools.javac.tree.JCTree.JCDoWhileLoop;
 import com.sun.tools.javac.tree.JCTree.JCEnhancedForLoop;
 import com.sun.tools.javac.tree.JCTree.JCErroneous;
-import com.sun.tools.javac.tree.JCTree.JCExpression;
 import com.sun.tools.javac.tree.JCTree.JCExpressionStatement;
 import com.sun.tools.javac.tree.JCTree.JCFieldAccess;
 import com.sun.tools.javac.tree.JCTree.JCForLoop;
@@ -62,26 +61,46 @@ import com.sun.tools.javac.tree.JCTree.JCWildcard;
 import com.sun.tools.javac.tree.JCTree.LetExpr;
 import com.sun.tools.javac.tree.JCTree.TypeBoundKind;
 import com.sun.tools.javac.tree.TreeInfo;
+import index.IndexScanner;
+import index.Pos;
 import java.util.List;
 import java.util.Properties;
 import javax.lang.model.element.ElementKind;
 import javax.tools.JavaFileObject;
 
 /**
- * The AST scanner that builds the simplified index.
+ * The AST scanner that builds the full index.
  *
  * @author Zdenek Tronicek, tronicek@tarleton.edu
  */
-public class SimplifiedIndexScanner extends IndexScanner {
+public class FullIndexScanner extends IndexScanner {
 
+    private final Trie trie;
     private int methodCount;
     private JCCompilationUnit currentUnit;
     private Stack stack = new Stack();
     private String srcFile;
     private int inMethod;
 
-    public SimplifiedIndexScanner(Properties conf) {
+    public FullIndexScanner(Properties conf) {
         super(conf);
+        trie = new Trie(conf);
+        logger.setIndex(trie);
+    }
+
+    @Override
+    public Trie getTrie() {
+        return trie;
+    }
+
+    @Override
+    public int getTrieNodeCount() {
+        return TrieNode.getCount();
+    }
+
+    @Override
+    public int getTrieEdgeCount() {
+        return TrieEdge.getCount();
     }
 
     private void scanBlock(JCTree t) {
@@ -163,6 +182,7 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
         if (!ignoreTypeArgs && !t.typeargs.isEmpty()) {
             addChild("TYPE_ARGS");
@@ -174,6 +194,7 @@ public class SimplifiedIndexScanner extends IndexScanner {
         scan(t.args);
         addChild("ARGS_END");
         addChildEnd(t);
+        stack.pop();
     }
 
     @Override
@@ -181,10 +202,12 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.cond);
         scan(t.detail);
         addChildEnd(t);
+        stack.pop();
     }
 
     @Override
@@ -192,10 +215,12 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.lhs);
         scan(t.rhs);
         addChildEnd(t);
+        stack.pop();
     }
 
     @Override
@@ -203,10 +228,12 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.lhs);
         scan(t.rhs);
         addChildEnd(t);
+        stack.pop();
     }
 
     @Override
@@ -214,39 +241,12 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
-        if (isEquality(t) && isLiteral(t.lhs) && !isLiteral(t.rhs)) {
-            scan(t.rhs);
-            scan(t.lhs);
-        } else {
-            scan(t.lhs);
-            scan(t.rhs);
-        }
+        scan(t.lhs);
+        scan(t.rhs);
         addChildEnd(t);
-    }
-
-    private boolean isEquality(JCBinary t) {
-        switch (t.getKind()) {
-            case EQUAL_TO:
-            case NOT_EQUAL_TO:
-                return true;
-        }
-        return false;
-    }
-
-    private boolean isLiteral(JCExpression t) {
-        switch (t.getKind()) {
-            case BOOLEAN_LITERAL:
-            case CHAR_LITERAL:
-            case DOUBLE_LITERAL:
-            case FLOAT_LITERAL:
-            case INT_LITERAL:
-            case LONG_LITERAL:
-            case NULL_LITERAL:
-            case STRING_LITERAL:
-                return true;
-        }
-        return false;
+        stack.pop();
     }
 
     @Override
@@ -254,11 +254,13 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         renameStrategy.enterBlock();
         addChild(t);
         scan(t.stats);
         addChildEnd(t);
         renameStrategy.exitBlock();
+        stack.pop();
     }
 
     @Override
@@ -266,7 +268,9 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
+        stack.pop();
     }
 
     @Override
@@ -274,10 +278,12 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.pat);
         scan(t.stats);
         addChildEnd(t);
+        stack.pop();
     }
 
     @Override
@@ -285,12 +291,14 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         renameStrategy.enterBlock();
         addChild(t);
         scan(t.param);
         scan(t.body);
         addChildEnd(t);
         renameStrategy.exitBlock();
+        stack.pop();
     }
 
     @Override
@@ -303,6 +311,7 @@ public class SimplifiedIndexScanner extends IndexScanner {
             scan(t.implementing);
             scan(t.defs);
         } else {
+            stack.push(trie.root, pos(t));
             addChild(t);
             scan(t.mods);
             scan(t.typarams);
@@ -314,6 +323,7 @@ public class SimplifiedIndexScanner extends IndexScanner {
             }
             scan(t.defs);
             addChildEnd(t);
+            stack.pop();
         }
         logger.exitClass(t);
     }
@@ -323,11 +333,13 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.cond);
         scan(t.truepart);
         scan(t.falsepart);
         addChildEnd(t);
+        stack.pop();
     }
 
     @Override
@@ -335,7 +347,9 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
+        stack.pop();
     }
 
     @Override
@@ -343,10 +357,12 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
         scanBlock(t.body);
         scan(t.cond);
         addChildEnd(t);
+        stack.pop();
     }
 
     @Override
@@ -359,9 +375,11 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.expr);
         addChildEnd(t);
+        stack.pop();
     }
 
     @Override
@@ -369,6 +387,7 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         renameStrategy.enterBlock();
         addChild(t);
         scan(t.init);
@@ -377,6 +396,7 @@ public class SimplifiedIndexScanner extends IndexScanner {
         scanBlock(t.body);
         addChildEnd(t);
         renameStrategy.exitBlock();
+        stack.pop();
     }
 
     @Override
@@ -384,6 +404,7 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         renameStrategy.enterBlock();
         addChild(t);
         scan(t.var);
@@ -391,6 +412,7 @@ public class SimplifiedIndexScanner extends IndexScanner {
         scanBlock(t.body);
         addChildEnd(t);
         renameStrategy.exitBlock();
+        stack.pop();
     }
 
     @Override
@@ -398,7 +420,9 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addIdentChild(t);
+        stack.pop();
     }
 
     private void addIdentChild(JCIdent t) {
@@ -426,11 +450,13 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.cond);
         scanBlock(t.thenpart);
         scanBlock(t.elsepart);
         addChildEnd(t);
+        stack.pop();
     }
 
     @Override
@@ -443,10 +469,12 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.indexed);
         scan(t.index);
         addChildEnd(t);
+        stack.pop();
     }
 
     @Override
@@ -454,9 +482,11 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.body);
         addChildEnd(t);
+        stack.pop();
     }
 
     @Override
@@ -464,12 +494,14 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         renameStrategy.enterBlock();
         addChild(t);
         scan(t.params);
         scan(t.body);
         addChildEnd(t);
         renameStrategy.exitBlock();
+        stack.pop();
     }
 
     @Override
@@ -482,7 +514,9 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild("LITERAL");
+        stack.pop();
     }
 
     @Override
@@ -517,7 +551,6 @@ public class SimplifiedIndexScanner extends IndexScanner {
 
     @Override
     public void visitModifiers(JCModifiers t) {
-        // ignore flags
         scan(t.annotations);
     }
 
@@ -526,12 +559,14 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.annotations);
         scan(t.elemtype);
         scan(t.dims);
         scan(t.elems);
         addChildEnd(t);
+        stack.pop();
     }
 
     @Override
@@ -540,6 +575,7 @@ public class SimplifiedIndexScanner extends IndexScanner {
             scan(t.def);
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.encl);
         scanConstructor(t.clazz);
@@ -553,6 +589,7 @@ public class SimplifiedIndexScanner extends IndexScanner {
         addChild("ARGS_END");
         scan(t.def);
         addChildEnd(t);
+        stack.pop();
     }
 
     private void parseTypeArgs(List<Type> typeargs) {
@@ -578,10 +615,12 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.expr);
         scan(t.typeargs);
         addChildEnd(t);
+        stack.pop();
     }
 
     @Override
@@ -589,9 +628,11 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.expr);
         addChildEnd(t);
+        stack.pop();
     }
 
     @Override
@@ -599,6 +640,7 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
         Symbol sym = t.sym;
         if (sym != null) {
@@ -616,6 +658,7 @@ public class SimplifiedIndexScanner extends IndexScanner {
         }
         scan(t.selected);
         addChildEnd(t);
+        stack.pop();
     }
 
     @Override
@@ -628,10 +671,12 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.selector);
         scan(t.cases);
         addChildEnd(t);
+        stack.pop();
     }
 
     @Override
@@ -639,10 +684,12 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.lock);
         scan(t.body);
         addChildEnd(t);
+        stack.pop();
     }
 
     @Override
@@ -650,9 +697,11 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.expr);
         addChildEnd(t);
+        stack.pop();
     }
 
     @Override
@@ -687,6 +736,7 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         renameStrategy.enterBlock();
         addChild(t);
         scan(t.resources);
@@ -695,6 +745,7 @@ public class SimplifiedIndexScanner extends IndexScanner {
         scan(t.finalizer);
         addChildEnd(t);
         renameStrategy.exitBlock();
+        stack.pop();
     }
 
     @Override
@@ -702,6 +753,7 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.clazz);
         if (!ignoreTypeArgs && !t.arguments.isEmpty()) {
@@ -710,6 +762,7 @@ public class SimplifiedIndexScanner extends IndexScanner {
             addChild("TYPE_ARGS_END");
         }
         addChildEnd(t);
+        stack.pop();
     }
 
     @Override
@@ -717,9 +770,11 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.elemtype);
         addChildEnd(t);
+        stack.pop();
     }
 
     @Override
@@ -732,10 +787,12 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.clazz);
         scan(t.expr);
         addChildEnd(t);
+        stack.pop();
     }
 
     @Override
@@ -743,9 +800,11 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.alternatives);
         addChildEnd(t);
+        stack.pop();
     }
 
     @Override
@@ -753,8 +812,10 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         String s = renameStrategy.renamePrimitiveType(t.getPrimitiveTypeKind());
         addChild(s);
+        stack.pop();
     }
 
     @Override
@@ -762,9 +823,11 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.bounds);
         addChildEnd(t);
+        stack.pop();
     }
 
     @Override
@@ -772,10 +835,12 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.annotations);
         scan(t.bounds);
         addChildEnd(t);
+        stack.pop();
     }
 
     @Override
@@ -783,10 +848,12 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.expr);
         scan(t.clazz);
         addChildEnd(t);
+        stack.pop();
     }
 
     @Override
@@ -794,9 +861,11 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.arg);
         addChildEnd(t);
+        stack.pop();
     }
 
     @Override
@@ -805,6 +874,7 @@ public class SimplifiedIndexScanner extends IndexScanner {
             scan(t.init);
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.mods);
         scan(t.vartype);
@@ -814,6 +884,7 @@ public class SimplifiedIndexScanner extends IndexScanner {
         renameStrategy.declareVar(k, t.name.toString());
         scan(t.init);
         addChildEnd(t);
+        stack.pop();
     }
 
     @Override
@@ -821,10 +892,12 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.cond);
         scanBlock(t.body);
         addChildEnd(t);
+        stack.pop();
     }
 
     @Override
@@ -832,9 +905,11 @@ public class SimplifiedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
+        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.kind);
         scan(t.inner);
         addChildEnd(t);
+        stack.pop();
     }
 }

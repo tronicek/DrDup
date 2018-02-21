@@ -55,7 +55,18 @@ public class MethodTokens {
         return distMap.get(mt.getTid());
     }
 
-    public void computeDistanceTo(MethodTokens mt, int maxDistance) {
+    public void computeDistanceTo(MethodTokens mt, int maxDistance, boolean useSegmentDistance) {
+        int d;
+        if (useSegmentDistance) {
+            d = approxSegmentDistance(mt, maxDistance);
+        } else {
+            d = levenshteinDistance(mt, maxDistance);
+        }
+        distMap.put(mt.tid, d);
+        mt.distMap.put(tid, d);
+    }
+
+    private int levenshteinDistance(MethodTokens mt, int maxDistance) {
         int n = tokens.size();
         int[] d = new int[n + 1];
         for (int i = 0; i <= n; i++) {
@@ -86,8 +97,38 @@ public class MethodTokens {
             d = nd;
             nd = p;
         }
-        distMap.put(mt.tid, d[n]);
-        mt.distMap.put(tid, d[n]);
+        return d[n];
+    }
+
+    private int approxSegmentDistance(MethodTokens mt, int maxDistance) {
+        int d = -1, i = 0;
+        while (i < mt.tokens.size()) {
+            i = find(mt.tokens, i);
+            d++;
+            if (d > maxDistance) {
+                break;
+            }
+        }
+        return d;
+    }
+
+    private int find(List<String> tt, int index) {
+        int max = index + 1;
+        for (int i = 0; i < tokens.size(); i++) {
+            int j = index;
+            while (j < tt.size()) {
+                String t1 = tokens.get(i + j - index);
+                String t2 = tt.get(j);
+                if (!t1.equals(t2)) {
+                    break;
+                }
+                j++;
+            }
+            if (j > max) {
+                max = j;
+            }
+        }
+        return max;
     }
 
     private int min(int a, int b, int c) {

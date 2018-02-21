@@ -16,7 +16,7 @@ public class Logger {
     private static final Logger instance = new Logger();
     private final Deque<String> classes = new ArrayDeque<>();
     private final Deque<String> methods = new ArrayDeque<>();
-    private Trie trie;
+    private Index trie;
     private boolean output;
 
     private Logger() {
@@ -26,7 +26,7 @@ public class Logger {
         return instance;
     }
 
-    public void setTrie(Trie trie) {
+    public void setIndex(Index trie) {
         this.trie = trie;
     }
 

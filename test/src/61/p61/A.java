@@ -2,15 +2,13 @@ package p61;
 
 public class A {
 
-    void print(String str) {
-        if (str != null) {
-            System.out.println(str);
+    void print(int x) {
+        while (x > 10) {
+            x /= 2;
         }
     }
 
-    void display(String str) {
-        if (null != str) {
-            System.out.println(str);
-        }
+    void display(int x) {
+        while (x > 10) x /= 2;
     }
 }

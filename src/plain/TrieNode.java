@@ -1,5 +1,7 @@
-package index;
+package plain;
 
+import index.Logger;
+import index.Pos;
 import java.io.Serializable;
 
 /**

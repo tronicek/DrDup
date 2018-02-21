@@ -10,6 +10,8 @@ import com.sun.tools.javac.main.Option;
 import com.sun.tools.javac.tree.JCTree.JCCompilationUnit;
 import com.sun.tools.javac.util.Context;
 import com.sun.tools.javac.util.Options;
+import compressed.FullCompressedIndexScanner;
+import compressed.SimplifiedCompressedIndexScanner;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.FileVisitResult;
@@ -26,6 +28,8 @@ import javax.tools.DiagnosticListener;
 import javax.tools.JavaFileManager;
 import javax.tools.JavaFileObject;
 import nicad.NiCadConvertor;
+import plain.FullIndexScanner;
+import plain.SimplifiedIndexScanner;
 
 /**
  * The connection with javac.
@@ -36,6 +40,7 @@ public class Engine {
 
     private final Properties conf;
     private final String index;
+    private final boolean compressed;
     private final boolean printStats;
     private final boolean printTrie;
     private final int type;
@@ -49,6 +54,7 @@ public class Engine {
     public Engine(Properties conf) {
         this.conf = conf;
         index = conf.getProperty("index", "full");
+        compressed = Boolean.parseBoolean(conf.getProperty("compressed", "false"));
         printStats = Boolean.parseBoolean(conf.getProperty("printStats"));
         printTrie = Boolean.parseBoolean(conf.getProperty("printTrie"));
         type = Integer.parseInt(conf.getProperty("type", "2"));
@@ -152,24 +158,24 @@ public class Engine {
         IndexScanner scan;
         switch (index) {
             case "simplified":
-                scan = new SimplifiedIndexScanner(conf);
+                scan = compressed ? new SimplifiedCompressedIndexScanner(conf) : new SimplifiedIndexScanner(conf);
                 break;
             case "full":
             default:
-                scan = new FullIndexScanner(conf);
+                scan = compressed ? new FullCompressedIndexScanner(conf) : new FullIndexScanner(conf);
         }
         CountingScanner cscan = printStats ? new CountingScanner() : null;
         for (JCCompilationUnit cu : units) {
             cu.accept(scan);
             if (printStats) {
                 cu.accept(cscan);
-                stats.store(cscan.getLines(), cscan.getNodes(), TrieNode.getCount(), TrieEdge.getCount(), Pos.getCount());
+                stats.store(cscan.getLines(), cscan.getNodes(), scan.getTrieNodeCount(), scan.getTrieEdgeCount(), Pos.getCount());
             }
         }
         if (printStats) {
             stats.print();
         }
-        Trie trie = scan.getTrie();
+        Index trie = scan.getTrie();
         if (printTrie) {
             trie.print();
         }
@@ -178,7 +184,7 @@ public class Engine {
         }
         switch (type) {
             case 3:
-                clones = trie.detectClonesType3(distance, minSize);
+                clones = trie.detectClonesType3(minSize, distance);
                 break;
             case 2:
             default:

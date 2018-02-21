@@ -1,7 +1,11 @@
-package index;
+package compressed;
 
 import clones.Clone;
 import clones.CloneSet;
+import index.Index;
+import index.Method;
+import index.MethodTokens;
+import index.Pos;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.Serializable;
@@ -21,38 +25,44 @@ import java.util.TreeMap;
 import java.util.TreeSet;
 
 /**
- * The implementation of the TRIE.
+ * The implementation of the compressed TRIE.
  *
  * @author Zdenek Tronicek, tronicek@tarleton.edu
  */
-public class Trie implements Serializable {
+public class CompressedTrie implements Index, Serializable {
 
     private static final long serialVersionUID = 1L;
-    protected final TrieNode root = new TrieNode();
+    protected final CompressedTrieNode root = new CompressedTrieNode();
     private final boolean printTokens;
     private final boolean printSimilarity;
+    private final boolean useSegmentDistance;
+    private final int segmentRangeCoefficient;
 
-    public Trie(Properties conf) {
+    public CompressedTrie(Properties conf) {
         printTokens = Boolean.parseBoolean(conf.getProperty("printTokens"));
         printSimilarity = Boolean.parseBoolean(conf.getProperty("printSimilarity"));
+        String metric = conf.getProperty("metric", "Levenshtein");
+        useSegmentDistance = metric.equals("segment");
+        segmentRangeCoefficient = Integer.parseInt(conf.getProperty("segmentRangeCoefficient", "20"));
     }
 
-    public TrieNode getRoot() {
+    public CompressedTrieNode getRoot() {
         return root;
     }
 
+    @Override
     public CloneSet detectClonesType2(int minSize) {
         CloneSet clones = new CloneSet();
-        List<TrieNode> nodes = new ArrayList<>();
+        List<CompressedTrieNode> nodes = new ArrayList<>();
         List<Pos[]> positions = new ArrayList<>();
-        TrieEdge edge = root.findEdge("METHOD");
+        CompressedTrieEdge edge = root.findEdge("METHOD");
         if (edge == null) {
             return clones;
         }
         nodes.add(edge.getDestination());
         positions.add(edge.getPositions());
         while (!nodes.isEmpty()) {
-            TrieNode node = nodes.remove(0);
+            CompressedTrieNode node = nodes.remove(0);
             Pos[] pp = positions.remove(0);
             if (node.isLeaf()) {
                 if (pp.length > 1 && minimumSize(pp) >= minSize) {
@@ -61,7 +71,7 @@ public class Trie implements Serializable {
                 }
                 continue;
             }
-            for (TrieEdge e : node.getEdges()) {
+            for (CompressedTrieEdge e : node.getEdges()) {
                 nodes.add(e.getDestination());
                 positions.add(e.getPositions());
             }
@@ -80,12 +90,14 @@ public class Trie implements Serializable {
         return minSize;
     }
 
-    public CloneSet detectClonesType3(int distance, int minSize) {
+    @Override
+    public CloneSet detectClonesType3(int minSize, int distance) {
         List<Method> methods = createMethodList(minSize);
         Map<Integer, Set<MethodTokens>> tokensMap = createTokensSizeMap(methods);
+        int coef = useSegmentDistance ? segmentRangeCoefficient : 1;
         for (Integer size : tokensMap.keySet()) {
             List<MethodTokens> mts = new ArrayList<>();
-            for (int i = size - distance; i <= size + distance; i++) {
+            for (int i = size - coef * distance; i <= size + coef * distance; i++) {
                 Set<MethodTokens> p = tokensMap.get(i);
                 if (p != null) {
                     mts.addAll(p);
@@ -112,9 +124,9 @@ public class Trie implements Serializable {
 
     private List<Method> createMethodList(int minSize) {
         List<Method> mm = new ArrayList<>();
-        List<TrieNode> nodes = new ArrayList<>();
+        List<CompressedTrieNode> nodes = new ArrayList<>();
         List<Pos[]> positions = new ArrayList<>();
-        TrieEdge edge = root.findEdge("METHOD");
+        CompressedTrieEdge edge = root.findEdge("METHOD");
         if (edge == null) {
             return mm;
         }
@@ -122,10 +134,10 @@ public class Trie implements Serializable {
         positions.add(edge.getPositions());
         List<List<String>> tokens = new ArrayList<>();
         List<String> seq = new ArrayList<>();
-        seq.add("METHOD");
+        seq.addAll(edge.getLabel());
         tokens.add(seq);
         while (!nodes.isEmpty()) {
-            TrieNode node = nodes.remove(0);
+            CompressedTrieNode node = nodes.remove(0);
             Pos[] pp = positions.remove(0);
             List<String> tt = tokens.remove(0);
             if (node.isLeaf()) {
@@ -138,12 +150,12 @@ public class Trie implements Serializable {
                 }
                 continue;
             }
-            for (TrieEdge e : node.getEdges()) {
+            for (CompressedTrieEdge e : node.getEdges()) {
                 nodes.add(e.getDestination());
                 positions.add(e.getPositions());
                 List<String> tt2 = new ArrayList<>();
                 tt2.addAll(tt);
-                tt2.add(e.getLabel());
+                tt2.addAll(e.getLabel());
                 tokens.add(tt2);
             }
         }
@@ -172,7 +184,7 @@ public class Trie implements Serializable {
                     continue;
                 }
                 if (mt1.getDistanceTo(mt2) == null) {
-                    mt1.computeDistanceTo(mt2, maxDistance);
+                    mt1.computeDistanceTo(mt2, maxDistance, useSegmentDistance);
                 }
             }
         }
@@ -208,7 +220,7 @@ public class Trie implements Serializable {
 
     private Map<Integer, Pos> createPosMap() {
         Map<Integer, Pos> map = new HashMap<>();
-        TrieEdge edge = root.findEdge("METHOD");
+        CompressedTrieEdge edge = root.findEdge("METHOD");
         if (edge == null) {
             return map;
         }
@@ -230,6 +242,7 @@ public class Trie implements Serializable {
         return map;
     }
 
+    @Override
     public void print() {
         root.print();
     }
@@ -243,24 +256,24 @@ public class Trie implements Serializable {
     }
 
     public void printMethods(List<String> tokens) {
-        TrieNode p = root;
+        CompressedTrieNode p = root;
         Pos[] pos = null;
         for (String token : tokens) {
-            TrieEdge edge = p.findEdge(token);
+            CompressedTrieEdge edge = p.findEdge(token);
             p = edge.getDestination();
             pos = edge.getPositions();
         }
-        List<TrieNode> nodes = new ArrayList<>();
+        List<CompressedTrieNode> nodes = new ArrayList<>();
         nodes.add(p);
         List<Pos[]> positions = new ArrayList<>();
         positions.add(pos);
         while (!nodes.isEmpty()) {
-            TrieNode node = nodes.remove(0);
+            CompressedTrieNode node = nodes.remove(0);
             Pos[] ps = positions.remove(0);
             if (node.isLeaf()) {
                 System.out.printf("pos: %s%n", Arrays.asList(ps));
             }
-            for (TrieEdge edge : node.getEdges()) {
+            for (CompressedTrieEdge edge : node.getEdges()) {
                 nodes.add(edge.getDestination());
                 positions.add(edge.getPositions());
             }
@@ -275,10 +288,11 @@ public class Trie implements Serializable {
         System.out.println("--- End of similarity map ---");
     }
 
+    @Override
     public void writeMethods(String file) throws IOException {
         Path path = Paths.get(file);
         try (BufferedWriter out = Files.newBufferedWriter(path)) {
-            TrieEdge edge = root.findEdge("METHOD");
+            CompressedTrieEdge edge = root.findEdge("METHOD");
             for (Pos pos : edge.getPositions()) {
                 String f = pos.getFile().replace("\\", "/");
                 String s = String.format("%s|%d|%d|%d|%d", f, pos.getStart(), pos.getEnd(), pos.getStartLine(), pos.getEndLine());

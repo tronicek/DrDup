@@ -1,5 +1,6 @@
-package index;
+package plain;
 
+import index.Pos;
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Iterator;
@@ -11,7 +12,7 @@ import java.util.Iterator;
  */
 public class Stack implements Iterable<StackNode> {
 
-    Deque<StackNode> nodes = new ArrayDeque<>();
+    private final Deque<StackNode> nodes = new ArrayDeque<>();
 
     public void push(TrieNode node, Pos pos) {
         StackNode p = new StackNode(node, pos);

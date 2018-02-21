@@ -1,0 +1,1018 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<clones>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/GrabKeyDialog.java" startline="54" endline="60"/>
+        <source file="org/gjt/sp/jedit/gui/GrabKeyDialog.java" startline="73" endline="79"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/BshClassManager.java" startline="604" endline="608"/>
+        <source file="org/gjt/sp/jedit/io/VFS.java" startline="231" endline="236"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/tray/JEditSwingTrayIcon.java" startline="95" endline="101"/>
+        <source file="org/gjt/sp/jedit/gui/tray/JTrayIconManager.java" startline="47" endline="52"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/io/FileVFS.java" startline="290" endline="295"/>
+        <source file="org/gjt/sp/jedit/io/FileVFS.java" startline="298" endline="303"/>
+        <source file="org/gjt/sp/jedit/io/FileVFS.java" startline="306" endline="311"/>
+        <source file="org/gjt/sp/jedit/io/FileVFS.java" startline="314" endline="319"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/jedit/io/Native2ASCIIEncoding.java" startline="151" endline="157"/>
+        <source file="org/jedit/io/Native2ASCIIEncoding.java" startline="159" endline="165"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="1778" endline="1783"/>
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="1805" endline="1810"/>
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="1830" endline="1835"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/JEditKillRing.java" startline="191" endline="196"/>
+        <source file="org/gjt/sp/jedit/JEditRegisterSaver.java" startline="184" endline="189"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/io/CharsetEncoding.java" startline="52" endline="60"/>
+        <source file="org/gjt/sp/jedit/io/CharsetEncoding.java" startline="62" endline="68"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/browser/VFSFileChooserDialog.java" startline="84" endline="90"/>
+        <source file="org/gjt/sp/jedit/browser/VFSFileChooserDialog.java" startline="99" endline="105"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/GrabKeyDialog.java" startline="324" endline="331"/>
+        <source file="org/gjt/sp/jedit/pluginmgr/PluginList.java" startline="504" endline="510"/>
+        <source file="org/gjt/sp/jedit/ServiceManager.java" startline="328" endline="335"/>
+        <source file="org/gjt/sp/jedit/syntax/Token.java" startline="148" endline="154"/>
+        <source file="org/gjt/sp/jedit/textarea/Selection.java" startline="376" endline="382"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/JEditActionSet.java" startline="342" endline="347"/>
+        <source file="org/jedit/keymap/KeymapImpl.java" startline="88" endline="93"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/FontSelectorDialog.java" startline="48" endline="53"/>
+        <source file="org/gjt/sp/jedit/gui/FontSelectorDialog.java" startline="56" endline="61"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="installer/CBZip2InputStream.java" startline="664" endline="669"/>
+        <source file="installer/CBZip2OutputStream.java" startline="504" endline="509"/>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/OptionsDialog.java" startline="597" endline="608"/>
+        <source file="org/jedit/options/OptionGroupPane.java" startline="419" endline="429"/>
+        <source file="org/jedit/options/PluginOptionGroup.java" startline="120" endline="130"/>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <source file="installer/OperatingSystem.java" startline="147" endline="156"/>
+        <source file="installer/OperatingSystem.java" startline="219" endline="226"/>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <source file="org/gjt/sp/jedit/msg/EditPaneUpdate.java" startline="68" endline="75"/>
+        <source file="org/gjt/sp/jedit/msg/ViewUpdate.java" startline="71" endline="79"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/EditAbbrevDialog.java" startline="40" endline="45"/>
+        <source file="org/gjt/sp/jedit/gui/EditAbbrevDialog.java" startline="48" endline="53"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/EditAbbrevDialog.java" startline="56" endline="62"/>
+        <source file="org/gjt/sp/jedit/gui/EditAbbrevDialog.java" startline="65" endline="71"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/statusbar/TaskMonitorWidgetFactory.java" startline="93" endline="98"/>
+        <source file="org/gjt/sp/jedit/gui/StatusBar.java" startline="175" endline="180"/>
+        <source file="org/gjt/sp/jedit/gui/StatusBar.java" startline="183" endline="188"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="1764" endline="1770"/>
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="1792" endline="1797"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/ReturnControl.java" startline="46" endline="50"/>
+        <source file="org/gjt/sp/jedit/bsh/Variable.java" startline="14" endline="19"/>
+        <source file="org/gjt/sp/jedit/buffer/UndoManager.java" startline="516" endline="521"/>
+        <source file="org/gjt/sp/jedit/gui/tray/JEditSwingTrayIcon.java" startline="174" endline="179"/>
+        <source file="org/gjt/sp/jedit/help/HelpHistoryModel.java" startline="219" endline="224"/>
+        <source file="org/gjt/sp/jedit/io/LocalFileSaveTask.java" startline="41" endline="46"/>
+        <source file="org/gjt/sp/jedit/jEdit.java" startline="4709" endline="4714"/>
+        <source file="org/gjt/sp/jedit/Marker.java" startline="73" endline="78"/>
+        <source file="org/gjt/sp/jedit/options/SyntaxHiliteOptionPane.java" startline="245" endline="250"/>
+        <source file="org/gjt/sp/jedit/search/DirectoryListSet.java" startline="41" endline="46"/>
+        <source file="org/gjt/sp/jedit/syntax/SyntaxStyle.java" startline="42" endline="47"/>
+        <source file="org/gjt/sp/jedit/textarea/BufferHandler.java" startline="55" endline="62"/>
+        <source file="org/gjt/sp/jedit/textarea/ColumnBlock.java" startline="121" endline="126"/>
+        <source file="org/gjt/sp/jedit/textarea/ColumnBlockLine.java" startline="31" endline="36"/>
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="5788" endline="5793"/>
+        <source file="org/gjt/sp/util/SegmentCharSequence.java" startline="38" endline="43"/>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/FontSelectorDialog.java" startline="64" endline="71"/>
+        <source file="org/gjt/sp/jedit/gui/FontSelectorDialog.java" startline="74" endline="81"/>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <source file="org/gjt/sp/jedit/indent/IndentRuleFactory.java" startline="29" endline="36"/>
+        <source file="org/gjt/sp/jedit/indent/IndentRuleFactory.java" startline="57" endline="65"/>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <source file="org/gjt/sp/jedit/help/HelpViewer.java" startline="637" endline="644"/>
+        <source file="org/gjt/sp/jedit/help/HelpViewer.java" startline="646" endline="653"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/TextUtilities.java" startline="300" endline="305"/>
+        <source file="org/gjt/sp/jedit/TextUtilities.java" startline="517" endline="522"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/TextUtilities.java" startline="334" endline="339"/>
+        <source file="org/gjt/sp/jedit/TextUtilities.java" startline="551" endline="556"/>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/PingPongList.java" startline="165" endline="172"/>
+        <source file="org/gjt/sp/jedit/gui/PingPongList.java" startline="175" endline="182"/>
+        <source file="org/gjt/sp/jedit/textarea/Gutter.java" startline="379" endline="386"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/JavaCharStream.java" startline="491" endline="497"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="60" endline="67"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/textarea/Selection.java" startline="436" endline="441"/>
+        <source file="org/gjt/sp/jedit/textarea/Selection.java" startline="444" endline="449"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/buffer/JEditBuffer.java" startline="2385" endline="2390"/>
+        <source file="org/gjt/sp/jedit/buffer/JEditBuffer.java" startline="2397" endline="2402"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/statusbar/BufferSetWidgetFactory.java" startline="72" endline="77"/>
+        <source file="org/gjt/sp/jedit/gui/statusbar/LastModifiedWidgetFactory.java" startline="75" endline="80"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/util/Task.java" startline="82" endline="87"/>
+        <source file="org/gjt/sp/util/Task.java" startline="89" endline="94"/>
+        <source file="org/gjt/sp/util/Task.java" startline="96" endline="101"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="installer/TarEntry.java" startline="195" endline="200"/>
+        <source file="installer/TarEntry.java" startline="262" endline="267"/>
+        <source file="installer/TarEntry.java" startline="285" endline="290"/>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <source file="installer/SwingInstall.java" startline="710" endline="719"/>
+        <source file="installer/SwingInstall.java" startline="768" endline="777"/>
+    </clone>
+    <clone nlines="14" similarity="100">
+        <source file="org/gjt/sp/util/IOUtilities.java" startline="200" endline="213"/>
+        <source file="org/gjt/sp/util/IOUtilities.java" startline="221" endline="234"/>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/OptionsDialog.java" startline="584" endline="595"/>
+        <source file="org/gjt/sp/jedit/gui/OptionsDialog.java" startline="610" endline="622"/>
+        <source file="org/jedit/options/OptionGroupPane.java" startline="407" endline="417"/>
+        <source file="org/jedit/options/OptionGroupPane.java" startline="431" endline="442"/>
+        <source file="org/jedit/options/PluginOptionGroup.java" startline="108" endline="118"/>
+        <source file="org/jedit/options/PluginOptionGroup.java" startline="132" endline="143"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/jedit/options/TabbedOptionDialog.java" startline="79" endline="85"/>
+        <source file="org/jedit/options/TabbedOptionDialog.java" startline="88" endline="94"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="net/sourceforge/jarbundler/AppBundleProperties.java" startline="210" endline="215"/>
+        <source file="net/sourceforge/jarbundler/AppBundleProperties.java" startline="245" endline="250"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/View.java" startline="959" endline="965"/>
+        <source file="org/gjt/sp/jedit/View.java" startline="1042" endline="1048"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/ActionListHandler.java" startline="175" endline="182"/>
+        <source file="org/gjt/sp/jedit/gui/DockableWindowFactory.java" startline="368" endline="375"/>
+        <source file="org/gjt/sp/jedit/pluginmgr/MirrorListHandler.java" startline="137" endline="142"/>
+        <source file="org/gjt/sp/jedit/ServiceListHandler.java" startline="139" endline="146"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/textarea/Anchor.java" startline="92" endline="97"/>
+        <source file="org/gjt/sp/jedit/textarea/Anchor.java" startline="99" endline="104"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/statusbar/MultiSelectWidgetFactory.java" startline="65" endline="71"/>
+        <source file="org/gjt/sp/jedit/gui/statusbar/OverwriteWidgetFactory.java" startline="68" endline="74"/>
+        <source file="org/gjt/sp/jedit/gui/statusbar/RectSelectWidgetFactory.java" startline="67" endline="73"/>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <source file="org/gjt/sp/jedit/PropertyManager.java" startline="224" endline="235"/>
+        <source file="org/gjt/sp/jedit/PropertyManager.java" startline="238" endline="249"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/EvalError.java" startline="106" endline="111"/>
+        <source file="org/gjt/sp/jedit/bsh/EvalError.java" startline="113" endline="118"/>
+        <source file="org/gjt/sp/jedit/bsh/EvalError.java" startline="120" endline="125"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/TextAreaDialog.java" startline="36" endline="42"/>
+        <source file="org/gjt/sp/jedit/gui/TextAreaDialog.java" startline="54" endline="60"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/ExternalNameSpace.java" startline="74" endline="80"/>
+        <source file="org/gjt/sp/jedit/bsh/ExternalNameSpace.java" startline="161" endline="167"/>
+    </clone>
+    <clone nlines="9" similarity="100">
+        <source file="org/gjt/sp/jedit/ActionSet.java" startline="321" endline="329"/>
+        <source file="org/gjt/sp/jedit/textarea/StandaloneTextArea.java" startline="623" endline="632"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/DockingLayoutManager.java" startline="244" endline="250"/>
+        <source file="org/gjt/sp/jedit/gui/DockingLayoutManager.java" startline="252" endline="258"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="installer/TarEntry.java" startline="92" endline="97"/>
+        <source file="installer/TarEntry.java" startline="105" endline="111"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="net/sourceforge/jarbundler/JavaProperty.java" startline="48" endline="54"/>
+        <source file="net/sourceforge/jarbundler/JavaProperty.java" startline="72" endline="78"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/NameSpace.java" startline="440" endline="446"/>
+        <source file="org/gjt/sp/jedit/bsh/NameSpace.java" startline="453" endline="459"/>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <source file="org/gjt/sp/jedit/TextUtilities.java" startline="353" endline="360"/>
+        <source file="org/gjt/sp/jedit/TextUtilities.java" startline="570" endline="577"/>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <source file="org/gjt/sp/util/Log.java" startline="490" endline="497"/>
+        <source file="org/gjt/sp/util/Log.java" startline="500" endline="507"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/CompleteWord.java" startline="353" endline="359"/>
+        <source file="org/gjt/sp/jedit/help/HelpIndex.java" startline="383" endline="389"/>
+        <source file="org/gjt/sp/jedit/options/ToolBarOptionPane.java" startline="260" endline="266"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="82" endline="87"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="98" endline="103"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/FilteredListModel.java" startline="63" endline="68"/>
+        <source file="org/gjt/sp/jedit/gui/FilteredTableModel.java" startline="86" endline="91"/>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <source file="org/gjt/sp/jedit/buffer/JEditBuffer.java" startline="1471" endline="1478"/>
+        <source file="org/gjt/sp/jedit/buffer/JEditBuffer.java" startline="1487" endline="1494"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/FilteredListModel.java" startline="256" endline="261"/>
+        <source file="org/gjt/sp/jedit/gui/FilteredTableModel.java" startline="216" endline="222"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/PanelWindowContainer.java" startline="669" endline="674"/>
+        <source file="org/gjt/sp/jedit/gui/PanelWindowContainer.java" startline="677" endline="682"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/DockingLayoutManager.java" startline="260" endline="266"/>
+        <source file="org/gjt/sp/jedit/gui/DockingLayoutManager.java" startline="268" endline="274"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/FilteredListModel.java" startline="78" endline="83"/>
+        <source file="org/gjt/sp/jedit/gui/FilteredTableModel.java" startline="105" endline="110"/>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <source file="org/gjt/sp/jedit/io/FavoritesVFS.java" startline="247" endline="258"/>
+        <source file="org/gjt/sp/jedit/io/FileRootsVFS.java" startline="162" endline="172"/>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <source file="org/gjt/sp/jedit/JEditKillRing.java" startline="49" endline="56"/>
+        <source file="org/gjt/sp/jedit/JEditRegisterSaver.java" startline="42" endline="49"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/classpath/BshClassPath.java" startline="838" endline="843"/>
+        <source file="org/gjt/sp/jedit/bsh/classpath/BshClassPath.java" startline="859" endline="864"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/Primitive.java" startline="744" endline="750"/>
+        <source file="org/gjt/sp/jedit/bsh/Primitive.java" startline="752" endline="758"/>
+    </clone>
+    <clone nlines="9" similarity="100">
+        <source file="org/gjt/sp/jedit/jEdit.java" startline="3133" endline="3141"/>
+        <source file="org/gjt/sp/jedit/syntax/ModeProvider.java" startline="399" endline="407"/>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <source file="org/gjt/sp/jedit/textarea/JEditTextArea.java" startline="328" endline="339"/>
+        <source file="org/gjt/sp/jedit/textarea/JEditTextArea.java" startline="346" endline="357"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/search/SearchAndReplace.java" startline="300" endline="305"/>
+        <source file="org/gjt/sp/jedit/search/SearchAndReplace.java" startline="344" endline="349"/>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <source file="org/gjt/sp/jedit/PropertyManager.java" startline="84" endline="91"/>
+        <source file="org/gjt/sp/jedit/PropertyManager.java" startline="106" endline="113"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/textarea/Gutter.java" startline="125" endline="130"/>
+        <source file="org/gjt/sp/jedit/textarea/Gutter.java" startline="132" endline="137"/>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <source file="org/gjt/sp/jedit/GUIUtilities.java" startline="1144" endline="1152"/>
+        <source file="org/gjt/sp/jedit/GUIUtilities.java" startline="1169" endline="1176"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="4446" endline="4454"/>
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="4564" endline="4572"/>
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="4579" endline="4585"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/NameSpace.java" startline="491" endline="497"/>
+        <source file="org/gjt/sp/jedit/search/HyperSearchResult.java" startline="49" endline="54"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/syntax/DisplayTokenHandler.java" startline="554" endline="559"/>
+        <source file="org/gjt/sp/jedit/syntax/DisplayTokenHandler.java" startline="561" endline="566"/>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="89" endline="96"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="105" endline="112"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/NameSpace.java" startline="365" endline="370"/>
+        <source file="org/gjt/sp/jedit/bsh/NameSpace.java" startline="376" endline="382"/>
+        <source file="org/gjt/sp/jedit/bsh/NameSpace.java" startline="389" endline="395"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/datatransfer/RichTextTransferable.java" startline="56" endline="61"/>
+        <source file="org/gjt/sp/jedit/gui/BufferSwitcher.java" startline="248" endline="255"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/statusbar/EncodingWidgetFactory.java" startline="63" endline="68"/>
+        <source file="org/gjt/sp/jedit/gui/statusbar/FoldWidgetFactory.java" startline="64" endline="69"/>
+        <source file="org/gjt/sp/jedit/gui/statusbar/ModeWidgetFactory.java" startline="63" endline="68"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/search/CurrentBufferSet.java" startline="47" endline="53"/>
+        <source file="org/gjt/sp/jedit/search/CurrentBufferSet.java" startline="56" endline="62"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/NameSpace.java" startline="1516" endline="1522"/>
+        <source file="org/gjt/sp/jedit/bsh/NameSpace.java" startline="1523" endline="1529"/>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/Primitive.java" startline="898" endline="905"/>
+        <source file="org/gjt/sp/jedit/bsh/Primitive.java" startline="912" endline="919"/>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <source file="org/gjt/sp/util/TaskManager.java" startline="108" endline="115"/>
+        <source file="org/gjt/sp/util/TaskManager.java" startline="138" endline="145"/>
+        <source file="org/gjt/sp/util/TaskManager.java" startline="147" endline="154"/>
+        <source file="org/gjt/sp/util/TaskManager.java" startline="156" endline="163"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/Name.java" startline="1015" endline="1021"/>
+        <source file="org/gjt/sp/jedit/bsh/Name.java" startline="1038" endline="1044"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/FilteredListModel.java" startline="222" endline="227"/>
+        <source file="org/gjt/sp/jedit/gui/FilteredTableModel.java" startline="276" endline="281"/>
+    </clone>
+    <clone nlines="9" similarity="100">
+        <source file="org/gjt/sp/jedit/search/SearchAndReplace.java" startline="218" endline="226"/>
+        <source file="org/gjt/sp/jedit/search/SearchAndReplace.java" startline="245" endline="253"/>
+        <source file="org/gjt/sp/jedit/search/SearchAndReplace.java" startline="273" endline="281"/>
+    </clone>
+    <clone nlines="13" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/JCheckBoxList.java" startline="316" endline="328"/>
+        <source file="org/gjt/sp/jedit/options/BrowserColorsOptionPane.java" startline="340" endline="351"/>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <source file="org/gjt/sp/jedit/jEdit.java" startline="889" endline="896"/>
+        <source file="org/gjt/sp/jedit/textarea/StandaloneTextArea.java" startline="470" endline="477"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/statusbar/BufferSetWidgetFactory.java" startline="64" endline="70"/>
+        <source file="org/gjt/sp/jedit/gui/statusbar/LastModifiedWidgetFactory.java" startline="67" endline="73"/>
+    </clone>
+    <clone nlines="9" similarity="100">
+        <source file="org/gjt/sp/jedit/textarea/Anchor.java" startline="154" endline="162"/>
+        <source file="org/gjt/sp/jedit/textarea/Anchor.java" startline="169" endline="177"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/statusbar/ClockWidgetFactory.java" startline="107" endline="113"/>
+        <source file="org/gjt/sp/jedit/gui/statusbar/ErrorsWidgetFactory.java" startline="127" endline="133"/>
+        <source file="org/gjt/sp/jedit/gui/statusbar/MemoryStatusWidgetFactory.java" startline="131" endline="137"/>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <source file="org/gjt/sp/jedit/ActionListHandler.java" startline="144" endline="155"/>
+        <source file="org/gjt/sp/jedit/gui/DockableWindowFactory.java" startline="297" endline="308"/>
+        <source file="org/gjt/sp/jedit/pluginmgr/MirrorListHandler.java" startline="103" endline="113"/>
+        <source file="org/gjt/sp/jedit/pluginmgr/PluginListHandler.java" startline="203" endline="213"/>
+        <source file="org/gjt/sp/jedit/ServiceListHandler.java" startline="104" endline="114"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="3767" endline="3772"/>
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="3822" endline="3829"/>
+    </clone>
+    <clone nlines="14" similarity="100">
+        <source file="org/gjt/sp/jedit/options/AbbrevsOptionPane.java" startline="410" endline="422"/>
+        <source file="org/gjt/sp/jedit/options/BrowserColorsOptionPane.java" startline="291" endline="304"/>
+        <source file="org/gjt/sp/jedit/options/SyntaxHiliteOptionPane.java" startline="179" endline="191"/>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <source file="net/sourceforge/jarbundler/PropertyListWriter.java" startline="491" endline="498"/>
+        <source file="net/sourceforge/jarbundler/PropertyListWriter.java" startline="501" endline="508"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/pluginmgr/ManagePanel.java" startline="944" endline="950"/>
+        <source file="org/gjt/sp/jedit/pluginmgr/ManagePanel.java" startline="1176" endline="1182"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5706" endline="5711"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5721" endline="5726"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="114" endline="119"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="585" endline="592"/>
+    </clone>
+    <clone nlines="13" similarity="100">
+        <source file="org/gjt/sp/jedit/options/AbbrevsOptionPane.java" startline="442" endline="454"/>
+        <source file="org/gjt/sp/jedit/options/BrowserColorsOptionPane.java" startline="326" endline="337"/>
+        <source file="org/gjt/sp/jedit/options/SyntaxHiliteOptionPane.java" startline="204" endline="216"/>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <source file="org/gjt/sp/jedit/search/SearchAndReplace.java" startline="128" endline="137"/>
+        <source file="org/gjt/sp/jedit/search/SearchAndReplace.java" startline="145" endline="154"/>
+    </clone>
+    <clone nlines="14" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/Primitive.java" startline="714" endline="727"/>
+        <source file="org/gjt/sp/jedit/bsh/Primitive.java" startline="729" endline="742"/>
+    </clone>
+    <clone nlines="9" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3583" endline="3587"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3589" endline="3593"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3595" endline="3599"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3601" endline="3605"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3607" endline="3611"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3613" endline="3617"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3619" endline="3623"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3625" endline="3629"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3631" endline="3635"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3637" endline="3641"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3643" endline="3647"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3649" endline="3653"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3655" endline="3659"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3661" endline="3665"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3667" endline="3671"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3673" endline="3677"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3679" endline="3683"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3685" endline="3689"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3691" endline="3695"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3697" endline="3701"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3703" endline="3707"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3709" endline="3713"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3715" endline="3719"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3721" endline="3725"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3727" endline="3731"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3733" endline="3737"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3739" endline="3743"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3745" endline="3749"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3751" endline="3755"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3757" endline="3761"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3763" endline="3767"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="installer/TarEntry.java" startline="144" endline="150"/>
+        <source file="installer/TarEntry.java" startline="160" endline="166"/>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <source file="org/jedit/keymap/KeymapManagerImpl.java" startline="128" endline="137"/>
+        <source file="org/jedit/keymap/KeymapManagerImpl.java" startline="140" endline="149"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/textarea/Gutter.java" startline="258" endline="264"/>
+        <source file="org/gjt/sp/jedit/textarea/TextAreaPainter.java" startline="752" endline="759"/>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <source file="org/gjt/sp/jedit/options/ToolBarOptionPane.java" startline="290" endline="301"/>
+        <source file="org/gjt/sp/jedit/options/ToolBarOptionPane.java" startline="307" endline="318"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4157" endline="4162"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4575" endline="4580"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4721" endline="4726"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4781" endline="4786"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4932" endline="4937"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5141" endline="5146"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5338" endline="5343"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/ExtendedGridLayout.java" startline="1216" endline="1221"/>
+        <source file="org/gjt/sp/jedit/textarea/Selection.java" startline="126" endline="132"/>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="2992" endline="3003"/>
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="3012" endline="3023"/>
+    </clone>
+    <clone nlines="9" similarity="100">
+        <source file="org/gjt/sp/jedit/syntax/ParserRule.java" startline="261" endline="269"/>
+        <source file="org/gjt/sp/jedit/syntax/ParserRule.java" startline="272" endline="280"/>
+    </clone>
+    <clone nlines="9" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/LHS.java" startline="117" endline="125"/>
+        <source file="org/gjt/sp/jedit/bsh/LHS.java" startline="130" endline="138"/>
+        <source file="org/gjt/sp/jedit/bsh/LHS.java" startline="143" endline="151"/>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <source file="org/gjt/sp/jedit/buffer/UndoManager.java" startline="606" endline="617"/>
+        <source file="org/gjt/sp/jedit/buffer/UndoManager.java" startline="620" endline="631"/>
+    </clone>
+    <clone nlines="9" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4185" endline="4193"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4200" endline="4208"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4234" endline="4242"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4330" endline="4338"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4403" endline="4411"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4511" endline="4519"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4603" endline="4611"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4759" endline="4767"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4897" endline="4905"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5007" endline="5015"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5104" endline="5112"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5159" endline="5167"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5345" endline="5353"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3971" endline="3977"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4121" endline="4127"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5627" endline="5633"/>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/BufferOptions.java" startline="126" endline="133"/>
+        <source file="org/gjt/sp/jedit/gui/FilePropertiesDialog.java" startline="340" endline="353"/>
+        <source file="org/gjt/sp/jedit/gui/PasteFromListDialog.java" startline="288" endline="295"/>
+        <source file="org/gjt/sp/jedit/gui/SelectLineRange.java" startline="125" endline="132"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/browser/VFSFileChooserDialog.java" startline="427" endline="433"/>
+        <source file="org/gjt/sp/jedit/gui/FontSelectorDialog.java" startline="348" endline="354"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/textarea/DisplayManager.java" startline="197" endline="203"/>
+        <source file="org/gjt/sp/jedit/textarea/DisplayManager.java" startline="212" endline="218"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4840" endline="4845"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5578" endline="5583"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/TextAreaDialog.java" startline="45" endline="51"/>
+        <source file="org/gjt/sp/jedit/gui/TextAreaDialog.java" startline="63" endline="69"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="org/gjt/sp/jedit/textarea/TextAreaPainter.java" startline="290" endline="295"/>
+        <source file="org/gjt/sp/jedit/textarea/TextAreaPainter.java" startline="353" endline="358"/>
+        <source file="org/gjt/sp/jedit/textarea/TextAreaPainter.java" startline="519" endline="524"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5713" endline="5719"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5728" endline="5734"/>
+    </clone>
+    <clone nlines="9" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/EnhancedButton.java" startline="83" endline="91"/>
+        <source file="org/gjt/sp/jedit/gui/EnhancedButton.java" startline="104" endline="112"/>
+        <source file="org/gjt/sp/jedit/menu/EnhancedCheckBoxMenuItem.java" startline="178" endline="187"/>
+        <source file="org/gjt/sp/jedit/menu/EnhancedCheckBoxMenuItem.java" startline="201" endline="210"/>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3807" endline="3815"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3828" endline="3836"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3864" endline="3872"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3905" endline="3913"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3946" endline="3954"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4250" endline="4258"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4260" endline="4268"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4501" endline="4509"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4543" endline="4551"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4728" endline="4736"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5061" endline="5069"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5355" endline="5363"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5464" endline="5472"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5485" endline="5493"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5534" endline="5542"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5590" endline="5598"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5671" endline="5679"/>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/FilteredListModel.java" startline="236" endline="246"/>
+        <source file="org/gjt/sp/jedit/gui/FilteredTableModel.java" startline="290" endline="300"/>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <source file="net/sourceforge/jarbundler/AppBundleProperties.java" startline="418" endline="429"/>
+        <source file="net/sourceforge/jarbundler/AppBundleProperties.java" startline="439" endline="451"/>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <source file="org/gjt/sp/jedit/search/SearchAndReplace.java" startline="1440" endline="1449"/>
+        <source file="org/gjt/sp/jedit/textarea/Selection.java" startline="754" endline="763"/>
+    </clone>
+    <clone nlines="17" similarity="100">
+        <source file="org/gjt/sp/jedit/jEdit.java" startline="765" endline="781"/>
+        <source file="org/gjt/sp/jedit/jEdit.java" startline="784" endline="800"/>
+        <source file="org/gjt/sp/jedit/textarea/StandaloneTextArea.java" startline="367" endline="383"/>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <source file="org/gjt/sp/jedit/PluginJAR.java" startline="317" endline="328"/>
+        <source file="org/gjt/sp/jedit/PluginJAR.java" startline="338" endline="349"/>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4281" endline="4288"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4534" endline="4541"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4634" endline="4641"/>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4691" endline="4698"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4700" endline="4707"/>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <source file="org/gjt/sp/jedit/buffer/UndoManager.java" startline="452" endline="459"/>
+        <source file="org/gjt/sp/jedit/buffer/UndoManager.java" startline="499" endline="506"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3845" endline="3851"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5071" endline="5077"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5079" endline="5085"/>
+    </clone>
+    <clone nlines="16" similarity="100">
+        <source file="installer/CBZip2InputStream.java" startline="277" endline="292"/>
+        <source file="installer/CBZip2InputStream.java" startline="364" endline="379"/>
+    </clone>
+    <clone nlines="6" similarity="100">
+        <source file="de/masters_of_disaster/ant/tasks/ar/Ar.java" startline="279" endline="284"/>
+        <source file="de/masters_of_disaster/ant/tasks/deb/Deb.java" startline="336" endline="341"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="121" endline="127"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="470" endline="476"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="594" endline="602"/>
+    </clone>
+    <clone nlines="16" similarity="100">
+        <source file="org/gjt/sp/jedit/buffer/JEditBuffer.java" startline="2566" endline="2581"/>
+        <source file="org/gjt/sp/jedit/buffer/JEditBuffer.java" startline="2584" endline="2599"/>
+        <source file="org/gjt/sp/jedit/buffer/JEditBuffer.java" startline="2602" endline="2617"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/browser/FileCellRenderer.java" startline="53" endline="59"/>
+        <source file="org/gjt/sp/jedit/gui/FilesChangedDialog.java" startline="401" endline="407"/>
+        <source file="org/gjt/sp/jedit/gui/OptionsDialog.java" startline="500" endline="506"/>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3853" endline="3862"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3889" endline="3898"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3930" endline="3939"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5314" endline="5323"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5426" endline="5435"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5474" endline="5483"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5523" endline="5532"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5686" endline="5695"/>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5114" endline="5123"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5148" endline="5157"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5649" endline="5658"/>
+    </clone>
+    <clone nlines="14" similarity="100">
+        <source file="org/gjt/sp/jedit/BeanShell.java" startline="212" endline="225"/>
+        <source file="org/gjt/sp/jedit/BeanShell.java" startline="247" endline="260"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="129" endline="135"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="478" endline="484"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="604" endline="612"/>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5279" endline="5290"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5325" endline="5336"/>
+    </clone>
+    <clone nlines="17" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/OptionsDialog.java" startline="141" endline="158"/>
+        <source file="org/jedit/options/TabbedOptionDialog.java" startline="140" endline="156"/>
+    </clone>
+    <clone nlines="19" similarity="100">
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="5411" endline="5429"/>
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="5432" endline="5450"/>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/NameSpace.java" startline="888" endline="899"/>
+        <source file="org/gjt/sp/jedit/bsh/NameSpace.java" startline="1578" endline="1590"/>
+        <source file="org/gjt/sp/jedit/bsh/NameSpace.java" startline="1594" endline="1605"/>
+    </clone>
+    <clone nlines="14" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/PingPongList.java" startline="133" endline="146"/>
+        <source file="org/gjt/sp/jedit/gui/PingPongList.java" startline="149" endline="162"/>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <source file="org/gjt/sp/jedit/textarea/Selection.java" startline="416" endline="423"/>
+        <source file="org/gjt/sp/jedit/textarea/Selection.java" startline="426" endline="433"/>
+    </clone>
+    <clone nlines="9" similarity="100">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1412" endline="1420"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1455" endline="1463"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1495" endline="1503"/>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <source file="org/gjt/sp/jedit/textarea/TextAreaMouseHandler.java" startline="548" endline="559"/>
+        <source file="org/gjt/sp/jedit/textarea/TextAreaMouseHandler.java" startline="567" endline="578"/>
+    </clone>
+    <clone nlines="23" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/Primitive.java" startline="672" endline="691"/>
+        <source file="org/gjt/sp/jedit/bsh/Primitive.java" startline="693" endline="712"/>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/classpath/ClassManagerImpl.java" startline="244" endline="253"/>
+        <source file="org/gjt/sp/jedit/bsh/classpath/ClassManagerImpl.java" startline="259" endline="272"/>
+    </clone>
+    <clone nlines="18" similarity="100">
+        <source file="org/gjt/sp/jedit/buffer/JEditBuffer.java" startline="2466" endline="2483"/>
+        <source file="org/gjt/sp/jedit/buffer/JEditBuffer.java" startline="2486" endline="2503"/>
+        <source file="org/gjt/sp/jedit/buffer/JEditBuffer.java" startline="2506" endline="2523"/>
+        <source file="org/gjt/sp/jedit/buffer/JEditBuffer.java" startline="2526" endline="2543"/>
+    </clone>
+    <clone nlines="9" similarity="100">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1392" endline="1400"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1475" endline="1483"/>
+    </clone>
+    <clone nlines="15" similarity="100">
+        <source file="org/gjt/sp/jedit/Buffer.java" startline="1733" endline="1747"/>
+        <source file="org/gjt/sp/jedit/Buffer.java" startline="1750" endline="1764"/>
+        <source file="org/gjt/sp/jedit/Buffer.java" startline="1767" endline="1781"/>
+        <source file="org/gjt/sp/jedit/Buffer.java" startline="1784" endline="1798"/>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/EnhancedDialog.java" startline="101" endline="112"/>
+        <source file="org/gjt/sp/jedit/gui/EnhancedDialog.java" startline="114" endline="125"/>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/EnhancedButton.java" startline="93" endline="102"/>
+        <source file="org/gjt/sp/jedit/menu/EnhancedCheckBoxMenuItem.java" startline="189" endline="199"/>
+    </clone>
+    <clone nlines="13" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/BshClassManager.java" startline="254" endline="266"/>
+        <source file="org/gjt/sp/jedit/bsh/BshClassManager.java" startline="271" endline="283"/>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="451" endline="458"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="614" endline="623"/>
+    </clone>
+    <clone nlines="18" similarity="100">
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="5216" endline="5234"/>
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="5368" endline="5385"/>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4481" endline="4488"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4613" endline="4620"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5206" endline="5213"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/browser/BrowserView.java" startline="413" endline="419"/>
+        <source file="org/gjt/sp/jedit/search/HyperSearchResults.java" startline="983" endline="990"/>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/org/objectweb/asm/ClassWriter.java" startline="685" endline="694"/>
+        <source file="org/gjt/sp/jedit/bsh/org/objectweb/asm/ClassWriter.java" startline="857" endline="866"/>
+    </clone>
+    <clone nlines="17" similarity="100">
+        <source file="org/gjt/sp/jedit/buffer/JEditBuffer.java" startline="583" endline="599"/>
+        <source file="org/gjt/sp/jedit/buffer/JEditBuffer.java" startline="660" endline="676"/>
+    </clone>
+    <clone nlines="17" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/statusbar/MultiSelectWidgetFactory.java" startline="81" endline="98"/>
+        <source file="org/gjt/sp/jedit/gui/statusbar/OverwriteWidgetFactory.java" startline="86" endline="102"/>
+        <source file="org/gjt/sp/jedit/gui/statusbar/RectSelectWidgetFactory.java" startline="82" endline="98"/>
+    </clone>
+    <clone nlines="15" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4811" endline="4825"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5437" endline="5451"/>
+    </clone>
+    <clone nlines="15" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/FilteredListModel.java" startline="163" endline="177"/>
+        <source file="org/gjt/sp/jedit/gui/FilteredTableModel.java" startline="185" endline="199"/>
+    </clone>
+    <clone nlines="7" similarity="100">
+        <source file="org/gjt/sp/jedit/textarea/ScrollLayout.java" startline="159" endline="165"/>
+        <source file="org/gjt/sp/jedit/textarea/ScrollLayout.java" startline="195" endline="201"/>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1444" endline="1453"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1505" endline="1514"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1527" endline="1536"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1549" endline="1558"/>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1433" endline="1442"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1516" endline="1525"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1538" endline="1547"/>
+    </clone>
+    <clone nlines="14" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/org/objectweb/asm/ClassWriter.java" startline="706" endline="719"/>
+        <source file="org/gjt/sp/jedit/bsh/org/objectweb/asm/ClassWriter.java" startline="731" endline="744"/>
+        <source file="org/gjt/sp/jedit/bsh/org/objectweb/asm/ClassWriter.java" startline="756" endline="769"/>
+    </clone>
+    <clone nlines="29" similarity="100">
+        <source file="org/gjt/sp/jedit/Macros.java" startline="151" endline="181"/>
+        <source file="org/gjt/sp/jedit/Macros.java" startline="191" endline="219"/>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/statusbar/MultiSelectWidgetFactory.java" startline="100" endline="112"/>
+        <source file="org/gjt/sp/jedit/gui/statusbar/OverwriteWidgetFactory.java" startline="106" endline="117"/>
+        <source file="org/gjt/sp/jedit/gui/statusbar/RectSelectWidgetFactory.java" startline="100" endline="112"/>
+    </clone>
+    <clone nlines="21" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/OptionsDialog.java" startline="642" endline="662"/>
+        <source file="org/gjt/sp/jedit/gui/OptionsDialog.java" startline="664" endline="684"/>
+        <source file="org/gjt/sp/jedit/gui/OptionsDialog.java" startline="686" endline="706"/>
+        <source file="org/gjt/sp/jedit/gui/OptionsDialog.java" startline="708" endline="728"/>
+        <source file="org/jedit/options/OptionGroupPane.java" startline="459" endline="479"/>
+        <source file="org/jedit/options/OptionGroupPane.java" startline="481" endline="501"/>
+        <source file="org/jedit/options/OptionGroupPane.java" startline="503" endline="523"/>
+        <source file="org/jedit/options/OptionGroupPane.java" startline="525" endline="545"/>
+        <source file="org/jedit/options/PluginOptionGroup.java" startline="160" endline="180"/>
+        <source file="org/jedit/options/PluginOptionGroup.java" startline="182" endline="202"/>
+        <source file="org/jedit/options/PluginOptionGroup.java" startline="204" endline="224"/>
+        <source file="org/jedit/options/PluginOptionGroup.java" startline="226" endline="246"/>
+    </clone>
+    <clone nlines="16" similarity="100">
+        <source file="org/gjt/sp/jedit/buffer/PositionManager.java" startline="67" endline="82"/>
+        <source file="org/gjt/sp/jedit/buffer/PositionManager.java" startline="85" endline="101"/>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <source file="org/gjt/sp/jedit/options/StatusBarOptionPane.java" startline="267" endline="274"/>
+        <source file="org/gjt/sp/jedit/options/ToolBarOptionPane.java" startline="169" endline="176"/>
+    </clone>
+    <clone nlines="17" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/statusbar/EncodingWidgetFactory.java" startline="56" endline="70"/>
+        <source file="org/gjt/sp/jedit/gui/statusbar/FoldWidgetFactory.java" startline="57" endline="71"/>
+        <source file="org/gjt/sp/jedit/gui/statusbar/ModeWidgetFactory.java" startline="56" endline="70"/>
+    </clone>
+    <clone nlines="9" similarity="100">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="137" endline="145"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="797" endline="805"/>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="486" endline="495"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="542" endline="551"/>
+    </clone>
+    <clone nlines="18" similarity="100">
+        <source file="org/gjt/sp/jedit/textarea/JEditTextArea.java" startline="104" endline="121"/>
+        <source file="org/gjt/sp/jedit/textarea/JEditTextArea.java" startline="127" endline="145"/>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="268" endline="278"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="314" endline="324"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="418" endline="428"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="677" endline="687"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="743" endline="755"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="859" endline="869"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1010" endline="1020"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1071" endline="1081"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1180" endline="1190"/>
+    </clone>
+    <clone nlines="18" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/ParserTokenManager.java" startline="1152" endline="1169"/>
+        <source file="org/gjt/sp/jedit/bsh/ParserTokenManager.java" startline="1170" endline="1187"/>
+        <source file="org/gjt/sp/jedit/bsh/ParserTokenManager.java" startline="1188" endline="1205"/>
+        <source file="org/gjt/sp/jedit/bsh/ParserTokenManager.java" startline="1206" endline="1223"/>
+        <source file="org/gjt/sp/jedit/bsh/ParserTokenManager.java" startline="1224" endline="1241"/>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/ExtendedGridLayout.java" startline="344" endline="354"/>
+        <source file="org/gjt/sp/jedit/gui/ExtendedGridLayout.java" startline="365" endline="375"/>
+        <source file="org/gjt/sp/jedit/gui/ExtendedGridLayout.java" startline="386" endline="396"/>
+    </clone>
+    <clone nlines="19" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/statusbar/MultiSelectWidgetFactory.java" startline="57" endline="73"/>
+        <source file="org/gjt/sp/jedit/gui/statusbar/OverwriteWidgetFactory.java" startline="60" endline="76"/>
+        <source file="org/gjt/sp/jedit/gui/statusbar/RectSelectWidgetFactory.java" startline="59" endline="75"/>
+    </clone>
+    <clone nlines="19" similarity="100">
+        <source file="org/gjt/sp/jedit/buffer/JEditBuffer.java" startline="469" endline="487"/>
+        <source file="org/gjt/sp/jedit/buffer/JEditBuffer.java" startline="557" endline="575"/>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <source file="org/gjt/sp/jedit/textarea/ScrollLayout.java" startline="147" endline="157"/>
+        <source file="org/gjt/sp/jedit/textarea/ScrollLayout.java" startline="168" endline="178"/>
+        <source file="org/gjt/sp/jedit/textarea/ScrollLayout.java" startline="183" endline="193"/>
+        <source file="org/gjt/sp/jedit/textarea/ScrollLayout.java" startline="204" endline="214"/>
+    </clone>
+    <clone nlines="13" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/statusbar/LineSepWidgetFactory.java" startline="99" endline="112"/>
+        <source file="org/gjt/sp/jedit/gui/statusbar/WrapWidgetFactory.java" startline="105" endline="117"/>
+    </clone>
+    <clone nlines="30" similarity="100">
+        <source file="org/gjt/sp/jedit/GUIUtilities.java" startline="690" endline="719"/>
+        <source file="org/gjt/sp/jedit/GUIUtilities.java" startline="734" endline="763"/>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="1740" endline="1759"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="1761" endline="1780"/>
+    </clone>
+    <clone nlines="16" similarity="100">
+        <source file="de/masters_of_disaster/ant/tasks/ar/ArUtils.java" startline="87" endline="102"/>
+        <source file="de/masters_of_disaster/ant/tasks/ar/ArUtils.java" startline="113" endline="128"/>
+        <source file="de/masters_of_disaster/ant/tasks/ar/ArUtils.java" startline="139" endline="154"/>
+    </clone>
+    <clone nlines="19" similarity="100">
+        <source file="org/gjt/sp/jedit/GUIUtilities.java" startline="1422" endline="1440"/>
+        <source file="org/gjt/sp/jedit/GUIUtilities.java" startline="1443" endline="1461"/>
+    </clone>
+    <clone nlines="17" similarity="100">
+        <source file="org/gjt/sp/jedit/gui/FilePropertiesDialog.java" startline="169" endline="185"/>
+        <source file="org/gjt/sp/jedit/gui/FilePropertiesDialog.java" startline="272" endline="288"/>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="1353" endline="1364"/>
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="1394" endline="1405"/>
+    </clone>
+    <clone nlines="26" similarity="100">
+        <source file="org/gjt/sp/jedit/textarea/JEditTextArea.java" startline="151" endline="177"/>
+        <source file="org/gjt/sp/jedit/textarea/JEditTextArea.java" startline="183" endline="208"/>
+    </clone>
+    <clone nlines="24" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/ParserTokenManager.java" startline="961" endline="982"/>
+        <source file="org/gjt/sp/jedit/bsh/ParserTokenManager.java" startline="1003" endline="1024"/>
+        <source file="org/gjt/sp/jedit/bsh/ParserTokenManager.java" startline="1025" endline="1046"/>
+    </clone>
+    <clone nlines="28" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3331" endline="3357"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3359" endline="3385"/>
+    </clone>
+    <clone nlines="28" similarity="100">
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="4300" endline="4327"/>
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="4334" endline="4361"/>
+    </clone>
+    <clone nlines="27" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3774" endline="3800"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4365" endline="4391"/>
+    </clone>
+    <clone nlines="33" similarity="100">
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="4368" endline="4400"/>
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="4407" endline="4439"/>
+    </clone>
+    <clone nlines="34" similarity="100">
+        <source file="org/gjt/sp/jedit/TextUtilities.java" startline="972" endline="1005"/>
+        <source file="org/gjt/sp/jedit/TextUtilities.java" startline="1008" endline="1041"/>
+    </clone>
+    <clone nlines="35" similarity="100">
+        <source file="org/gjt/sp/jedit/buffer/JEditBuffer.java" startline="2102" endline="2136"/>
+        <source file="org/gjt/sp/jedit/buffer/JEditBuffer.java" startline="2144" endline="2179"/>
+    </clone>
+    <clone nlines="13" similarity="100">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="711" endline="725"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1042" endline="1054"/>
+    </clone>
+    <clone nlines="14" similarity="100">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="727" endline="741"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1056" endline="1069"/>
+    </clone>
+    <clone nlines="37" similarity="100">
+        <source file="org/gjt/sp/jedit/textarea/Selection.java" startline="309" endline="345"/>
+        <source file="org/gjt/sp/jedit/textarea/Selection.java" startline="711" endline="747"/>
+    </clone>
+    <clone nlines="17" similarity="100">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="222" endline="238"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="497" endline="513"/>
+    </clone>
+    <clone nlines="47" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="1181" endline="1222"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="1224" endline="1265"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="1267" endline="1308"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="1342" endline="1383"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="1385" endline="1426"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="1582" endline="1623"/>
+    </clone>
+    <clone nlines="14" similarity="100">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="647" endline="660"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="829" endline="842"/>
+    </clone>
+    <clone nlines="14" similarity="100">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="662" endline="675"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="844" endline="857"/>
+    </clone>
+    <clone nlines="63" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/Primitive.java" startline="437" endline="497"/>
+        <source file="org/gjt/sp/jedit/bsh/Primitive.java" startline="499" endline="559"/>
+    </clone>
+    <clone nlines="19" similarity="100">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="689" endline="709"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1022" endline="1040"/>
+    </clone>
+    <clone nlines="53" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/ParseException.java" startline="221" endline="264"/>
+        <source file="org/gjt/sp/jedit/bsh/TokenMgrError.java" startline="40" endline="83"/>
+    </clone>
+    <clone nlines="21" similarity="100">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="625" endline="645"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="807" endline="827"/>
+    </clone>
+    <clone nlines="78" similarity="100">
+        <source file="org/gjt/sp/jedit/bsh/Primitive.java" startline="283" endline="357"/>
+        <source file="org/gjt/sp/jedit/bsh/Primitive.java" startline="360" endline="434"/>
+    </clone>
+</clones>

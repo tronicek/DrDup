@@ -1,4 +1,4 @@
-package index;
+package compressed;
 
 import com.sun.source.tree.Tree.Kind;
 import com.sun.tools.javac.code.Flags;
@@ -25,7 +25,6 @@ import com.sun.tools.javac.tree.JCTree.JCContinue;
 import com.sun.tools.javac.tree.JCTree.JCDoWhileLoop;
 import com.sun.tools.javac.tree.JCTree.JCEnhancedForLoop;
 import com.sun.tools.javac.tree.JCTree.JCErroneous;
-import com.sun.tools.javac.tree.JCTree.JCExpression;
 import com.sun.tools.javac.tree.JCTree.JCExpressionStatement;
 import com.sun.tools.javac.tree.JCTree.JCFieldAccess;
 import com.sun.tools.javac.tree.JCTree.JCForLoop;
@@ -62,26 +61,48 @@ import com.sun.tools.javac.tree.JCTree.JCWildcard;
 import com.sun.tools.javac.tree.JCTree.LetExpr;
 import com.sun.tools.javac.tree.JCTree.TypeBoundKind;
 import com.sun.tools.javac.tree.TreeInfo;
+import index.IndexScanner;
+import index.Pos;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 import javax.lang.model.element.ElementKind;
 import javax.tools.JavaFileObject;
 
 /**
- * The AST scanner that builds the full index.
+ * The AST scanner that builds the compressed TRIE.
  *
  * @author Zdenek Tronicek, tronicek@tarleton.edu
  */
-public class FullIndexScanner extends IndexScanner {
+public class SimplifiedCompressedIndexScanner extends IndexScanner {
 
+    private final CompressedTrie trie;
     private int methodCount;
     private JCCompilationUnit currentUnit;
-    private Stack stack = new Stack();
+    private EStack stack = new EStack();
     private String srcFile;
     private int inMethod;
+    private final List<String> linearization = new ArrayList<>();
 
-    public FullIndexScanner(Properties conf) {
+    public SimplifiedCompressedIndexScanner(Properties conf) {
         super(conf);
+        trie = new CompressedTrie(conf);
+        logger.setIndex(trie);
+    }
+
+    @Override
+    public CompressedTrie getTrie() {
+        return trie;
+    }
+
+    @Override
+    public int getTrieNodeCount() {
+        return CompressedTrieNode.getCount();
+    }
+
+    @Override
+    public int getTrieEdgeCount() {
+        return CompressedTrieEdge.getCount();
     }
 
     private void scanBlock(JCTree t) {
@@ -99,6 +120,24 @@ public class FullIndexScanner extends IndexScanner {
         addChild(s);
     }
 
+    private void addChildRoot(JCTree t, Pos pos) {
+        Kind k = t.getKind();
+        addChildRoot(k.name(), pos);
+    }
+
+    private void addChildRoot(String label, Pos pos) {
+        extendTrie(label);
+        CompressedTrieEdge edge = trie.root.findEdge(label);
+        if (edge == null) {
+            edge = trie.root.addEdge(linearization, linearization.size() - 1, pos);
+            stack.push(new EStackNode(edge, linearization.size(), pos));
+        } else {
+            edge.addPosition(pos);
+            stack.push(new EStackNode(edge, edge.getStart() + 1, pos));
+        }
+        //trie.print();
+    }
+
     private void addChild(JCTree t) {
         Kind k = t.getKind();
         addChild(k.name());
@@ -110,12 +149,52 @@ public class FullIndexScanner extends IndexScanner {
     }
 
     private void addChild(String label) {
-        Stack s = new Stack();
-        for (StackNode node : stack) {
+        extendTrie(label);
+    }
+
+    private void extendTrie(String label) {
+        //System.out.printf("extendTrie: %s, stack: %s%n", label, stack);
+        linearization.add(label);
+        EStack s = new EStack();
+        for (EStackNode node : stack) {
             Pos pos = node.getPos();
-            TrieNode tnode = node.getNode();
-            TrieNode p = tnode.addChild(label, pos);
-            s.push(new StackNode(p, pos));
+            CompressedTrieEdge edge = node.getEdge();
+            int end = node.getEnd();
+            if (end == edge.getEnd()) {
+                if (edge.getEnd() == linearization.size() - 1) {
+                    edge.setEnd(end + 1);
+                    s.push(new EStackNode(edge, end + 1, pos));
+                } else {
+                    CompressedTrieNode dest = edge.getDestination();
+                    CompressedTrieEdge e = dest.findEdge(label);
+                    if (e == null) {
+                        e = dest.addEdge(linearization, linearization.size() - 1, pos);
+                    }
+                    e.addPosition(pos);
+                    s.push(new EStackNode(e, e.getStart() + 1, pos));
+                }
+            } else {
+                String token = linearization.get(end);
+                if (token.equals(label)) {
+                    s.push(new EStackNode(edge, end + 1, pos));
+                } else {
+                    CompressedTrieNode p = new CompressedTrieNode();
+                    CompressedTrieEdge e2 = new CompressedTrieEdge(linearization, end, edge.getEnd(), edge.getDestination());
+                    for (Pos pp : edge.getPositions()) {
+                        if (!pp.equals(pos)) {
+                            e2.addPosition(pp);
+                        }
+                    }
+                    p.addEdge(e2);
+                    edge.setEnd(end);
+                    edge.setDestination(p);
+                    CompressedTrieNode r = new CompressedTrieNode();
+                    CompressedTrieEdge e3 = new CompressedTrieEdge(linearization, linearization.size() - 1, linearization.size(), r);
+                    e3.addPosition(pos);
+                    p.addEdge(e3);
+                    s.push(new EStackNode(e3, linearization.size(), pos));
+                }
+            }
         }
         stack = s;
     }
@@ -163,7 +242,6 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
         if (!ignoreTypeArgs && !t.typeargs.isEmpty()) {
             addChild("TYPE_ARGS");
@@ -175,7 +253,6 @@ public class FullIndexScanner extends IndexScanner {
         scan(t.args);
         addChild("ARGS_END");
         addChildEnd(t);
-        stack.pop();
     }
 
     @Override
@@ -183,12 +260,10 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.cond);
         scan(t.detail);
         addChildEnd(t);
-        stack.pop();
     }
 
     @Override
@@ -196,12 +271,10 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.lhs);
         scan(t.rhs);
         addChildEnd(t);
-        stack.pop();
     }
 
     @Override
@@ -209,12 +282,10 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.lhs);
         scan(t.rhs);
         addChildEnd(t);
-        stack.pop();
     }
 
     @Override
@@ -222,41 +293,10 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
-        if (isEquality(t) && isLiteral(t.lhs) && !isLiteral(t.rhs)) {
-            scan(t.rhs);
-            scan(t.lhs);
-        } else {
-            scan(t.lhs);
-            scan(t.rhs);
-        }
+        scan(t.lhs);
+        scan(t.rhs);
         addChildEnd(t);
-        stack.pop();
-    }
-
-    private boolean isEquality(JCBinary t) {
-        switch (t.getKind()) {
-            case EQUAL_TO:
-            case NOT_EQUAL_TO:
-                return true;
-        }
-        return false;
-    }
-
-    private boolean isLiteral(JCExpression t) {
-        switch (t.getKind()) {
-            case BOOLEAN_LITERAL:
-            case CHAR_LITERAL:
-            case DOUBLE_LITERAL:
-            case FLOAT_LITERAL:
-            case INT_LITERAL:
-            case LONG_LITERAL:
-            case NULL_LITERAL:
-            case STRING_LITERAL:
-                return true;
-        }
-        return false;
     }
 
     @Override
@@ -264,13 +304,11 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         renameStrategy.enterBlock();
         addChild(t);
         scan(t.stats);
         addChildEnd(t);
         renameStrategy.exitBlock();
-        stack.pop();
     }
 
     @Override
@@ -278,9 +316,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
-        stack.pop();
     }
 
     @Override
@@ -288,12 +324,10 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.pat);
         scan(t.stats);
         addChildEnd(t);
-        stack.pop();
     }
 
     @Override
@@ -301,14 +335,12 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         renameStrategy.enterBlock();
         addChild(t);
         scan(t.param);
         scan(t.body);
         addChildEnd(t);
         renameStrategy.exitBlock();
-        stack.pop();
     }
 
     @Override
@@ -321,7 +353,6 @@ public class FullIndexScanner extends IndexScanner {
             scan(t.implementing);
             scan(t.defs);
         } else {
-            stack.push(trie.root, pos(t));
             addChild(t);
             scan(t.mods);
             scan(t.typarams);
@@ -333,7 +364,6 @@ public class FullIndexScanner extends IndexScanner {
             }
             scan(t.defs);
             addChildEnd(t);
-            stack.pop();
         }
         logger.exitClass(t);
     }
@@ -343,13 +373,11 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.cond);
         scan(t.truepart);
         scan(t.falsepart);
         addChildEnd(t);
-        stack.pop();
     }
 
     @Override
@@ -357,9 +385,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
-        stack.pop();
     }
 
     @Override
@@ -367,12 +393,10 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
         scanBlock(t.body);
         scan(t.cond);
         addChildEnd(t);
-        stack.pop();
     }
 
     @Override
@@ -385,11 +409,9 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.expr);
         addChildEnd(t);
-        stack.pop();
     }
 
     @Override
@@ -397,7 +419,6 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         renameStrategy.enterBlock();
         addChild(t);
         scan(t.init);
@@ -406,7 +427,6 @@ public class FullIndexScanner extends IndexScanner {
         scanBlock(t.body);
         addChildEnd(t);
         renameStrategy.exitBlock();
-        stack.pop();
     }
 
     @Override
@@ -414,7 +434,6 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         renameStrategy.enterBlock();
         addChild(t);
         scan(t.var);
@@ -422,7 +441,6 @@ public class FullIndexScanner extends IndexScanner {
         scanBlock(t.body);
         addChildEnd(t);
         renameStrategy.exitBlock();
-        stack.pop();
     }
 
     @Override
@@ -430,9 +448,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addIdentChild(t);
-        stack.pop();
     }
 
     private void addIdentChild(JCIdent t) {
@@ -460,13 +476,11 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.cond);
         scanBlock(t.thenpart);
         scanBlock(t.elsepart);
         addChildEnd(t);
-        stack.pop();
     }
 
     @Override
@@ -479,12 +493,10 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.indexed);
         scan(t.index);
         addChildEnd(t);
-        stack.pop();
     }
 
     @Override
@@ -492,11 +504,9 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.body);
         addChildEnd(t);
-        stack.pop();
     }
 
     @Override
@@ -504,14 +514,12 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         renameStrategy.enterBlock();
         addChild(t);
         scan(t.params);
         scan(t.body);
         addChildEnd(t);
         renameStrategy.exitBlock();
-        stack.pop();
     }
 
     @Override
@@ -524,9 +532,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild("LITERAL");
-        stack.pop();
     }
 
     @Override
@@ -538,9 +544,8 @@ public class FullIndexScanner extends IndexScanner {
         methodCount++;
         logger.enterMethod(t);
         inMethod++;
-        stack.push(trie.root, pos(t));
         renameStrategy.enterMethod();
-        addChild(t);
+        addChildRoot(t, pos(t));
         scan(t.mods);
         scan(t.typarams);
         scan(t.restype);
@@ -570,14 +575,12 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.annotations);
         scan(t.elemtype);
         scan(t.dims);
         scan(t.elems);
         addChildEnd(t);
-        stack.pop();
     }
 
     @Override
@@ -586,7 +589,6 @@ public class FullIndexScanner extends IndexScanner {
             scan(t.def);
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.encl);
         scanConstructor(t.clazz);
@@ -600,7 +602,6 @@ public class FullIndexScanner extends IndexScanner {
         addChild("ARGS_END");
         scan(t.def);
         addChildEnd(t);
-        stack.pop();
     }
 
     private void parseTypeArgs(List<Type> typeargs) {
@@ -626,12 +627,10 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.expr);
         scan(t.typeargs);
         addChildEnd(t);
-        stack.pop();
     }
 
     @Override
@@ -639,11 +638,9 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.expr);
         addChildEnd(t);
-        stack.pop();
     }
 
     @Override
@@ -651,7 +648,6 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
         Symbol sym = t.sym;
         if (sym != null) {
@@ -669,7 +665,6 @@ public class FullIndexScanner extends IndexScanner {
         }
         scan(t.selected);
         addChildEnd(t);
-        stack.pop();
     }
 
     @Override
@@ -682,12 +677,10 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.selector);
         scan(t.cases);
         addChildEnd(t);
-        stack.pop();
     }
 
     @Override
@@ -695,12 +688,10 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.lock);
         scan(t.body);
         addChildEnd(t);
-        stack.pop();
     }
 
     @Override
@@ -708,11 +699,9 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.expr);
         addChildEnd(t);
-        stack.pop();
     }
 
     @Override
@@ -747,7 +736,6 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         renameStrategy.enterBlock();
         addChild(t);
         scan(t.resources);
@@ -756,7 +744,6 @@ public class FullIndexScanner extends IndexScanner {
         scan(t.finalizer);
         addChildEnd(t);
         renameStrategy.exitBlock();
-        stack.pop();
     }
 
     @Override
@@ -764,7 +751,6 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.clazz);
         if (!ignoreTypeArgs && !t.arguments.isEmpty()) {
@@ -773,7 +759,6 @@ public class FullIndexScanner extends IndexScanner {
             addChild("TYPE_ARGS_END");
         }
         addChildEnd(t);
-        stack.pop();
     }
 
     @Override
@@ -781,11 +766,9 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.elemtype);
         addChildEnd(t);
-        stack.pop();
     }
 
     @Override
@@ -798,12 +781,10 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.clazz);
         scan(t.expr);
         addChildEnd(t);
-        stack.pop();
     }
 
     @Override
@@ -811,11 +792,9 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.alternatives);
         addChildEnd(t);
-        stack.pop();
     }
 
     @Override
@@ -823,10 +802,8 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         String s = renameStrategy.renamePrimitiveType(t.getPrimitiveTypeKind());
         addChild(s);
-        stack.pop();
     }
 
     @Override
@@ -834,11 +811,9 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.bounds);
         addChildEnd(t);
-        stack.pop();
     }
 
     @Override
@@ -846,12 +821,10 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.annotations);
         scan(t.bounds);
         addChildEnd(t);
-        stack.pop();
     }
 
     @Override
@@ -859,12 +832,10 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.expr);
         scan(t.clazz);
         addChildEnd(t);
-        stack.pop();
     }
 
     @Override
@@ -872,11 +843,9 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.arg);
         addChildEnd(t);
-        stack.pop();
     }
 
     @Override
@@ -885,7 +854,6 @@ public class FullIndexScanner extends IndexScanner {
             scan(t.init);
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.mods);
         scan(t.vartype);
@@ -895,7 +863,6 @@ public class FullIndexScanner extends IndexScanner {
         renameStrategy.declareVar(k, t.name.toString());
         scan(t.init);
         addChildEnd(t);
-        stack.pop();
     }
 
     @Override
@@ -903,12 +870,10 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.cond);
         scanBlock(t.body);
         addChildEnd(t);
-        stack.pop();
     }
 
     @Override
@@ -916,11 +881,9 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
         addChild(t);
         scan(t.kind);
         scan(t.inner);
         addChildEnd(t);
-        stack.pop();
     }
 }

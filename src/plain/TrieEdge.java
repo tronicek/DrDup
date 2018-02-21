@@ -1,6 +1,7 @@
-package index;
+package plain;
 
 import java.io.Serializable;
+import index.Pos;
 
 /**
  * The edge of the TRIE.

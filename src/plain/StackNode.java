@@ -1,4 +1,6 @@
-package index;
+package plain;
+
+import index.Pos;
 
 /**
  * The stack node.

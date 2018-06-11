@@ -92,6 +92,7 @@ public class FullCompressedIndexScanner extends IndexScanner {
 
     @Override
     public CompressedTrie getTrie() {
+        trie.checkDegree();
         return trie;
     }
 
@@ -125,11 +126,19 @@ public class FullCompressedIndexScanner extends IndexScanner {
         addChildRoot(k.name(), pos);
     }
 
+    // the method name is misleading
     private void addChildRoot(String label, Pos pos) {
         extendTrie(label);
         CompressedTrieEdge edge = trie.getRoot().findEdge(label);
         if (edge == null) {
-            buffer.add(label);
+            if (buffer.isEmpty()) {
+                buffer.add(label);
+            } else {
+                String tail = buffer.get(buffer.size() - 1);
+                if (!tail.equals(label)) {
+                    buffer.add(label);
+                }
+            }
             edge = trie.getRoot().addEdge(buffer, buffer.size() - 1, pos);
             stack.push(new EStackNode(edge, buffer.size(), pos));
         } else {
@@ -154,51 +163,131 @@ public class FullCompressedIndexScanner extends IndexScanner {
     }
 
     private void extendTrie(String label) {
-        EStack s = new EStack();
-        for (EStackNode node : stack) {
-            Pos pos = node.getPos();
-            CompressedTrieEdge edge = node.getEdge();
-            int end = node.getEnd();
-            if (end == edge.getEnd()) {
-                if (edge.getEnd() == buffer.size()) {
-                    buffer.add(label);
-                    edge.setEnd(end + 1);
-                    s.push(new EStackNode(edge, end + 1, pos));
+        //System.out.println("--- extends trie --- label: " + label);
+        boolean extended = false;
+        EStack newStack = new EStack();
+        for (EStackNode snode : stack) {
+            Pos pos = snode.getPos();
+            CompressedTrieEdge edge = snode.getEdge();
+            int current = snode.getCurrent();
+            // adjust current
+            while (current > edge.getEnd()) {
+                CompressedTrieNode dest = edge.getDestination();
+                String next = buffer.get(edge.getEnd());
+                edge = dest.findEdge(next);
+            }
+            if (current == edge.getEnd() && edge.getEnd() == buffer.size()) {
+                //System.out.println("case 1");
+                buffer.add(label);
+                extended = true;
+                edge.incEnd();
+                newStack.push(new EStackNode(edge, current + 1, pos));
+                continue;
+            }
+            if (current == edge.getEnd() && edge.getEnd() < buffer.size()) {
+                CompressedTrieNode dest = edge.getDestination();
+                String token = buffer.get(current);
+                if (dest.isLeaf()) {
+                    assert token.equals(label);
+                }
+                if (dest.isLeaf() && token.equals(label)) {
+                    //System.out.println("case 2");
+                    edge.incEnd();
+                    newStack.push(new EStackNode(edge, current + 1, pos));
                 } else {
-                    CompressedTrieNode dest = edge.getDestination();
+                    //System.out.println("case 3");
                     CompressedTrieEdge e = dest.findEdge(label);
                     if (e == null) {
-                        buffer.add(label);
+                        if (!extended) {
+                            buffer.add(label);
+                            extended = true;
+                        }
                         e = dest.addEdge(buffer, buffer.size() - 1, pos);
                     }
                     e.addPosition(pos);
-                    s.push(new EStackNode(e, e.getStart() + 1, pos));
+                    newStack.push(new EStackNode(e, e.getStart() + 1, pos));
                 }
-            } else {
-                String token = buffer.get(end);
+                continue;
+            }
+            assert current < edge.getEnd() : "current: " + current + ", edge.getEnd(): " + edge.getEnd();
+            if (current < edge.getEnd()) {
+                String token = buffer.get(current);
                 if (token.equals(label)) {
-                    s.push(new EStackNode(edge, end + 1, pos));
+                    //System.out.println("case 4");
+                    newStack.push(new EStackNode(edge, current + 1, pos));
                 } else {
+                    //System.out.println("case 5");
+                    //System.out.printf("  edge: %d, %d%n", edge.getStart(), edge.getEnd());
                     CompressedTrieNode p = new CompressedTrieNode();
-                    CompressedTrieEdge e2 = new CompressedTrieEdge(buffer, end, edge.getEnd(), edge.getDestination());
+                    CompressedTrieEdge e2 = new CompressedTrieEdge(buffer, current, edge.getEnd(), edge.getDestination());
                     for (Pos pp : edge.getPositions()) {
                         if (!pp.equals(pos)) {
                             e2.addPosition(pp);
                         }
                     }
                     p.addEdge(e2);
-                    edge.setEnd(end);
+                    edge.setEnd(current);
                     edge.setDestination(p);
+                    if (!extended) {
+                        buffer.add(label);
+                        extended = true;
+                    }
                     CompressedTrieNode r = new CompressedTrieNode();
-                    buffer.add(label);
                     CompressedTrieEdge e3 = new CompressedTrieEdge(buffer, buffer.size() - 1, buffer.size(), r);
                     e3.addPosition(pos);
                     p.addEdge(e3);
-                    s.push(new EStackNode(e3, buffer.size(), pos));
+                    newStack.push(new EStackNode(e3, buffer.size(), pos));
                 }
             }
+//            if (current == edge.getEnd()) {
+//                if (edge.getEnd() == buffer.size()) { // case 1
+//                    buffer.add(label);
+//                    edge.incEnd();
+//                    newStack.push(new EStackNode(edge, current + 1, pos));
+//                } else {
+//                    CompressedTrieNode dest = edge.getDestination();
+//                    String token = buffer.get(current);
+//                    if (dest.isLeaf() && token.equals(label)) { // case 2
+//                        edge.incEnd();
+//                        newStack.push(new EStackNode(edge, current + 1, pos));
+//                    } else { // case 3
+//                        CompressedTrieEdge e = dest.findEdge(label);
+//                        if (e == null) {
+//                            buffer.add(label);
+//                            e = dest.addEdge(buffer, buffer.size() - 1, pos);
+//                        }
+//                        e.addPosition(pos);
+//                        newStack.push(new EStackNode(e, e.getStart() + 1, pos));
+//                    }
+//                }
+//            } else {
+//                if (current > edge.getEnd()) {
+//                    System.out.println("buffer: " + buffer);
+//                }
+//                String token = buffer.get(current);
+//                if (token.equals(label)) {
+//                    newStack.push(new EStackNode(edge, current + 1, pos));
+//                } else {
+//                    CompressedTrieNode p = new CompressedTrieNode();
+//                    CompressedTrieEdge e2 = new CompressedTrieEdge(buffer, current, edge.getEnd(), edge.getDestination());
+//                    for (Pos pp : edge.getPositions()) {
+//                        if (!pp.equals(pos)) {
+//                            e2.addPosition(pp);
+//                        }
+//                    }
+//                    p.addEdge(e2);
+//                    edge.setEnd(current);
+//                    edge.setDestination(p);
+//                    CompressedTrieNode r = new CompressedTrieNode();
+//                    buffer.add(label);
+//                    CompressedTrieEdge e3 = new CompressedTrieEdge(buffer, buffer.size() - 1, buffer.size(), r);
+//                    e3.addPosition(pos);
+//                    p.addEdge(e3);
+//                    newStack.push(new EStackNode(e3, buffer.size(), pos));
+//                }
+//            }
         }
-        stack = s;
+        stack = newStack;
     }
 
     private Pos pos(JCTree t) {
@@ -514,7 +603,6 @@ public class FullCompressedIndexScanner extends IndexScanner {
             return;
         }
         addChildRoot(t, pos(t));
-        addChild(t);
         scan(t.indexed);
         scan(t.index);
         addChildEnd(t);
@@ -527,7 +615,6 @@ public class FullCompressedIndexScanner extends IndexScanner {
             return;
         }
         addChildRoot(t, pos(t));
-        addChild(t);
         scan(t.body);
         addChildEnd(t);
         stack.pop();
@@ -540,7 +627,6 @@ public class FullCompressedIndexScanner extends IndexScanner {
         }
         renameStrategy.enterBlock();
         addChildRoot(t, pos(t));
-        addChild(t);
         scan(t.params);
         scan(t.body);
         addChildEnd(t);
@@ -593,7 +679,41 @@ public class FullCompressedIndexScanner extends IndexScanner {
 
     @Override
     public void visitModifiers(JCModifiers t) {
-        // ignore flags
+        if (!ignoreModifiers) {
+            if ((t.flags & Flags.ABSTRACT) != 0) {
+                addChild("ABSTRACT");
+            }
+            if ((t.flags & Flags.FINAL) != 0) {
+                addChild("FINAL");
+            }
+            if ((t.flags & Flags.NATIVE) != 0) {
+                addChild("NATIVE");
+            }
+            if ((t.flags & Flags.PRIVATE) != 0) {
+                addChild("PRIVATE");
+            }
+            if ((t.flags & Flags.PROTECTED) != 0) {
+                addChild("PROTECTED");
+            }
+            if ((t.flags & Flags.PUBLIC) != 0) {
+                addChild("PUBLIC");
+            }
+            if ((t.flags & Flags.STATIC) != 0) {
+                addChild("STATIC");
+            }
+            if ((t.flags & Flags.STRICTFP) != 0) {
+                addChild("STRICTFP");
+            }
+            if ((t.flags & Flags.SYNCHRONIZED) != 0) {
+                addChild("SYNCHRONIZED");
+            }
+            if ((t.flags & Flags.TRANSIENT) != 0) {
+                addChild("TRANSIENT");
+            }
+            if ((t.flags & Flags.VOLATILE) != 0) {
+                addChild("VOLATILE");
+            }
+        }
         scan(t.annotations);
     }
 
@@ -773,7 +893,6 @@ public class FullCompressedIndexScanner extends IndexScanner {
         }
         renameStrategy.enterBlock();
         addChildRoot(t, pos(t));
-        addChild(t);
         scan(t.resources);
         scan(t.body);
         scan(t.catchers);

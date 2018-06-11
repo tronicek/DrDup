@@ -11,6 +11,11 @@ import javax.lang.model.type.TypeKind;
 public class BlindRename extends RenameStrategy {
 
     @Override
+    public RenameStrategy newInstance() {
+        return new BlindRename();
+    }
+
+    @Override
     public void enterBlock() {
     }
 

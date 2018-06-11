@@ -82,7 +82,7 @@ public class SimplifiedCompressedIndexScanner extends IndexScanner {
     private EStack stack = new EStack();
     private String srcFile;
     private int inMethod;
-    private final List<String> linearization = new ArrayList<>();
+    private final List<String> buffer = new ArrayList<>();
 
     public SimplifiedCompressedIndexScanner(Properties conf) {
         super(conf);
@@ -92,6 +92,7 @@ public class SimplifiedCompressedIndexScanner extends IndexScanner {
 
     @Override
     public CompressedTrie getTrie() {
+        trie.checkDegreeSimplified();
         return trie;
     }
 
@@ -129,8 +130,8 @@ public class SimplifiedCompressedIndexScanner extends IndexScanner {
         extendTrie(label);
         CompressedTrieEdge edge = trie.root.findEdge(label);
         if (edge == null) {
-            edge = trie.root.addEdge(linearization, linearization.size() - 1, pos);
-            stack.push(new EStackNode(edge, linearization.size(), pos));
+            edge = trie.root.addEdge(buffer, buffer.size() - 1, pos);
+            stack.push(new EStackNode(edge, buffer.size(), pos));
         } else {
             edge.addPosition(pos);
             stack.push(new EStackNode(edge, edge.getStart() + 1, pos));
@@ -140,12 +141,12 @@ public class SimplifiedCompressedIndexScanner extends IndexScanner {
 
     private void addChild(JCTree t) {
         Kind k = t.getKind();
-        addChild(k.name());
+        extendTrie(k.name());
     }
 
     private void addChildEnd(JCTree t) {
         Kind k = t.getKind();
-        addChild(k.name() + "_END");
+        extendTrie(k.name() + "_END");
     }
 
     private void addChild(String label) {
@@ -153,50 +154,50 @@ public class SimplifiedCompressedIndexScanner extends IndexScanner {
     }
 
     private void extendTrie(String label) {
-        //System.out.printf("extendTrie: %s, stack: %s%n", label, stack);
-        linearization.add(label);
-        EStack s = new EStack();
-        for (EStackNode node : stack) {
-            Pos pos = node.getPos();
-            CompressedTrieEdge edge = node.getEdge();
-            int end = node.getEnd();
-            if (end == edge.getEnd()) {
-                if (edge.getEnd() == linearization.size() - 1) {
-                    edge.setEnd(end + 1);
-                    s.push(new EStackNode(edge, end + 1, pos));
+//        System.out.printf("extendTrie: %s, stack: %s%n", label, stack);
+        buffer.add(label);
+        EStack newStack = new EStack();
+        for (EStackNode snode : stack) {
+            Pos pos = snode.getPos();
+            CompressedTrieEdge edge = snode.getEdge();
+            int current = snode.getCurrent();
+            if (current == edge.getEnd()) {
+                if (edge.getEnd() == buffer.size() - 1) {
+                    edge.setEnd(current + 1);
+                    newStack.push(new EStackNode(edge, current + 1, pos));
                 } else {
                     CompressedTrieNode dest = edge.getDestination();
                     CompressedTrieEdge e = dest.findEdge(label);
                     if (e == null) {
-                        e = dest.addEdge(linearization, linearization.size() - 1, pos);
+                        e = dest.addEdge(buffer, buffer.size() - 1, pos);
                     }
                     e.addPosition(pos);
-                    s.push(new EStackNode(e, e.getStart() + 1, pos));
+                    newStack.push(new EStackNode(e, e.getStart() + 1, pos));
                 }
             } else {
-                String token = linearization.get(end);
+                String token = buffer.get(current);
                 if (token.equals(label)) {
-                    s.push(new EStackNode(edge, end + 1, pos));
+                    newStack.push(new EStackNode(edge, current + 1, pos));
                 } else {
                     CompressedTrieNode p = new CompressedTrieNode();
-                    CompressedTrieEdge e2 = new CompressedTrieEdge(linearization, end, edge.getEnd(), edge.getDestination());
+                    CompressedTrieEdge e2 = new CompressedTrieEdge(buffer, current, edge.getEnd(), edge.getDestination());
                     for (Pos pp : edge.getPositions()) {
                         if (!pp.equals(pos)) {
                             e2.addPosition(pp);
                         }
                     }
                     p.addEdge(e2);
-                    edge.setEnd(end);
+                    edge.setEnd(current);
                     edge.setDestination(p);
                     CompressedTrieNode r = new CompressedTrieNode();
-                    CompressedTrieEdge e3 = new CompressedTrieEdge(linearization, linearization.size() - 1, linearization.size(), r);
+                    CompressedTrieEdge e3 = new CompressedTrieEdge(buffer, buffer.size() - 1, buffer.size(), r);
                     e3.addPosition(pos);
                     p.addEdge(e3);
-                    s.push(new EStackNode(e3, linearization.size(), pos));
+                    newStack.push(new EStackNode(e3, buffer.size(), pos));
                 }
             }
         }
-        stack = s;
+        stack = newStack;
     }
 
     private Pos pos(JCTree t) {
@@ -566,7 +567,41 @@ public class SimplifiedCompressedIndexScanner extends IndexScanner {
 
     @Override
     public void visitModifiers(JCModifiers t) {
-        // ignore flags
+        if (!ignoreModifiers) {
+            if ((t.flags & Flags.ABSTRACT) != 0) {
+                addChild("ABSTRACT");
+            }
+            if ((t.flags & Flags.FINAL) != 0) {
+                addChild("FINAL");
+            }
+            if ((t.flags & Flags.NATIVE) != 0) {
+                addChild("NATIVE");
+            }
+            if ((t.flags & Flags.PRIVATE) != 0) {
+                addChild("PRIVATE");
+            }
+            if ((t.flags & Flags.PROTECTED) != 0) {
+                addChild("PROTECTED");
+            }
+            if ((t.flags & Flags.PUBLIC) != 0) {
+                addChild("PUBLIC");
+            }
+            if ((t.flags & Flags.STATIC) != 0) {
+                addChild("STATIC");
+            }
+            if ((t.flags & Flags.STRICTFP) != 0) {
+                addChild("STRICTFP");
+            }
+            if ((t.flags & Flags.SYNCHRONIZED) != 0) {
+                addChild("SYNCHRONIZED");
+            }
+            if ((t.flags & Flags.TRANSIENT) != 0) {
+                addChild("TRANSIENT");
+            }
+            if ((t.flags & Flags.VOLATILE) != 0) {
+                addChild("VOLATILE");
+            }
+        }
         scan(t.annotations);
     }
 

@@ -301,6 +301,16 @@ public class CompressedTrie implements Index, Serializable {
             }
         }
     }
+    
+    public void checkDegree() {
+        root.checkDegree();
+        System.out.println("--- node degrees checked ---");
+    }
+    
+    public void checkDegreeSimplified() {
+        root.checkDegreeSimplified();
+        System.out.println("--- node degrees checked ---");
+    }
 
     private static class MethodPair implements Comparable<MethodPair> {
 

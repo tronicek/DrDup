@@ -32,7 +32,7 @@ import java.util.TreeSet;
 public class Trie implements Index, Serializable {
 
     private static final long serialVersionUID = 1L;
-    protected final TrieNode root = new TrieNode();
+    public final TrieNode root = new TrieNode();
     private final boolean printTokens;
     private final boolean printSimilarity;
     private final boolean useSegmentDistance;

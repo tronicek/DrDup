@@ -1,0 +1,1391 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<clones>
+    <clone nlines="15">
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/opti/SchemaDOM.java" startline="293" endline="307"/>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="2304" endline="2323"/>
+    </clone>
+    <clone nlines="15">
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/opti/SchemaDOM.java" startline="293" endline="307"/>
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1952" endline="1970"/>
+    </clone>
+    <clone nlines="20">
+        <source file="com/sun/org/apache/xml/internal/serializer/ToXMLSAXHandler.java" startline="417" endline="440"/>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="2304" endline="2323"/>
+    </clone>
+    <clone nlines="19">
+        <source file="com/sun/org/apache/xml/internal/serializer/ToXMLSAXHandler.java" startline="417" endline="440"/>
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1952" endline="1970"/>
+    </clone>
+    <clone nlines="20">
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="2304" endline="2323"/>
+        <source file="com/sun/org/apache/xpath/internal/operations/Variable.java" startline="328" endline="349"/>
+    </clone>
+    <clone nlines="20">
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="2304" endline="2323"/>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/dom2dtm/DOM2DTMdefaultNamespaceDeclarationNode.java" startline="402" endline="466"/>
+    </clone>
+    <clone nlines="20">
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="2304" endline="2323"/>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="1879" endline="1944"/>
+    </clone>
+    <clone nlines="20">
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="2304" endline="2323"/>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="2250" endline="2296"/>
+    </clone>
+    <clone nlines="20">
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="2304" endline="2323"/>
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1539" endline="1603"/>
+    </clone>
+    <clone nlines="20">
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="2304" endline="2323"/>
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1899" endline="1944"/>
+    </clone>
+    <clone nlines="19">
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1952" endline="1970"/>
+        <source file="com/sun/org/apache/xpath/internal/operations/Variable.java" startline="328" endline="349"/>
+    </clone>
+    <clone nlines="19">
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1952" endline="1970"/>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/dom2dtm/DOM2DTMdefaultNamespaceDeclarationNode.java" startline="402" endline="466"/>
+    </clone>
+    <clone nlines="19">
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1952" endline="1970"/>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="1879" endline="1944"/>
+    </clone>
+    <clone nlines="19">
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1952" endline="1970"/>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="2250" endline="2296"/>
+    </clone>
+    <clone nlines="19">
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1952" endline="1970"/>
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1539" endline="1603"/>
+    </clone>
+    <clone nlines="19">
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1952" endline="1970"/>
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1899" endline="1944"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/xpath/internal/objects/XStringForFSB.java" startline="560" endline="589"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/compiler/Text.java" startline="207" endline="217"/>
+    </clone>
+    <clone nlines="13">
+        <source file="com/sun/org/apache/xml/internal/utils/DOMHelper.java" startline="895" endline="907"/>
+        <source file="com/sun/org/apache/xerces/internal/impl/dtd/XMLDTDValidator.java" startline="1476" endline="1490"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serializer/ToHTMLStream.java" startline="1879" endline="1888"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToTextStream.java" startline="520" endline="529"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serializer/EmptySerializer.java" startline="636" endline="645"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/EmptySerializer.java" startline="241" endline="251"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/xpath/internal/NodeSet.java" startline="947" endline="957"/>
+        <source file="com/sun/org/apache/xml/internal/utils/NodeVector.java" startline="186" endline="196"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xerces/internal/jaxp/validation/ValidatorHandlerImpl.java" startline="625" endline="635"/>
+        <source file="com/sun/org/apache/xerces/internal/xinclude/XIncludeHandler.java" startline="1221" endline="1230"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xerces/internal/jaxp/validation/ValidatorHandlerImpl.java" startline="625" endline="635"/>
+        <source file="com/sun/org/apache/xerces/internal/xinclude/XIncludeHandler.java" startline="1289" endline="1298"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serializer/ToUnknownStream.java" startline="268" endline="277"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToUnknownStream.java" startline="747" endline="756"/>
+    </clone>
+    <clone nlines="15">
+        <source file="com/sun/org/apache/bcel/internal/generic/Type.java" startline="113" endline="120"/>
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/XSWildcardDecl.java" startline="569" endline="576"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serializer/ToUnknownStream.java" startline="882" endline="891"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToUnknownStream.java" startline="323" endline="332"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serializer/ToUnknownStream.java" startline="882" endline="891"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToUnknownStream.java" startline="775" endline="786"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xerces/internal/xinclude/XIncludeHandler.java" startline="1221" endline="1230"/>
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/XMLSchemaValidator.java" startline="720" endline="732"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xerces/internal/xinclude/XIncludeHandler.java" startline="1221" endline="1230"/>
+        <source file="com/sun/org/apache/xerces/internal/xinclude/XIncludeHandler.java" startline="1322" endline="1336"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xerces/internal/xinclude/XIncludeHandler.java" startline="1221" endline="1230"/>
+        <source file="com/sun/org/apache/xerces/internal/xinclude/XIncludeHandler.java" startline="1411" endline="1425"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xerces/internal/xinclude/XIncludeHandler.java" startline="1289" endline="1298"/>
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/XMLSchemaValidator.java" startline="720" endline="732"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xerces/internal/xinclude/XIncludeHandler.java" startline="1289" endline="1298"/>
+        <source file="com/sun/org/apache/xerces/internal/xinclude/XIncludeHandler.java" startline="1322" endline="1336"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xerces/internal/xinclude/XIncludeHandler.java" startline="1289" endline="1298"/>
+        <source file="com/sun/org/apache/xerces/internal/xinclude/XIncludeHandler.java" startline="1411" endline="1425"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/xml/internal/serializer/EncodingInfo.java" startline="89" endline="99"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/EncodingInfo.java" startline="108" endline="118"/>
+    </clone>
+    <clone nlines="19">
+        <source file="com/sun/org/apache/xerces/internal/jaxp/datatype/DatatypeFactoryImpl.java" startline="174" endline="192"/>
+        <source file="com/sun/org/apache/xerces/internal/jaxp/datatype/DatatypeFactoryImpl.java" startline="631" endline="651"/>
+    </clone>
+    <clone nlines="19">
+        <source file="com/sun/org/apache/xerces/internal/jaxp/datatype/DatatypeFactoryImpl.java" startline="174" endline="192"/>
+        <source file="com/sun/org/apache/xerces/internal/jaxp/datatype/XMLGregorianCalendarImpl.java" startline="689" endline="708"/>
+    </clone>
+    <clone nlines="19">
+        <source file="com/sun/org/apache/xerces/internal/jaxp/datatype/DatatypeFactoryImpl.java" startline="174" endline="192"/>
+        <source file="com/sun/org/apache/xerces/internal/jaxp/datatype/XMLGregorianCalendarImpl.java" startline="767" endline="786"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serializer/SerializerBase.java" startline="1163" endline="1172"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/SerializerBase.java" startline="1191" endline="1200"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serializer/ToUnknownStream.java" startline="323" endline="332"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToHTMLSAXHandler.java" startline="654" endline="665"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serializer/ToUnknownStream.java" startline="323" endline="332"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToUnknownStream.java" startline="806" endline="816"/>
+    </clone>
+    <clone nlines="12">
+        <source file="com/sun/org/apache/xml/internal/serializer/ToUnknownStream.java" startline="775" endline="786"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToHTMLSAXHandler.java" startline="654" endline="665"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/xml/internal/serializer/ToUnknownStream.java" startline="775" endline="786"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToUnknownStream.java" startline="806" endline="816"/>
+    </clone>
+    <clone nlines="17">
+        <source file="javax/xml/datatype/DatatypeFactory.java" startline="1006" endline="1022"/>
+        <source file="com/sun/org/apache/xerces/internal/jaxp/datatype/XMLGregorianCalendarImpl.java" startline="874" endline="890"/>
+    </clone>
+    <clone nlines="17">
+        <source file="com/sun/org/apache/xerces/internal/jaxp/datatype/XMLGregorianCalendarImpl.java" startline="874" endline="890"/>
+        <source file="com/sun/org/apache/xerces/internal/jaxp/datatype/XMLGregorianCalendarImpl.java" startline="909" endline="925"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serialize/HTMLSerializer.java" startline="376" endline="385"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToTextStream.java" startline="244" endline="256"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serialize/HTMLSerializer.java" startline="376" endline="385"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToTextStream.java" startline="420" endline="432"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serialize/XMLSerializer.java" startline="371" endline="380"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToTextStream.java" startline="244" endline="256"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serialize/XMLSerializer.java" startline="371" endline="380"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToTextStream.java" startline="420" endline="432"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serializer/utils/URI.java" startline="1162" endline="1175"/>
+        <source file="com/sun/org/apache/xerces/internal/util/URI.java" startline="1558" endline="1567"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/utils/URI.java" startline="1183" endline="1196"/>
+        <source file="com/sun/org/apache/xerces/internal/util/URI.java" startline="1558" endline="1567"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/utils/ObjectVector.java" startline="412" endline="421"/>
+        <source file="com/sun/org/apache/xpath/internal/compiler/OpMapVector.java" startline="107" endline="116"/>
+    </clone>
+    <clone nlines="16">
+        <source file="javax/xml/datatype/DatatypeFactory.java" startline="932" endline="947"/>
+        <source file="javax/xml/datatype/DatatypeFactory.java" startline="968" endline="983"/>
+    </clone>
+    <clone nlines="16">
+        <source file="javax/xml/datatype/DatatypeFactory.java" startline="932" endline="947"/>
+        <source file="com/sun/org/apache/xerces/internal/jaxp/datatype/XMLGregorianCalendarImpl.java" startline="808" endline="823"/>
+    </clone>
+    <clone nlines="16">
+        <source file="javax/xml/datatype/DatatypeFactory.java" startline="968" endline="983"/>
+        <source file="com/sun/org/apache/xerces/internal/jaxp/datatype/XMLGregorianCalendarImpl.java" startline="840" endline="855"/>
+    </clone>
+    <clone nlines="16">
+        <source file="com/sun/org/apache/xerces/internal/jaxp/datatype/XMLGregorianCalendarImpl.java" startline="808" endline="823"/>
+        <source file="com/sun/org/apache/xerces/internal/jaxp/datatype/XMLGregorianCalendarImpl.java" startline="840" endline="855"/>
+    </clone>
+    <clone nlines="15">
+        <source file="com/sun/org/apache/xerces/internal/jaxp/datatype/DatatypeFactoryImpl.java" startline="439" endline="453"/>
+        <source file="javax/xml/datatype/DatatypeFactory.java" startline="480" endline="496"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/resolver/CatalogException.java" startline="124" endline="133"/>
+        <source file="javax/xml/transform/TransformerFactoryConfigurationError.java" startline="103" endline="112"/>
+    </clone>
+    <clone nlines="10">
+        <source file="org/xml/sax/SAXException.java" startline="127" endline="136"/>
+        <source file="javax/xml/transform/TransformerFactoryConfigurationError.java" startline="103" endline="112"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xalan/internal/xsltc/trax/TransformerFactoryImpl.java" startline="1074" endline="1083"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/trax/TransformerFactoryImpl.java" startline="1095" endline="1104"/>
+    </clone>
+    <clone nlines="14">
+        <source file="com/sun/org/apache/xpath/internal/NodeSet.java" startline="243" endline="256"/>
+        <source file="com/sun/org/apache/xpath/internal/NodeSetDTM.java" startline="387" endline="400"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xalan/internal/xsltc/dom/AdaptiveResultTreeImpl.java" startline="317" endline="326"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/dom/AdaptiveResultTreeImpl.java" startline="339" endline="348"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xalan/internal/xsltc/dom/AdaptiveResultTreeImpl.java" startline="317" endline="326"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/dom/AdaptiveResultTreeImpl.java" startline="487" endline="496"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xalan/internal/xsltc/dom/AdaptiveResultTreeImpl.java" startline="317" endline="326"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/dom/DOMAdapter.java" startline="314" endline="323"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xalan/internal/xsltc/dom/AdaptiveResultTreeImpl.java" startline="328" endline="337"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/dom/AdaptiveResultTreeImpl.java" startline="339" endline="348"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xalan/internal/xsltc/dom/AdaptiveResultTreeImpl.java" startline="328" endline="337"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/dom/AdaptiveResultTreeImpl.java" startline="487" endline="496"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xalan/internal/xsltc/dom/AdaptiveResultTreeImpl.java" startline="328" endline="337"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/dom/DOMAdapter.java" startline="314" endline="323"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xalan/internal/xsltc/dom/AdaptiveResultTreeImpl.java" startline="366" endline="375"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/dom/AdaptiveResultTreeImpl.java" startline="339" endline="348"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xalan/internal/xsltc/dom/AdaptiveResultTreeImpl.java" startline="366" endline="375"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/dom/AdaptiveResultTreeImpl.java" startline="487" endline="496"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xalan/internal/xsltc/dom/AdaptiveResultTreeImpl.java" startline="366" endline="375"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/dom/DOMAdapter.java" startline="314" endline="323"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xalan/internal/xsltc/dom/DOMAdapter.java" startline="330" endline="339"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/dom/AdaptiveResultTreeImpl.java" startline="339" endline="348"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xalan/internal/xsltc/dom/DOMAdapter.java" startline="330" endline="339"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/dom/AdaptiveResultTreeImpl.java" startline="487" endline="496"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xalan/internal/xsltc/dom/DOMAdapter.java" startline="330" endline="339"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/dom/DOMAdapter.java" startline="314" endline="323"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xerces/internal/util/XMLCatalogResolver.java" startline="464" endline="473"/>
+        <source file="com/sun/org/apache/xerces/internal/util/XMLCatalogResolver.java" startline="490" endline="499"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xerces/internal/util/XMLCatalogResolver.java" startline="519" endline="528"/>
+        <source file="com/sun/org/apache/xerces/internal/util/XMLCatalogResolver.java" startline="490" endline="499"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xerces/internal/impl/io/UTF8Reader.java" startline="682" endline="691"/>
+        <source file="com/sun/org/apache/xerces/internal/impl/io/UTF8Reader.java" startline="694" endline="703"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xerces/internal/jaxp/validation/ValidatorHandlerImpl.java" startline="459" endline="468"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/runtime/AbstractTranslet.java" startline="627" endline="638"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xerces/internal/impl/dtd/XMLDTDValidator.java" startline="739" endline="749"/>
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/XMLSchemaValidator.java" startline="743" endline="752"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/xerces/internal/impl/dtd/XMLDTDValidator.java" startline="739" endline="749"/>
+        <source file="com/sun/org/apache/xerces/internal/xinclude/XIncludeHandler.java" startline="1341" endline="1351"/>
+    </clone>
+    <clone nlines="12">
+        <source file="com/sun/org/apache/xpath/internal/axes/OneStepIterator.java" startline="137" endline="148"/>
+        <source file="com/sun/org/apache/xpath/internal/axes/WalkingIterator.java" startline="113" endline="126"/>
+    </clone>
+    <clone nlines="13">
+        <source file="com/sun/org/apache/xpath/internal/NodeSet.java" startline="1172" endline="1184"/>
+        <source file="com/sun/org/apache/xml/internal/utils/NodeVector.java" startline="430" endline="442"/>
+    </clone>
+    <clone nlines="12">
+        <source file="com/sun/org/apache/bcel/internal/util/SecuritySupport.java" startline="97" endline="103"/>
+        <source file="com/sun/org/apache/xalan/internal/utils/SecuritySupport.java" startline="110" endline="116"/>
+    </clone>
+    <clone nlines="12">
+        <source file="com/sun/org/apache/xalan/internal/utils/SecuritySupport.java" startline="102" endline="108"/>
+        <source file="com/sun/org/apache/xalan/internal/utils/SecuritySupport.java" startline="110" endline="116"/>
+    </clone>
+    <clone nlines="12">
+        <source file="com/sun/org/apache/xerces/internal/utils/SecuritySupport.java" startline="98" endline="105"/>
+        <source file="com/sun/org/apache/xalan/internal/utils/SecuritySupport.java" startline="110" endline="116"/>
+    </clone>
+    <clone nlines="12">
+        <source file="com/sun/org/apache/xerces/internal/xinclude/SecuritySupport.java" startline="92" endline="99"/>
+        <source file="com/sun/org/apache/xalan/internal/utils/SecuritySupport.java" startline="110" endline="116"/>
+    </clone>
+    <clone nlines="12">
+        <source file="com/sun/org/apache/xml/internal/serialize/SecuritySupport.java" startline="92" endline="99"/>
+        <source file="com/sun/org/apache/xalan/internal/utils/SecuritySupport.java" startline="110" endline="116"/>
+    </clone>
+    <clone nlines="12">
+        <source file="javax/xml/datatype/SecuritySupport.java" startline="56" endline="63"/>
+        <source file="com/sun/org/apache/xalan/internal/utils/SecuritySupport.java" startline="110" endline="116"/>
+    </clone>
+    <clone nlines="12">
+        <source file="javax/xml/parsers/SecuritySupport.java" startline="60" endline="67"/>
+        <source file="com/sun/org/apache/xalan/internal/utils/SecuritySupport.java" startline="110" endline="116"/>
+    </clone>
+    <clone nlines="12">
+        <source file="javax/xml/stream/SecuritySupport.java" startline="60" endline="67"/>
+        <source file="com/sun/org/apache/xalan/internal/utils/SecuritySupport.java" startline="110" endline="116"/>
+    </clone>
+    <clone nlines="12">
+        <source file="javax/xml/transform/SecuritySupport.java" startline="58" endline="65"/>
+        <source file="com/sun/org/apache/xalan/internal/utils/SecuritySupport.java" startline="110" endline="116"/>
+    </clone>
+    <clone nlines="12">
+        <source file="javax/xml/validation/SecuritySupport.java" startline="60" endline="67"/>
+        <source file="com/sun/org/apache/xalan/internal/utils/SecuritySupport.java" startline="110" endline="116"/>
+    </clone>
+    <clone nlines="12">
+        <source file="javax/xml/xpath/SecuritySupport.java" startline="57" endline="64"/>
+        <source file="com/sun/org/apache/xalan/internal/utils/SecuritySupport.java" startline="110" endline="116"/>
+    </clone>
+    <clone nlines="12">
+        <source file="org/xml/sax/helpers/SecuritySupport.java" startline="58" endline="65"/>
+        <source file="com/sun/org/apache/xalan/internal/utils/SecuritySupport.java" startline="110" endline="116"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/xml/internal/serializer/utils/StringToIntTable.java" startline="177" endline="187"/>
+        <source file="com/sun/org/apache/xml/internal/utils/StringToStringTable.java" startline="214" endline="224"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/xml/internal/serializer/utils/StringToIntTable.java" startline="177" endline="187"/>
+        <source file="com/sun/org/apache/xml/internal/utils/StringToStringTable.java" startline="233" endline="243"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/xml/internal/utils/StringToIntTable.java" startline="170" endline="180"/>
+        <source file="com/sun/org/apache/xml/internal/utils/StringToStringTable.java" startline="214" endline="224"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/xml/internal/utils/StringToIntTable.java" startline="170" endline="180"/>
+        <source file="com/sun/org/apache/xml/internal/utils/StringToStringTable.java" startline="233" endline="243"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/xml/internal/utils/StringToStringTableVector.java" startline="190" endline="200"/>
+        <source file="com/sun/org/apache/xml/internal/utils/StringToStringTable.java" startline="214" endline="224"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/xml/internal/utils/StringToStringTableVector.java" startline="190" endline="200"/>
+        <source file="com/sun/org/apache/xml/internal/utils/StringToStringTable.java" startline="233" endline="243"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/xml/internal/stream/writers/XMLStreamWriterImpl.java" startline="684" endline="694"/>
+        <source file="com/sun/xml/internal/stream/writers/XMLStreamWriterImpl.java" startline="727" endline="737"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xerces/internal/xinclude/XIncludeHandler.java" startline="1341" endline="1351"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToTextSAXHandler.java" startline="368" endline="377"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xalan/internal/xsltc/dom/AdaptiveResultTreeImpl.java" startline="879" endline="888"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/dom/AdaptiveResultTreeImpl.java" startline="930" endline="939"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xalan/internal/xsltc/dom/DOMAdapter.java" startline="434" endline="444"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/dom/AdaptiveResultTreeImpl.java" startline="930" endline="939"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="747" endline="759"/>
+        <source file="com/sun/org/apache/xpath/internal/operations/UnaryOperation.java" startline="153" endline="162"/>
+    </clone>
+    <clone nlines="13">
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="747" endline="759"/>
+        <source file="com/sun/org/apache/xpath/internal/operations/Variable.java" startline="362" endline="379"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/xml/internal/utils/IntVector.java" startline="376" endline="386"/>
+        <source file="com/sun/org/apache/xml/internal/utils/IntVector.java" startline="354" endline="364"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/xml/internal/utils/IntVector.java" startline="376" endline="386"/>
+        <source file="com/sun/org/apache/xml/internal/utils/ObjectVector.java" startline="351" endline="361"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/xml/internal/utils/ObjectVector.java" startline="373" endline="383"/>
+        <source file="com/sun/org/apache/xml/internal/utils/IntVector.java" startline="354" endline="364"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/xml/internal/utils/ObjectVector.java" startline="373" endline="383"/>
+        <source file="com/sun/org/apache/xml/internal/utils/ObjectVector.java" startline="351" endline="361"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/xerces/internal/impl/dv/xs/XSSimpleTypeDecl.java" startline="748" endline="758"/>
+        <source file="com/sun/org/apache/xerces/internal/impl/dv/xs/XSSimpleTypeDecl.java" startline="763" endline="773"/>
+    </clone>
+    <clone nlines="14">
+        <source file="com/sun/org/apache/xpath/internal/objects/XNodeSet.java" startline="387" endline="400"/>
+        <source file="com/sun/org/apache/xpath/internal/objects/XNodeSet.java" startline="407" endline="420"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xerces/internal/dom/TreeWalkerImpl.java" startline="63" endline="72"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/dom/CurrentNodeListIterator.java" startline="90" endline="100"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xerces/internal/dom/TreeWalkerImpl.java" startline="63" endline="72"/>
+        <source file="com/sun/org/apache/xerces/internal/dom/DOMInputImpl.java" startline="129" endline="139"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xerces/internal/dom/TreeWalkerImpl.java" startline="63" endline="72"/>
+        <source file="com/sun/org/apache/xerces/internal/dom/DOMInputImpl.java" startline="158" endline="168"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/xerces/internal/dom/ElementImpl.java" startline="273" endline="283"/>
+        <source file="com/sun/org/apache/xerces/internal/dom/ElementImpl.java" startline="748" endline="758"/>
+    </clone>
+    <clone nlines="12">
+        <source file="com/sun/org/apache/bcel/internal/generic/InstructionHandle.java" startline="130" endline="141"/>
+        <source file="com/sun/org/apache/bcel/internal/generic/BranchHandle.java" startline="84" endline="95"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/xerces/internal/dom/ElementImpl.java" startline="834" endline="844"/>
+        <source file="com/sun/org/apache/xerces/internal/dom/ElementImpl.java" startline="748" endline="758"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serializer/ToHTMLSAXHandler.java" startline="243" endline="252"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToHTMLSAXHandler.java" startline="606" endline="615"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/xml/internal/utils/StringToStringTable.java" startline="118" endline="128"/>
+        <source file="com/sun/org/apache/xml/internal/utils/StringToStringTable.java" startline="183" endline="193"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/traversers/XSDWildcardTraverser.java" startline="126" endline="136"/>
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/traversers/XSDAttributeTraverser.java" startline="213" endline="223"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/traversers/XSDWildcardTraverser.java" startline="126" endline="136"/>
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/traversers/XSDElementTraverser.java" startline="235" endline="246"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="346" endline="356"/>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="435" endline="446"/>
+    </clone>
+    <clone nlines="14">
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="539" endline="552"/>
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="563" endline="576"/>
+    </clone>
+    <clone nlines="14">
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="539" endline="552"/>
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="587" endline="600"/>
+    </clone>
+    <clone nlines="14">
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="539" endline="552"/>
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="611" endline="624"/>
+    </clone>
+    <clone nlines="14">
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="563" endline="576"/>
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="587" endline="600"/>
+    </clone>
+    <clone nlines="14">
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="563" endline="576"/>
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="611" endline="624"/>
+    </clone>
+    <clone nlines="14">
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="587" endline="600"/>
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="611" endline="624"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/xml/internal/serializer/ToSAXHandler.java" startline="315" endline="325"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToSAXHandler.java" startline="194" endline="208"/>
+    </clone>
+    <clone nlines="12">
+        <source file="com/sun/org/apache/xalan/internal/res/XSLMessages.java" startline="58" endline="69"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/utils/Messages.java" startline="150" endline="161"/>
+    </clone>
+    <clone nlines="12">
+        <source file="com/sun/org/apache/xalan/internal/res/XSLMessages.java" startline="81" endline="92"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/utils/Messages.java" startline="150" endline="161"/>
+    </clone>
+    <clone nlines="12">
+        <source file="com/sun/org/apache/xml/internal/res/XMLMessages.java" startline="82" endline="94"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/utils/Messages.java" startline="150" endline="161"/>
+    </clone>
+    <clone nlines="12">
+        <source file="com/sun/org/apache/xpath/internal/res/XPATHMessages.java" startline="56" endline="67"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/utils/Messages.java" startline="150" endline="161"/>
+    </clone>
+    <clone nlines="12">
+        <source file="com/sun/org/apache/xpath/internal/res/XPATHMessages.java" startline="79" endline="90"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/utils/Messages.java" startline="150" endline="161"/>
+    </clone>
+    <clone nlines="16">
+        <source file="com/sun/org/apache/xml/internal/utils/NodeVector.java" startline="561" endline="576"/>
+        <source file="com/sun/org/apache/xml/internal/utils/NodeVector.java" startline="616" endline="631"/>
+    </clone>
+    <clone nlines="16">
+        <source file="com/sun/org/apache/xml/internal/utils/NodeVector.java" startline="616" endline="631"/>
+        <source file="com/sun/org/apache/xml/internal/utils/NodeVector.java" startline="589" endline="604"/>
+    </clone>
+    <clone nlines="12">
+        <source file="com/sun/org/apache/xalan/internal/lib/ExsltDatetime.java" startline="727" endline="738"/>
+        <source file="com/sun/org/apache/xalan/internal/lib/ExsltDatetime.java" startline="644" endline="655"/>
+    </clone>
+    <clone nlines="12">
+        <source file="com/sun/org/apache/xalan/internal/lib/ExsltDatetime.java" startline="727" endline="738"/>
+        <source file="com/sun/org/apache/xalan/internal/lib/ExsltDatetime.java" startline="687" endline="698"/>
+    </clone>
+    <clone nlines="12">
+        <source file="com/sun/org/apache/xalan/internal/lib/ExsltDatetime.java" startline="767" endline="778"/>
+        <source file="com/sun/org/apache/xalan/internal/lib/ExsltDatetime.java" startline="644" endline="655"/>
+    </clone>
+    <clone nlines="12">
+        <source file="com/sun/org/apache/xalan/internal/lib/ExsltDatetime.java" startline="767" endline="778"/>
+        <source file="com/sun/org/apache/xalan/internal/lib/ExsltDatetime.java" startline="687" endline="698"/>
+    </clone>
+    <clone nlines="13">
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="354" endline="366"/>
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="549" endline="563"/>
+    </clone>
+    <clone nlines="13">
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="400" endline="412"/>
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="549" endline="563"/>
+    </clone>
+    <clone nlines="12">
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="580" endline="591"/>
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="549" endline="563"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/bcel/internal/classfile/ClassParser.java" startline="296" endline="305"/>
+        <source file="com/sun/org/apache/bcel/internal/classfile/ClassParser.java" startline="217" endline="226"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/xml/internal/stream/writers/XMLDOMWriterImpl.java" startline="559" endline="569"/>
+        <source file="com/sun/xml/internal/stream/writers/XMLDOMWriterImpl.java" startline="577" endline="587"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/xerces/internal/dom/CoreDocumentImpl.java" startline="559" endline="572"/>
+        <source file="com/sun/org/apache/xerces/internal/dom/CoreDocumentImpl.java" startline="662" endline="672"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xerces/internal/dom/CoreDocumentImpl.java" startline="617" endline="626"/>
+        <source file="com/sun/org/apache/xerces/internal/dom/CoreDocumentImpl.java" startline="662" endline="672"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xerces/internal/dom/CoreDocumentImpl.java" startline="638" endline="647"/>
+        <source file="com/sun/org/apache/xerces/internal/dom/CoreDocumentImpl.java" startline="662" endline="672"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/xerces/internal/dom/CoreDocumentImpl.java" startline="1398" endline="1408"/>
+        <source file="com/sun/org/apache/xerces/internal/dom/CoreDocumentImpl.java" startline="662" endline="672"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xerces/internal/dom/CoreDocumentImpl.java" startline="1422" endline="1431"/>
+        <source file="com/sun/org/apache/xerces/internal/dom/CoreDocumentImpl.java" startline="662" endline="672"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xerces/internal/dom/CoreDocumentImpl.java" startline="1437" endline="1446"/>
+        <source file="com/sun/org/apache/xerces/internal/dom/CoreDocumentImpl.java" startline="662" endline="672"/>
+    </clone>
+    <clone nlines="15">
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators.java" startline="359" endline="373"/>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators.java" startline="607" endline="621"/>
+    </clone>
+    <clone nlines="15">
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators.java" startline="359" endline="373"/>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators.java" startline="831" endline="845"/>
+    </clone>
+    <clone nlines="15">
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators.java" startline="359" endline="373"/>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators.java" startline="1504" endline="1525"/>
+    </clone>
+    <clone nlines="15">
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators.java" startline="878" endline="892"/>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators.java" startline="607" endline="621"/>
+    </clone>
+    <clone nlines="15">
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators.java" startline="878" endline="892"/>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators.java" startline="831" endline="845"/>
+    </clone>
+    <clone nlines="15">
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators.java" startline="878" endline="892"/>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators.java" startline="1504" endline="1525"/>
+    </clone>
+    <clone nlines="15">
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/sax2dtm/SAX2DTM2.java" startline="418" endline="432"/>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators.java" startline="607" endline="621"/>
+    </clone>
+    <clone nlines="15">
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/sax2dtm/SAX2DTM2.java" startline="418" endline="432"/>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators.java" startline="831" endline="845"/>
+    </clone>
+    <clone nlines="15">
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/sax2dtm/SAX2DTM2.java" startline="418" endline="432"/>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators.java" startline="1504" endline="1525"/>
+    </clone>
+    <clone nlines="16">
+        <source file="com/sun/org/apache/xpath/internal/NodeSet.java" startline="269" endline="284"/>
+        <source file="com/sun/org/apache/xpath/internal/NodeSetDTM.java" startline="413" endline="428"/>
+    </clone>
+    <clone nlines="15">
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators.java" startline="607" endline="621"/>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators.java" startline="1504" endline="1525"/>
+    </clone>
+    <clone nlines="15">
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators.java" startline="831" endline="845"/>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators.java" startline="1504" endline="1525"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/xml/internal/stream/writers/XMLDOMWriterImpl.java" startline="577" endline="587"/>
+        <source file="com/sun/xml/internal/stream/writers/XMLDOMWriterImpl.java" startline="596" endline="607"/>
+    </clone>
+    <clone nlines="14">
+        <source file="com/sun/org/apache/xpath/internal/functions/Function2Args.java" startline="80" endline="94"/>
+        <source file="com/sun/org/apache/xpath/internal/functions/Function3Args.java" startline="79" endline="92"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xalan/internal/utils/SecuritySupport.java" startline="212" endline="221"/>
+        <source file="com/sun/org/apache/xerces/internal/utils/SecuritySupport.java" startline="206" endline="215"/>
+    </clone>
+    <clone nlines="13">
+        <source file="com/sun/org/apache/xpath/internal/NodeSet.java" startline="546" endline="558"/>
+        <source file="com/sun/org/apache/xpath/internal/NodeSetDTM.java" startline="705" endline="717"/>
+    </clone>
+    <clone nlines="12">
+        <source file="com/sun/org/apache/xerces/internal/dom/ElementImpl.java" startline="252" endline="263"/>
+        <source file="com/sun/org/apache/xerces/internal/dom/ElementImpl.java" startline="574" endline="587"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serializer/SerializerBase.java" startline="238" endline="247"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToHTMLSAXHandler.java" startline="475" endline="484"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serializer/SerializerBase.java" startline="238" endline="247"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToTextSAXHandler.java" startline="352" endline="364"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serializer/SerializerBase.java" startline="238" endline="247"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToUnknownStream.java" startline="340" endline="349"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serializer/SerializerBase.java" startline="238" endline="247"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToXMLSAXHandler.java" startline="463" endline="472"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serializer/ToSAXHandler.java" startline="122" endline="131"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToHTMLSAXHandler.java" startline="475" endline="484"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serializer/ToSAXHandler.java" startline="122" endline="131"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToTextSAXHandler.java" startline="352" endline="364"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serializer/ToSAXHandler.java" startline="122" endline="131"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToUnknownStream.java" startline="340" endline="349"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serializer/ToSAXHandler.java" startline="122" endline="131"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToXMLSAXHandler.java" startline="463" endline="472"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serializer/ToTextSAXHandler.java" startline="87" endline="96"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToHTMLSAXHandler.java" startline="475" endline="484"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serializer/ToTextSAXHandler.java" startline="87" endline="96"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToTextSAXHandler.java" startline="352" endline="364"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serializer/ToTextSAXHandler.java" startline="87" endline="96"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToUnknownStream.java" startline="340" endline="349"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serializer/ToTextSAXHandler.java" startline="87" endline="96"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToXMLSAXHandler.java" startline="463" endline="472"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serializer/ToTextStream.java" startline="472" endline="481"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToHTMLSAXHandler.java" startline="475" endline="484"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serializer/ToTextStream.java" startline="472" endline="481"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToTextSAXHandler.java" startline="352" endline="364"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serializer/ToTextStream.java" startline="472" endline="481"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToUnknownStream.java" startline="340" endline="349"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serializer/ToTextStream.java" startline="472" endline="481"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToXMLSAXHandler.java" startline="463" endline="472"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serializer/ToTextStream.java" startline="572" endline="582"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToHTMLSAXHandler.java" startline="475" endline="484"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/xml/internal/serializer/ToTextStream.java" startline="572" endline="582"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToTextSAXHandler.java" startline="352" endline="364"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serializer/ToTextStream.java" startline="572" endline="582"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToUnknownStream.java" startline="340" endline="349"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xml/internal/serializer/ToTextStream.java" startline="572" endline="582"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToXMLSAXHandler.java" startline="463" endline="472"/>
+    </clone>
+    <clone nlines="14">
+        <source file="com/sun/org/apache/xpath/internal/operations/And.java" startline="47" endline="60"/>
+        <source file="com/sun/org/apache/xpath/internal/operations/Or.java" startline="47" endline="60"/>
+    </clone>
+    <clone nlines="12">
+        <source file="com/sun/org/apache/xpath/internal/functions/FunctionMultiArgs.java" startline="196" endline="207"/>
+        <source file="com/sun/org/apache/xpath/internal/patterns/UnionPattern.java" startline="177" endline="188"/>
+    </clone>
+    <clone nlines="14">
+        <source file="com/sun/org/apache/xalan/internal/xsltc/trax/SmartTransformerFactoryImpl.java" startline="330" endline="343"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/trax/SmartTransformerFactoryImpl.java" startline="370" endline="383"/>
+    </clone>
+    <clone nlines="14">
+        <source file="com/sun/org/apache/xalan/internal/xsltc/trax/SmartTransformerFactoryImpl.java" startline="330" endline="343"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/trax/SmartTransformerFactoryImpl.java" startline="391" endline="404"/>
+    </clone>
+    <clone nlines="14">
+        <source file="com/sun/org/apache/xalan/internal/xsltc/trax/SmartTransformerFactoryImpl.java" startline="350" endline="363"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/trax/SmartTransformerFactoryImpl.java" startline="370" endline="383"/>
+    </clone>
+    <clone nlines="14">
+        <source file="com/sun/org/apache/xalan/internal/xsltc/trax/SmartTransformerFactoryImpl.java" startline="350" endline="363"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/trax/SmartTransformerFactoryImpl.java" startline="391" endline="404"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xml/internal/utils/IntVector.java" startline="128" endline="145"/>
+        <source file="com/sun/org/apache/xml/internal/utils/IntStack.java" startline="74" endline="93"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xml/internal/utils/IntVector.java" startline="128" endline="145"/>
+        <source file="com/sun/org/apache/xml/internal/utils/ObjectStack.java" startline="74" endline="93"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xml/internal/utils/ObjectVector.java" startline="128" endline="145"/>
+        <source file="com/sun/org/apache/xml/internal/utils/IntStack.java" startline="74" endline="93"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xml/internal/utils/ObjectVector.java" startline="128" endline="145"/>
+        <source file="com/sun/org/apache/xml/internal/utils/ObjectStack.java" startline="74" endline="93"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xml/internal/utils/StringToStringTableVector.java" startline="95" endline="112"/>
+        <source file="com/sun/org/apache/xml/internal/utils/IntStack.java" startline="74" endline="93"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xml/internal/utils/StringToStringTableVector.java" startline="95" endline="112"/>
+        <source file="com/sun/org/apache/xml/internal/utils/ObjectStack.java" startline="74" endline="93"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xml/internal/utils/StringVector.java" startline="96" endline="113"/>
+        <source file="com/sun/org/apache/xml/internal/utils/IntStack.java" startline="74" endline="93"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xml/internal/utils/StringVector.java" startline="96" endline="113"/>
+        <source file="com/sun/org/apache/xml/internal/utils/ObjectStack.java" startline="74" endline="93"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xml/internal/utils/StringVector.java" startline="176" endline="193"/>
+        <source file="com/sun/org/apache/xml/internal/utils/IntStack.java" startline="74" endline="93"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xml/internal/utils/StringVector.java" startline="176" endline="193"/>
+        <source file="com/sun/org/apache/xml/internal/utils/ObjectStack.java" startline="74" endline="93"/>
+    </clone>
+    <clone nlines="12">
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/IncrementalSAXSource_Filter.java" startline="248" endline="259"/>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/IncrementalSAXSource_Filter.java" startline="329" endline="340"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xml/internal/serialize/Printer.java" startline="252" endline="269"/>
+        <source file="com/sun/org/apache/xml/internal/serialize/Printer.java" startline="232" endline="249"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xml/internal/serialize/Printer.java" startline="272" endline="289"/>
+        <source file="com/sun/org/apache/xml/internal/serialize/Printer.java" startline="232" endline="249"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xpath/internal/NodeSet.java" startline="490" endline="507"/>
+        <source file="com/sun/org/apache/xpath/internal/NodeSetDTM.java" startline="648" endline="665"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xalan/internal/xsltc/compiler/NameCall.java" startline="58" endline="67"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/compiler/NamespaceUriCall.java" startline="57" endline="68"/>
+    </clone>
+    <clone nlines="20">
+        <source file="com/sun/org/apache/xml/internal/serializer/ToHTMLSAXHandler.java" startline="699" endline="718"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToXMLStream.java" startline="542" endline="564"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xml/internal/serializer/ToHTMLStream.java" startline="1838" endline="1855"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToXMLStream.java" startline="542" endline="564"/>
+    </clone>
+    <clone nlines="16">
+        <source file="com/sun/org/apache/xerces/internal/util/DOMUtil.java" startline="169" endline="184"/>
+        <source file="com/sun/org/apache/xerces/internal/util/DOMUtil.java" startline="187" endline="202"/>
+    </clone>
+    <clone nlines="16">
+        <source file="com/sun/org/apache/xerces/internal/util/DOMUtil.java" startline="169" endline="184"/>
+        <source file="com/sun/org/apache/xerces/internal/util/DOMUtil.java" startline="244" endline="259"/>
+    </clone>
+    <clone nlines="16">
+        <source file="com/sun/org/apache/xerces/internal/util/DOMUtil.java" startline="169" endline="184"/>
+        <source file="com/sun/org/apache/xerces/internal/util/DOMUtil.java" startline="296" endline="311"/>
+    </clone>
+    <clone nlines="16">
+        <source file="com/sun/org/apache/xerces/internal/util/DOMUtil.java" startline="224" endline="239"/>
+        <source file="com/sun/org/apache/xerces/internal/util/DOMUtil.java" startline="187" endline="202"/>
+    </clone>
+    <clone nlines="16">
+        <source file="com/sun/org/apache/xerces/internal/util/DOMUtil.java" startline="224" endline="239"/>
+        <source file="com/sun/org/apache/xerces/internal/util/DOMUtil.java" startline="244" endline="259"/>
+    </clone>
+    <clone nlines="16">
+        <source file="com/sun/org/apache/xerces/internal/util/DOMUtil.java" startline="224" endline="239"/>
+        <source file="com/sun/org/apache/xerces/internal/util/DOMUtil.java" startline="296" endline="311"/>
+    </clone>
+    <clone nlines="16">
+        <source file="com/sun/org/apache/xerces/internal/util/DOMUtil.java" startline="278" endline="293"/>
+        <source file="com/sun/org/apache/xerces/internal/util/DOMUtil.java" startline="187" endline="202"/>
+    </clone>
+    <clone nlines="16">
+        <source file="com/sun/org/apache/xerces/internal/util/DOMUtil.java" startline="278" endline="293"/>
+        <source file="com/sun/org/apache/xerces/internal/util/DOMUtil.java" startline="244" endline="259"/>
+    </clone>
+    <clone nlines="16">
+        <source file="com/sun/org/apache/xerces/internal/util/DOMUtil.java" startline="278" endline="293"/>
+        <source file="com/sun/org/apache/xerces/internal/util/DOMUtil.java" startline="296" endline="311"/>
+    </clone>
+    <clone nlines="15">
+        <source file="com/sun/org/apache/xalan/internal/xsltc/trax/SmartTransformerFactoryImpl.java" startline="265" endline="279"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/trax/SmartTransformerFactoryImpl.java" startline="287" endline="301"/>
+    </clone>
+    <clone nlines="15">
+        <source file="com/sun/org/apache/xalan/internal/xsltc/trax/SmartTransformerFactoryImpl.java" startline="265" endline="279"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/trax/SmartTransformerFactoryImpl.java" startline="309" endline="323"/>
+    </clone>
+    <clone nlines="12">
+        <source file="com/sun/org/apache/xerces/internal/impl/XMLStreamReaderImpl.java" startline="663" endline="676"/>
+        <source file="com/sun/org/apache/xerces/internal/impl/XMLStreamReaderImpl.java" startline="715" endline="726"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/xerces/internal/impl/XMLStreamReaderImpl.java" startline="663" endline="676"/>
+        <source file="com/sun/org/apache/xerces/internal/impl/XMLStreamReaderImpl.java" startline="734" endline="744"/>
+    </clone>
+    <clone nlines="12">
+        <source file="com/sun/org/apache/xerces/internal/impl/XMLStreamReaderImpl.java" startline="663" endline="676"/>
+        <source file="com/sun/org/apache/xerces/internal/impl/XMLStreamReaderImpl.java" startline="773" endline="784"/>
+    </clone>
+    <clone nlines="12">
+        <source file="com/sun/org/apache/xerces/internal/impl/XMLStreamReaderImpl.java" startline="663" endline="676"/>
+        <source file="com/sun/org/apache/xerces/internal/impl/XMLStreamReaderImpl.java" startline="792" endline="803"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/xerces/internal/impl/XMLStreamReaderImpl.java" startline="663" endline="676"/>
+        <source file="com/sun/org/apache/xerces/internal/impl/XMLStreamReaderImpl.java" startline="1207" endline="1217"/>
+    </clone>
+    <clone nlines="17">
+        <source file="com/sun/org/apache/xpath/internal/NodeSet.java" startline="1297" endline="1313"/>
+        <source file="com/sun/org/apache/xpath/internal/NodeSet.java" startline="1354" endline="1370"/>
+    </clone>
+    <clone nlines="17">
+        <source file="com/sun/org/apache/xpath/internal/NodeSet.java" startline="1354" endline="1370"/>
+        <source file="com/sun/org/apache/xpath/internal/NodeSet.java" startline="1326" endline="1342"/>
+    </clone>
+    <clone nlines="12">
+        <source file="com/sun/org/apache/xml/internal/utils/SuballocatedByteVector.java" startline="193" endline="204"/>
+        <source file="com/sun/org/apache/xml/internal/utils/SuballocatedIntVector.java" startline="233" endline="244"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/bcel/internal/classfile/LocalVariable.java" startline="114" endline="124"/>
+        <source file="com/sun/org/apache/bcel/internal/classfile/StackMapEntry.java" startline="100" endline="111"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/bcel/internal/classfile/InnerClasses.java" startline="110" endline="120"/>
+        <source file="com/sun/org/apache/bcel/internal/classfile/LocalVariableTable.java" startline="107" endline="117"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/bcel/internal/classfile/InnerClasses.java" startline="110" endline="120"/>
+        <source file="com/sun/org/apache/bcel/internal/classfile/StackMap.java" startline="104" endline="114"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/bcel/internal/classfile/LineNumberTable.java" startline="108" endline="117"/>
+        <source file="com/sun/org/apache/bcel/internal/classfile/LocalVariableTable.java" startline="107" endline="117"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/bcel/internal/classfile/LineNumberTable.java" startline="108" endline="117"/>
+        <source file="com/sun/org/apache/bcel/internal/classfile/StackMap.java" startline="104" endline="114"/>
+    </clone>
+    <clone nlines="12">
+        <source file="com/sun/org/apache/bcel/internal/classfile/LocalVariableTypeTable.java" startline="117" endline="128"/>
+        <source file="com/sun/org/apache/bcel/internal/classfile/LocalVariableTable.java" startline="171" endline="182"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xerces/internal/xinclude/SecuritySupport.java" startline="116" endline="131"/>
+        <source file="javax/xml/datatype/SecuritySupport.java" startline="80" endline="95"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xerces/internal/xinclude/SecuritySupport.java" startline="116" endline="131"/>
+        <source file="javax/xml/parsers/SecuritySupport.java" startline="84" endline="99"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xerces/internal/xinclude/SecuritySupport.java" startline="116" endline="131"/>
+        <source file="javax/xml/stream/SecuritySupport.java" startline="84" endline="99"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xerces/internal/xinclude/SecuritySupport.java" startline="116" endline="131"/>
+        <source file="javax/xml/transform/SecuritySupport.java" startline="82" endline="97"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xerces/internal/xinclude/SecuritySupport.java" startline="116" endline="131"/>
+        <source file="javax/xml/validation/SecuritySupport.java" startline="99" endline="114"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xerces/internal/xinclude/SecuritySupport.java" startline="116" endline="131"/>
+        <source file="javax/xml/validation/SecuritySupport.java" startline="137" endline="152"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xerces/internal/xinclude/SecuritySupport.java" startline="116" endline="131"/>
+        <source file="javax/xml/xpath/SecuritySupport.java" startline="96" endline="111"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xerces/internal/xinclude/SecuritySupport.java" startline="116" endline="131"/>
+        <source file="javax/xml/xpath/SecuritySupport.java" startline="134" endline="149"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xerces/internal/xinclude/SecuritySupport.java" startline="116" endline="131"/>
+        <source file="org/xml/sax/helpers/SecuritySupport.java" startline="82" endline="97"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xml/internal/serialize/SecuritySupport.java" startline="116" endline="131"/>
+        <source file="javax/xml/datatype/SecuritySupport.java" startline="80" endline="95"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xml/internal/serialize/SecuritySupport.java" startline="116" endline="131"/>
+        <source file="javax/xml/parsers/SecuritySupport.java" startline="84" endline="99"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xml/internal/serialize/SecuritySupport.java" startline="116" endline="131"/>
+        <source file="javax/xml/stream/SecuritySupport.java" startline="84" endline="99"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xml/internal/serialize/SecuritySupport.java" startline="116" endline="131"/>
+        <source file="javax/xml/transform/SecuritySupport.java" startline="82" endline="97"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xml/internal/serialize/SecuritySupport.java" startline="116" endline="131"/>
+        <source file="javax/xml/validation/SecuritySupport.java" startline="99" endline="114"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xml/internal/serialize/SecuritySupport.java" startline="116" endline="131"/>
+        <source file="javax/xml/validation/SecuritySupport.java" startline="137" endline="152"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xml/internal/serialize/SecuritySupport.java" startline="116" endline="131"/>
+        <source file="javax/xml/xpath/SecuritySupport.java" startline="96" endline="111"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xml/internal/serialize/SecuritySupport.java" startline="116" endline="131"/>
+        <source file="javax/xml/xpath/SecuritySupport.java" startline="134" endline="149"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xml/internal/serialize/SecuritySupport.java" startline="116" endline="131"/>
+        <source file="org/xml/sax/helpers/SecuritySupport.java" startline="82" endline="97"/>
+    </clone>
+    <clone nlines="12">
+        <source file="com/sun/org/apache/xerces/internal/impl/xpath/regex/RegularExpression.java" startline="2047" endline="2058"/>
+        <source file="com/sun/org/apache/xerces/internal/impl/xpath/regex/RegularExpression.java" startline="2073" endline="2084"/>
+    </clone>
+    <clone nlines="12">
+        <source file="com/sun/org/apache/xerces/internal/impl/xpath/regex/RegularExpression.java" startline="2060" endline="2071"/>
+        <source file="com/sun/org/apache/xerces/internal/impl/xpath/regex/RegularExpression.java" startline="2073" endline="2084"/>
+    </clone>
+    <clone nlines="18">
+        <source file="javax/xml/datatype/SecuritySupport.java" startline="80" endline="95"/>
+        <source file="com/sun/org/apache/bcel/internal/util/SecuritySupport.java" startline="130" endline="143"/>
+    </clone>
+    <clone nlines="18">
+        <source file="javax/xml/datatype/SecuritySupport.java" startline="80" endline="95"/>
+        <source file="com/sun/org/apache/xalan/internal/utils/SecuritySupport.java" startline="143" endline="156"/>
+    </clone>
+    <clone nlines="18">
+        <source file="javax/xml/datatype/SecuritySupport.java" startline="80" endline="95"/>
+        <source file="com/sun/org/apache/xerces/internal/utils/SecuritySupport.java" startline="133" endline="148"/>
+    </clone>
+    <clone nlines="18">
+        <source file="javax/xml/parsers/SecuritySupport.java" startline="84" endline="99"/>
+        <source file="com/sun/org/apache/bcel/internal/util/SecuritySupport.java" startline="130" endline="143"/>
+    </clone>
+    <clone nlines="18">
+        <source file="javax/xml/parsers/SecuritySupport.java" startline="84" endline="99"/>
+        <source file="com/sun/org/apache/xalan/internal/utils/SecuritySupport.java" startline="143" endline="156"/>
+    </clone>
+    <clone nlines="18">
+        <source file="javax/xml/parsers/SecuritySupport.java" startline="84" endline="99"/>
+        <source file="com/sun/org/apache/xerces/internal/utils/SecuritySupport.java" startline="133" endline="148"/>
+    </clone>
+    <clone nlines="18">
+        <source file="javax/xml/stream/SecuritySupport.java" startline="84" endline="99"/>
+        <source file="com/sun/org/apache/bcel/internal/util/SecuritySupport.java" startline="130" endline="143"/>
+    </clone>
+    <clone nlines="18">
+        <source file="javax/xml/stream/SecuritySupport.java" startline="84" endline="99"/>
+        <source file="com/sun/org/apache/xalan/internal/utils/SecuritySupport.java" startline="143" endline="156"/>
+    </clone>
+    <clone nlines="18">
+        <source file="javax/xml/stream/SecuritySupport.java" startline="84" endline="99"/>
+        <source file="com/sun/org/apache/xerces/internal/utils/SecuritySupport.java" startline="133" endline="148"/>
+    </clone>
+    <clone nlines="18">
+        <source file="javax/xml/transform/SecuritySupport.java" startline="82" endline="97"/>
+        <source file="com/sun/org/apache/bcel/internal/util/SecuritySupport.java" startline="130" endline="143"/>
+    </clone>
+    <clone nlines="18">
+        <source file="javax/xml/transform/SecuritySupport.java" startline="82" endline="97"/>
+        <source file="com/sun/org/apache/xalan/internal/utils/SecuritySupport.java" startline="143" endline="156"/>
+    </clone>
+    <clone nlines="18">
+        <source file="javax/xml/transform/SecuritySupport.java" startline="82" endline="97"/>
+        <source file="com/sun/org/apache/xerces/internal/utils/SecuritySupport.java" startline="133" endline="148"/>
+    </clone>
+    <clone nlines="18">
+        <source file="javax/xml/validation/SecuritySupport.java" startline="99" endline="114"/>
+        <source file="com/sun/org/apache/bcel/internal/util/SecuritySupport.java" startline="130" endline="143"/>
+    </clone>
+    <clone nlines="18">
+        <source file="javax/xml/validation/SecuritySupport.java" startline="99" endline="114"/>
+        <source file="com/sun/org/apache/xalan/internal/utils/SecuritySupport.java" startline="143" endline="156"/>
+    </clone>
+    <clone nlines="18">
+        <source file="javax/xml/validation/SecuritySupport.java" startline="99" endline="114"/>
+        <source file="com/sun/org/apache/xerces/internal/utils/SecuritySupport.java" startline="133" endline="148"/>
+    </clone>
+    <clone nlines="18">
+        <source file="javax/xml/validation/SecuritySupport.java" startline="137" endline="152"/>
+        <source file="com/sun/org/apache/bcel/internal/util/SecuritySupport.java" startline="130" endline="143"/>
+    </clone>
+    <clone nlines="18">
+        <source file="javax/xml/validation/SecuritySupport.java" startline="137" endline="152"/>
+        <source file="com/sun/org/apache/xalan/internal/utils/SecuritySupport.java" startline="143" endline="156"/>
+    </clone>
+    <clone nlines="18">
+        <source file="javax/xml/validation/SecuritySupport.java" startline="137" endline="152"/>
+        <source file="com/sun/org/apache/xerces/internal/utils/SecuritySupport.java" startline="133" endline="148"/>
+    </clone>
+    <clone nlines="18">
+        <source file="javax/xml/xpath/SecuritySupport.java" startline="96" endline="111"/>
+        <source file="com/sun/org/apache/bcel/internal/util/SecuritySupport.java" startline="130" endline="143"/>
+    </clone>
+    <clone nlines="18">
+        <source file="javax/xml/xpath/SecuritySupport.java" startline="96" endline="111"/>
+        <source file="com/sun/org/apache/xalan/internal/utils/SecuritySupport.java" startline="143" endline="156"/>
+    </clone>
+    <clone nlines="18">
+        <source file="javax/xml/xpath/SecuritySupport.java" startline="96" endline="111"/>
+        <source file="com/sun/org/apache/xerces/internal/utils/SecuritySupport.java" startline="133" endline="148"/>
+    </clone>
+    <clone nlines="18">
+        <source file="javax/xml/xpath/SecuritySupport.java" startline="134" endline="149"/>
+        <source file="com/sun/org/apache/bcel/internal/util/SecuritySupport.java" startline="130" endline="143"/>
+    </clone>
+    <clone nlines="18">
+        <source file="javax/xml/xpath/SecuritySupport.java" startline="134" endline="149"/>
+        <source file="com/sun/org/apache/xalan/internal/utils/SecuritySupport.java" startline="143" endline="156"/>
+    </clone>
+    <clone nlines="18">
+        <source file="javax/xml/xpath/SecuritySupport.java" startline="134" endline="149"/>
+        <source file="com/sun/org/apache/xerces/internal/utils/SecuritySupport.java" startline="133" endline="148"/>
+    </clone>
+    <clone nlines="18">
+        <source file="org/xml/sax/helpers/SecuritySupport.java" startline="82" endline="97"/>
+        <source file="com/sun/org/apache/bcel/internal/util/SecuritySupport.java" startline="130" endline="143"/>
+    </clone>
+    <clone nlines="18">
+        <source file="org/xml/sax/helpers/SecuritySupport.java" startline="82" endline="97"/>
+        <source file="com/sun/org/apache/xalan/internal/utils/SecuritySupport.java" startline="143" endline="156"/>
+    </clone>
+    <clone nlines="18">
+        <source file="org/xml/sax/helpers/SecuritySupport.java" startline="82" endline="97"/>
+        <source file="com/sun/org/apache/xerces/internal/utils/SecuritySupport.java" startline="133" endline="148"/>
+    </clone>
+    <clone nlines="16">
+        <source file="com/sun/org/apache/xerces/internal/parsers/AbstractSAXParser.java" startline="424" endline="439"/>
+        <source file="com/sun/org/apache/xerces/internal/parsers/AbstractSAXParser.java" startline="854" endline="869"/>
+    </clone>
+    <clone nlines="16">
+        <source file="com/sun/org/apache/xerces/internal/parsers/AbstractSAXParser.java" startline="1015" endline="1030"/>
+        <source file="com/sun/org/apache/xerces/internal/parsers/AbstractSAXParser.java" startline="1045" endline="1061"/>
+    </clone>
+    <clone nlines="16">
+        <source file="com/sun/org/apache/xerces/internal/parsers/AbstractSAXParser.java" startline="1074" endline="1089"/>
+        <source file="com/sun/org/apache/xerces/internal/parsers/AbstractSAXParser.java" startline="1045" endline="1061"/>
+    </clone>
+    <clone nlines="12">
+        <source file="com/sun/org/apache/xerces/internal/util/XMLGrammarPoolImpl.java" startline="249" endline="260"/>
+        <source file="com/sun/org/apache/xerces/internal/util/XMLGrammarPoolImpl.java" startline="197" endline="208"/>
+    </clone>
+    <clone nlines="13">
+        <source file="com/sun/org/apache/xalan/internal/xsltc/compiler/XSLTC.java" startline="389" endline="401"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/compiler/XSLTC.java" startline="408" endline="420"/>
+    </clone>
+    <clone nlines="17">
+        <source file="com/sun/org/apache/xerces/internal/impl/XMLErrorReporter.java" startline="505" endline="526"/>
+        <source file="com/sun/org/apache/xerces/internal/impl/XMLErrorReporter.java" startline="577" endline="593"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xerces/internal/dom/ElementImpl.java" startline="405" endline="422"/>
+        <source file="com/sun/org/apache/xerces/internal/dom/ElementImpl.java" startline="718" endline="735"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMDocumentImpl.java" startline="1643" endline="1653"/>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMDocumentImpl.java" startline="1669" endline="1679"/>
+    </clone>
+    <clone nlines="16">
+        <source file="com/sun/org/apache/xml/internal/utils/URI.java" startline="1122" endline="1137"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/utils/URI.java" startline="1101" endline="1116"/>
+    </clone>
+    <clone nlines="14">
+        <source file="com/sun/org/apache/xalan/internal/xsltc/trax/TransformerFactoryImpl.java" startline="1242" endline="1255"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/trax/TransformerFactoryImpl.java" startline="1184" endline="1198"/>
+    </clone>
+    <clone nlines="14">
+        <source file="com/sun/org/apache/xalan/internal/xsltc/trax/TransformerFactoryImpl.java" startline="1242" endline="1255"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/trax/TransformerFactoryImpl.java" startline="1213" endline="1227"/>
+    </clone>
+    <clone nlines="14">
+        <source file="com/sun/org/apache/xalan/internal/xsltc/trax/TransformerFactoryImpl.java" startline="1242" endline="1255"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/trax/TransformerImpl.java" startline="1348" endline="1362"/>
+    </clone>
+    <clone nlines="14">
+        <source file="com/sun/org/apache/xalan/internal/xsltc/trax/TransformerFactoryImpl.java" startline="1242" endline="1255"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/trax/TransformerImpl.java" startline="1377" endline="1391"/>
+    </clone>
+    <clone nlines="14">
+        <source file="com/sun/org/apache/xalan/internal/xsltc/trax/TransformerImpl.java" startline="1406" endline="1419"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/trax/TransformerFactoryImpl.java" startline="1184" endline="1198"/>
+    </clone>
+    <clone nlines="14">
+        <source file="com/sun/org/apache/xalan/internal/xsltc/trax/TransformerImpl.java" startline="1406" endline="1419"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/trax/TransformerFactoryImpl.java" startline="1213" endline="1227"/>
+    </clone>
+    <clone nlines="14">
+        <source file="com/sun/org/apache/xalan/internal/xsltc/trax/TransformerImpl.java" startline="1406" endline="1419"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/trax/TransformerImpl.java" startline="1348" endline="1362"/>
+    </clone>
+    <clone nlines="14">
+        <source file="com/sun/org/apache/xalan/internal/xsltc/trax/TransformerImpl.java" startline="1406" endline="1419"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/trax/TransformerImpl.java" startline="1377" endline="1391"/>
+    </clone>
+    <clone nlines="15">
+        <source file="com/sun/org/apache/xml/internal/serializer/NamespaceMappings.java" startline="159" endline="173"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/NamespaceMappings.java" startline="175" endline="190"/>
+    </clone>
+    <clone nlines="19">
+        <source file="com/sun/org/apache/xerces/internal/impl/dv/xs/XSSimpleTypeDecl.java" startline="1570" endline="1588"/>
+        <source file="com/sun/org/apache/xerces/internal/impl/dv/xs/XSSimpleTypeDecl.java" startline="1542" endline="1560"/>
+    </clone>
+    <clone nlines="19">
+        <source file="com/sun/org/apache/xerces/internal/impl/dv/xs/XSSimpleTypeDecl.java" startline="1570" endline="1588"/>
+        <source file="com/sun/org/apache/xerces/internal/impl/dv/xs/XSSimpleTypeDecl.java" startline="1593" endline="1611"/>
+    </clone>
+    <clone nlines="12">
+        <source file="com/sun/org/apache/xalan/internal/xsltc/runtime/Hashtable.java" startline="149" endline="160"/>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/runtime/Hashtable.java" startline="165" endline="176"/>
+    </clone>
+    <clone nlines="19">
+        <source file="javax/xml/transform/dom/DOMResult.java" startline="132" endline="150"/>
+        <source file="javax/xml/transform/dom/DOMResult.java" startline="183" endline="201"/>
+    </clone>
+    <clone nlines="16">
+        <source file="com/sun/org/apache/xml/internal/utils/SuballocatedByteVector.java" startline="483" endline="498"/>
+        <source file="com/sun/org/apache/xml/internal/utils/SuballocatedIntVector.java" startline="524" endline="539"/>
+    </clone>
+    <clone nlines="14">
+        <source file="com/sun/org/apache/xpath/internal/domapi/XPathResultImpl.java" startline="185" endline="198"/>
+        <source file="com/sun/org/apache/xpath/internal/domapi/XPathResultImpl.java" startline="208" endline="221"/>
+    </clone>
+    <clone nlines="14">
+        <source file="com/sun/org/apache/xpath/internal/domapi/XPathResultImpl.java" startline="226" endline="239"/>
+        <source file="com/sun/org/apache/xpath/internal/domapi/XPathResultImpl.java" startline="208" endline="221"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xerces/internal/impl/dv/xs/TimeDV.java" startline="95" endline="105"/>
+        <source file="com/sun/org/apache/xerces/internal/impl/dv/xs/DateDV.java" startline="77" endline="86"/>
+    </clone>
+    <clone nlines="17">
+        <source file="com/sun/org/apache/xpath/internal/compiler/XPathParser.java" startline="804" endline="820"/>
+        <source file="com/sun/org/apache/xpath/internal/compiler/XPathParser.java" startline="831" endline="847"/>
+    </clone>
+    <clone nlines="13">
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/XMLSchemaLoader.java" startline="1125" endline="1137"/>
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/XMLSchemaLoader.java" startline="1156" endline="1169"/>
+    </clone>
+    <clone nlines="13">
+        <source file="com/sun/org/apache/xml/internal/resolver/tools/ResolvingXMLReader.java" startline="63" endline="75"/>
+        <source file="com/sun/org/apache/xml/internal/resolver/tools/ResolvingXMLReader.java" startline="84" endline="96"/>
+    </clone>
+    <clone nlines="19">
+        <source file="com/sun/org/apache/xerces/internal/impl/dtd/XMLDTDValidator.java" startline="941" endline="959"/>
+        <source file="com/sun/org/apache/xerces/internal/impl/dtd/XMLDTDValidator.java" startline="979" endline="998"/>
+    </clone>
+    <clone nlines="16">
+        <source file="com/sun/org/apache/xml/internal/serialize/BaseMarkupSerializer.java" startline="908" endline="923"/>
+        <source file="com/sun/org/apache/xml/internal/serialize/BaseMarkupSerializer.java" startline="860" endline="875"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xalan/internal/lib/ExsltSets.java" startline="128" endline="145"/>
+        <source file="com/sun/org/apache/xalan/internal/lib/ExsltSets.java" startline="158" endline="176"/>
+    </clone>
+    <clone nlines="24">
+        <source file="com/sun/org/apache/xerces/internal/parsers/AbstractSAXParser.java" startline="380" endline="403"/>
+        <source file="com/sun/org/apache/xerces/internal/parsers/AbstractSAXParser.java" startline="808" endline="832"/>
+    </clone>
+    <clone nlines="12">
+        <source file="com/sun/org/apache/xerces/internal/xni/parser/XMLParseException.java" startline="70" endline="81"/>
+        <source file="com/sun/org/apache/xerces/internal/xni/parser/XMLParseException.java" startline="84" endline="96"/>
+    </clone>
+    <clone nlines="17">
+        <source file="com/sun/org/apache/xerces/internal/impl/dv/xs/DoubleDV.java" startline="85" endline="101"/>
+        <source file="com/sun/org/apache/xerces/internal/impl/dv/xs/FloatDV.java" startline="69" endline="85"/>
+    </clone>
+    <clone nlines="21">
+        <source file="com/sun/org/apache/xml/internal/utils/QName.java" startline="204" endline="224"/>
+        <source file="com/sun/org/apache/xml/internal/utils/QName.java" startline="107" endline="128"/>
+    </clone>
+    <clone nlines="20">
+        <source file="com/sun/org/apache/xerces/internal/parsers/DOMParser.java" startline="581" endline="600"/>
+        <source file="com/sun/org/apache/xerces/internal/jaxp/SAXParserImpl.java" startline="692" endline="711"/>
+    </clone>
+    <clone nlines="20">
+        <source file="com/sun/org/apache/xerces/internal/parsers/DOMParser.java" startline="581" endline="600"/>
+        <source file="com/sun/org/apache/xerces/internal/jaxp/SAXParserImpl.java" startline="713" endline="732"/>
+    </clone>
+    <clone nlines="21">
+        <source file="com/sun/org/apache/xerces/internal/dom/NamedNodeMapImpl.java" startline="266" endline="286"/>
+        <source file="com/sun/org/apache/xerces/internal/dom/NamedNodeMapImpl.java" startline="302" endline="322"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xalan/internal/lib/ExsltMath.java" startline="106" endline="123"/>
+        <source file="com/sun/org/apache/xalan/internal/lib/ExsltMath.java" startline="71" endline="88"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/bcel/internal/generic/ConstantPoolGen.java" startline="548" endline="565"/>
+        <source file="com/sun/org/apache/bcel/internal/generic/ConstantPoolGen.java" startline="598" endline="615"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/bcel/internal/generic/ConstantPoolGen.java" startline="548" endline="565"/>
+        <source file="com/sun/org/apache/bcel/internal/generic/ConstantPoolGen.java" startline="643" endline="660"/>
+    </clone>
+    <clone nlines="18">
+        <source file="com/sun/org/apache/xerces/internal/jaxp/validation/SoftReferenceGrammarPool.java" startline="187" endline="204"/>
+        <source file="com/sun/org/apache/xerces/internal/jaxp/validation/SoftReferenceGrammarPool.java" startline="237" endline="254"/>
+    </clone>
+    <clone nlines="11">
+        <source file="com/sun/org/apache/xerces/internal/impl/XMLStreamReaderImpl.java" startline="405" endline="416"/>
+        <source file="com/sun/org/apache/xerces/internal/impl/XMLStreamReaderImpl.java" startline="390" endline="400"/>
+    </clone>
+    <clone nlines="10">
+        <source file="com/sun/org/apache/xerces/internal/impl/XMLStreamReaderImpl.java" startline="421" endline="430"/>
+        <source file="com/sun/org/apache/xerces/internal/impl/XMLStreamReaderImpl.java" startline="390" endline="400"/>
+    </clone>
+    <clone nlines="19">
+        <source file="com/sun/org/apache/xerces/internal/impl/xpath/regex/RegularExpression.java" startline="1918" endline="1936"/>
+        <source file="com/sun/org/apache/xerces/internal/impl/xpath/regex/RegularExpression.java" startline="1956" endline="1974"/>
+    </clone>
+    <clone nlines="23">
+        <source file="com/sun/org/apache/xpath/internal/functions/FunctionMultiArgs.java" startline="212" endline="237"/>
+        <source file="com/sun/org/apache/xpath/internal/axes/PredicatedNodeTest.java" startline="570" endline="592"/>
+    </clone>
+    <clone nlines="26">
+        <source file="com/sun/org/apache/xpath/internal/functions/FunctionMultiArgs.java" startline="212" endline="237"/>
+        <source file="com/sun/org/apache/xpath/internal/axes/UnionPathIterator.java" startline="557" endline="583"/>
+    </clone>
+    <clone nlines="32">
+        <source file="com/sun/org/apache/xml/internal/utils/URI.java" startline="604" endline="635"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/utils/URI.java" startline="583" endline="614"/>
+    </clone>
+    <clone nlines="23">
+        <source file="com/sun/org/apache/bcel/internal/generic/Type.java" startline="211" endline="233"/>
+        <source file="com/sun/org/apache/bcel/internal/classfile/Utility.java" startline="581" endline="606"/>
+    </clone>
+    <clone nlines="19">
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/XSModelImpl.java" startline="220" endline="238"/>
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/XSModelImpl.java" startline="200" endline="218"/>
+    </clone>
+    <clone nlines="42">
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators.java" startline="1303" endline="1345"/>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/sax2dtm/SAX2DTM2.java" startline="861" endline="902"/>
+    </clone>
+    <clone nlines="34">
+        <source file="com/sun/org/apache/xml/internal/utils/SuballocatedByteVector.java" startline="152" endline="185"/>
+        <source file="com/sun/org/apache/xml/internal/utils/SuballocatedIntVector.java" startline="192" endline="225"/>
+    </clone>
+    <clone nlines="38">
+        <source file="com/sun/org/apache/xerces/internal/dom/RangeImpl.java" startline="273" endline="310"/>
+        <source file="com/sun/org/apache/xerces/internal/dom/RangeImpl.java" startline="232" endline="271"/>
+    </clone>
+    <clone nlines="38">
+        <source file="com/sun/org/apache/xerces/internal/dom/RangeImpl.java" startline="273" endline="310"/>
+        <source file="com/sun/org/apache/xerces/internal/dom/RangeImpl.java" startline="312" endline="349"/>
+    </clone>
+    <clone nlines="38">
+        <source file="com/sun/org/apache/xerces/internal/dom/RangeImpl.java" startline="351" endline="388"/>
+        <source file="com/sun/org/apache/xerces/internal/dom/RangeImpl.java" startline="232" endline="271"/>
+    </clone>
+    <clone nlines="38">
+        <source file="com/sun/org/apache/xerces/internal/dom/RangeImpl.java" startline="351" endline="388"/>
+        <source file="com/sun/org/apache/xerces/internal/dom/RangeImpl.java" startline="312" endline="349"/>
+    </clone>
+    <clone nlines="34">
+        <source file="javax/xml/datatype/FactoryFinder.java" startline="173" endline="208"/>
+        <source file="javax/xml/parsers/FactoryFinder.java" startline="174" endline="207"/>
+    </clone>
+    <clone nlines="34">
+        <source file="javax/xml/stream/FactoryFinder.java" startline="174" endline="209"/>
+        <source file="javax/xml/parsers/FactoryFinder.java" startline="174" endline="207"/>
+    </clone>
+    <clone nlines="24">
+        <source file="com/sun/org/apache/xerces/internal/impl/dtd/DTDGrammar.java" startline="2458" endline="2482"/>
+        <source file="com/sun/xml/internal/stream/dtd/nonvalidating/DTDGrammar.java" startline="769" endline="792"/>
+    </clone>
+    <clone nlines="47">
+        <source file="com/sun/org/apache/xml/internal/utils/URI.java" startline="1211" endline="1257"/>
+        <source file="com/sun/org/apache/xml/internal/serializer/utils/URI.java" startline="1190" endline="1236"/>
+    </clone>
+    <clone nlines="48">
+        <source file="com/sun/org/apache/xerces/internal/parsers/XML11NonValidatingConfiguration.java" startline="844" endline="891"/>
+        <source file="com/sun/org/apache/xerces/internal/parsers/XML11NonValidatingConfiguration.java" startline="894" endline="942"/>
+    </clone>
+    <clone nlines="51">
+        <source file="com/sun/org/apache/xerces/internal/jaxp/validation/JAXPValidationMessageFormatter.java" startline="51" endline="101"/>
+        <source file="com/sun/org/apache/xerces/internal/util/DatatypeMessageFormatter.java" startline="53" endline="103"/>
+    </clone>
+    <clone nlines="51">
+        <source file="com/sun/org/apache/xerces/internal/util/SAXMessageFormatter.java" startline="51" endline="101"/>
+        <source file="com/sun/org/apache/xerces/internal/util/DatatypeMessageFormatter.java" startline="53" endline="103"/>
+    </clone>
+    <clone nlines="47">
+        <source file="com/sun/org/apache/xalan/internal/lib/ExsltDynamic.java" startline="182" endline="228"/>
+        <source file="com/sun/org/apache/xalan/internal/lib/ExsltDynamic.java" startline="101" endline="147"/>
+    </clone>
+</clones>

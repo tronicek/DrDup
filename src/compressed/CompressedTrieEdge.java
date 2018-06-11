@@ -21,11 +21,13 @@ public class CompressedTrieEdge implements Serializable {
     private int positionsCount;
 
     public CompressedTrieEdge(List<String> linearization, int start, int end, CompressedTrieNode destination) {
+        //System.out.printf("new edge: %d, %d, %s%n", start, end, linearization.subList(start, end));
         this.linearization = linearization;
         this.start = start;
         this.end = end;
         this.destination = destination;
         count++;
+        assert start < end;
     }
 
     public static int getCount() {
@@ -49,7 +51,12 @@ public class CompressedTrieEdge implements Serializable {
     }
 
     public void setEnd(int end) {
+        //System.out.printf("changing end from %d to %d%n", this.end, end);
         this.end = end;
+    }
+    
+    public void incEnd() {
+        end++;
     }
 
     public List<String> getLabel() {

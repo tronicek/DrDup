@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<clones>
+    <clone nlines="10">
+        <source file="org/gjt/sp/jedit/pluginmgr/PluginList.java" startline="385" endline="394"/>
+        <source file="org/gjt/sp/jedit/pluginmgr/PluginList.java" startline="456" endline="465"/>
+    </clone>
+    <clone nlines="10">
+        <source file="org/gjt/sp/jedit/pluginmgr/PluginList.java" startline="385" endline="394"/>
+        <source file="org/gjt/sp/jedit/Macros.java" startline="447" endline="456"/>
+    </clone>
+    <clone nlines="12">
+        <source file="org/gjt/sp/jedit/gui/OptionsDialog.java" startline="597" endline="608"/>
+        <source file="org/gjt/sp/jedit/gui/OptionsDialog.java" startline="584" endline="595"/>
+    </clone>
+    <clone nlines="12">
+        <source file="org/gjt/sp/jedit/gui/OptionsDialog.java" startline="597" endline="608"/>
+        <source file="org/gjt/sp/jedit/gui/OptionsDialog.java" startline="610" endline="622"/>
+    </clone>
+    <clone nlines="11">
+        <source file="org/gjt/sp/jedit/gui/OptionsDialog.java" startline="597" endline="608"/>
+        <source file="org/jedit/options/OptionGroupPane.java" startline="407" endline="417"/>
+    </clone>
+    <clone nlines="12">
+        <source file="org/gjt/sp/jedit/gui/OptionsDialog.java" startline="597" endline="608"/>
+        <source file="org/jedit/options/OptionGroupPane.java" startline="431" endline="442"/>
+    </clone>
+    <clone nlines="11">
+        <source file="org/gjt/sp/jedit/gui/OptionsDialog.java" startline="597" endline="608"/>
+        <source file="org/jedit/options/PluginOptionGroup.java" startline="108" endline="118"/>
+    </clone>
+    <clone nlines="12">
+        <source file="org/gjt/sp/jedit/gui/OptionsDialog.java" startline="597" endline="608"/>
+        <source file="org/jedit/options/PluginOptionGroup.java" startline="132" endline="143"/>
+    </clone>
+    <clone nlines="11">
+        <source file="org/jedit/options/OptionGroupPane.java" startline="419" endline="429"/>
+        <source file="org/gjt/sp/jedit/gui/OptionsDialog.java" startline="584" endline="595"/>
+    </clone>
+    <clone nlines="11">
+        <source file="org/jedit/options/OptionGroupPane.java" startline="419" endline="429"/>
+        <source file="org/gjt/sp/jedit/gui/OptionsDialog.java" startline="610" endline="622"/>
+    </clone>
+    <clone nlines="11">
+        <source file="org/jedit/options/OptionGroupPane.java" startline="419" endline="429"/>
+        <source file="org/jedit/options/OptionGroupPane.java" startline="407" endline="417"/>
+    </clone>
+    <clone nlines="11">
+        <source file="org/jedit/options/OptionGroupPane.java" startline="419" endline="429"/>
+        <source file="org/jedit/options/OptionGroupPane.java" startline="431" endline="442"/>
+    </clone>
+    <clone nlines="11">
+        <source file="org/jedit/options/OptionGroupPane.java" startline="419" endline="429"/>
+        <source file="org/jedit/options/PluginOptionGroup.java" startline="108" endline="118"/>
+    </clone>
+    <clone nlines="11">
+        <source file="org/jedit/options/OptionGroupPane.java" startline="419" endline="429"/>
+        <source file="org/jedit/options/PluginOptionGroup.java" startline="132" endline="143"/>
+    </clone>
+    <clone nlines="11">
+        <source file="org/jedit/options/PluginOptionGroup.java" startline="120" endline="130"/>
+        <source file="org/gjt/sp/jedit/gui/OptionsDialog.java" startline="584" endline="595"/>
+    </clone>
+    <clone nlines="11">
+        <source file="org/jedit/options/PluginOptionGroup.java" startline="120" endline="130"/>
+        <source file="org/gjt/sp/jedit/gui/OptionsDialog.java" startline="610" endline="622"/>
+    </clone>
+    <clone nlines="11">
+        <source file="org/jedit/options/PluginOptionGroup.java" startline="120" endline="130"/>
+        <source file="org/jedit/options/OptionGroupPane.java" startline="407" endline="417"/>
+    </clone>
+    <clone nlines="11">
+        <source file="org/jedit/options/PluginOptionGroup.java" startline="120" endline="130"/>
+        <source file="org/jedit/options/OptionGroupPane.java" startline="431" endline="442"/>
+    </clone>
+    <clone nlines="11">
+        <source file="org/jedit/options/PluginOptionGroup.java" startline="120" endline="130"/>
+        <source file="org/jedit/options/PluginOptionGroup.java" startline="108" endline="118"/>
+    </clone>
+    <clone nlines="11">
+        <source file="org/jedit/options/PluginOptionGroup.java" startline="120" endline="130"/>
+        <source file="org/jedit/options/PluginOptionGroup.java" startline="132" endline="143"/>
+    </clone>
+    <clone nlines="12">
+        <source file="org/gjt/sp/jedit/EditPane.java" startline="270" endline="279"/>
+        <source file="installer/SwingInstall.java" startline="710" endline="719"/>
+    </clone>
+    <clone nlines="12">
+        <source file="org/gjt/sp/jedit/EditPane.java" startline="270" endline="279"/>
+        <source file="installer/SwingInstall.java" startline="768" endline="777"/>
+    </clone>
+    <clone nlines="14">
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="6397" endline="6412"/>
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="6414" endline="6427"/>
+    </clone>
+    <clone nlines="12">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3807" endline="3815"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298"/>
+    </clone>
+    <clone nlines="12">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3828" endline="3836"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298"/>
+    </clone>
+    <clone nlines="12">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3864" endline="3872"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298"/>
+    </clone>
+    <clone nlines="12">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3905" endline="3913"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298"/>
+    </clone>
+    <clone nlines="12">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3946" endline="3954"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298"/>
+    </clone>
+    <clone nlines="12">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4250" endline="4258"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298"/>
+    </clone>
+    <clone nlines="12">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4260" endline="4268"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298"/>
+    </clone>
+    <clone nlines="12">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4501" endline="4509"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298"/>
+    </clone>
+    <clone nlines="12">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4543" endline="4551"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298"/>
+    </clone>
+    <clone nlines="12">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4728" endline="4736"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298"/>
+    </clone>
+    <clone nlines="12">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5061" endline="5069"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298"/>
+    </clone>
+    <clone nlines="12">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5355" endline="5363"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298"/>
+    </clone>
+    <clone nlines="12">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5464" endline="5472"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298"/>
+    </clone>
+    <clone nlines="12">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5485" endline="5493"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298"/>
+    </clone>
+    <clone nlines="12">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5534" endline="5542"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298"/>
+    </clone>
+    <clone nlines="12">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5590" endline="5598"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298"/>
+    </clone>
+    <clone nlines="12">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5671" endline="5679"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298"/>
+    </clone>
+    <clone nlines="10">
+        <source file="org/gjt/sp/jedit/bsh/org/objectweb/asm/Type.java" startline="210" endline="220"/>
+        <source file="org/gjt/sp/jedit/buffer/BufferSegment.java" startline="42" endline="51"/>
+    </clone>
+    <clone nlines="14">
+        <source file="org/gjt/sp/jedit/PluginJAR.java" startline="2073" endline="2086"/>
+        <source file="org/gjt/sp/jedit/PluginJAR.java" startline="2089" endline="2102"/>
+    </clone>
+    <clone nlines="11">
+        <source file="org/gjt/sp/jedit/menu/EnhancedMenuItem.java" startline="91" endline="101"/>
+        <source file="org/gjt/sp/jedit/menu/EnhancedCheckBoxMenuItem.java" startline="96" endline="107"/>
+    </clone>
+    <clone nlines="10">
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="3318" endline="3327"/>
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="3335" endline="3344"/>
+    </clone>
+    <clone nlines="16">
+        <source file="org/gjt/sp/jedit/buffer/JEditBuffer.java" startline="329" endline="344"/>
+        <source file="org/gjt/sp/jedit/buffer/JEditBuffer.java" startline="1423" endline="1438"/>
+    </clone>
+    <clone nlines="16">
+        <source file="org/gjt/sp/jedit/buffer/JEditBuffer.java" startline="1423" endline="1438"/>
+        <source file="org/gjt/sp/jedit/buffer/JEditBuffer.java" startline="385" endline="400"/>
+    </clone>
+    <clone nlines="10">
+        <source file="org/gjt/sp/jedit/bsh/classpath/ClassManagerImpl.java" startline="244" endline="253"/>
+        <source file="org/gjt/sp/jedit/bsh/BshClassManager.java" startline="254" endline="266"/>
+    </clone>
+    <clone nlines="10">
+        <source file="org/gjt/sp/jedit/bsh/classpath/ClassManagerImpl.java" startline="244" endline="253"/>
+        <source file="org/gjt/sp/jedit/bsh/BshClassManager.java" startline="271" endline="283"/>
+    </clone>
+    <clone nlines="13">
+        <source file="org/gjt/sp/jedit/bsh/classpath/ClassManagerImpl.java" startline="259" endline="272"/>
+        <source file="org/gjt/sp/jedit/bsh/BshClassManager.java" startline="254" endline="266"/>
+    </clone>
+    <clone nlines="13">
+        <source file="org/gjt/sp/jedit/bsh/classpath/ClassManagerImpl.java" startline="259" endline="272"/>
+        <source file="org/gjt/sp/jedit/bsh/BshClassManager.java" startline="271" endline="283"/>
+    </clone>
+    <clone nlines="11">
+        <source file="org/gjt/sp/jedit/syntax/ParserRule.java" startline="235" endline="245"/>
+        <source file="org/gjt/sp/jedit/syntax/ParserRule.java" startline="248" endline="258"/>
+    </clone>
+    <clone nlines="10">
+        <source file="org/gjt/sp/jedit/gui/EnhancedButton.java" startline="93" endline="102"/>
+        <source file="org/gjt/sp/jedit/menu/EnhancedMenuItem.java" startline="170" endline="179"/>
+    </clone>
+    <clone nlines="10">
+        <source file="org/gjt/sp/jedit/menu/EnhancedCheckBoxMenuItem.java" startline="189" endline="199"/>
+        <source file="org/gjt/sp/jedit/menu/EnhancedMenuItem.java" startline="170" endline="179"/>
+    </clone>
+    <clone nlines="13">
+        <source file="org/gjt/sp/jedit/PluginJAR.java" startline="1990" endline="2002"/>
+        <source file="org/gjt/sp/jedit/PluginJAR.java" startline="2005" endline="2017"/>
+    </clone>
+    <clone nlines="10">
+        <source file="org/gjt/sp/jedit/bsh/org/objectweb/asm/ClassWriter.java" startline="779" endline="788"/>
+        <source file="org/gjt/sp/jedit/bsh/org/objectweb/asm/ClassWriter.java" startline="666" endline="675"/>
+    </clone>
+    <clone nlines="11">
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="3087" endline="3097"/>
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="3105" endline="3119"/>
+    </clone>
+    <clone nlines="14">
+        <source file="de/masters_of_disaster/ant/tasks/ar/ArUtils.java" startline="38" endline="51"/>
+        <source file="installer/TarHeader.java" startline="301" endline="316"/>
+    </clone>
+    <clone nlines="11">
+        <source file="org/gjt/sp/jedit/bufferio/BufferIORequest.java" startline="96" endline="108"/>
+        <source file="org/gjt/sp/jedit/bufferio/MarkersSaveRequest.java" startline="55" endline="65"/>
+    </clone>
+    <clone nlines="13">
+        <source file="org/gjt/sp/jedit/gui/ExtendedGridLayoutConstraints.java" startline="240" endline="252"/>
+        <source file="org/gjt/sp/jedit/gui/ExtendedGridLayoutConstraints.java" startline="264" endline="276"/>
+    </clone>
+    <clone nlines="10">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1444" endline="1453"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1433" endline="1442"/>
+    </clone>
+    <clone nlines="10">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1444" endline="1453"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1516" endline="1525"/>
+    </clone>
+    <clone nlines="10">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1444" endline="1453"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1538" endline="1547"/>
+    </clone>
+    <clone nlines="10">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1505" endline="1514"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1433" endline="1442"/>
+    </clone>
+    <clone nlines="10">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1505" endline="1514"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1516" endline="1525"/>
+    </clone>
+    <clone nlines="10">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1505" endline="1514"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1538" endline="1547"/>
+    </clone>
+    <clone nlines="10">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1527" endline="1536"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1433" endline="1442"/>
+    </clone>
+    <clone nlines="10">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1527" endline="1536"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1516" endline="1525"/>
+    </clone>
+    <clone nlines="10">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1527" endline="1536"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1538" endline="1547"/>
+    </clone>
+    <clone nlines="10">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1549" endline="1558"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1433" endline="1442"/>
+    </clone>
+    <clone nlines="10">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1549" endline="1558"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1516" endline="1525"/>
+    </clone>
+    <clone nlines="10">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1549" endline="1558"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1538" endline="1547"/>
+    </clone>
+    <clone nlines="10">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="292" endline="301"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="303" endline="312"/>
+    </clone>
+    <clone nlines="10">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4996" endline="5005"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5130" endline="5139"/>
+    </clone>
+    <clone nlines="10">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="885" endline="894"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="896" endline="905"/>
+    </clone>
+    <clone nlines="18">
+        <source file="org/gjt/sp/jedit/bsh/ParserTokenManager.java" startline="1134" endline="1151"/>
+        <source file="org/gjt/sp/jedit/bsh/ParserTokenManager.java" startline="1093" endline="1110"/>
+    </clone>
+    <clone nlines="64">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="1013" endline="1050"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3191" endline="3229"/>
+    </clone>
+    <clone nlines="25">
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="2790" endline="2815"/>
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="2494" endline="2518"/>
+    </clone>
+    <clone nlines="12">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="515" endline="526"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="528" endline="540"/>
+    </clone>
+    <clone nlines="30">
+        <source file="org/gjt/sp/jedit/syntax/ParserRule.java" startline="159" endline="188"/>
+        <source file="org/gjt/sp/jedit/syntax/ParserRule.java" startline="191" endline="220"/>
+    </clone>
+    <clone nlines="13">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="240" endline="252"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="254" endline="266"/>
+    </clone>
+    <clone nlines="15">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="711" endline="725"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="727" endline="741"/>
+    </clone>
+    <clone nlines="14">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="711" endline="725"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1056" endline="1069"/>
+    </clone>
+    <clone nlines="13">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1042" endline="1054"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="727" endline="741"/>
+    </clone>
+    <clone nlines="13">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1042" endline="1054"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1056" endline="1069"/>
+    </clone>
+    <clone nlines="35">
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="2053" endline="2082"/>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="385" endline="414"/>
+    </clone>
+    <clone nlines="14">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="647" endline="660"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="662" endline="675"/>
+    </clone>
+    <clone nlines="14">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="647" endline="660"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="844" endline="857"/>
+    </clone>
+    <clone nlines="14">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="829" endline="842"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="662" endline="675"/>
+    </clone>
+    <clone nlines="14">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="829" endline="842"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="844" endline="857"/>
+    </clone>
+    <clone nlines="16">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="976" endline="991"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="993" endline="1008"/>
+    </clone>
+    <clone nlines="19">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="757" endline="775"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="777" endline="795"/>
+    </clone>
+    <clone nlines="24">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="368" endline="391"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="393" endline="416"/>
+    </clone>
+    <clone nlines="25">
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1127" endline="1151"/>
+        <source file="test/org/jedit/io/Native2ASCIIEncodingTest.java" startline="1153" endline="1178"/>
+    </clone>
+</clones>

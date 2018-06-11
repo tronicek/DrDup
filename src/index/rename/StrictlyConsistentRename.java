@@ -15,6 +15,11 @@ public class StrictlyConsistentRename extends RenameStrategy {
     private final SymbolTable symbolTable = new SymbolTable();
 
     @Override
+    public RenameStrategy newInstance() {
+        return new StrictlyConsistentRename();
+    }
+
+    @Override
     public void enterBlock() {
         symbolTable.enterBlock();
     }

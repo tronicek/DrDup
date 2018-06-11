@@ -1,4 +1,4 @@
-package plain;
+package plain2;
 
 import com.sun.source.tree.Tree.Kind;
 import com.sun.tools.javac.code.Flags;
@@ -63,26 +63,31 @@ import com.sun.tools.javac.tree.JCTree.TypeBoundKind;
 import com.sun.tools.javac.tree.TreeInfo;
 import index.IndexScanner;
 import index.Pos;
+import index.rename.RenameStrategy;
 import java.util.List;
 import java.util.Properties;
 import javax.lang.model.element.ElementKind;
+import javax.lang.model.type.TypeKind;
 import javax.tools.JavaFileObject;
+import plain.Trie;
+import plain.TrieEdge;
+import plain.TrieNode;
 
 /**
  * The AST scanner that builds the full index.
  *
  * @author Zdenek Tronicek, tronicek@tarleton.edu
  */
-public class FullIndexScanner extends IndexScanner {
+public class FullIndexScanner2 extends IndexScanner {
 
     private final Trie trie;
     private int methodCount;
     private JCCompilationUnit currentUnit;
-    private Stack stack = new Stack();
+    private Stack2 stack = new Stack2();
     private String srcFile;
     private int inMethod;
 
-    public FullIndexScanner(Properties conf) {
+    public FullIndexScanner2(Properties conf) {
         super(conf);
         trie = new Trie(conf);
         logger.setIndex(trie);
@@ -114,8 +119,7 @@ public class FullIndexScanner extends IndexScanner {
     }
 
     private void scanConstructor(JCTree t) {
-        String s = renameStrategy.rename(ElementKind.CONSTRUCTOR, t.type.toString(), false);
-        addChild(s);
+        addChild(ElementKind.CONSTRUCTOR, t.type.toString(), true);
     }
 
     private void addChild(JCTree t) {
@@ -129,14 +133,80 @@ public class FullIndexScanner extends IndexScanner {
     }
 
     private void addChild(String label) {
-        Stack s = new Stack();
-        for (StackNode node : stack) {
+        Stack2 s = new Stack2();
+        for (StackNode2 node : stack) {
             Pos pos = node.getPos();
+            RenameStrategy rstr = node.getRenameStrategy();
             TrieNode tnode = node.getNode();
             TrieNode p = tnode.addChild(label, pos);
-            s.push(new StackNode(p, pos));
+            s.push(new StackNode2(p, pos, rstr));
         }
         stack = s;
+    }
+
+    private void addChild(ElementKind kind, String id, boolean isStatic) {
+        Stack2 s = new Stack2();
+        for (StackNode2 node : stack) {
+            Pos pos = node.getPos();
+            RenameStrategy rstr = node.getRenameStrategy();
+            String label = rstr.rename(kind, id, isStatic);
+            if (label == null) {
+                s.push(node);
+                continue;
+            }
+            TrieNode tnode = node.getNode();
+            TrieNode p = tnode.addChild(label, pos);
+            s.push(new StackNode2(p, pos, rstr));
+        }
+        stack = s;
+    }
+
+    private void addTypeArgChild(String id) {
+        Stack2 s = new Stack2();
+        for (StackNode2 node : stack) {
+            Pos pos = node.getPos();
+            RenameStrategy rstr = node.getRenameStrategy();
+            String label = rstr.renameTypeArg(id);
+            if (label == null) {
+                s.push(node);
+                continue;
+            }
+            TrieNode tnode = node.getNode();
+            TrieNode p = tnode.addChild(label, pos);
+            s.push(new StackNode2(p, pos, rstr));
+        }
+        stack = s;
+    }
+
+    private void addPrimitiveTypeChild(TypeKind kind) {
+        Stack2 s = new Stack2();
+        for (StackNode2 node : stack) {
+            Pos pos = node.getPos();
+            RenameStrategy rstr = node.getRenameStrategy();
+            String label = rstr.renamePrimitiveType(kind);
+            if (label == null) {
+                s.push(node);
+                continue;
+            }
+            TrieNode tnode = node.getNode();
+            TrieNode p = tnode.addChild(label, pos);
+            s.push(new StackNode2(p, pos, rstr));
+        }
+        stack = s;
+    }
+
+    private void enterBlock() {
+        for (StackNode2 node : stack) {
+            RenameStrategy rs = node.getRenameStrategy();
+            rs.enterBlock();
+        }
+    }
+
+    private void exitBlock() {
+        for (StackNode2 node : stack) {
+            RenameStrategy rs = node.getRenameStrategy();
+            rs.exitBlock();
+        }
     }
 
     private Pos pos(JCTree t) {
@@ -146,7 +216,7 @@ public class FullIndexScanner extends IndexScanner {
         int endLine = currentUnit.lineMap.getLineNumber(endpos);
         int realLines = endLine - startLine + 1;
         int ppLines = countLines(t.toString());
-        int lines = max(realLines, ppLines);
+        int lines = Math.max(realLines, ppLines);
         return new Pos(methodCount, srcFile, lines, startpos, endpos, startLine, endLine);
     }
 
@@ -158,10 +228,6 @@ public class FullIndexScanner extends IndexScanner {
             }
         }
         return lines;
-    }
-
-    private int max(int a, int b) {
-        return a > b ? a : b;
     }
 
     @Override
@@ -182,7 +248,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         if (!ignoreTypeArgs && !t.typeargs.isEmpty()) {
             addChild("TYPE_ARGS");
@@ -202,7 +268,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         scan(t.cond);
         scan(t.detail);
@@ -215,7 +281,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         scan(t.lhs);
         scan(t.rhs);
@@ -228,7 +294,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         scan(t.lhs);
         scan(t.rhs);
@@ -241,7 +307,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         scan(t.lhs);
         scan(t.rhs);
@@ -254,12 +320,12 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
-        renameStrategy.enterBlock();
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
+        enterBlock();
         addChild(t);
         scan(t.stats);
         addChildEnd(t);
-        renameStrategy.exitBlock();
+        exitBlock();
         stack.pop();
     }
 
@@ -268,7 +334,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         stack.pop();
     }
@@ -278,7 +344,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         scan(t.pat);
         scan(t.stats);
@@ -291,13 +357,13 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
-        renameStrategy.enterBlock();
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
+        enterBlock();
         addChild(t);
         scan(t.param);
         scan(t.body);
         addChildEnd(t);
-        renameStrategy.exitBlock();
+        exitBlock();
         stack.pop();
     }
 
@@ -311,7 +377,7 @@ public class FullIndexScanner extends IndexScanner {
             scan(t.implementing);
             scan(t.defs);
         } else {
-            stack.push(trie.root, pos(t));
+            stack.push(trie.root, pos(t), renameStrategy.newInstance());
             addChild(t);
             scan(t.mods);
             scan(t.typarams);
@@ -333,7 +399,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         scan(t.cond);
         scan(t.truepart);
@@ -347,7 +413,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         stack.pop();
     }
@@ -357,7 +423,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         scanBlock(t.body);
         scan(t.cond);
@@ -375,7 +441,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         scan(t.expr);
         addChildEnd(t);
@@ -387,15 +453,15 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
-        renameStrategy.enterBlock();
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
+        enterBlock();
         addChild(t);
         scan(t.init);
         scan(t.cond);
         scan(t.step);
         scanBlock(t.body);
         addChildEnd(t);
-        renameStrategy.exitBlock();
+        exitBlock();
         stack.pop();
     }
 
@@ -404,14 +470,14 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
-        renameStrategy.enterBlock();
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
+        enterBlock();
         addChild(t);
         scan(t.var);
         scan(t.expr);
         scanBlock(t.body);
         addChildEnd(t);
-        renameStrategy.exitBlock();
+        exitBlock();
         stack.pop();
     }
 
@@ -420,7 +486,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addIdentChild(t);
         stack.pop();
     }
@@ -439,10 +505,7 @@ public class FullIndexScanner extends IndexScanner {
             default:
                 name = t.name.toString();
         }
-        String s = renameStrategy.rename(k, name, sym.isStatic());
-        if (s != null) {
-            addChild(s);
-        }
+        addChild(k, name, sym.isStatic());
     }
 
     @Override
@@ -450,7 +513,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         scan(t.cond);
         scanBlock(t.thenpart);
@@ -469,7 +532,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         scan(t.indexed);
         scan(t.index);
@@ -482,7 +545,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         scan(t.body);
         addChildEnd(t);
@@ -494,13 +557,13 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
-        renameStrategy.enterBlock();
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
+        enterBlock();
         addChild(t);
         scan(t.params);
         scan(t.body);
         addChildEnd(t);
-        renameStrategy.exitBlock();
+        exitBlock();
         stack.pop();
     }
 
@@ -514,7 +577,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild("LITERAL");
         stack.pop();
     }
@@ -528,8 +591,8 @@ public class FullIndexScanner extends IndexScanner {
         methodCount++;
         logger.enterMethod(t);
         inMethod++;
-        stack.push(trie.root, pos(t));
-        renameStrategy.enterMethod();
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
+//        renameStrategy.enterMethod();
         addChild(t);
         scan(t.mods);
         scan(t.typarams);
@@ -543,7 +606,7 @@ public class FullIndexScanner extends IndexScanner {
         scan(t.defaultValue);
         scan(t.body);
         addChildEnd(t);
-        renameStrategy.exitMethod();
+//        renameStrategy.exitMethod();
         stack.pop();
         inMethod--;
         logger.exitMethod(t);
@@ -594,7 +657,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         scan(t.annotations);
         scan(t.elemtype);
@@ -610,7 +673,7 @@ public class FullIndexScanner extends IndexScanner {
             scan(t.def);
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         scan(t.encl);
         scanConstructor(t.clazz);
@@ -633,8 +696,7 @@ public class FullIndexScanner extends IndexScanner {
         }
         addChild("TYPE_ARGS");
         for (Type t : typeargs) {
-            String s = renameStrategy.renameTypeArg(t.toString());
-            addChild(s);
+            addTypeArgChild(t.toString());
         }
         addChild("TYPE_ARGS_END");
     }
@@ -650,7 +712,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         scan(t.expr);
         scan(t.typeargs);
@@ -663,7 +725,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         scan(t.expr);
         addChildEnd(t);
@@ -675,7 +737,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         Symbol sym = t.sym;
         if (sym != null) {
@@ -686,10 +748,7 @@ public class FullIndexScanner extends IndexScanner {
             } else {
                 sel = t.sym.owner + "." + t.name;
             }
-            String s = renameStrategy.rename(k, sel, sym.isStatic());
-            if (s != null) {
-                addChild(s);
-            }
+            addChild(k, sel, sym.isStatic());
         }
         scan(t.selected);
         addChildEnd(t);
@@ -706,7 +765,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         scan(t.selector);
         scan(t.cases);
@@ -719,7 +778,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         scan(t.lock);
         scan(t.body);
@@ -732,7 +791,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         scan(t.expr);
         addChildEnd(t);
@@ -771,15 +830,15 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
-        renameStrategy.enterBlock();
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
+        enterBlock();
         addChild(t);
         scan(t.resources);
         scan(t.body);
         scan(t.catchers);
         scan(t.finalizer);
         addChildEnd(t);
-        renameStrategy.exitBlock();
+        exitBlock();
         stack.pop();
     }
 
@@ -788,7 +847,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         scan(t.clazz);
         if (!ignoreTypeArgs && !t.arguments.isEmpty()) {
@@ -805,7 +864,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         scan(t.elemtype);
         addChildEnd(t);
@@ -822,7 +881,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         scan(t.clazz);
         scan(t.expr);
@@ -835,7 +894,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         scan(t.alternatives);
         addChildEnd(t);
@@ -847,9 +906,8 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
-        String s = renameStrategy.renamePrimitiveType(t.getPrimitiveTypeKind());
-        addChild(s);
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
+        addPrimitiveTypeChild(t.getPrimitiveTypeKind());
         stack.pop();
     }
 
@@ -858,7 +916,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         scan(t.bounds);
         addChildEnd(t);
@@ -870,7 +928,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         scan(t.annotations);
         scan(t.bounds);
@@ -883,7 +941,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         scan(t.expr);
         scan(t.clazz);
@@ -896,7 +954,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         scan(t.arg);
         addChildEnd(t);
@@ -909,14 +967,14 @@ public class FullIndexScanner extends IndexScanner {
             scan(t.init);
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         scan(t.mods);
         scan(t.vartype);
         scan(t.nameexpr);
-        Symbol sym = t.sym;
-        ElementKind k = sym.getKind();
-        renameStrategy.declareVar(k, t.name.toString());
+//        Symbol sym = t.sym;
+//        ElementKind k = sym.getKind();
+//        renameStrategy.declareVar(k, t.name.toString());
         scan(t.init);
         addChildEnd(t);
         stack.pop();
@@ -927,7 +985,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         scan(t.cond);
         scanBlock(t.body);
@@ -940,7 +998,7 @@ public class FullIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        stack.push(trie.root, pos(t));
+        stack.push(trie.root, pos(t), renameStrategy.newInstance());
         addChild(t);
         scan(t.kind);
         scan(t.inner);

@@ -97,6 +97,21 @@ public class CompressedTrieNode implements Serializable {
             dst.print();
         }
     }
+    
+    public void checkDegree() {
+        assert edgesCount == 0 || edgesCount > 1;
+        for (int i = 0; i < edgesCount; i++) {
+            CompressedTrieNode dst = edges[i].getDestination();
+            dst.checkDegree();
+        }
+    }
+
+    public void checkDegreeSimplified() {
+        for (int i = 0; i < edgesCount; i++) {
+            CompressedTrieNode dst = edges[i].getDestination();
+            dst.checkDegree();
+        }
+    }
 
     @Override
     public String toString() {

@@ -22,6 +22,8 @@ public abstract class RenameStrategy {
         System.out.println("missing rename strategy, using default...");
         return new BlindRename();
     }
+    
+    public abstract RenameStrategy newInstance();
 
     public abstract void enterBlock();
 

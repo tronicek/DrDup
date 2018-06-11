@@ -507,7 +507,41 @@ public class SimplifiedIndexScanner extends IndexScanner {
 
     @Override
     public void visitModifiers(JCModifiers t) {
-        // ignore flags
+        if (!ignoreModifiers) {
+            if ((t.flags & Flags.ABSTRACT) != 0) {
+                addChild("ABSTRACT");
+            }
+            if ((t.flags & Flags.FINAL) != 0) {
+                addChild("FINAL");
+            }
+            if ((t.flags & Flags.NATIVE) != 0) {
+                addChild("NATIVE");
+            }
+            if ((t.flags & Flags.PRIVATE) != 0) {
+                addChild("PRIVATE");
+            }
+            if ((t.flags & Flags.PROTECTED) != 0) {
+                addChild("PROTECTED");
+            }
+            if ((t.flags & Flags.PUBLIC) != 0) {
+                addChild("PUBLIC");
+            }
+            if ((t.flags & Flags.STATIC) != 0) {
+                addChild("STATIC");
+            }
+            if ((t.flags & Flags.STRICTFP) != 0) {
+                addChild("STRICTFP");
+            }
+            if ((t.flags & Flags.SYNCHRONIZED) != 0) {
+                addChild("SYNCHRONIZED");
+            }
+            if ((t.flags & Flags.TRANSIENT) != 0) {
+                addChild("TRANSIENT");
+            }
+            if ((t.flags & Flags.VOLATILE) != 0) {
+                addChild("VOLATILE");
+            }
+        }
         scan(t.annotations);
     }
 

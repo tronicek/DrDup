@@ -14,6 +14,7 @@ public class EStack implements Iterable<EStackNode> {
     private final Deque<EStackNode> nodes = new ArrayDeque<>();
 
     public void push(EStackNode node) {
+        //System.out.printf("pushing: [%d, %d] %d%n", node.getEdge().getStart(), node.getEdge().getEnd(), node.getCurrent());
         nodes.addLast(node);
     }
 

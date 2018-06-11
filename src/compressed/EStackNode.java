@@ -10,21 +10,22 @@ import index.Pos;
 public class EStackNode {
 
     private final CompressedTrieEdge edge;
-    private final int end;
+    private final int current;
     private final Pos pos;
 
-    public EStackNode(CompressedTrieEdge edge, int end, Pos pos) {
+    public EStackNode(CompressedTrieEdge edge, int current, Pos pos) {
         this.edge = edge;
-        this.end = end;
+        this.current = current;
         this.pos = pos;
+        assert current <= edge.getEnd();
     }
 
     public CompressedTrieEdge getEdge() {
         return edge;
     }
 
-    public int getEnd() {
-        return end;
+    public int getCurrent() {
+        return current;
     }
 
     public Pos getPos() {
@@ -33,7 +34,7 @@ public class EStackNode {
     
     @Override
     public String toString() {
-        return String.format("%s:%d", edge, end);
+        return String.format("%s:%d", edge, current);
         //return String.format("-> %d", edge.getDestination().getNum());
     }
 }

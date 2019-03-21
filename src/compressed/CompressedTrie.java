@@ -243,6 +243,16 @@ public class CompressedTrie implements Index, Serializable {
     }
 
     @Override
+    public CloneSet detectClonesType23(int minSize, int distance) {
+        CloneSet clones = detectClonesType2(minSize);
+        CloneSet clones2 = detectClonesType3(minSize, distance);
+        for (Clone cl : clones2.getClones()) {
+            clones.addClone(cl);
+        }
+        return clones;
+    }
+
+    @Override
     public void print() {
         root.print();
     }
@@ -301,12 +311,12 @@ public class CompressedTrie implements Index, Serializable {
             }
         }
     }
-    
+
     public void checkDegree() {
         root.checkDegree();
         System.out.println("--- node degrees checked ---");
     }
-    
+
     public void checkDegreeSimplified() {
         root.checkDegreeSimplified();
         System.out.println("--- node degrees checked ---");

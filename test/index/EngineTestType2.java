@@ -32,6 +32,15 @@ public class EngineTestType2 {
         return perform(prop);
     }
 
+    private int performWith(String rename, String sourceDir, String propertyName, String propertyValue) throws Exception {
+        Properties prop = new Properties();
+        prop.setProperty("sourceDir", sourceDir);
+        prop.setProperty("type", "2");
+        prop.setProperty("rename", rename);
+        prop.setProperty(propertyName, propertyValue);
+        return perform(prop);
+    }
+
     private int perform(Properties prop) throws Exception {
         prop.setProperty("index", "full");
         prop.setProperty("compressed", "true");
@@ -83,7 +92,7 @@ public class EngineTestType2 {
 
     @Test
     public void testPerform5() throws Exception {
-        int c = perform("strictly-consistent", "test/src/5");
+        int c = performWith("strictly-consistent", "test/src/5", "ignoreModifiers", "true");
         assertEquals(1, c);
     }
 
@@ -139,7 +148,7 @@ public class EngineTestType2 {
 
     @Test
     public void testPerform13() throws Exception {
-        int c = perform("strictly-consistent", "test/src/13");
+        int c = performWith("strictly-consistent", "test/src/13", "ignoreExceptions", "true");
         assertEquals(1, c);
     }
 
@@ -193,7 +202,7 @@ public class EngineTestType2 {
 
     @Test
     public void testPerform20() throws Exception {
-        int c = perform("strictly-consistent", "test/src/20");
+        int c = performWith("strictly-consistent", "test/src/20", "ignoreModifiers", "true");
         assertEquals(1, c);
     }
 
@@ -415,7 +424,7 @@ public class EngineTestType2 {
 
     @Test
     public void testPerform51() throws Exception {
-        int c = perform("strictly-consistent", "test/src/51");
+        int c = performWith("strictly-consistent", "test/src/51", "ignoreModifiers", "true");
         assertEquals(1, c);
     }
 
@@ -550,6 +559,24 @@ public class EngineTestType2 {
     @Test
     public void testPerform71() throws Exception {
         int c = perform("consistent", "test/src/71");
+        assertEquals(1, c);
+    }
+
+    @Test
+    public void testPerform72() throws Exception {
+        int c = performWith("blind", "test/src/72", "normalizeAST", "true");
+        assertEquals(1, c);
+    }
+
+    @Test
+    public void testPerform73() throws Exception {
+        int c = performWith("blind", "test/src/73", "normalizeAST", "true");
+        assertEquals(1, c);
+    }
+
+    @Test
+    public void testPerform74() throws Exception {
+        int c = performWith("blind", "test/src/74", "normalizeAST", "true");
         assertEquals(1, c);
     }
 }

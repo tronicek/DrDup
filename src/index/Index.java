@@ -12,4 +12,6 @@ public interface Index {
     public CloneSet detectClonesType2(int minSize);
 
     public CloneSet detectClonesType3(int minSize, int distance);
+    
+    public CloneSet detectClonesType23(int minSize, int distance);
 }

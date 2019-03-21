@@ -22,8 +22,8 @@ public abstract class IndexScanner extends TreeScanner {
         srcDir = conf.getProperty("sourceDir");
         renameStrategy = RenameStrategy.instance(conf.getProperty("rename", "blind"));
         ignoreTypeArgs = Boolean.parseBoolean(conf.getProperty("ignoreTypeArgs"));
-        ignoreModifiers = Boolean.parseBoolean(conf.getProperty("ignoreModifiers", "true"));
-        ignoreExceptions = Boolean.parseBoolean(conf.getProperty("ignoreExceptions", "true"));
+        ignoreModifiers = Boolean.parseBoolean(conf.getProperty("ignoreModifiers"));
+        ignoreExceptions = Boolean.parseBoolean(conf.getProperty("ignoreExceptions"));
     }
 
     public abstract Index getTrie();

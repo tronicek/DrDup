@@ -243,6 +243,16 @@ public class Trie implements Index, Serializable {
     }
 
     @Override
+    public CloneSet detectClonesType23(int minSize, int distance) {
+        CloneSet clones = detectClonesType2(minSize);
+        CloneSet clones2 = detectClonesType3(minSize, distance);
+        for (Clone cl : clones2.getClones()) {
+            clones.addClone(cl);
+        }
+        return clones;
+    }
+
+    @Override
     public void print() {
         root.print();
     }

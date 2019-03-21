@@ -92,7 +92,7 @@ public class SimplifiedCompressedIndexScanner extends IndexScanner {
 
     @Override
     public CompressedTrie getTrie() {
-        trie.checkDegreeSimplified();
+        //trie.checkDegreeSimplified();
         return trie;
     }
 
@@ -154,15 +154,22 @@ public class SimplifiedCompressedIndexScanner extends IndexScanner {
     }
 
     private void extendTrie(String label) {
-//        System.out.printf("extendTrie: %s, stack: %s%n", label, stack);
+        //System.out.printf("extendTrie: %s, stack: %s%n", label, stack);
+        int bufferSize = buffer.size();
         buffer.add(label);
         EStack newStack = new EStack();
         for (EStackNode snode : stack) {
             Pos pos = snode.getPos();
             CompressedTrieEdge edge = snode.getEdge();
             int current = snode.getCurrent();
+            // adjust current
+            while (current > edge.getEnd()) {
+                CompressedTrieNode dest = edge.getDestination();
+                String next = buffer.get(edge.getEnd());
+                edge = dest.findEdge(next);
+            }
             if (current == edge.getEnd()) {
-                if (edge.getEnd() == buffer.size() - 1) {
+                if (edge.getEnd() == bufferSize) {
                     edge.setEnd(current + 1);
                     newStack.push(new EStackNode(edge, current + 1, pos));
                 } else {
@@ -356,7 +363,11 @@ public class SimplifiedCompressedIndexScanner extends IndexScanner {
         } else {
             addChild(t);
             scan(t.mods);
-            scan(t.typarams);
+            if (!t.typarams.isEmpty()) {
+                addChild("TYPE_PARAMS");
+                scan(t.typarams);
+                addChild("TYPE_PARAMS_END");
+            }
             scan(t.extending);
             if (!t.implementing.isEmpty()) {
                 addChild("IMPLEMENTS");
@@ -548,7 +559,11 @@ public class SimplifiedCompressedIndexScanner extends IndexScanner {
         renameStrategy.enterMethod();
         addChildRoot(t, pos(t));
         scan(t.mods);
-        scan(t.typarams);
+        if (!t.typarams.isEmpty()) {
+            addChild("TYPE_PARAMS");
+            scan(t.typarams);
+            addChild("TYPE_PARAMS_END");
+        }
         scan(t.restype);
         addChild("PARAMS");
         scan(t.params);

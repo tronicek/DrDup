@@ -92,7 +92,7 @@ public class FullCompressedIndexScanner extends IndexScanner {
 
     @Override
     public CompressedTrie getTrie() {
-        trie.checkDegree();
+        //trie.checkDegree();
         return trie;
     }
 
@@ -165,6 +165,7 @@ public class FullCompressedIndexScanner extends IndexScanner {
     private void extendTrie(String label) {
         //System.out.println("--- extends trie --- label: " + label);
         boolean extended = false;
+        int bufferSize = buffer.size();
         EStack newStack = new EStack();
         for (EStackNode snode : stack) {
             Pos pos = snode.getPos();
@@ -176,26 +177,17 @@ public class FullCompressedIndexScanner extends IndexScanner {
                 String next = buffer.get(edge.getEnd());
                 edge = dest.findEdge(next);
             }
-            if (current == edge.getEnd() && edge.getEnd() == buffer.size()) {
-                //System.out.println("case 1");
-                buffer.add(label);
-                extended = true;
-                edge.incEnd();
-                newStack.push(new EStackNode(edge, current + 1, pos));
-                continue;
-            }
-            if (current == edge.getEnd() && edge.getEnd() < buffer.size()) {
-                CompressedTrieNode dest = edge.getDestination();
-                String token = buffer.get(current);
-                if (dest.isLeaf()) {
-                    assert token.equals(label);
-                }
-                if (dest.isLeaf() && token.equals(label)) {
-                    //System.out.println("case 2");
+            if (current == edge.getEnd()) {
+                if (edge.getEnd() == bufferSize) { // case 1
+                    if (!extended) {
+                        buffer.add(label);
+                        extended = true;
+                    }
                     edge.incEnd();
                     newStack.push(new EStackNode(edge, current + 1, pos));
-                } else {
-                    //System.out.println("case 3");
+                } else { // case 2 and 3
+                    CompressedTrieNode dest = edge.getDestination();
+                    assert !dest.isLeaf();
                     CompressedTrieEdge e = dest.findEdge(label);
                     if (e == null) {
                         if (!extended) {
@@ -207,16 +199,11 @@ public class FullCompressedIndexScanner extends IndexScanner {
                     e.addPosition(pos);
                     newStack.push(new EStackNode(e, e.getStart() + 1, pos));
                 }
-                continue;
-            }
-            assert current < edge.getEnd() : "current: " + current + ", edge.getEnd(): " + edge.getEnd();
-            if (current < edge.getEnd()) {
+            } else { // current < edge.getEnd()
                 String token = buffer.get(current);
-                if (token.equals(label)) {
-                    //System.out.println("case 4");
+                if (token.equals(label)) { // case 3
                     newStack.push(new EStackNode(edge, current + 1, pos));
-                } else {
-                    //System.out.println("case 5");
+                } else { // case 4
                     //System.out.printf("  edge: %d, %d%n", edge.getStart(), edge.getEnd());
                     CompressedTrieNode p = new CompressedTrieNode();
                     CompressedTrieEdge e2 = new CompressedTrieEdge(buffer, current, edge.getEnd(), edge.getDestination());
@@ -297,7 +284,7 @@ public class FullCompressedIndexScanner extends IndexScanner {
         int endLine = currentUnit.lineMap.getLineNumber(endpos);
         int realLines = endLine - startLine + 1;
         int ppLines = countLines(t.toString());
-        int lines = max(realLines, ppLines);
+        int lines = Math.max(realLines, ppLines);
         return new Pos(methodCount, srcFile, lines, startpos, endpos, startLine, endLine);
     }
 
@@ -309,10 +296,6 @@ public class FullCompressedIndexScanner extends IndexScanner {
             }
         }
         return lines;
-    }
-
-    private int max(int a, int b) {
-        return a > b ? a : b;
     }
 
     @Override
@@ -455,7 +438,11 @@ public class FullCompressedIndexScanner extends IndexScanner {
         } else {
             addChildRoot(t, pos(t));
             scan(t.mods);
-            scan(t.typarams);
+            if (!t.typarams.isEmpty()) {
+                addChild("TYPE_PARAMS");
+                scan(t.typarams);
+                addChild("TYPE_PARAMS_END");
+            }
             scan(t.extending);
             if (!t.implementing.isEmpty()) {
                 addChild("IMPLEMENTS");
@@ -660,7 +647,11 @@ public class FullCompressedIndexScanner extends IndexScanner {
         renameStrategy.enterMethod();
         addChildRoot(t, pos(t));
         scan(t.mods);
-        scan(t.typarams);
+        if (!t.typarams.isEmpty()) {
+            addChild("TYPE_PARAMS");
+            scan(t.typarams);
+            addChild("TYPE_PARAMS_END");
+        }
         scan(t.restype);
         addChild("PARAMS");
         scan(t.params);
@@ -742,7 +733,6 @@ public class FullCompressedIndexScanner extends IndexScanner {
         scanConstructor(t.clazz);
         if (!ignoreTypeArgs) {
             //t.typeargs is empty
-            //scan(t.typeargs);
             parseTypeArgs(t.clazz.type.getTypeArguments());
         }
         addChild("ARGS");

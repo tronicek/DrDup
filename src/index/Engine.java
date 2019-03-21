@@ -41,9 +41,10 @@ public class Engine {
     private final Properties conf;
     private final String index;
     private final boolean compressed;
+    private final boolean normalizeAST;
     private final boolean printStats;
     private final boolean printTrie;
-    private final int type;
+    private final String type;
     private final int minSize;
     private final int distance;
     private final String sourceEncoding;
@@ -55,9 +56,10 @@ public class Engine {
         this.conf = conf;
         index = conf.getProperty("index", "full");
         compressed = Boolean.parseBoolean(conf.getProperty("compressed", "false"));
+        normalizeAST = Boolean.parseBoolean(conf.getProperty("normalizeAST"));
         printStats = Boolean.parseBoolean(conf.getProperty("printStats"));
         printTrie = Boolean.parseBoolean(conf.getProperty("printTrie"));
-        type = Integer.parseInt(conf.getProperty("type", "2"));
+        type = conf.getProperty("type", "2");
         minSize = Integer.parseInt(conf.getProperty("minSize", "0"));
         distance = Integer.parseInt(conf.getProperty("distance", "2"));
         sourceEncoding = conf.getProperty("sourceEncoding", "UTF-8");
@@ -164,8 +166,12 @@ public class Engine {
             default:
                 scan = compressed ? new FullCompressedIndexScanner(conf) : new FullIndexScanner(conf);
         }
+        NormalizationScanner normScan = normalizeAST ? new NormalizationScanner() : null;
         CountingScanner cscan = printStats ? new CountingScanner() : null;
         for (JCCompilationUnit cu : units) {
+            if (normalizeAST) {
+                cu.accept(normScan);
+            }
             cu.accept(scan);
             if (printStats) {
                 cu.accept(cscan);
@@ -183,12 +189,17 @@ public class Engine {
             trie.writeMethods(methodFile);
         }
         switch (type) {
-            case 3:
+            case "2":
+                clones = trie.detectClonesType2(minSize);
+                break;
+            case "3":
                 clones = trie.detectClonesType3(minSize, distance);
                 break;
-            case 2:
+            case "2+3":
+                clones = trie.detectClonesType23(minSize, distance);
+                break;
             default:
-                clones = trie.detectClonesType2(minSize);
+                throw new RuntimeException("invalid type");
         }
         String nicadOutput = conf.getProperty("NiCadOutputFile");
         if (nicadOutput == null) {

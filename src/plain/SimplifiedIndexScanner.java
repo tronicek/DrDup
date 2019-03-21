@@ -295,7 +295,11 @@ public class SimplifiedIndexScanner extends IndexScanner {
         } else {
             addChild(t);
             scan(t.mods);
-            scan(t.typarams);
+            if (!t.typarams.isEmpty()) {
+                addChild("TYPE_PARAMS");
+                scan(t.typarams);
+                addChild("TYPE_PARAMS_END");
+            }
             scan(t.extending);
             if (!t.implementing.isEmpty()) {
                 addChild("IMPLEMENTS");
@@ -488,7 +492,11 @@ public class SimplifiedIndexScanner extends IndexScanner {
         renameStrategy.enterMethod();
         addChild(t);
         scan(t.mods);
-        scan(t.typarams);
+        if (!t.typarams.isEmpty()) {
+            addChild("TYPE_PARAMS");
+            scan(t.typarams);
+            addChild("TYPE_PARAMS_END");
+        }
         scan(t.restype);
         addChild("PARAMS");
         scan(t.params);

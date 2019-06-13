@@ -47,6 +47,7 @@ public class ConsistentRename extends RenameStrategy {
     @Override
     public String rename(ElementKind kind, String name, boolean isStatic) {
         switch (kind) {
+            case ANNOTATION_TYPE:
             case CLASS:
             case ENUM:
             case INTERFACE:

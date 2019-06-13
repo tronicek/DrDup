@@ -59,8 +59,13 @@ public class Logger {
         String method = formatMethod(t);
         String fqn = String.format("%s.%s", clazz, method);
         methods.addLast(fqn);
-        if (fqn.startsWith("#service.A.next")) {
-//            System.out.println("--- trie ---");
+        if (fqn.startsWith("#org.gjt.sp.jedit.bsh.Variable.<init>") && t.thrown.isEmpty()) {
+            System.out.println("--- trie ---");
+            //output = true;
+            
+        }
+        if (fqn.startsWith("#org.gjt.sp.jedit.EditBus.EBMessageHandler.<init>")) {
+            System.out.println("--- trie ---");
 //            trie.print();
 //            System.out.println("--- end of trie ---");
             System.out.printf("--- entering method: %s ---%n", fqn);

@@ -166,7 +166,7 @@ public class SimplifiedIndexScanner extends IndexScanner {
 
     @Override
     public void visitAnnotatedType(JCAnnotatedType t) {
-        scan(t.annotations);
+//        scan(t.annotations);
         scan(t.underlyingType);
     }
 
@@ -550,7 +550,7 @@ public class SimplifiedIndexScanner extends IndexScanner {
                 addChild("VOLATILE");
             }
         }
-        scan(t.annotations);
+//        scan(t.annotations);
     }
 
     @Override
@@ -559,7 +559,7 @@ public class SimplifiedIndexScanner extends IndexScanner {
             return;
         }
         addChild(t);
-        scan(t.annotations);
+//        scan(t.annotations);
         scan(t.elemtype);
         scan(t.dims);
         scan(t.elems);
@@ -569,6 +569,7 @@ public class SimplifiedIndexScanner extends IndexScanner {
     @Override
     public void visitNewClass(JCNewClass t) {
         if (inMethod == 0) {
+            scan(t.args);
             scan(t.def);
             return;
         }
@@ -693,7 +694,7 @@ public class SimplifiedIndexScanner extends IndexScanner {
         JavaFileObject jfo = t.getSourceFile();
         srcFile = filename(jfo.getName());
         assert srcFile != null;
-        scan(t.packageAnnotations);
+//        scan(t.packageAnnotations);
         scan(t.pid);
         scan(t.defs);
         srcFile = null;
@@ -805,7 +806,7 @@ public class SimplifiedIndexScanner extends IndexScanner {
             return;
         }
         addChild(t);
-        scan(t.annotations);
+//        scan(t.annotations);
         scan(t.bounds);
         addChildEnd(t);
     }
@@ -838,6 +839,7 @@ public class SimplifiedIndexScanner extends IndexScanner {
             return;
         }
         addChild(t);
+        logger.println(t);
         scan(t.mods);
         scan(t.vartype);
         scan(t.nameexpr);

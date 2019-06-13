@@ -300,7 +300,7 @@ public class FullCompressedIndexScanner extends IndexScanner {
 
     @Override
     public void visitAnnotatedType(JCAnnotatedType t) {
-        scan(t.annotations);
+//        scan(t.annotations);
         scan(t.underlyingType);
     }
 
@@ -705,7 +705,7 @@ public class FullCompressedIndexScanner extends IndexScanner {
                 addChild("VOLATILE");
             }
         }
-        scan(t.annotations);
+//        scan(t.annotations);
     }
 
     @Override
@@ -714,7 +714,7 @@ public class FullCompressedIndexScanner extends IndexScanner {
             return;
         }
         addChildRoot(t, pos(t));
-        scan(t.annotations);
+//        scan(t.annotations);
         scan(t.elemtype);
         scan(t.dims);
         scan(t.elems);
@@ -855,7 +855,7 @@ public class FullCompressedIndexScanner extends IndexScanner {
         JavaFileObject jfo = t.getSourceFile();
         srcFile = filename(jfo.getName());
         assert srcFile != null;
-        scan(t.packageAnnotations);
+//        scan(t.packageAnnotations);
         scan(t.pid);
         scan(t.defs);
         srcFile = null;
@@ -974,7 +974,7 @@ public class FullCompressedIndexScanner extends IndexScanner {
             return;
         }
         addChildRoot(t, pos(t));
-        scan(t.annotations);
+//        scan(t.annotations);
         scan(t.bounds);
         addChildEnd(t);
         stack.pop();

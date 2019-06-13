@@ -215,7 +215,7 @@ public class EngineTestType2 {
     @Test
     public void testPerform22() throws Exception {
         int c = perform("strictly-consistent", "test/src/22");
-        assertEquals(1, c);
+        assertEquals(0, c);
     }
 
     @Test

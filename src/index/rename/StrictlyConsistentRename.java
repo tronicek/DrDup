@@ -47,6 +47,12 @@ public class StrictlyConsistentRename extends RenameStrategy {
 
     @Override
     public String rename(ElementKind kind, String name, boolean isStatic) {
+        if ("this".equals(name)) {
+            return "THIS";
+        }
+        if ("super".equals(name)) {
+            return "SUPER";
+        }
         switch (kind) {
             case ANNOTATION_TYPE:
             case CLASS:

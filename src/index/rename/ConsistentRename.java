@@ -74,42 +74,39 @@ public class ConsistentRename extends RenameStrategy {
     }
 
     @Override
-    public String renamePrimitiveType(TypeKind kind) {
-        String name;
-        switch (kind) {
-            case BOOLEAN:
-                name = "java.lang.Boolean";
-                break;
-            case BYTE:
-                name = "java.lang.Byte";
-                break;
-            case CHAR:
-                name = "java.lang.Character";
-                break;
-            case DOUBLE:
-                name = "java.lang.Double";
-                break;
-            case FLOAT:
-                name = "java.lang.Float";
-                break;
-            case INT:
-                name = "java.lang.Integer";
-                break;
-            case LONG:
-                name = "java.lang.Long";
-                break;
-            case SHORT:
-                name = "java.lang.Short";
-                break;
-            case VOID:
-                name = "java.lang.Void";
-                break;
-            default:
-                name = kind.name();
+    public String renamePrimitiveType(boolean distinguishPrimitiveTypes, TypeKind kind) {
+        if (distinguishPrimitiveTypes) {
+            return symbolTable.lookup(kind.name(), SymbolKind.TYPE);
         }
+        String name = toClassName(kind);
         return symbolTable.lookup(name, SymbolKind.TYPE);
     }
 
+    private String toClassName(TypeKind kind) {
+        switch (kind) {
+            case BOOLEAN:
+                return "java.lang.Boolean";
+            case BYTE:
+                return "java.lang.Byte";
+            case CHAR:
+                return "java.lang.Character";
+            case DOUBLE:
+                return "java.lang.Double";
+            case FLOAT:
+                return "java.lang.Float";
+            case INT:
+                return "java.lang.Integer";
+            case LONG:
+                return "java.lang.Long";
+            case SHORT:
+                return "java.lang.Short";
+            case VOID:
+                return "java.lang.Void";
+            default:
+                return kind.name();
+        }
+    }
+    
     @Override
     public String renameTypeArg(String name) {
         return symbolTable.lookup(name, SymbolKind.TYPE);

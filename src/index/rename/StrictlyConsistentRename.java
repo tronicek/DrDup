@@ -77,7 +77,7 @@ public class StrictlyConsistentRename extends RenameStrategy {
     }
 
     @Override
-    public String renamePrimitiveType(TypeKind kind) {
+    public String renamePrimitiveType(boolean distinguishPrimitiveTypes, TypeKind kind) {
         String name;
         switch (kind) {
             case BOOLEAN:

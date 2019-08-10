@@ -852,7 +852,7 @@ public class SimplifiedCompressedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        String s = renameStrategy.renamePrimitiveType(t.getPrimitiveTypeKind());
+        String s = renameStrategy.renamePrimitiveType(distinguishPrimitiveTypes, t.getPrimitiveTypeKind());
         addChild(s);
     }
 

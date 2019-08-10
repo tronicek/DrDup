@@ -856,7 +856,7 @@ public class FullIndexScanner extends IndexScanner {
             return;
         }
         stack.push(trie.root, pos(t));
-        String s = renameStrategy.renamePrimitiveType(t.getPrimitiveTypeKind());
+        String s = renameStrategy.renamePrimitiveType(distinguishPrimitiveTypes, t.getPrimitiveTypeKind());
         addChild(s);
         stack.pop();
     }

@@ -23,12 +23,12 @@ import javax.xml.bind.Marshaller;
 public class NiCadConvertor {
 
     private final boolean printSource;
-    private final String sourceCharset;
+    private final String sourceEncoding;
     private final String sourceDir;
 
     public NiCadConvertor(Properties prop) {
         printSource = Boolean.parseBoolean(prop.getProperty("printSource"));
-        sourceCharset = prop.getProperty("sourceCharset", "UTF-8");
+        sourceEncoding = prop.getProperty("sourceEncoding", "UTF-8");
         sourceDir = prop.getProperty("sourceDir");
     }
 
@@ -73,7 +73,7 @@ public class NiCadConvertor {
 
     private String readFile(String file, int startline, int endline) throws IOException {
         Path path = Paths.get(sourceDir, file);
-        Charset cs = Charset.forName(sourceCharset);
+        Charset cs = Charset.forName(sourceEncoding);
         List<String> lines = Files.readAllLines(path, cs);
         List<String> selected = lines.subList(startline - 1, endline);
         StringBuilder sb = new StringBuilder();

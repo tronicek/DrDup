@@ -64,7 +64,7 @@ public class BlindRename extends RenameStrategy {
     }
 
     @Override
-    public String renamePrimitiveType(TypeKind kind) {
+    public String renamePrimitiveType(boolean distinguishPrimitiveTypes, TypeKind kind) {
         return "ID#";
     }
 

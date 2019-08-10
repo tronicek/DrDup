@@ -37,7 +37,7 @@ public abstract class RenameStrategy {
 
     public abstract String rename(ElementKind kind, String name, boolean isStatic);
 
-    public abstract String renamePrimitiveType(TypeKind kind);
+    public abstract String renamePrimitiveType(boolean distinguishPrimitiveTypes, TypeKind kind);
     
     public abstract String renameTypeArg(String name);
 }

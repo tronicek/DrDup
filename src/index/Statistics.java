@@ -30,6 +30,7 @@ public class Statistics {
         }
         Record rec = records.get(records.size() - 1);
         System.out.println(rec);
+        System.out.printf("number of files: %d%n", records.size());
     }
 
     static class Record {

@@ -17,7 +17,7 @@ public abstract class IndexScanner extends TreeScanner {
     protected final boolean ignoreTypeArgs;
     protected final boolean ignoreModifiers;
     protected final boolean ignoreExceptions;
-    protected final boolean distinguishPrimitiveTypes;
+    protected final boolean useWrappersForPrimitiveTypes;
 
     public IndexScanner(Properties conf) {
         srcDir = conf.getProperty("sourceDir");
@@ -25,7 +25,7 @@ public abstract class IndexScanner extends TreeScanner {
         ignoreTypeArgs = Boolean.parseBoolean(conf.getProperty("ignoreTypeArgs"));
         ignoreModifiers = Boolean.parseBoolean(conf.getProperty("ignoreModifiers"));
         ignoreExceptions = Boolean.parseBoolean(conf.getProperty("ignoreExceptions"));
-        distinguishPrimitiveTypes = Boolean.parseBoolean(conf.getProperty("distinguishPrimitiveTypes"));
+        useWrappersForPrimitiveTypes = Boolean.parseBoolean(conf.getProperty("useWrappersForPrimitiveTypes"));
     }
 
     public abstract Index getTrie();

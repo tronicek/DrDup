@@ -16,7 +16,6 @@ public class Logger {
     private static final Logger instance = new Logger();
     private final Deque<String> classes = new ArrayDeque<>();
     private final Deque<String> methods = new ArrayDeque<>();
-    private Index trie;
     private boolean output;
 
     private Logger() {
@@ -24,10 +23,6 @@ public class Logger {
 
     public static Logger getInstance() {
         return instance;
-    }
-
-    public void setIndex(Index trie) {
-        this.trie = trie;
     }
 
     public void turnOn() {
@@ -59,17 +54,7 @@ public class Logger {
         String method = formatMethod(t);
         String fqn = String.format("%s.%s", clazz, method);
         methods.addLast(fqn);
-        if (fqn.startsWith("#org.gjt.sp.jedit.bsh.Variable.<init>") && t.thrown.isEmpty()) {
-            System.out.println("--- trie ---");
-            //output = true;
-            
-        }
-        if (fqn.startsWith("#org.gjt.sp.jedit.EditBus.EBMessageHandler.<init>")) {
-            System.out.println("--- trie ---");
-//            trie.print();
-//            System.out.println("--- end of trie ---");
-            System.out.printf("--- entering method: %s ---%n", fqn);
-            output = true;
+        if (fqn.startsWith("#org.gjt.sp.jedit.bsh.Variable.<init>")) {
         }
     }
 
@@ -95,9 +80,6 @@ public class Logger {
         String fqn = methods.removeLast();
         if (output) {
             System.out.printf("--- exiting method: %s ---%n", fqn);
-//            System.out.println("--- trie ---");
-//            trie.print();
-//            System.out.println("--- end of trie ---");
             output = false;
         }
     }

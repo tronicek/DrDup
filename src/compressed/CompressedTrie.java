@@ -51,7 +51,7 @@ public class CompressedTrie implements Index, Serializable {
     }
 
     @Override
-    public CloneSet detectClonesType2(int minSize) {
+    public CloneSet detectClonesType2(int minSize, int maxSize) {
         CloneSet clones = new CloneSet();
         List<CompressedTrieNode> nodes = new ArrayList<>();
         List<Pos[]> positions = new ArrayList<>();
@@ -65,7 +65,8 @@ public class CompressedTrie implements Index, Serializable {
             CompressedTrieNode node = nodes.remove(0);
             Pos[] pp = positions.remove(0);
             if (node.isLeaf()) {
-                if (pp.length > 1 && minimumSize(pp) >= minSize) {
+                long size = minimumSize(pp);
+                if (pp.length > 1 && size >= minSize && size <= maxSize) {
                     Clone clone = new Clone(0, pp);
                     clones.addClone(clone);
                 }
@@ -91,8 +92,8 @@ public class CompressedTrie implements Index, Serializable {
     }
 
     @Override
-    public CloneSet detectClonesType3(int minSize, int distance) {
-        List<Method> methods = createMethodList(minSize);
+    public CloneSet detectClonesType3(int minSize, int maxSize, int distance) {
+        List<Method> methods = createMethodList(minSize, maxSize);
         Map<Integer, Set<MethodTokens>> tokensMap = createTokensSizeMap(methods);
         int coef = useSegmentDistance ? segmentRangeCoefficient : 1;
         for (Integer size : tokensMap.keySet()) {
@@ -122,7 +123,7 @@ public class CompressedTrie implements Index, Serializable {
         return findClones(distance, methods);
     }
 
-    private List<Method> createMethodList(int minSize) {
+    private List<Method> createMethodList(int minSize, int maxSize) {
         List<Method> mm = new ArrayList<>();
         List<CompressedTrieNode> nodes = new ArrayList<>();
         List<Pos[]> positions = new ArrayList<>();
@@ -143,7 +144,8 @@ public class CompressedTrie implements Index, Serializable {
             if (node.isLeaf()) {
                 MethodTokens mt = new MethodTokens(tt);
                 for (Pos p : pp) {
-                    if (p.getLines() >= minSize) {
+                    int lines = p.getLines();
+                    if (lines >= minSize && lines <= maxSize) {
                         Method m = new Method(p.getMid(), p.getFile(), p.getStart(), p.getEnd(), p.getStartLine(), p.getEndLine(), mt);
                         mm.add(m);
                     }
@@ -243,9 +245,9 @@ public class CompressedTrie implements Index, Serializable {
     }
 
     @Override
-    public CloneSet detectClonesType23(int minSize, int distance) {
-        CloneSet clones = detectClonesType2(minSize);
-        CloneSet clones2 = detectClonesType3(minSize, distance);
+    public CloneSet detectClonesType23(int minSize, int maxSize, int distance) {
+        CloneSet clones = detectClonesType2(minSize, maxSize);
+        CloneSet clones2 = detectClonesType3(minSize, maxSize, distance);
         for (Clone cl : clones2.getClones()) {
             clones.addClone(cl);
         }

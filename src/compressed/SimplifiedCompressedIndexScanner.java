@@ -87,7 +87,6 @@ public class SimplifiedCompressedIndexScanner extends IndexScanner {
     public SimplifiedCompressedIndexScanner(Properties conf) {
         super(conf);
         trie = new CompressedTrie(conf);
-        logger.setIndex(trie);
     }
 
     @Override
@@ -117,7 +116,10 @@ public class SimplifiedCompressedIndexScanner extends IndexScanner {
     }
 
     private void scanConstructor(JCTree t) {
-        String s = renameStrategy.rename(ElementKind.CONSTRUCTOR, t.type.toString(), false);
+        String s = renameStrategy.rename(ElementKind.CONSTRUCTOR, t.type.toString());
+        if (s == null) {
+            s = renameStrategy.declareGlobal(ElementKind.CONSTRUCTOR, t.type.toString());
+        }
         addChild(s);
     }
 
@@ -464,8 +466,7 @@ public class SimplifiedCompressedIndexScanner extends IndexScanner {
     }
 
     private void addIdentChild(JCIdent t) {
-        Symbol sym = t.sym;
-        ElementKind k = sym.getKind();
+        ElementKind k = t.sym.getKind();
         String name;
         switch (k) {
             case CLASS:
@@ -477,10 +478,11 @@ public class SimplifiedCompressedIndexScanner extends IndexScanner {
             default:
                 name = t.name.toString();
         }
-        String s = renameStrategy.rename(k, name, sym.isStatic());
-        if (s != null) {
-            addChild(s);
+        String s = renameStrategy.rename(k, name);
+        if (s == null) {
+            s = renameStrategy.declareGlobal(k, name);
         }
+        addChild(s);
     }
 
     @Override
@@ -565,6 +567,9 @@ public class SimplifiedCompressedIndexScanner extends IndexScanner {
             addChild("TYPE_PARAMS_END");
         }
         scan(t.restype);
+        ElementKind k = t.sym.getKind();
+        String s = renameStrategy.declareGlobal(k, t.name.toString());
+        addChild(s);
         addChild("PARAMS");
         scan(t.params);
         addChild("PARAMS_END");
@@ -574,8 +579,8 @@ public class SimplifiedCompressedIndexScanner extends IndexScanner {
         scan(t.defaultValue);
         scan(t.body);
         addChildEnd(t);
-        renameStrategy.exitMethod();
         stack.pop();
+        renameStrategy.exitMethod();
         inMethod--;
         logger.exitMethod(t);
     }
@@ -660,7 +665,10 @@ public class SimplifiedCompressedIndexScanner extends IndexScanner {
         }
         addChild("TYPE_ARGS");
         for (Type t : typeargs) {
-            String s = renameStrategy.renameTypeArg(t.toString());
+            String s = renameStrategy.rename(ElementKind.CLASS, t.toString());
+            if (s == null) {
+                s = renameStrategy.declare(ElementKind.CLASS, t.toString());
+            }
             addChild(s);
         }
         addChild("TYPE_ARGS_END");
@@ -708,10 +716,11 @@ public class SimplifiedCompressedIndexScanner extends IndexScanner {
             } else {
                 sel = t.sym.owner + "." + t.name;
             }
-            String s = renameStrategy.rename(k, sel, sym.isStatic());
-            if (s != null) {
-                addChild(s);
+            String s = renameStrategy.rename(k, sel);
+            if (s == null) {
+                s = renameStrategy.declareGlobal(k, sel);
             }
+            addChild(s);
         }
         scan(t.selected);
         addChildEnd(t);
@@ -852,8 +861,38 @@ public class SimplifiedCompressedIndexScanner extends IndexScanner {
         if (inMethod == 0) {
             return;
         }
-        String s = renameStrategy.renamePrimitiveType(distinguishPrimitiveTypes, t.getPrimitiveTypeKind());
+        String tname = t.toString();
+        if (useWrappersForPrimitiveTypes) {
+            tname = toWrapperClass(tname);
+        }
+        String s = renameStrategy.rename(ElementKind.CLASS, tname);
+        if (s == null) {
+            s = renameStrategy.declareGlobal(ElementKind.CLASS, tname);
+        }
         addChild(s);
+    }
+
+    private String toWrapperClass(String type) {
+        switch (type) {
+            case "boolean":
+                return "java.lang.Boolean";
+            case "byte":
+                return "java.lang.Byte";
+            case "char":
+                return "java.lang.Character";
+            case "double":
+                return "java.lang.Double";
+            case "float":
+                return "java.lang.Float";
+            case "int":
+                return "java.lang.Integer";
+            case "long":
+                return "java.lang.Long";
+            case "short":
+                return "java.lang.Short";
+            default:
+                return type;
+        }
     }
 
     @Override
@@ -907,10 +946,9 @@ public class SimplifiedCompressedIndexScanner extends IndexScanner {
         addChild(t);
         scan(t.mods);
         scan(t.vartype);
-        scan(t.nameexpr);
-        Symbol sym = t.sym;
-        ElementKind k = sym.getKind();
-        renameStrategy.declareVar(k, t.name.toString());
+        ElementKind k = t.sym.getKind();
+        String s = renameStrategy.declare(k, t.name.toString());
+        addChild(s);
         scan(t.init);
         addChildEnd(t);
     }

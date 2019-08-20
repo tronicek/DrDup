@@ -46,6 +46,7 @@ public class Engine {
     private final boolean printTrie;
     private final String type;
     private final int minSize;
+    private final int maxSize;
     private final int distance;
     private final String sourceEncoding;
     private final String methodFile;
@@ -61,6 +62,7 @@ public class Engine {
         printTrie = Boolean.parseBoolean(conf.getProperty("printTrie"));
         type = conf.getProperty("type", "2");
         minSize = Integer.parseInt(conf.getProperty("minSize", "0"));
+        maxSize = Integer.parseInt(conf.getProperty("maxSize", "1000000"));
         distance = Integer.parseInt(conf.getProperty("distance", "2"));
         sourceEncoding = conf.getProperty("sourceEncoding", "UTF-8");
         methodFile = conf.getProperty("methodFile");
@@ -190,13 +192,13 @@ public class Engine {
         }
         switch (type) {
             case "2":
-                clones = trie.detectClonesType2(minSize);
+                clones = trie.detectClonesType2(minSize, maxSize);
                 break;
             case "3":
-                clones = trie.detectClonesType3(minSize, distance);
+                clones = trie.detectClonesType3(minSize, maxSize, distance);
                 break;
             case "2+3":
-                clones = trie.detectClonesType23(minSize, distance);
+                clones = trie.detectClonesType23(minSize, maxSize, distance);
                 break;
             default:
                 throw new RuntimeException("invalid type");

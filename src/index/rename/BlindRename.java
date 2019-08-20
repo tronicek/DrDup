@@ -11,8 +11,11 @@ import javax.lang.model.type.TypeKind;
 public class BlindRename extends RenameStrategy {
 
     @Override
-    public RenameStrategy newInstance() {
-        return new BlindRename();
+    public void enterMethod() {
+    }
+
+    @Override
+    public void exitMethod() {
     }
 
     @Override
@@ -24,19 +27,17 @@ public class BlindRename extends RenameStrategy {
     }
 
     @Override
-    public void enterMethod() {
+    public String declare(ElementKind kind, String name) {
+        return rename(kind, name);
     }
 
     @Override
-    public void exitMethod() {
+    public String declareGlobal(ElementKind kind, String name) {
+        return rename(kind, name);
     }
 
     @Override
-    public void declareVar(ElementKind kind, String name) {
-    }
-
-    @Override
-    public String rename(ElementKind kind, String name, boolean isStatic) {
+    public String rename(ElementKind kind, String name) {
         if ("this".equals(name)) {
             return "THIS";
         }
@@ -59,17 +60,9 @@ public class BlindRename extends RenameStrategy {
             case CONSTRUCTOR:
             case METHOD:
                 return "METHOD#";
+            default:
+                return "OTHER#";
         }
-        return null;
     }
 
-    @Override
-    public String renamePrimitiveType(boolean distinguishPrimitiveTypes, TypeKind kind) {
-        return "ID#";
-    }
-
-    @Override
-    public String renameTypeArg(String name) {
-        return "ID#";
-    }
 }

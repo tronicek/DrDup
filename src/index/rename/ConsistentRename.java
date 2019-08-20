@@ -3,7 +3,6 @@ package index.rename;
 import index.symtab.SymbolKind;
 import index.symtab.SymbolTable;
 import javax.lang.model.element.ElementKind;
-import javax.lang.model.type.TypeKind;
 
 /**
  * The consistent rename strategy.
@@ -12,103 +11,46 @@ import javax.lang.model.type.TypeKind;
  */
 public class ConsistentRename extends RenameStrategy {
 
-    private final SymbolTable symbolTable = new SymbolTable();
-
-    @Override
-    public RenameStrategy newInstance() {
-        return new ConsistentRename();
-    }
-
-    @Override
-    public void enterBlock() {
-        symbolTable.enterBlock();
-    }
-
-    @Override
-    public void exitBlock() {
-        symbolTable.exitBlock();
-    }
+    private SymbolTable symbolTable;
 
     @Override
     public void enterMethod() {
-        symbolTable.enterMethod();
+        symbolTable = new SymbolTable(true, symbolTable);
     }
 
     @Override
     public void exitMethod() {
-        symbolTable.exitMethod();
+        symbolTable = symbolTable.getNext();
     }
 
     @Override
-    public void declareVar(ElementKind kind, String name) {
-        symbolTable.declareVar(name, SymbolKind.ID);
+    public void enterBlock() {
+        symbolTable = new SymbolTable(false, symbolTable);
     }
 
     @Override
-    public String rename(ElementKind kind, String name, boolean isStatic) {
-        if ("this".equals(name)) {
-            return "THIS";
-        }
-        if ("super".equals(name)) {
-            return "SUPER";
-        }
-        switch (kind) {
-            case ANNOTATION_TYPE:
-            case CLASS:
-            case ENUM:
-            case INTERFACE:
-            case TYPE_PARAMETER:
-                return symbolTable.lookup(name, SymbolKind.TYPE);
-            case ENUM_CONSTANT:
-            case EXCEPTION_PARAMETER:
-            case FIELD:
-            case LOCAL_VARIABLE:
-            case PARAMETER:
-            case RESOURCE_VARIABLE:
-                return symbolTable.lookup(name, SymbolKind.ID);
-            case CONSTRUCTOR:
-            case METHOD:
-                return symbolTable.lookup(name, SymbolKind.METHOD);
-        }
-        return null;
+    public void exitBlock() {
+        symbolTable = symbolTable.getNext();
     }
 
     @Override
-    public String renamePrimitiveType(boolean distinguishPrimitiveTypes, TypeKind kind) {
-        if (distinguishPrimitiveTypes) {
-            return symbolTable.lookup(kind.name(), SymbolKind.TYPE);
-        }
-        String name = toClassName(kind);
-        return symbolTable.lookup(name, SymbolKind.TYPE);
+    public String declare(ElementKind kind, String name) {
+        SymbolKind sym = SymbolKind.fromElementKind(kind);
+        return symbolTable.declare(name, sym);
     }
 
-    private String toClassName(TypeKind kind) {
-        switch (kind) {
-            case BOOLEAN:
-                return "java.lang.Boolean";
-            case BYTE:
-                return "java.lang.Byte";
-            case CHAR:
-                return "java.lang.Character";
-            case DOUBLE:
-                return "java.lang.Double";
-            case FLOAT:
-                return "java.lang.Float";
-            case INT:
-                return "java.lang.Integer";
-            case LONG:
-                return "java.lang.Long";
-            case SHORT:
-                return "java.lang.Short";
-            case VOID:
-                return "java.lang.Void";
-            default:
-                return kind.name();
-        }
-    }
-    
     @Override
-    public String renameTypeArg(String name) {
-        return symbolTable.lookup(name, SymbolKind.TYPE);
+    public String declareGlobal(ElementKind kind, String name) {
+        SymbolKind sym = SymbolKind.fromElementKind(kind);
+        return symbolTable.declareGlobal(name, sym);
+    }
+
+    @Override
+    public String rename(ElementKind kind, String name) {
+        if ("this".equals(name) || "super".equals(name)) {
+            return name;
+        }
+        SymbolKind sym = SymbolKind.fromElementKind(kind);
+        return symbolTable.lookup(name, sym);
     }
 }

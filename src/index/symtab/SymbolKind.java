@@ -1,5 +1,7 @@
 package index.symtab;
 
+import javax.lang.model.element.ElementKind;
+
 /**
  * The kind of symbol table entry.
  *
@@ -7,44 +9,33 @@ package index.symtab;
  */
 public enum SymbolKind {
 
-    PARAMETER,
     FIELD,
-    STATIC_FIELD,
     METHOD,
-    CONSTRUCTOR,
-    EXCEPTION_PARAMETER,
     LOCAL_VARIABLE,
-    ENUM_CONSTANT,
-    RESOURCE_VARIABLE,
-    ID,
-    TYPE;
+    TYPE,
+    OTHER;
 
-    public static SymbolKind instance(String str) {
-        switch (str) {
-            case "PARAMETER":
-                return PARAMETER;
-            case "FIELD":
-                return FIELD;
-            case "STATIC_FIELD":
-                return STATIC_FIELD;
-            case "METHOD":
-                return METHOD;
-            case "CONSTRUCTOR":
-                return CONSTRUCTOR;
-            case "EXCEPTION_PARAMETER":
-                return EXCEPTION_PARAMETER;
-            case "LOCAL_VARIABLE":
-                return LOCAL_VARIABLE;
-            case "ENUM_CONSTANT":
-                return ENUM_CONSTANT;
-            case "RESOURCE_VARIABLE":
-                return RESOURCE_VARIABLE;
-            case "ID":
-                return ID;
-            case "TYPE":
+    public static SymbolKind fromElementKind(ElementKind kind) {
+        switch (kind) {
+            case ANNOTATION_TYPE:
+            case CLASS:
+            case CONSTRUCTOR:
+            case ENUM:
+            case INTERFACE:
+            case TYPE_PARAMETER:
                 return TYPE;
+            case ENUM_CONSTANT:
+            case FIELD:
+                return FIELD;
+            case EXCEPTION_PARAMETER:
+            case LOCAL_VARIABLE:
+            case PARAMETER:
+            case RESOURCE_VARIABLE:
+                return LOCAL_VARIABLE;
+            case METHOD:
+                return METHOD;
+            default:
+                return OTHER;
         }
-        assert false;
-        return null;
     }
 }

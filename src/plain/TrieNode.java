@@ -50,6 +50,7 @@ public class TrieNode implements Serializable {
     }
 
     public TrieNode addChild(String label, Pos pos) {
+        assert label != null;
         logger.printf("addChild: %s, %s%n", label, pos);
         TrieEdge e = findEdge(label);
         if (e == null) {

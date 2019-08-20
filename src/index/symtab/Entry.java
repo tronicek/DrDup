@@ -10,13 +10,11 @@ public class Entry {
     private final String name;
     private final SymbolKind kind;
     private final int count;
-    private final int level;
 
-    public Entry(String name, SymbolKind kind, int count, int level) {
+    public Entry(String name, SymbolKind kind, int count) {
         this.name = name;
         this.kind = kind;
         this.count = count;
-        this.level = level;
     }
 
     public String norm() {
@@ -35,12 +33,8 @@ public class Entry {
         return count;
     }
 
-    public int getLevel() {
-        return level;
-    }
-
     @Override
     public String toString() {
-        return String.format("entry: %s, %s, %d, %d", name, kind, count, level);
+        return String.format("entry: %s, %s, %d", name, kind, count);
     }
 }

@@ -1,11 +1,10 @@
 package index.rename;
 
 import javax.lang.model.element.ElementKind;
-import javax.lang.model.type.TypeKind;
 
 /**
  * The rename strategy.
- * 
+ *
  * @author Zdenek Tronicek, tronicek@tarleton.edu
  */
 public abstract class RenameStrategy {
@@ -16,28 +15,23 @@ public abstract class RenameStrategy {
                 return new BlindRename();
             case "consistent":
                 return new ConsistentRename();
-            case "strictly-consistent":
-                return new StrictlyConsistentRename();
         }
         System.out.println("missing rename strategy, using default...");
         return new BlindRename();
     }
-    
-    public abstract RenameStrategy newInstance();
-
-    public abstract void enterBlock();
-
-    public abstract void exitBlock();
 
     public abstract void enterMethod();
 
     public abstract void exitMethod();
 
-    public abstract void declareVar(ElementKind kind, String name);
+    public abstract void enterBlock();
 
-    public abstract String rename(ElementKind kind, String name, boolean isStatic);
+    public abstract void exitBlock();
 
-    public abstract String renamePrimitiveType(boolean distinguishPrimitiveTypes, TypeKind kind);
-    
-    public abstract String renameTypeArg(String name);
+    public abstract String declare(ElementKind kind, String name);
+
+    public abstract String declareGlobal(ElementKind kind, String name);
+
+    public abstract String rename(ElementKind kind, String name);
+
 }

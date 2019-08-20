@@ -1,0 +1,2091 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- The clones reported by DrDup and not reported by NiCad
+30x     short
+3x      distance (due to normalization)
+-->
+<clones>
+    <clone nlines="15">
+        <!-- short -->
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/opti/SchemaDOM.java" startline="293" endline="307">
+    public void printDOM() {
+        /*
+         for (int i=0; i&lt;relations.length; i++) {
+         if (relations[i][0] != null) {
+         for (int j=0; j&lt;relations[i].length; j++) {
+         if (relations[i][j] != null) {
+         System.out.print(relations[i][j].nodeType+"-"+relations[i][j].parentRow+"  ");
+         }
+         }
+         System.out.println("");
+         }
+         }
+         */
+        //traverse(getDocumentElement(), 0);
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToXMLSAXHandler.java" startline="417" endline="440">
+    public void endCDATA() throws SAXException
+    {
+        /* Normally we would do somthing with this but we ignore it.
+         * The neccessary call to m_lexHandler.endCDATA() will be made
+         * in flushPending().
+         *
+         * This is so that if we get calls like these:
+         *   this.startCDATA();
+         *   this.characters(chars1, off1, len1);
+         *   this.endCDATA();
+         *   this.startCDATA();
+         *   this.characters(chars2, off2, len2);
+         *   this.endCDATA();
+         *
+         * that we will only make these calls to the wrapped handlers:
+         *
+         *   m_lexHandler.startCDATA();
+         *   m_saxHandler.characters(chars1, off1, len1);
+         *   m_saxHandler.characters(chars1, off2, len2);
+         *   m_lexHandler.endCDATA();
+         *
+         * We will merge adjacent CDATA blocks.
+         */
+    }
+</source>
+    </clone>
+    <clone nlines="15">
+        <!-- short -->
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/opti/SchemaDOM.java" startline="293" endline="307">
+    public void printDOM() {
+        /*
+         for (int i=0; i&lt;relations.length; i++) {
+         if (relations[i][0] != null) {
+         for (int j=0; j&lt;relations[i].length; j++) {
+         if (relations[i][j] != null) {
+         System.out.print(relations[i][j].nodeType+"-"+relations[i][j].parentRow+"  ");
+         }
+         }
+         System.out.println("");
+         }
+         }
+         */
+        //traverse(getDocumentElement(), 0);
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="2304" endline="2323">
+    @Override
+    public String getWholeText(){
+
+/*
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+        if (nextSibling == null) {
+            return data;
+        }
+        StringBuffer buffer = new StringBuffer();
+        if (data != null &amp;&amp; data.length() != 0) {
+            buffer.append(data);
+        }
+        getWholeText(nextSibling, buffer);
+        return buffer.toString();
+*/
+        return null; // PENDING
+
+    }
+</source>
+    </clone>
+    <clone nlines="15">
+        <!-- short -->
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/opti/SchemaDOM.java" startline="293" endline="307">
+    public void printDOM() {
+        /*
+         for (int i=0; i&lt;relations.length; i++) {
+         if (relations[i][0] != null) {
+         for (int j=0; j&lt;relations[i].length; j++) {
+         if (relations[i][j] != null) {
+         System.out.print(relations[i][j].nodeType+"-"+relations[i][j].parentRow+"  ");
+         }
+         }
+         System.out.println("");
+         }
+         }
+         */
+        //traverse(getDocumentElement(), 0);
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1952" endline="1970">
+    public String getWholeText(){
+
+/*
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+        if (nextSibling == null) {
+            return data;
+        }
+        StringBuffer buffer = new StringBuffer();
+        if (data != null &amp;&amp; data.length() != 0) {
+            buffer.append(data);
+        }
+        getWholeText(nextSibling, buffer);
+        return buffer.toString();
+*/
+        return null; // PENDING
+
+    }
+</source>
+    </clone>
+    <clone nlines="20">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/serializer/ToXMLSAXHandler.java" startline="417" endline="440">
+    public void endCDATA() throws SAXException
+    {
+        /* Normally we would do somthing with this but we ignore it.
+         * The neccessary call to m_lexHandler.endCDATA() will be made
+         * in flushPending().
+         *
+         * This is so that if we get calls like these:
+         *   this.startCDATA();
+         *   this.characters(chars1, off1, len1);
+         *   this.endCDATA();
+         *   this.startCDATA();
+         *   this.characters(chars2, off2, len2);
+         *   this.endCDATA();
+         *
+         * that we will only make these calls to the wrapped handlers:
+         *
+         *   m_lexHandler.startCDATA();
+         *   m_saxHandler.characters(chars1, off1, len1);
+         *   m_saxHandler.characters(chars1, off2, len2);
+         *   m_lexHandler.endCDATA();
+         *
+         * We will merge adjacent CDATA blocks.
+         */
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="2304" endline="2323">
+    @Override
+    public String getWholeText(){
+
+/*
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+        if (nextSibling == null) {
+            return data;
+        }
+        StringBuffer buffer = new StringBuffer();
+        if (data != null &amp;&amp; data.length() != 0) {
+            buffer.append(data);
+        }
+        getWholeText(nextSibling, buffer);
+        return buffer.toString();
+*/
+        return null; // PENDING
+
+    }
+</source>
+    </clone>
+    <clone nlines="19">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/serializer/ToXMLSAXHandler.java" startline="417" endline="440">
+    public void endCDATA() throws SAXException
+    {
+        /* Normally we would do somthing with this but we ignore it.
+         * The neccessary call to m_lexHandler.endCDATA() will be made
+         * in flushPending().
+         *
+         * This is so that if we get calls like these:
+         *   this.startCDATA();
+         *   this.characters(chars1, off1, len1);
+         *   this.endCDATA();
+         *   this.startCDATA();
+         *   this.characters(chars2, off2, len2);
+         *   this.endCDATA();
+         *
+         * that we will only make these calls to the wrapped handlers:
+         *
+         *   m_lexHandler.startCDATA();
+         *   m_saxHandler.characters(chars1, off1, len1);
+         *   m_saxHandler.characters(chars1, off2, len2);
+         *   m_lexHandler.endCDATA();
+         *
+         * We will merge adjacent CDATA blocks.
+         */
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1952" endline="1970">
+    public String getWholeText(){
+
+/*
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+        if (nextSibling == null) {
+            return data;
+        }
+        StringBuffer buffer = new StringBuffer();
+        if (data != null &amp;&amp; data.length() != 0) {
+            buffer.append(data);
+        }
+        getWholeText(nextSibling, buffer);
+        return buffer.toString();
+*/
+        return null; // PENDING
+
+    }
+</source>
+    </clone>
+    <clone nlines="20">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="2304" endline="2323">
+    @Override
+    public String getWholeText(){
+
+/*
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+        if (nextSibling == null) {
+            return data;
+        }
+        StringBuffer buffer = new StringBuffer();
+        if (data != null &amp;&amp; data.length() != 0) {
+            buffer.append(data);
+        }
+        getWholeText(nextSibling, buffer);
+        return buffer.toString();
+*/
+        return null; // PENDING
+
+    }
+</source>
+        <source file="com/sun/org/apache/xpath/internal/operations/Variable.java" startline="328" endline="349">
+  public int getAnalysisBits()
+  {
+
+    // J2SE does not support Xalan interpretive
+    /*
+        com.sun.org.apache.xalan.internal.templates.ElemVariable vvar = getElemVariable();
+        if(null != vvar)
+        {
+                XPath xpath = vvar.getSelect();
+                if(null != xpath)
+                {
+                        Expression expr = xpath.getExpression();
+                        if(null != expr &amp;&amp; expr instanceof PathComponent)
+                        {
+                                return ((PathComponent)expr).getAnalysisBits();
+                        }
+                }
+        }
+    */
+
+    return WalkerFactory.BIT_FILTER;
+  }
+</source>
+    </clone>
+    <clone nlines="20">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="2304" endline="2323">
+    @Override
+    public String getWholeText(){
+
+/*
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+        if (nextSibling == null) {
+            return data;
+        }
+        StringBuffer buffer = new StringBuffer();
+        if (data != null &amp;&amp; data.length() != 0) {
+            buffer.append(data);
+        }
+        getWholeText(nextSibling, buffer);
+        return buffer.toString();
+*/
+        return null; // PENDING
+
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/dom2dtm/DOM2DTMdefaultNamespaceDeclarationNode.java" startline="402" endline="466">
+    public boolean isDefaultNamespace(String namespaceURI){
+       /*
+        // REVISIT: remove casts when DOM L3 becomes REC.
+        short type = this.getNodeType();
+        switch (type) {
+        case Node.ELEMENT_NODE: {
+            String namespace = this.getNamespaceURI();
+            String prefix = this.getPrefix();
+
+            // REVISIT: is it possible that prefix is empty string?
+            if (prefix == null || prefix.length() == 0) {
+                if (namespaceURI == null) {
+                    return (namespace == namespaceURI);
+                }
+                return namespaceURI.equals(namespace);
+            }
+            if (this.hasAttributes()) {
+                ElementImpl elem = (ElementImpl)this;
+                NodeImpl attr = (NodeImpl)elem.getAttributeNodeNS("http://www.w3.org/2000/xmlns/", "xmlns");
+                if (attr != null) {
+                    String value = attr.getNodeValue();
+                    if (namespaceURI == null) {
+                        return (namespace == value);
+                    }
+                    return namespaceURI.equals(value);
+                }
+            }
+
+            NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+            if (ancestor != null) {
+                return ancestor.isDefaultNamespace(namespaceURI);
+            }
+            return false;
+        }
+        case Node.DOCUMENT_NODE:{
+                return((NodeImpl)((Document)this).getDocumentElement()).isDefaultNamespace(namespaceURI);
+            }
+
+        case Node.ENTITY_NODE :
+          case Node.NOTATION_NODE:
+        case Node.DOCUMENT_FRAGMENT_NODE:
+        case Node.DOCUMENT_TYPE_NODE:
+            // type is unknown
+            return false;
+        case Node.ATTRIBUTE_NODE:{
+                if (this.ownerNode.getNodeType() == Node.ELEMENT_NODE) {
+                    return ownerNode.isDefaultNamespace(namespaceURI);
+
+                }
+                return false;
+            }
+        default:{
+                NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+                if (ancestor != null) {
+                    return ancestor.isDefaultNamespace(namespaceURI);
+                }
+                return false;
+            }
+
+        }
+*/
+        return false;
+
+
+    }
+</source>
+    </clone>
+    <clone nlines="20">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="2304" endline="2323">
+    @Override
+    public String getWholeText(){
+
+/*
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+        if (nextSibling == null) {
+            return data;
+        }
+        StringBuffer buffer = new StringBuffer();
+        if (data != null &amp;&amp; data.length() != 0) {
+            buffer.append(data);
+        }
+        getWholeText(nextSibling, buffer);
+        return buffer.toString();
+*/
+        return null; // PENDING
+
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="1879" endline="1944">
+    @Override
+    public boolean isDefaultNamespace(String namespaceURI){
+       /*
+        // REVISIT: remove casts when DOM L3 becomes REC.
+        short type = this.getNodeType();
+        switch (type) {
+        case Node.ELEMENT_NODE: {
+            String namespace = this.getNamespaceURI();
+            String prefix = this.getPrefix();
+
+            // REVISIT: is it possible that prefix is empty string?
+            if (prefix == null || prefix.length() == 0) {
+                if (namespaceURI == null) {
+                    return (namespace == namespaceURI);
+                }
+                return namespaceURI.equals(namespace);
+            }
+            if (this.hasAttributes()) {
+                ElementImpl elem = (ElementImpl)this;
+                NodeImpl attr = (NodeImpl)elem.getAttributeNodeNS("http://www.w3.org/2000/xmlns/", "xmlns");
+                if (attr != null) {
+                    String value = attr.getNodeValue();
+                    if (namespaceURI == null) {
+                        return (namespace == value);
+                    }
+                    return namespaceURI.equals(value);
+                }
+            }
+
+            NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+            if (ancestor != null) {
+                return ancestor.isDefaultNamespace(namespaceURI);
+            }
+            return false;
+        }
+        case Node.DOCUMENT_NODE:{
+                return((NodeImpl)((Document)this).getDocumentElement()).isDefaultNamespace(namespaceURI);
+            }
+
+        case Node.ENTITY_NODE :
+          case Node.NOTATION_NODE:
+        case Node.DOCUMENT_FRAGMENT_NODE:
+        case Node.DOCUMENT_TYPE_NODE:
+            // type is unknown
+            return false;
+        case Node.ATTRIBUTE_NODE:{
+                if (this.ownerNode.getNodeType() == Node.ELEMENT_NODE) {
+                    return ownerNode.isDefaultNamespace(namespaceURI);
+
+                }
+                return false;
+            }
+        default:{
+                NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+                if (ancestor != null) {
+                    return ancestor.isDefaultNamespace(namespaceURI);
+                }
+                return false;
+            }
+
+        }
+*/
+        return false;
+
+
+    }
+</source>
+    </clone>
+    <clone nlines="20">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="2304" endline="2323">
+    @Override
+    public String getWholeText(){
+
+/*
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+        if (nextSibling == null) {
+            return data;
+        }
+        StringBuffer buffer = new StringBuffer();
+        if (data != null &amp;&amp; data.length() != 0) {
+            buffer.append(data);
+        }
+        getWholeText(nextSibling, buffer);
+        return buffer.toString();
+*/
+        return null; // PENDING
+
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1539" endline="1603">
+    public boolean isDefaultNamespace(String namespaceURI){
+       /*
+        // REVISIT: remove casts when DOM L3 becomes REC.
+        short type = this.getNodeType();
+        switch (type) {
+        case Node.ELEMENT_NODE: {
+            String namespace = this.getNamespaceURI();
+            String prefix = this.getPrefix();
+
+            // REVISIT: is it possible that prefix is empty string?
+            if (prefix == null || prefix.length() == 0) {
+                if (namespaceURI == null) {
+                    return (namespace == namespaceURI);
+                }
+                return namespaceURI.equals(namespace);
+            }
+            if (this.hasAttributes()) {
+                ElementImpl elem = (ElementImpl)this;
+                NodeImpl attr = (NodeImpl)elem.getAttributeNodeNS("http://www.w3.org/2000/xmlns/", "xmlns");
+                if (attr != null) {
+                    String value = attr.getNodeValue();
+                    if (namespaceURI == null) {
+                        return (namespace == value);
+                    }
+                    return namespaceURI.equals(value);
+                }
+            }
+
+            NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+            if (ancestor != null) {
+                return ancestor.isDefaultNamespace(namespaceURI);
+            }
+            return false;
+        }
+        case Node.DOCUMENT_NODE:{
+                return((NodeImpl)((Document)this).getDocumentElement()).isDefaultNamespace(namespaceURI);
+            }
+
+        case Node.ENTITY_NODE :
+          case Node.NOTATION_NODE:
+        case Node.DOCUMENT_FRAGMENT_NODE:
+        case Node.DOCUMENT_TYPE_NODE:
+            // type is unknown
+            return false;
+        case Node.ATTRIBUTE_NODE:{
+                if (this.ownerNode.getNodeType() == Node.ELEMENT_NODE) {
+                    return ownerNode.isDefaultNamespace(namespaceURI);
+
+                }
+                return false;
+            }
+        default:{
+                NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+                if (ancestor != null) {
+                    return ancestor.isDefaultNamespace(namespaceURI);
+                }
+                return false;
+            }
+
+        }
+*/
+        return false;
+
+
+    }
+</source>
+    </clone>
+    <clone nlines="19">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1952" endline="1970">
+    public String getWholeText(){
+
+/*
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+        if (nextSibling == null) {
+            return data;
+        }
+        StringBuffer buffer = new StringBuffer();
+        if (data != null &amp;&amp; data.length() != 0) {
+            buffer.append(data);
+        }
+        getWholeText(nextSibling, buffer);
+        return buffer.toString();
+*/
+        return null; // PENDING
+
+    }
+</source>
+        <source file="com/sun/org/apache/xpath/internal/operations/Variable.java" startline="328" endline="349">
+  public int getAnalysisBits()
+  {
+
+    // J2SE does not support Xalan interpretive
+    /*
+        com.sun.org.apache.xalan.internal.templates.ElemVariable vvar = getElemVariable();
+        if(null != vvar)
+        {
+                XPath xpath = vvar.getSelect();
+                if(null != xpath)
+                {
+                        Expression expr = xpath.getExpression();
+                        if(null != expr &amp;&amp; expr instanceof PathComponent)
+                        {
+                                return ((PathComponent)expr).getAnalysisBits();
+                        }
+                }
+        }
+    */
+
+    return WalkerFactory.BIT_FILTER;
+  }
+</source>
+    </clone>
+    <clone nlines="19">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1952" endline="1970">
+    public String getWholeText(){
+
+/*
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+        if (nextSibling == null) {
+            return data;
+        }
+        StringBuffer buffer = new StringBuffer();
+        if (data != null &amp;&amp; data.length() != 0) {
+            buffer.append(data);
+        }
+        getWholeText(nextSibling, buffer);
+        return buffer.toString();
+*/
+        return null; // PENDING
+
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/dom2dtm/DOM2DTMdefaultNamespaceDeclarationNode.java" startline="402" endline="466">
+    public boolean isDefaultNamespace(String namespaceURI){
+       /*
+        // REVISIT: remove casts when DOM L3 becomes REC.
+        short type = this.getNodeType();
+        switch (type) {
+        case Node.ELEMENT_NODE: {
+            String namespace = this.getNamespaceURI();
+            String prefix = this.getPrefix();
+
+            // REVISIT: is it possible that prefix is empty string?
+            if (prefix == null || prefix.length() == 0) {
+                if (namespaceURI == null) {
+                    return (namespace == namespaceURI);
+                }
+                return namespaceURI.equals(namespace);
+            }
+            if (this.hasAttributes()) {
+                ElementImpl elem = (ElementImpl)this;
+                NodeImpl attr = (NodeImpl)elem.getAttributeNodeNS("http://www.w3.org/2000/xmlns/", "xmlns");
+                if (attr != null) {
+                    String value = attr.getNodeValue();
+                    if (namespaceURI == null) {
+                        return (namespace == value);
+                    }
+                    return namespaceURI.equals(value);
+                }
+            }
+
+            NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+            if (ancestor != null) {
+                return ancestor.isDefaultNamespace(namespaceURI);
+            }
+            return false;
+        }
+        case Node.DOCUMENT_NODE:{
+                return((NodeImpl)((Document)this).getDocumentElement()).isDefaultNamespace(namespaceURI);
+            }
+
+        case Node.ENTITY_NODE :
+          case Node.NOTATION_NODE:
+        case Node.DOCUMENT_FRAGMENT_NODE:
+        case Node.DOCUMENT_TYPE_NODE:
+            // type is unknown
+            return false;
+        case Node.ATTRIBUTE_NODE:{
+                if (this.ownerNode.getNodeType() == Node.ELEMENT_NODE) {
+                    return ownerNode.isDefaultNamespace(namespaceURI);
+
+                }
+                return false;
+            }
+        default:{
+                NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+                if (ancestor != null) {
+                    return ancestor.isDefaultNamespace(namespaceURI);
+                }
+                return false;
+            }
+
+        }
+*/
+        return false;
+
+
+    }
+</source>
+    </clone>
+    <clone nlines="19">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1952" endline="1970">
+    public String getWholeText(){
+
+/*
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+        if (nextSibling == null) {
+            return data;
+        }
+        StringBuffer buffer = new StringBuffer();
+        if (data != null &amp;&amp; data.length() != 0) {
+            buffer.append(data);
+        }
+        getWholeText(nextSibling, buffer);
+        return buffer.toString();
+*/
+        return null; // PENDING
+
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="1879" endline="1944">
+    @Override
+    public boolean isDefaultNamespace(String namespaceURI){
+       /*
+        // REVISIT: remove casts when DOM L3 becomes REC.
+        short type = this.getNodeType();
+        switch (type) {
+        case Node.ELEMENT_NODE: {
+            String namespace = this.getNamespaceURI();
+            String prefix = this.getPrefix();
+
+            // REVISIT: is it possible that prefix is empty string?
+            if (prefix == null || prefix.length() == 0) {
+                if (namespaceURI == null) {
+                    return (namespace == namespaceURI);
+                }
+                return namespaceURI.equals(namespace);
+            }
+            if (this.hasAttributes()) {
+                ElementImpl elem = (ElementImpl)this;
+                NodeImpl attr = (NodeImpl)elem.getAttributeNodeNS("http://www.w3.org/2000/xmlns/", "xmlns");
+                if (attr != null) {
+                    String value = attr.getNodeValue();
+                    if (namespaceURI == null) {
+                        return (namespace == value);
+                    }
+                    return namespaceURI.equals(value);
+                }
+            }
+
+            NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+            if (ancestor != null) {
+                return ancestor.isDefaultNamespace(namespaceURI);
+            }
+            return false;
+        }
+        case Node.DOCUMENT_NODE:{
+                return((NodeImpl)((Document)this).getDocumentElement()).isDefaultNamespace(namespaceURI);
+            }
+
+        case Node.ENTITY_NODE :
+          case Node.NOTATION_NODE:
+        case Node.DOCUMENT_FRAGMENT_NODE:
+        case Node.DOCUMENT_TYPE_NODE:
+            // type is unknown
+            return false;
+        case Node.ATTRIBUTE_NODE:{
+                if (this.ownerNode.getNodeType() == Node.ELEMENT_NODE) {
+                    return ownerNode.isDefaultNamespace(namespaceURI);
+
+                }
+                return false;
+            }
+        default:{
+                NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+                if (ancestor != null) {
+                    return ancestor.isDefaultNamespace(namespaceURI);
+                }
+                return false;
+            }
+
+        }
+*/
+        return false;
+
+
+    }
+</source>
+    </clone>
+    <clone nlines="19">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1952" endline="1970">
+    public String getWholeText(){
+
+/*
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+        if (nextSibling == null) {
+            return data;
+        }
+        StringBuffer buffer = new StringBuffer();
+        if (data != null &amp;&amp; data.length() != 0) {
+            buffer.append(data);
+        }
+        getWholeText(nextSibling, buffer);
+        return buffer.toString();
+*/
+        return null; // PENDING
+
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1539" endline="1603">
+    public boolean isDefaultNamespace(String namespaceURI){
+       /*
+        // REVISIT: remove casts when DOM L3 becomes REC.
+        short type = this.getNodeType();
+        switch (type) {
+        case Node.ELEMENT_NODE: {
+            String namespace = this.getNamespaceURI();
+            String prefix = this.getPrefix();
+
+            // REVISIT: is it possible that prefix is empty string?
+            if (prefix == null || prefix.length() == 0) {
+                if (namespaceURI == null) {
+                    return (namespace == namespaceURI);
+                }
+                return namespaceURI.equals(namespace);
+            }
+            if (this.hasAttributes()) {
+                ElementImpl elem = (ElementImpl)this;
+                NodeImpl attr = (NodeImpl)elem.getAttributeNodeNS("http://www.w3.org/2000/xmlns/", "xmlns");
+                if (attr != null) {
+                    String value = attr.getNodeValue();
+                    if (namespaceURI == null) {
+                        return (namespace == value);
+                    }
+                    return namespaceURI.equals(value);
+                }
+            }
+
+            NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+            if (ancestor != null) {
+                return ancestor.isDefaultNamespace(namespaceURI);
+            }
+            return false;
+        }
+        case Node.DOCUMENT_NODE:{
+                return((NodeImpl)((Document)this).getDocumentElement()).isDefaultNamespace(namespaceURI);
+            }
+
+        case Node.ENTITY_NODE :
+          case Node.NOTATION_NODE:
+        case Node.DOCUMENT_FRAGMENT_NODE:
+        case Node.DOCUMENT_TYPE_NODE:
+            // type is unknown
+            return false;
+        case Node.ATTRIBUTE_NODE:{
+                if (this.ownerNode.getNodeType() == Node.ELEMENT_NODE) {
+                    return ownerNode.isDefaultNamespace(namespaceURI);
+
+                }
+                return false;
+            }
+        default:{
+                NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+                if (ancestor != null) {
+                    return ancestor.isDefaultNamespace(namespaceURI);
+                }
+                return false;
+            }
+
+        }
+*/
+        return false;
+
+
+    }
+</source>
+    </clone>
+    <clone nlines="47">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/dom2dtm/DOM2DTMdefaultNamespaceDeclarationNode.java" startline="402" endline="466">
+    public boolean isDefaultNamespace(String namespaceURI){
+       /*
+        // REVISIT: remove casts when DOM L3 becomes REC.
+        short type = this.getNodeType();
+        switch (type) {
+        case Node.ELEMENT_NODE: {
+            String namespace = this.getNamespaceURI();
+            String prefix = this.getPrefix();
+
+            // REVISIT: is it possible that prefix is empty string?
+            if (prefix == null || prefix.length() == 0) {
+                if (namespaceURI == null) {
+                    return (namespace == namespaceURI);
+                }
+                return namespaceURI.equals(namespace);
+            }
+            if (this.hasAttributes()) {
+                ElementImpl elem = (ElementImpl)this;
+                NodeImpl attr = (NodeImpl)elem.getAttributeNodeNS("http://www.w3.org/2000/xmlns/", "xmlns");
+                if (attr != null) {
+                    String value = attr.getNodeValue();
+                    if (namespaceURI == null) {
+                        return (namespace == value);
+                    }
+                    return namespaceURI.equals(value);
+                }
+            }
+
+            NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+            if (ancestor != null) {
+                return ancestor.isDefaultNamespace(namespaceURI);
+            }
+            return false;
+        }
+        case Node.DOCUMENT_NODE:{
+                return((NodeImpl)((Document)this).getDocumentElement()).isDefaultNamespace(namespaceURI);
+            }
+
+        case Node.ENTITY_NODE :
+          case Node.NOTATION_NODE:
+        case Node.DOCUMENT_FRAGMENT_NODE:
+        case Node.DOCUMENT_TYPE_NODE:
+            // type is unknown
+            return false;
+        case Node.ATTRIBUTE_NODE:{
+                if (this.ownerNode.getNodeType() == Node.ELEMENT_NODE) {
+                    return ownerNode.isDefaultNamespace(namespaceURI);
+
+                }
+                return false;
+            }
+        default:{
+                NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+                if (ancestor != null) {
+                    return ancestor.isDefaultNamespace(namespaceURI);
+                }
+                return false;
+            }
+
+        }
+*/
+        return false;
+
+
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="2250" endline="2296">
+    @Override
+    public Text replaceWholeText(String content)
+                                 throws DOMException{
+/*
+
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+
+        // make sure we can make the replacement
+        if (!canModify(nextSibling)) {
+            throw new DOMException(DOMException.NO_MODIFICATION_ALLOWED_ERR,
+                DOMMessageFormatter.formatMessage(DOMMessageFormatter.DOM_DOMAIN, "NO_MODIFICATION_ALLOWED_ERR", null));
+        }
+
+        Node parent = this.getParentNode();
+        if (content == null || content.length() == 0) {
+            // remove current node
+            if (parent !=null) { // check if node in the tree
+                parent.removeChild(this);
+                return null;
+            }
+        }
+        Text currentNode = null;
+        if (isReadOnly()){
+            Text newNode = this.ownerDocument().createTextNode(content);
+            if (parent !=null) { // check if node in the tree
+                parent.insertBefore(newNode, this);
+                parent.removeChild(this);
+                currentNode = newNode;
+            } else {
+                return newNode;
+            }
+        }  else {
+            this.setData(content);
+            currentNode = this;
+        }
+        Node sibling =  currentNode.getNextSibling();
+        while ( sibling !=null) {
+            parent.removeChild(sibling);
+            sibling = currentNode.getNextSibling();
+        }
+
+        return currentNode;
+*/
+        return null; //Pending
+    }
+</source>
+    </clone>
+    <clone nlines="46">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/dom2dtm/DOM2DTMdefaultNamespaceDeclarationNode.java" startline="402" endline="466">
+    public boolean isDefaultNamespace(String namespaceURI){
+       /*
+        // REVISIT: remove casts when DOM L3 becomes REC.
+        short type = this.getNodeType();
+        switch (type) {
+        case Node.ELEMENT_NODE: {
+            String namespace = this.getNamespaceURI();
+            String prefix = this.getPrefix();
+
+            // REVISIT: is it possible that prefix is empty string?
+            if (prefix == null || prefix.length() == 0) {
+                if (namespaceURI == null) {
+                    return (namespace == namespaceURI);
+                }
+                return namespaceURI.equals(namespace);
+            }
+            if (this.hasAttributes()) {
+                ElementImpl elem = (ElementImpl)this;
+                NodeImpl attr = (NodeImpl)elem.getAttributeNodeNS("http://www.w3.org/2000/xmlns/", "xmlns");
+                if (attr != null) {
+                    String value = attr.getNodeValue();
+                    if (namespaceURI == null) {
+                        return (namespace == value);
+                    }
+                    return namespaceURI.equals(value);
+                }
+            }
+
+            NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+            if (ancestor != null) {
+                return ancestor.isDefaultNamespace(namespaceURI);
+            }
+            return false;
+        }
+        case Node.DOCUMENT_NODE:{
+                return((NodeImpl)((Document)this).getDocumentElement()).isDefaultNamespace(namespaceURI);
+            }
+
+        case Node.ENTITY_NODE :
+          case Node.NOTATION_NODE:
+        case Node.DOCUMENT_FRAGMENT_NODE:
+        case Node.DOCUMENT_TYPE_NODE:
+            // type is unknown
+            return false;
+        case Node.ATTRIBUTE_NODE:{
+                if (this.ownerNode.getNodeType() == Node.ELEMENT_NODE) {
+                    return ownerNode.isDefaultNamespace(namespaceURI);
+
+                }
+                return false;
+            }
+        default:{
+                NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+                if (ancestor != null) {
+                    return ancestor.isDefaultNamespace(namespaceURI);
+                }
+                return false;
+            }
+
+        }
+*/
+        return false;
+
+
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1899" endline="1944">
+    public Text replaceWholeText(String content)
+                                 throws DOMException{
+/*
+
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+
+        // make sure we can make the replacement
+        if (!canModify(nextSibling)) {
+            throw new DOMException(DOMException.NO_MODIFICATION_ALLOWED_ERR,
+                DOMMessageFormatter.formatMessage(DOMMessageFormatter.DOM_DOMAIN, "NO_MODIFICATION_ALLOWED_ERR", null));
+        }
+
+        Node parent = this.getParentNode();
+        if (content == null || content.length() == 0) {
+            // remove current node
+            if (parent !=null) { // check if node in the tree
+                parent.removeChild(this);
+                return null;
+            }
+        }
+        Text currentNode = null;
+        if (isReadOnly()){
+            Text newNode = this.ownerDocument().createTextNode(content);
+            if (parent !=null) { // check if node in the tree
+                parent.insertBefore(newNode, this);
+                parent.removeChild(this);
+                currentNode = newNode;
+            } else {
+                return newNode;
+            }
+        }  else {
+            this.setData(content);
+            currentNode = this;
+        }
+        Node sibling =  currentNode.getNextSibling();
+        while ( sibling !=null) {
+            parent.removeChild(sibling);
+            sibling = currentNode.getNextSibling();
+        }
+
+        return currentNode;
+*/
+        return null; //Pending
+    }
+</source>
+    </clone>
+    <clone nlines="47">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="1879" endline="1944">
+    @Override
+    public boolean isDefaultNamespace(String namespaceURI){
+       /*
+        // REVISIT: remove casts when DOM L3 becomes REC.
+        short type = this.getNodeType();
+        switch (type) {
+        case Node.ELEMENT_NODE: {
+            String namespace = this.getNamespaceURI();
+            String prefix = this.getPrefix();
+
+            // REVISIT: is it possible that prefix is empty string?
+            if (prefix == null || prefix.length() == 0) {
+                if (namespaceURI == null) {
+                    return (namespace == namespaceURI);
+                }
+                return namespaceURI.equals(namespace);
+            }
+            if (this.hasAttributes()) {
+                ElementImpl elem = (ElementImpl)this;
+                NodeImpl attr = (NodeImpl)elem.getAttributeNodeNS("http://www.w3.org/2000/xmlns/", "xmlns");
+                if (attr != null) {
+                    String value = attr.getNodeValue();
+                    if (namespaceURI == null) {
+                        return (namespace == value);
+                    }
+                    return namespaceURI.equals(value);
+                }
+            }
+
+            NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+            if (ancestor != null) {
+                return ancestor.isDefaultNamespace(namespaceURI);
+            }
+            return false;
+        }
+        case Node.DOCUMENT_NODE:{
+                return((NodeImpl)((Document)this).getDocumentElement()).isDefaultNamespace(namespaceURI);
+            }
+
+        case Node.ENTITY_NODE :
+          case Node.NOTATION_NODE:
+        case Node.DOCUMENT_FRAGMENT_NODE:
+        case Node.DOCUMENT_TYPE_NODE:
+            // type is unknown
+            return false;
+        case Node.ATTRIBUTE_NODE:{
+                if (this.ownerNode.getNodeType() == Node.ELEMENT_NODE) {
+                    return ownerNode.isDefaultNamespace(namespaceURI);
+
+                }
+                return false;
+            }
+        default:{
+                NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+                if (ancestor != null) {
+                    return ancestor.isDefaultNamespace(namespaceURI);
+                }
+                return false;
+            }
+
+        }
+*/
+        return false;
+
+
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="2250" endline="2296">
+    @Override
+    public Text replaceWholeText(String content)
+                                 throws DOMException{
+/*
+
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+
+        // make sure we can make the replacement
+        if (!canModify(nextSibling)) {
+            throw new DOMException(DOMException.NO_MODIFICATION_ALLOWED_ERR,
+                DOMMessageFormatter.formatMessage(DOMMessageFormatter.DOM_DOMAIN, "NO_MODIFICATION_ALLOWED_ERR", null));
+        }
+
+        Node parent = this.getParentNode();
+        if (content == null || content.length() == 0) {
+            // remove current node
+            if (parent !=null) { // check if node in the tree
+                parent.removeChild(this);
+                return null;
+            }
+        }
+        Text currentNode = null;
+        if (isReadOnly()){
+            Text newNode = this.ownerDocument().createTextNode(content);
+            if (parent !=null) { // check if node in the tree
+                parent.insertBefore(newNode, this);
+                parent.removeChild(this);
+                currentNode = newNode;
+            } else {
+                return newNode;
+            }
+        }  else {
+            this.setData(content);
+            currentNode = this;
+        }
+        Node sibling =  currentNode.getNextSibling();
+        while ( sibling !=null) {
+            parent.removeChild(sibling);
+            sibling = currentNode.getNextSibling();
+        }
+
+        return currentNode;
+*/
+        return null; //Pending
+    }
+</source>
+    </clone>
+    <clone nlines="46">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="1879" endline="1944">
+    @Override
+    public boolean isDefaultNamespace(String namespaceURI){
+       /*
+        // REVISIT: remove casts when DOM L3 becomes REC.
+        short type = this.getNodeType();
+        switch (type) {
+        case Node.ELEMENT_NODE: {
+            String namespace = this.getNamespaceURI();
+            String prefix = this.getPrefix();
+
+            // REVISIT: is it possible that prefix is empty string?
+            if (prefix == null || prefix.length() == 0) {
+                if (namespaceURI == null) {
+                    return (namespace == namespaceURI);
+                }
+                return namespaceURI.equals(namespace);
+            }
+            if (this.hasAttributes()) {
+                ElementImpl elem = (ElementImpl)this;
+                NodeImpl attr = (NodeImpl)elem.getAttributeNodeNS("http://www.w3.org/2000/xmlns/", "xmlns");
+                if (attr != null) {
+                    String value = attr.getNodeValue();
+                    if (namespaceURI == null) {
+                        return (namespace == value);
+                    }
+                    return namespaceURI.equals(value);
+                }
+            }
+
+            NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+            if (ancestor != null) {
+                return ancestor.isDefaultNamespace(namespaceURI);
+            }
+            return false;
+        }
+        case Node.DOCUMENT_NODE:{
+                return((NodeImpl)((Document)this).getDocumentElement()).isDefaultNamespace(namespaceURI);
+            }
+
+        case Node.ENTITY_NODE :
+          case Node.NOTATION_NODE:
+        case Node.DOCUMENT_FRAGMENT_NODE:
+        case Node.DOCUMENT_TYPE_NODE:
+            // type is unknown
+            return false;
+        case Node.ATTRIBUTE_NODE:{
+                if (this.ownerNode.getNodeType() == Node.ELEMENT_NODE) {
+                    return ownerNode.isDefaultNamespace(namespaceURI);
+
+                }
+                return false;
+            }
+        default:{
+                NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+                if (ancestor != null) {
+                    return ancestor.isDefaultNamespace(namespaceURI);
+                }
+                return false;
+            }
+
+        }
+*/
+        return false;
+
+
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1899" endline="1944">
+    public Text replaceWholeText(String content)
+                                 throws DOMException{
+/*
+
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+
+        // make sure we can make the replacement
+        if (!canModify(nextSibling)) {
+            throw new DOMException(DOMException.NO_MODIFICATION_ALLOWED_ERR,
+                DOMMessageFormatter.formatMessage(DOMMessageFormatter.DOM_DOMAIN, "NO_MODIFICATION_ALLOWED_ERR", null));
+        }
+
+        Node parent = this.getParentNode();
+        if (content == null || content.length() == 0) {
+            // remove current node
+            if (parent !=null) { // check if node in the tree
+                parent.removeChild(this);
+                return null;
+            }
+        }
+        Text currentNode = null;
+        if (isReadOnly()){
+            Text newNode = this.ownerDocument().createTextNode(content);
+            if (parent !=null) { // check if node in the tree
+                parent.insertBefore(newNode, this);
+                parent.removeChild(this);
+                currentNode = newNode;
+            } else {
+                return newNode;
+            }
+        }  else {
+            this.setData(content);
+            currentNode = this;
+        }
+        Node sibling =  currentNode.getNextSibling();
+        while ( sibling !=null) {
+            parent.removeChild(sibling);
+            sibling = currentNode.getNextSibling();
+        }
+
+        return currentNode;
+*/
+        return null; //Pending
+    }
+</source>
+    </clone>
+    <clone nlines="47">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1539" endline="1603">
+    public boolean isDefaultNamespace(String namespaceURI){
+       /*
+        // REVISIT: remove casts when DOM L3 becomes REC.
+        short type = this.getNodeType();
+        switch (type) {
+        case Node.ELEMENT_NODE: {
+            String namespace = this.getNamespaceURI();
+            String prefix = this.getPrefix();
+
+            // REVISIT: is it possible that prefix is empty string?
+            if (prefix == null || prefix.length() == 0) {
+                if (namespaceURI == null) {
+                    return (namespace == namespaceURI);
+                }
+                return namespaceURI.equals(namespace);
+            }
+            if (this.hasAttributes()) {
+                ElementImpl elem = (ElementImpl)this;
+                NodeImpl attr = (NodeImpl)elem.getAttributeNodeNS("http://www.w3.org/2000/xmlns/", "xmlns");
+                if (attr != null) {
+                    String value = attr.getNodeValue();
+                    if (namespaceURI == null) {
+                        return (namespace == value);
+                    }
+                    return namespaceURI.equals(value);
+                }
+            }
+
+            NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+            if (ancestor != null) {
+                return ancestor.isDefaultNamespace(namespaceURI);
+            }
+            return false;
+        }
+        case Node.DOCUMENT_NODE:{
+                return((NodeImpl)((Document)this).getDocumentElement()).isDefaultNamespace(namespaceURI);
+            }
+
+        case Node.ENTITY_NODE :
+          case Node.NOTATION_NODE:
+        case Node.DOCUMENT_FRAGMENT_NODE:
+        case Node.DOCUMENT_TYPE_NODE:
+            // type is unknown
+            return false;
+        case Node.ATTRIBUTE_NODE:{
+                if (this.ownerNode.getNodeType() == Node.ELEMENT_NODE) {
+                    return ownerNode.isDefaultNamespace(namespaceURI);
+
+                }
+                return false;
+            }
+        default:{
+                NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+                if (ancestor != null) {
+                    return ancestor.isDefaultNamespace(namespaceURI);
+                }
+                return false;
+            }
+
+        }
+*/
+        return false;
+
+
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="2250" endline="2296">
+    @Override
+    public Text replaceWholeText(String content)
+                                 throws DOMException{
+/*
+
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+
+        // make sure we can make the replacement
+        if (!canModify(nextSibling)) {
+            throw new DOMException(DOMException.NO_MODIFICATION_ALLOWED_ERR,
+                DOMMessageFormatter.formatMessage(DOMMessageFormatter.DOM_DOMAIN, "NO_MODIFICATION_ALLOWED_ERR", null));
+        }
+
+        Node parent = this.getParentNode();
+        if (content == null || content.length() == 0) {
+            // remove current node
+            if (parent !=null) { // check if node in the tree
+                parent.removeChild(this);
+                return null;
+            }
+        }
+        Text currentNode = null;
+        if (isReadOnly()){
+            Text newNode = this.ownerDocument().createTextNode(content);
+            if (parent !=null) { // check if node in the tree
+                parent.insertBefore(newNode, this);
+                parent.removeChild(this);
+                currentNode = newNode;
+            } else {
+                return newNode;
+            }
+        }  else {
+            this.setData(content);
+            currentNode = this;
+        }
+        Node sibling =  currentNode.getNextSibling();
+        while ( sibling !=null) {
+            parent.removeChild(sibling);
+            sibling = currentNode.getNextSibling();
+        }
+
+        return currentNode;
+*/
+        return null; //Pending
+    }
+</source>
+    </clone>
+    <clone nlines="46">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1539" endline="1603">
+    public boolean isDefaultNamespace(String namespaceURI){
+       /*
+        // REVISIT: remove casts when DOM L3 becomes REC.
+        short type = this.getNodeType();
+        switch (type) {
+        case Node.ELEMENT_NODE: {
+            String namespace = this.getNamespaceURI();
+            String prefix = this.getPrefix();
+
+            // REVISIT: is it possible that prefix is empty string?
+            if (prefix == null || prefix.length() == 0) {
+                if (namespaceURI == null) {
+                    return (namespace == namespaceURI);
+                }
+                return namespaceURI.equals(namespace);
+            }
+            if (this.hasAttributes()) {
+                ElementImpl elem = (ElementImpl)this;
+                NodeImpl attr = (NodeImpl)elem.getAttributeNodeNS("http://www.w3.org/2000/xmlns/", "xmlns");
+                if (attr != null) {
+                    String value = attr.getNodeValue();
+                    if (namespaceURI == null) {
+                        return (namespace == value);
+                    }
+                    return namespaceURI.equals(value);
+                }
+            }
+
+            NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+            if (ancestor != null) {
+                return ancestor.isDefaultNamespace(namespaceURI);
+            }
+            return false;
+        }
+        case Node.DOCUMENT_NODE:{
+                return((NodeImpl)((Document)this).getDocumentElement()).isDefaultNamespace(namespaceURI);
+            }
+
+        case Node.ENTITY_NODE :
+          case Node.NOTATION_NODE:
+        case Node.DOCUMENT_FRAGMENT_NODE:
+        case Node.DOCUMENT_TYPE_NODE:
+            // type is unknown
+            return false;
+        case Node.ATTRIBUTE_NODE:{
+                if (this.ownerNode.getNodeType() == Node.ELEMENT_NODE) {
+                    return ownerNode.isDefaultNamespace(namespaceURI);
+
+                }
+                return false;
+            }
+        default:{
+                NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+                if (ancestor != null) {
+                    return ancestor.isDefaultNamespace(namespaceURI);
+                }
+                return false;
+            }
+
+        }
+*/
+        return false;
+
+
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1899" endline="1944">
+    public Text replaceWholeText(String content)
+                                 throws DOMException{
+/*
+
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+
+        // make sure we can make the replacement
+        if (!canModify(nextSibling)) {
+            throw new DOMException(DOMException.NO_MODIFICATION_ALLOWED_ERR,
+                DOMMessageFormatter.formatMessage(DOMMessageFormatter.DOM_DOMAIN, "NO_MODIFICATION_ALLOWED_ERR", null));
+        }
+
+        Node parent = this.getParentNode();
+        if (content == null || content.length() == 0) {
+            // remove current node
+            if (parent !=null) { // check if node in the tree
+                parent.removeChild(this);
+                return null;
+            }
+        }
+        Text currentNode = null;
+        if (isReadOnly()){
+            Text newNode = this.ownerDocument().createTextNode(content);
+            if (parent !=null) { // check if node in the tree
+                parent.insertBefore(newNode, this);
+                parent.removeChild(this);
+                currentNode = newNode;
+            } else {
+                return newNode;
+            }
+        }  else {
+            this.setData(content);
+            currentNode = this;
+        }
+        Node sibling =  currentNode.getNextSibling();
+        while ( sibling !=null) {
+            parent.removeChild(sibling);
+            sibling = currentNode.getNextSibling();
+        }
+
+        return currentNode;
+*/
+        return null; //Pending
+    }
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/serializer/ToUnknownStream.java" startline="775" endline="786">
+    public void externalEntityDecl(
+        String name,
+        String publicId,
+        String systemId)
+        throws SAXException
+    {
+        if (m_firstTagNotEmitted)
+        {
+            flush();
+        }
+        m_handler.externalEntityDecl(name, publicId, systemId);
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToHTMLSAXHandler.java" startline="654" endline="665">
+    public boolean startPrefixMapping(
+        String prefix,
+        String uri,
+        boolean shouldFlush)
+        throws SAXException
+    {
+        // no namespace support for HTML
+        if (shouldFlush)
+            flushPending();
+        m_saxHandler.startPrefixMapping(prefix,uri);
+        return false;
+    }
+</source>
+    </clone>
+    <clone nlines="17">
+        <!-- short -->
+        <source file="com/sun/org/apache/xerces/internal/jaxp/datatype/XMLGregorianCalendarImpl.java" startline="874" endline="890">
+    public static XMLGregorianCalendar createTime(
+        int hours,
+        int minutes,
+        int seconds,
+        BigDecimal fractionalSecond,
+        int timezone) {
+
+        return new XMLGregorianCalendarImpl(
+            null,            // Year
+            DatatypeConstants.FIELD_UNDEFINED, // month
+            DatatypeConstants.FIELD_UNDEFINED, // day
+            hours,
+            minutes,
+            seconds,
+            fractionalSecond,
+            timezone);
+    }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/jaxp/datatype/XMLGregorianCalendarImpl.java" startline="909" endline="925">
+    public static XMLGregorianCalendar createTime(
+        int hours,
+        int minutes,
+        int seconds,
+        int milliseconds,
+        int timezone) {
+
+        return new XMLGregorianCalendarImpl(
+                DatatypeConstants.FIELD_UNDEFINED, // year
+                DatatypeConstants.FIELD_UNDEFINED, // month
+                DatatypeConstants.FIELD_UNDEFINED, // day
+                hours,
+                minutes,
+                seconds,
+                milliseconds,
+                timezone);
+    }
+</source>
+    </clone>
+    <clone nlines="16">
+        <!-- short -->
+        <source file="com/sun/org/apache/xerces/internal/jaxp/datatype/XMLGregorianCalendarImpl.java" startline="808" endline="823">
+    public static XMLGregorianCalendar createDate(
+        int year,
+        int month,
+        int day,
+        int timezone) {
+
+        return new XMLGregorianCalendarImpl(
+            year,
+            month,
+            day,
+            DatatypeConstants.FIELD_UNDEFINED, // hour
+            DatatypeConstants.FIELD_UNDEFINED, // minute
+            DatatypeConstants.FIELD_UNDEFINED, // second
+                DatatypeConstants.FIELD_UNDEFINED, // millisecond
+            timezone);
+    }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/jaxp/datatype/XMLGregorianCalendarImpl.java" startline="840" endline="855">
+    public static XMLGregorianCalendar createTime(
+        int hours,
+        int minutes,
+        int seconds,
+                int timezone) {
+
+                return new XMLGregorianCalendarImpl(
+                        DatatypeConstants.FIELD_UNDEFINED, // Year
+                        DatatypeConstants.FIELD_UNDEFINED, // Month
+                        DatatypeConstants.FIELD_UNDEFINED, // Day
+                        hours,
+                        minutes,
+                        seconds,
+                        DatatypeConstants.FIELD_UNDEFINED, //Millisecond
+                        timezone);
+    }
+</source>
+    </clone>
+    <clone nlines="16">
+        <!-- short -->
+        <source file="javax/xml/datatype/DatatypeFactory.java" startline="932" endline="947">
+    public XMLGregorianCalendar newXMLGregorianCalendarDate(
+            final int year,
+            final int month,
+            final int day,
+            final int timezone) {
+
+            return newXMLGregorianCalendar(
+                    year,
+                    month,
+                    day,
+                    DatatypeConstants.FIELD_UNDEFINED, // hour
+                    DatatypeConstants.FIELD_UNDEFINED, // minute
+                    DatatypeConstants.FIELD_UNDEFINED, // second
+                    DatatypeConstants.FIELD_UNDEFINED, // millisecond
+                    timezone);
+            }
+</source>
+        <source file="javax/xml/datatype/DatatypeFactory.java" startline="968" endline="983">
+    public XMLGregorianCalendar newXMLGregorianCalendarTime(
+            final int hours,
+            final int minutes,
+            final int seconds,
+            final int timezone) {
+
+            return newXMLGregorianCalendar(
+                    DatatypeConstants.FIELD_UNDEFINED, // Year
+                    DatatypeConstants.FIELD_UNDEFINED, // Month
+                    DatatypeConstants.FIELD_UNDEFINED, // Day
+                    hours,
+                    minutes,
+                    seconds,
+                    DatatypeConstants.FIELD_UNDEFINED, //Millisecond
+                    timezone);
+    }
+</source>
+    </clone>
+    <clone nlines="15">
+        <!-- short -->
+        <source file="com/sun/org/apache/xerces/internal/jaxp/datatype/DatatypeFactoryImpl.java" startline="439" endline="453">
+        public Duration newDurationDayTime(
+                final boolean isPositive,
+                final BigInteger day,
+                final BigInteger hour,
+                final BigInteger minute,
+                final BigInteger second) {
+
+                return new DurationDayTimeImpl(
+                        isPositive,
+                        day,
+                        hour,
+                        minute,
+                        (second != null)? new BigDecimal(second):null
+                );
+        }
+</source>
+        <source file="javax/xml/datatype/DatatypeFactory.java" startline="480" endline="496">
+    public Duration newDurationDayTime(
+            final boolean isPositive,
+            final BigInteger day,
+            final BigInteger hour,
+            final BigInteger minute,
+            final BigInteger second) {
+
+            return newDuration(
+                    isPositive,
+                    null,  // years
+                    null, // months
+                    day,
+                    hour,
+                    minute,
+                    (second != null)? new BigDecimal(second):null
+            );
+    }
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- distance -->
+        <source file="com/sun/org/apache/xml/internal/res/XMLMessages.java" startline="82" endline="94">
+  public static final String createXMLMessage(String msgKey, Object args[])
+  {
+    if (XMLBundle == null) {
+        XMLBundle = SecuritySupport.getResourceBundle(XML_ERROR_RESOURCES);
+    }
+
+    if (XMLBundle != null)
+    {
+      return createMsg(XMLBundle, msgKey, args);
+    }
+    else
+      return "Could not load any resource bundles.";
+  }
+</source>
+        <source file="com/sun/org/apache/xml/internal/serializer/utils/Messages.java" startline="150" endline="161">
+    public final String createMessage(String msgKey, Object args[])
+    {
+        if (m_resourceBundle == null)
+            m_resourceBundle = SecuritySupport.getResourceBundle(m_resourceBundleName);
+
+        if (m_resourceBundle != null)
+        {
+            return createMsg(m_resourceBundle, msgKey, args);
+        }
+        else
+            return "Could not load the resource bundles: "+ m_resourceBundleName;
+    }
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- distance -->
+        <source file="com/sun/org/apache/xpath/internal/res/XPATHMessages.java" startline="56" endline="67">
+    public static final String createXPATHMessage(String msgKey, Object args[]) //throws Exception
+    {
+        if (XPATHBundle == null) {
+            XPATHBundle = SecuritySupport.getResourceBundle(XPATH_ERROR_RESOURCES);
+        }
+
+        if (XPATHBundle != null) {
+            return createXPATHMsg(XPATHBundle, msgKey, args);
+        } else {
+            return "Could not load any resource bundles.";
+        }
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/serializer/utils/Messages.java" startline="150" endline="161">
+    public final String createMessage(String msgKey, Object args[])
+    {
+        if (m_resourceBundle == null)
+            m_resourceBundle = SecuritySupport.getResourceBundle(m_resourceBundleName);
+
+        if (m_resourceBundle != null)
+        {
+            return createMsg(m_resourceBundle, msgKey, args);
+        }
+        else
+            return "Could not load the resource bundles: "+ m_resourceBundleName;
+    }
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- distance -->
+        <source file="com/sun/org/apache/xpath/internal/res/XPATHMessages.java" startline="79" endline="90">
+    public static final String createXPATHWarning(String msgKey, Object args[]) //throws Exception
+    {
+        if (XPATHBundle == null) {
+            XPATHBundle = SecuritySupport.getResourceBundle(XPATH_ERROR_RESOURCES);
+        }
+
+        if (XPATHBundle != null) {
+            return createXPATHMsg(XPATHBundle, msgKey, args);
+        } else {
+            return "Could not load any resource bundles.";
+        }
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/serializer/utils/Messages.java" startline="150" endline="161">
+    public final String createMessage(String msgKey, Object args[])
+    {
+        if (m_resourceBundle == null)
+            m_resourceBundle = SecuritySupport.getResourceBundle(m_resourceBundleName);
+
+        if (m_resourceBundle != null)
+        {
+            return createMsg(m_resourceBundle, msgKey, args);
+        }
+        else
+            return "Could not load the resource bundles: "+ m_resourceBundleName;
+    }
+</source>
+    </clone>
+    <clone nlines="14">
+        <!-- short -->
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="539" endline="552">
+  public boolean lessThan(XObject obj2)
+          throws javax.xml.transform.TransformerException
+  {
+
+    // In order to handle the 'all' semantics of
+    // nodeset comparisons, we always call the
+    // nodeset function.  Because the arguments
+    // are backwards, we call the opposite comparison
+    // function.
+    if (obj2.getType() == XObject.CLASS_NODESET)
+      return obj2.greaterThan(this);
+
+    return this.num() &lt; obj2.num();
+  }
+</source>
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="563" endline="576">
+  public boolean lessThanOrEqual(XObject obj2)
+          throws javax.xml.transform.TransformerException
+  {
+
+    // In order to handle the 'all' semantics of
+    // nodeset comparisons, we always call the
+    // nodeset function.  Because the arguments
+    // are backwards, we call the opposite comparison
+    // function.
+    if (obj2.getType() == XObject.CLASS_NODESET)
+      return obj2.greaterThanOrEqual(this);
+
+    return this.num() &lt;= obj2.num();
+  }
+</source>
+    </clone>
+    <clone nlines="14">
+        <!-- short -->
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="539" endline="552">
+  public boolean lessThan(XObject obj2)
+          throws javax.xml.transform.TransformerException
+  {
+
+    // In order to handle the 'all' semantics of
+    // nodeset comparisons, we always call the
+    // nodeset function.  Because the arguments
+    // are backwards, we call the opposite comparison
+    // function.
+    if (obj2.getType() == XObject.CLASS_NODESET)
+      return obj2.greaterThan(this);
+
+    return this.num() &lt; obj2.num();
+  }
+</source>
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="587" endline="600">
+  public boolean greaterThan(XObject obj2)
+          throws javax.xml.transform.TransformerException
+  {
+
+    // In order to handle the 'all' semantics of
+    // nodeset comparisons, we always call the
+    // nodeset function.  Because the arguments
+    // are backwards, we call the opposite comparison
+    // function.
+    if (obj2.getType() == XObject.CLASS_NODESET)
+      return obj2.lessThan(this);
+
+    return this.num() &gt; obj2.num();
+  }
+</source>
+    </clone>
+    <clone nlines="14">
+        <!-- short -->
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="539" endline="552">
+  public boolean lessThan(XObject obj2)
+          throws javax.xml.transform.TransformerException
+  {
+
+    // In order to handle the 'all' semantics of
+    // nodeset comparisons, we always call the
+    // nodeset function.  Because the arguments
+    // are backwards, we call the opposite comparison
+    // function.
+    if (obj2.getType() == XObject.CLASS_NODESET)
+      return obj2.greaterThan(this);
+
+    return this.num() &lt; obj2.num();
+  }
+</source>
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="611" endline="624">
+  public boolean greaterThanOrEqual(XObject obj2)
+          throws javax.xml.transform.TransformerException
+  {
+
+    // In order to handle the 'all' semantics of
+    // nodeset comparisons, we always call the
+    // nodeset function.  Because the arguments
+    // are backwards, we call the opposite comparison
+    // function.
+    if (obj2.getType() == XObject.CLASS_NODESET)
+      return obj2.lessThanOrEqual(this);
+
+    return this.num() &gt;= obj2.num();
+  }
+</source>
+    </clone>
+    <clone nlines="14">
+        <!-- short -->
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="563" endline="576">
+  public boolean lessThanOrEqual(XObject obj2)
+          throws javax.xml.transform.TransformerException
+  {
+
+    // In order to handle the 'all' semantics of
+    // nodeset comparisons, we always call the
+    // nodeset function.  Because the arguments
+    // are backwards, we call the opposite comparison
+    // function.
+    if (obj2.getType() == XObject.CLASS_NODESET)
+      return obj2.greaterThanOrEqual(this);
+
+    return this.num() &lt;= obj2.num();
+  }
+</source>
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="587" endline="600">
+  public boolean greaterThan(XObject obj2)
+          throws javax.xml.transform.TransformerException
+  {
+
+    // In order to handle the 'all' semantics of
+    // nodeset comparisons, we always call the
+    // nodeset function.  Because the arguments
+    // are backwards, we call the opposite comparison
+    // function.
+    if (obj2.getType() == XObject.CLASS_NODESET)
+      return obj2.lessThan(this);
+
+    return this.num() &gt; obj2.num();
+  }
+</source>
+    </clone>
+    <clone nlines="14">
+        <!-- short -->
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="563" endline="576">
+  public boolean lessThanOrEqual(XObject obj2)
+          throws javax.xml.transform.TransformerException
+  {
+
+    // In order to handle the 'all' semantics of
+    // nodeset comparisons, we always call the
+    // nodeset function.  Because the arguments
+    // are backwards, we call the opposite comparison
+    // function.
+    if (obj2.getType() == XObject.CLASS_NODESET)
+      return obj2.greaterThanOrEqual(this);
+
+    return this.num() &lt;= obj2.num();
+  }
+</source>
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="611" endline="624">
+  public boolean greaterThanOrEqual(XObject obj2)
+          throws javax.xml.transform.TransformerException
+  {
+
+    // In order to handle the 'all' semantics of
+    // nodeset comparisons, we always call the
+    // nodeset function.  Because the arguments
+    // are backwards, we call the opposite comparison
+    // function.
+    if (obj2.getType() == XObject.CLASS_NODESET)
+      return obj2.lessThanOrEqual(this);
+
+    return this.num() &gt;= obj2.num();
+  }
+</source>
+    </clone>
+    <clone nlines="14">
+        <!-- short -->
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="587" endline="600">
+  public boolean greaterThan(XObject obj2)
+          throws javax.xml.transform.TransformerException
+  {
+
+    // In order to handle the 'all' semantics of
+    // nodeset comparisons, we always call the
+    // nodeset function.  Because the arguments
+    // are backwards, we call the opposite comparison
+    // function.
+    if (obj2.getType() == XObject.CLASS_NODESET)
+      return obj2.lessThan(this);
+
+    return this.num() &gt; obj2.num();
+  }
+</source>
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="611" endline="624">
+  public boolean greaterThanOrEqual(XObject obj2)
+          throws javax.xml.transform.TransformerException
+  {
+
+    // In order to handle the 'all' semantics of
+    // nodeset comparisons, we always call the
+    // nodeset function.  Because the arguments
+    // are backwards, we call the opposite comparison
+    // function.
+    if (obj2.getType() == XObject.CLASS_NODESET)
+      return obj2.lessThanOrEqual(this);
+
+    return this.num() &gt;= obj2.num();
+  }
+</source>
+    </clone>
+</clones>

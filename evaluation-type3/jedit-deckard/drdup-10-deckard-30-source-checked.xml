@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- The clones reported by DrDup and not reported by Deckard
+22x     true clone
+1x      short
+-->
+<clones>
+    <clone nlines="10">
+        <!-- short -->
+        <source file="org/gjt/sp/jedit/pluginmgr/PluginList.java" startline="385" endline="394">
+		Branch getCompatibleBranch()
+		{
+			for (Branch branch : branches)
+			{
+				if (branch.canSatisfyDependencies())
+					return branch;
+			}
+
+			return null;
+		}
+</source>
+        <source file="org/gjt/sp/jedit/pluginmgr/PluginList.java" startline="456" endline="465">
+		boolean canSatisfyDependencies()
+		{
+			for (Dependency dep : deps)
+			{
+				if (!dep.canSatisfy())
+					return false;
+			}
+
+			return true;
+		}
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: jj_3R_164() to jj_scan_token(IDENTIFIER) -->
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3807" endline="3815">
+  final private boolean jj_3R_161() {
+    if (jj_3R_164()) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3R_169()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298">
+  final private boolean jj_3R_29() {
+    if (jj_scan_token(IDENTIFIER)) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3_7()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: jj_3R_161() to jj_scan_token(IDENTIFIER) -->
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3828" endline="3836">
+  final private boolean jj_3R_158() {
+    if (jj_3R_161()) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3R_167()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298">
+  final private boolean jj_3R_29() {
+    if (jj_scan_token(IDENTIFIER)) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3_7()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: jj_3R_158() to jj_scan_token(IDENTIFIER) -->
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3864" endline="3872">
+  final private boolean jj_3R_153() {
+    if (jj_3R_158()) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3R_165()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298">
+  final private boolean jj_3R_29() {
+    if (jj_scan_token(IDENTIFIER)) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3_7()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: jj_3R_153() to jj_scan_token(IDENTIFIER) -->
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3905" endline="3913">
+  final private boolean jj_3R_148() {
+    if (jj_3R_153()) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3R_162()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298">
+  final private boolean jj_3R_29() {
+    if (jj_scan_token(IDENTIFIER)) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3_7()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: jj_3R_148() to jj_scan_token(IDENTIFIER) -->
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="3946" endline="3954">
+  final private boolean jj_3R_135() {
+    if (jj_3R_148()) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3R_159()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298">
+  final private boolean jj_3R_29() {
+    if (jj_scan_token(IDENTIFIER)) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3_7()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: jj_3R_29() to jj_scan_token(IDENTIFIER) -->
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4250" endline="4258">
+  final private boolean jj_3R_76() {
+    if (jj_3R_29()) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3R_111()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298">
+  final private boolean jj_3R_29() {
+    if (jj_scan_token(IDENTIFIER)) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3_7()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: jj_3R_39() to jj_scan_token(IDENTIFIER) -->
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4260" endline="4268">
+  final private boolean jj_3R_134() {
+    if (jj_3R_39()) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3R_147()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298">
+  final private boolean jj_3R_29() {
+    if (jj_scan_token(IDENTIFIER)) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3_7()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: jj_3R_109() to jj_scan_token(IDENTIFIER) -->
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4501" endline="4509">
+  final private boolean jj_3R_75() {
+    if (jj_3R_109()) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3R_110()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298">
+  final private boolean jj_3R_29() {
+    if (jj_scan_token(IDENTIFIER)) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3_7()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: jj_3R_31() to jj_scan_token(IDENTIFIER) -->
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4543" endline="4551">
+  final private boolean jj_3R_163() {
+    if (jj_3R_31()) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3_4()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298">
+  final private boolean jj_3R_29() {
+    if (jj_scan_token(IDENTIFIER)) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3_7()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: jj_3R_112() to jj_scan_token(IDENTIFIER) -->
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4728" endline="4736">
+  final private boolean jj_3R_205() {
+    if (jj_3R_112()) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3R_210()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298">
+  final private boolean jj_3R_29() {
+    if (jj_scan_token(IDENTIFIER)) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3_7()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: jj_3R_57() to jj_scan_token(IDENTIFIER) -->
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5061" endline="5069">
+  final private boolean jj_3R_33() {
+    if (jj_3R_57()) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3R_58()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298">
+  final private boolean jj_3R_29() {
+    if (jj_scan_token(IDENTIFIER)) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3_7()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: jj_3R_193() to jj_scan_token(IDENTIFIER) -->
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5355" endline="5363">
+  final private boolean jj_3R_183() {
+    if (jj_3R_193()) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3_29()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298">
+  final private boolean jj_3R_29() {
+    if (jj_scan_token(IDENTIFIER)) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3_7()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: jj_3R_191() to jj_scan_token(IDENTIFIER) -->
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5464" endline="5472">
+  final private boolean jj_3R_181() {
+    if (jj_3R_191()) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3R_209()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298">
+  final private boolean jj_3R_29() {
+    if (jj_scan_token(IDENTIFIER)) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3_7()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: jj_3R_181() to jj_scan_token(IDENTIFIER) -->
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5485" endline="5493">
+  final private boolean jj_3R_178() {
+    if (jj_3R_181()) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3R_200()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298">
+  final private boolean jj_3R_29() {
+    if (jj_scan_token(IDENTIFIER)) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3_7()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: jj_3R_178() to jj_scan_token(IDENTIFIER) -->
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5534" endline="5542">
+  final private boolean jj_3R_170() {
+    if (jj_3R_178()) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3R_192()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298">
+  final private boolean jj_3R_29() {
+    if (jj_scan_token(IDENTIFIER)) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3_7()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: jj_3R_170() to jj_scan_token(IDENTIFIER) -->
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5590" endline="5598">
+  final private boolean jj_3R_168() {
+    if (jj_3R_170()) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3R_182()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298">
+  final private boolean jj_3R_29() {
+    if (jj_scan_token(IDENTIFIER)) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3_7()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: jj_3R_166() to jj_scan_token(IDENTIFIER) -->
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="5671" endline="5679">
+  final private boolean jj_3R_164() {
+    if (jj_3R_166()) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3R_171()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+        <source file="org/gjt/sp/jedit/bsh/Parser.java" startline="4290" endline="4298">
+  final private boolean jj_3R_29() {
+    if (jj_scan_token(IDENTIFIER)) return true;
+    Token xsp;
+    while (true) {
+      xsp = jj_scanpos;
+      if (jj_3_7()) { jj_scanpos = xsp; break; }
+    }
+    return false;
+  }
+</source>
+    </clone>
+    <clone nlines="17">
+        <!-- modification: private to public static -->
+        <source file="org/gjt/sp/jedit/textarea/StandaloneTextArea.java" startline="367" endline="383">
+	private int getIntegerProperty(String name, int def)
+	{
+		String value = getProperty(name);
+		if(value == null)
+			return def;
+		else
+		{
+			try
+			{
+				return Integer.parseInt(value.trim());
+			}
+			catch(NumberFormatException nf)
+			{
+				return def;
+			}
+		}
+	} //}}}
+</source>
+        <source file="org/gjt/sp/jedit/jEdit.java" startline="765" endline="781">
+	public static int getIntegerProperty(String name, int def)
+	{
+		String value = getProperty(name);
+		if(value == null)
+			return def;
+		else
+		{
+			try
+			{
+				return Integer.parseInt(value.trim());
+			}
+			catch(NumberFormatException nf)
+			{
+				return def;
+			}
+		}
+	} //}}}
+</source>
+    </clone>
+    <clone nlines="17">
+        <!-- modification: private to public static -->
+        <source file="org/gjt/sp/jedit/textarea/StandaloneTextArea.java" startline="367" endline="383">
+	private int getIntegerProperty(String name, int def)
+	{
+		String value = getProperty(name);
+		if(value == null)
+			return def;
+		else
+		{
+			try
+			{
+				return Integer.parseInt(value.trim());
+			}
+			catch(NumberFormatException nf)
+			{
+				return def;
+			}
+		}
+	} //}}}
+</source>
+        <source file="org/gjt/sp/jedit/jEdit.java" startline="784" endline="800">
+	public static double getDoubleProperty(String name, double def)
+	{
+		String value = getProperty(name);
+		if(value == null)
+			return def;
+		else
+		{
+			try
+			{
+				return Double.parseDouble(value.trim());
+			}
+			catch(NumberFormatException nf)
+			{
+				return def;
+			}
+		}
+	}
+</source>
+    </clone>
+    <clone nlines="15">
+        <!-- modification: protected to private -->
+        <source file="org/gjt/sp/jedit/gui/FilteredListModel.java" startline="163" endline="177">
+	protected Set&lt;Integer&gt; saveSelection()
+	{
+		if (list == null)
+			return null;
+		int[] rows = list.getSelectedIndices();
+		if (rows.length == 0)
+			return null;
+
+		Set&lt;Integer&gt; selectedRows = new HashSet&lt;Integer&gt;(rows.length);
+		for (int row : rows)
+		{
+			selectedRows.add(getTrueRow(row));
+		}
+		return selectedRows;
+	} //}}}
+</source>
+        <source file="org/gjt/sp/jedit/gui/FilteredTableModel.java" startline="185" endline="199">
+	private Set&lt;Integer&gt; saveSelection()
+	{
+		if (table == null)
+			return null;
+		int[] rows = table.getSelectedRows();
+		if (rows.length == 0)
+			return null;
+
+		Set&lt;Integer&gt; selectedRows = new HashSet&lt;Integer&gt;(rows.length);
+		for (int row : rows)
+		{
+			selectedRows.add(getTrueRow(row));
+		}
+		return selectedRows;
+	} //}}}
+</source>
+    </clone>
+    <clone nlines="34">
+        <!-- modification: public to private -->
+        <source file="org/gjt/sp/jedit/TextUtilities.java" startline="1008" endline="1041">
+	public static void indexIgnoringWhitespace(String text, int maxLineLength,
+		int tabSize, StringBuffer buf)
+	{
+		// align everything to paragraph's leading indent
+		int leadingWhitespaceCount = StandardUtilities.getLeadingWhiteSpace(text);
+		String leadingWhitespace = text.substring(0,leadingWhitespaceCount);
+		int leadingWhitespaceWidth = StandardUtilities.getLeadingWhiteSpaceWidth(text,tabSize);
+
+		buf.append(leadingWhitespace);
+
+		int lineLength = leadingWhitespaceWidth;
+		StringTokenizer st = new StringTokenizer(text);
+		while(st.hasMoreTokens())
+		{
+			String word = st.nextToken();
+			if(lineLength == leadingWhitespaceWidth)
+			{
+				// do nothing
+			}
+			else if(lineLength + word.length() + 1 &gt; maxLineLength)
+			{
+				buf.append('\n');
+				buf.append(leadingWhitespace);
+				lineLength = leadingWhitespaceWidth;
+			}
+			else
+			{
+				buf.append(' ');
+				lineLength++;
+			}
+			buf.append(word);
+			lineLength += word.length();
+		}
+	} //}}}
+</source>
+        <source file="org/gjt/sp/jedit/TextUtilities.java" startline="972" endline="1005">
+	private static void formatParagraph(String text, int maxLineLength,
+		int tabSize, StringBuilder buf)
+	{
+		// align everything to paragraph's leading indent
+		int leadingWhitespaceCount = StandardUtilities.getLeadingWhiteSpace(text);
+		String leadingWhitespace = text.substring(0,leadingWhitespaceCount);
+		int leadingWhitespaceWidth = StandardUtilities.getLeadingWhiteSpaceWidth(text,tabSize);
+
+		buf.append(leadingWhitespace);
+
+		int lineLength = leadingWhitespaceWidth;
+		StringTokenizer st = new StringTokenizer(text);
+		while(st.hasMoreTokens())
+		{
+			String word = st.nextToken();
+			if(lineLength == leadingWhitespaceWidth)
+			{
+				// do nothing
+			}
+			else if(lineLength + word.length() + 1 &gt; maxLineLength)
+			{
+				buf.append('\n');
+				buf.append(leadingWhitespace);
+				lineLength = leadingWhitespaceWidth;
+			}
+			else
+			{
+				buf.append(' ');
+				lineLength++;
+			}
+			buf.append(word);
+			lineLength += word.length();
+		}
+	} //}}}
+</source>
+    </clone>
+    <clone nlines="53">
+        <!-- modification: static final -->
+        <source file="org/gjt/sp/jedit/bsh/ParseException.java" startline="221" endline="264">
+  protected String add_escapes(String str) {
+      StringBuilder retval = new StringBuilder();
+      char ch;
+      for (int i = 0; i &lt; str.length(); i++) {
+        switch (str.charAt(i))
+        {
+           case 0 :
+              continue;
+           case '\b':
+              retval.append("\\b");
+              continue;
+           case '\t':
+              retval.append("\\t");
+              continue;
+           case '\n':
+              retval.append("\\n");
+              continue;
+           case '\f':
+              retval.append("\\f");
+              continue;
+           case '\r':
+              retval.append("\\r");
+              continue;
+           case '\"':
+              retval.append("\\\"");
+              continue;
+           case '\'':
+              retval.append("\\\'");
+              continue;
+           case '\\':
+              retval.append("\\\\");
+              continue;
+           default:
+              if ((ch = str.charAt(i)) &lt; 0x20 || ch &gt; 0x7e) {
+                 String s = "0000" + Integer.toString(ch, 16);
+                 retval.append("\\u" + s.substring(s.length() - 4, s.length()));
+              } else {
+                 retval.append(ch);
+              }
+              continue;
+        }
+      }
+      return retval.toString();
+   }
+</source>
+        <source file="org/gjt/sp/jedit/bsh/TokenMgrError.java" startline="40" endline="83">
+   protected static final String addEscapes(String str) {
+	  StringBuilder retval = new StringBuilder();
+      char ch;
+      for (int i = 0; i &lt; str.length(); i++) {
+        switch (str.charAt(i))
+        {
+           case 0 :
+              continue;
+           case '\b':
+              retval.append("\\b");
+              continue;
+           case '\t':
+              retval.append("\\t");
+              continue;
+           case '\n':
+              retval.append("\\n");
+              continue;
+           case '\f':
+              retval.append("\\f");
+              continue;
+           case '\r':
+              retval.append("\\r");
+              continue;
+           case '\"':
+              retval.append("\\\"");
+              continue;
+           case '\'':
+              retval.append("\\\'");
+              continue;
+           case '\\':
+              retval.append("\\\\");
+              continue;
+           default:
+              if ((ch = str.charAt(i)) &lt; 0x20 || ch &gt; 0x7e) {
+                 String s = "0000" + Integer.toString(ch, 16);
+                 retval.append("\\u" + s.substring(s.length() - 4, s.length()));
+              } else {
+                 retval.append(ch);
+              }
+              continue;
+        }
+      }
+      return retval.toString();
+   }
+</source>
+    </clone>
+</clones>

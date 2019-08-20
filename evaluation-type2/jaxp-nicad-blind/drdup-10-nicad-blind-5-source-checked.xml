@@ -1,0 +1,4632 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- The clones reported by DrDup and not reported by NiCad
+65x     identifiers
+32x     identifiers, literals
+25x     short
+7x      identifiers, normalization
+4x      identifiers, literals, normalization
+3x      normalization
+-->
+<clones>
+    <clone nlines="11" similarity="100">
+        <!-- short -->
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/opti/SchemaParsingConfig.java" startline="545" endline="555">
+    public void setInputSource(XMLInputSource inputSource)
+    throws XMLConfigurationException, IOException {
+
+        // REVISIT: this method used to reset all the components and
+        //          construct the pipeline. Now reset() is called
+        //          in parse (boolean) just before we parse the document
+        //          Should this method still throw exceptions..?
+
+        fInputSource = inputSource;
+
+    } // setInputSource(XMLInputSource)
+</source>
+        <source file="com/sun/org/apache/xerces/internal/parsers/DTDConfiguration.java" startline="473" endline="483">
+    public void setInputSource(XMLInputSource inputSource)
+        throws XMLConfigurationException, IOException {
+
+        // REVISIT: this method used to reset all the components and
+        //          construct the pipeline. Now reset() is called
+        //          in parse (boolean) just before we parse the document
+        //          Should this method still throw exceptions..?
+
+        fInputSource = inputSource;
+
+    } // setInputSource(XMLInputSource)
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- short -->
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/opti/SchemaParsingConfig.java" startline="545" endline="555">
+    public void setInputSource(XMLInputSource inputSource)
+    throws XMLConfigurationException, IOException {
+
+        // REVISIT: this method used to reset all the components and
+        //          construct the pipeline. Now reset() is called
+        //          in parse (boolean) just before we parse the document
+        //          Should this method still throw exceptions..?
+
+        fInputSource = inputSource;
+
+    } // setInputSource(XMLInputSource)
+</source>
+        <source file="com/sun/org/apache/xerces/internal/parsers/NonValidatingConfiguration.java" startline="449" endline="459">
+    public void setInputSource(XMLInputSource inputSource)
+        throws XMLConfigurationException, IOException {
+
+        // REVISIT: this method used to reset all the components and
+        //          construct the pipeline. Now reset() is called
+        //          in parse (boolean) just before we parse the document
+        //          Should this method still throw exceptions..?
+
+        fInputSource = inputSource;
+
+    } // setInputSource(XMLInputSource)
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- short -->
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/opti/SchemaParsingConfig.java" startline="545" endline="555">
+    public void setInputSource(XMLInputSource inputSource)
+    throws XMLConfigurationException, IOException {
+
+        // REVISIT: this method used to reset all the components and
+        //          construct the pipeline. Now reset() is called
+        //          in parse (boolean) just before we parse the document
+        //          Should this method still throw exceptions..?
+
+        fInputSource = inputSource;
+
+    } // setInputSource(XMLInputSource)
+</source>
+        <source file="com/sun/org/apache/xerces/internal/parsers/XML11Configuration.java" startline="620" endline="630">
+    public void setInputSource(XMLInputSource inputSource)
+        throws XMLConfigurationException, IOException {
+
+        // REVISIT: this method used to reset all the components and
+        //          construct the pipeline. Now reset() is called
+        //          in parse (boolean) just before we parse the document
+        //          Should this method still throw exceptions..?
+
+        fInputSource = inputSource;
+
+    } // setInputSource(XMLInputSource)
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- short -->
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/opti/SchemaParsingConfig.java" startline="545" endline="555">
+    public void setInputSource(XMLInputSource inputSource)
+    throws XMLConfigurationException, IOException {
+
+        // REVISIT: this method used to reset all the components and
+        //          construct the pipeline. Now reset() is called
+        //          in parse (boolean) just before we parse the document
+        //          Should this method still throw exceptions..?
+
+        fInputSource = inputSource;
+
+    } // setInputSource(XMLInputSource)
+</source>
+        <source file="com/sun/org/apache/xerces/internal/parsers/XML11DTDConfiguration.java" startline="514" endline="524">
+    public void setInputSource(XMLInputSource inputSource)
+        throws XMLConfigurationException, IOException {
+
+        // REVISIT: this method used to reset all the components and
+        //          construct the pipeline. Now reset() is called
+        //          in parse (boolean) just before we parse the document
+        //          Should this method still throw exceptions..?
+
+        fInputSource = inputSource;
+
+    } // setInputSource(XMLInputSource)
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- short -->
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/opti/SchemaParsingConfig.java" startline="545" endline="555">
+    public void setInputSource(XMLInputSource inputSource)
+    throws XMLConfigurationException, IOException {
+
+        // REVISIT: this method used to reset all the components and
+        //          construct the pipeline. Now reset() is called
+        //          in parse (boolean) just before we parse the document
+        //          Should this method still throw exceptions..?
+
+        fInputSource = inputSource;
+
+    } // setInputSource(XMLInputSource)
+</source>
+        <source file="com/sun/org/apache/xerces/internal/parsers/XML11NonValidatingConfiguration.java" startline="440" endline="450">
+    public void setInputSource(XMLInputSource inputSource)
+        throws XMLConfigurationException, IOException {
+
+        // REVISIT: this method used to reset all the components and
+        //          construct the pipeline. Now reset() is called
+        //          in parse (boolean) just before we parse the document
+        //          Should this method still throw exceptions..?
+
+        fInputSource = inputSource;
+
+    } // setInputSource(XMLInputSource)
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- short -->
+        <source file="com/sun/org/apache/xerces/internal/parsers/DTDConfiguration.java" startline="473" endline="483">
+    public void setInputSource(XMLInputSource inputSource)
+        throws XMLConfigurationException, IOException {
+
+        // REVISIT: this method used to reset all the components and
+        //          construct the pipeline. Now reset() is called
+        //          in parse (boolean) just before we parse the document
+        //          Should this method still throw exceptions..?
+
+        fInputSource = inputSource;
+
+    } // setInputSource(XMLInputSource)
+</source>
+        <source file="com/sun/org/apache/xerces/internal/parsers/NonValidatingConfiguration.java" startline="449" endline="459">
+    public void setInputSource(XMLInputSource inputSource)
+        throws XMLConfigurationException, IOException {
+
+        // REVISIT: this method used to reset all the components and
+        //          construct the pipeline. Now reset() is called
+        //          in parse (boolean) just before we parse the document
+        //          Should this method still throw exceptions..?
+
+        fInputSource = inputSource;
+
+    } // setInputSource(XMLInputSource)
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- short -->
+        <source file="com/sun/org/apache/xerces/internal/parsers/DTDConfiguration.java" startline="473" endline="483">
+    public void setInputSource(XMLInputSource inputSource)
+        throws XMLConfigurationException, IOException {
+
+        // REVISIT: this method used to reset all the components and
+        //          construct the pipeline. Now reset() is called
+        //          in parse (boolean) just before we parse the document
+        //          Should this method still throw exceptions..?
+
+        fInputSource = inputSource;
+
+    } // setInputSource(XMLInputSource)
+</source>
+        <source file="com/sun/org/apache/xerces/internal/parsers/XML11Configuration.java" startline="620" endline="630">
+    public void setInputSource(XMLInputSource inputSource)
+        throws XMLConfigurationException, IOException {
+
+        // REVISIT: this method used to reset all the components and
+        //          construct the pipeline. Now reset() is called
+        //          in parse (boolean) just before we parse the document
+        //          Should this method still throw exceptions..?
+
+        fInputSource = inputSource;
+
+    } // setInputSource(XMLInputSource)
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- short -->
+        <source file="com/sun/org/apache/xerces/internal/parsers/DTDConfiguration.java" startline="473" endline="483">
+    public void setInputSource(XMLInputSource inputSource)
+        throws XMLConfigurationException, IOException {
+
+        // REVISIT: this method used to reset all the components and
+        //          construct the pipeline. Now reset() is called
+        //          in parse (boolean) just before we parse the document
+        //          Should this method still throw exceptions..?
+
+        fInputSource = inputSource;
+
+    } // setInputSource(XMLInputSource)
+</source>
+        <source file="com/sun/org/apache/xerces/internal/parsers/XML11DTDConfiguration.java" startline="514" endline="524">
+    public void setInputSource(XMLInputSource inputSource)
+        throws XMLConfigurationException, IOException {
+
+        // REVISIT: this method used to reset all the components and
+        //          construct the pipeline. Now reset() is called
+        //          in parse (boolean) just before we parse the document
+        //          Should this method still throw exceptions..?
+
+        fInputSource = inputSource;
+
+    } // setInputSource(XMLInputSource)
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- short -->
+        <source file="com/sun/org/apache/xerces/internal/parsers/DTDConfiguration.java" startline="473" endline="483">
+    public void setInputSource(XMLInputSource inputSource)
+        throws XMLConfigurationException, IOException {
+
+        // REVISIT: this method used to reset all the components and
+        //          construct the pipeline. Now reset() is called
+        //          in parse (boolean) just before we parse the document
+        //          Should this method still throw exceptions..?
+
+        fInputSource = inputSource;
+
+    } // setInputSource(XMLInputSource)
+</source>
+        <source file="com/sun/org/apache/xerces/internal/parsers/XML11NonValidatingConfiguration.java" startline="440" endline="450">
+    public void setInputSource(XMLInputSource inputSource)
+        throws XMLConfigurationException, IOException {
+
+        // REVISIT: this method used to reset all the components and
+        //          construct the pipeline. Now reset() is called
+        //          in parse (boolean) just before we parse the document
+        //          Should this method still throw exceptions..?
+
+        fInputSource = inputSource;
+
+    } // setInputSource(XMLInputSource)
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- short -->
+        <source file="com/sun/org/apache/xerces/internal/parsers/NonValidatingConfiguration.java" startline="449" endline="459">
+    public void setInputSource(XMLInputSource inputSource)
+        throws XMLConfigurationException, IOException {
+
+        // REVISIT: this method used to reset all the components and
+        //          construct the pipeline. Now reset() is called
+        //          in parse (boolean) just before we parse the document
+        //          Should this method still throw exceptions..?
+
+        fInputSource = inputSource;
+
+    } // setInputSource(XMLInputSource)
+</source>
+        <source file="com/sun/org/apache/xerces/internal/parsers/XML11Configuration.java" startline="620" endline="630">
+    public void setInputSource(XMLInputSource inputSource)
+        throws XMLConfigurationException, IOException {
+
+        // REVISIT: this method used to reset all the components and
+        //          construct the pipeline. Now reset() is called
+        //          in parse (boolean) just before we parse the document
+        //          Should this method still throw exceptions..?
+
+        fInputSource = inputSource;
+
+    } // setInputSource(XMLInputSource)
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- short -->
+        <source file="com/sun/org/apache/xerces/internal/parsers/NonValidatingConfiguration.java" startline="449" endline="459">
+    public void setInputSource(XMLInputSource inputSource)
+        throws XMLConfigurationException, IOException {
+
+        // REVISIT: this method used to reset all the components and
+        //          construct the pipeline. Now reset() is called
+        //          in parse (boolean) just before we parse the document
+        //          Should this method still throw exceptions..?
+
+        fInputSource = inputSource;
+
+    } // setInputSource(XMLInputSource)
+</source>
+        <source file="com/sun/org/apache/xerces/internal/parsers/XML11DTDConfiguration.java" startline="514" endline="524">
+    public void setInputSource(XMLInputSource inputSource)
+        throws XMLConfigurationException, IOException {
+
+        // REVISIT: this method used to reset all the components and
+        //          construct the pipeline. Now reset() is called
+        //          in parse (boolean) just before we parse the document
+        //          Should this method still throw exceptions..?
+
+        fInputSource = inputSource;
+
+    } // setInputSource(XMLInputSource)
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- short -->
+        <source file="com/sun/org/apache/xerces/internal/parsers/NonValidatingConfiguration.java" startline="449" endline="459">
+    public void setInputSource(XMLInputSource inputSource)
+        throws XMLConfigurationException, IOException {
+
+        // REVISIT: this method used to reset all the components and
+        //          construct the pipeline. Now reset() is called
+        //          in parse (boolean) just before we parse the document
+        //          Should this method still throw exceptions..?
+
+        fInputSource = inputSource;
+
+    } // setInputSource(XMLInputSource)
+</source>
+        <source file="com/sun/org/apache/xerces/internal/parsers/XML11NonValidatingConfiguration.java" startline="440" endline="450">
+    public void setInputSource(XMLInputSource inputSource)
+        throws XMLConfigurationException, IOException {
+
+        // REVISIT: this method used to reset all the components and
+        //          construct the pipeline. Now reset() is called
+        //          in parse (boolean) just before we parse the document
+        //          Should this method still throw exceptions..?
+
+        fInputSource = inputSource;
+
+    } // setInputSource(XMLInputSource)
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- short -->
+        <source file="com/sun/org/apache/xerces/internal/parsers/XML11Configuration.java" startline="620" endline="630">
+    public void setInputSource(XMLInputSource inputSource)
+        throws XMLConfigurationException, IOException {
+
+        // REVISIT: this method used to reset all the components and
+        //          construct the pipeline. Now reset() is called
+        //          in parse (boolean) just before we parse the document
+        //          Should this method still throw exceptions..?
+
+        fInputSource = inputSource;
+
+    } // setInputSource(XMLInputSource)
+</source>
+        <source file="com/sun/org/apache/xerces/internal/parsers/XML11DTDConfiguration.java" startline="514" endline="524">
+    public void setInputSource(XMLInputSource inputSource)
+        throws XMLConfigurationException, IOException {
+
+        // REVISIT: this method used to reset all the components and
+        //          construct the pipeline. Now reset() is called
+        //          in parse (boolean) just before we parse the document
+        //          Should this method still throw exceptions..?
+
+        fInputSource = inputSource;
+
+    } // setInputSource(XMLInputSource)
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- short -->
+        <source file="com/sun/org/apache/xerces/internal/parsers/XML11Configuration.java" startline="620" endline="630">
+    public void setInputSource(XMLInputSource inputSource)
+        throws XMLConfigurationException, IOException {
+
+        // REVISIT: this method used to reset all the components and
+        //          construct the pipeline. Now reset() is called
+        //          in parse (boolean) just before we parse the document
+        //          Should this method still throw exceptions..?
+
+        fInputSource = inputSource;
+
+    } // setInputSource(XMLInputSource)
+</source>
+        <source file="com/sun/org/apache/xerces/internal/parsers/XML11NonValidatingConfiguration.java" startline="440" endline="450">
+    public void setInputSource(XMLInputSource inputSource)
+        throws XMLConfigurationException, IOException {
+
+        // REVISIT: this method used to reset all the components and
+        //          construct the pipeline. Now reset() is called
+        //          in parse (boolean) just before we parse the document
+        //          Should this method still throw exceptions..?
+
+        fInputSource = inputSource;
+
+    } // setInputSource(XMLInputSource)
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- short -->
+        <source file="com/sun/org/apache/xerces/internal/parsers/XML11DTDConfiguration.java" startline="514" endline="524">
+    public void setInputSource(XMLInputSource inputSource)
+        throws XMLConfigurationException, IOException {
+
+        // REVISIT: this method used to reset all the components and
+        //          construct the pipeline. Now reset() is called
+        //          in parse (boolean) just before we parse the document
+        //          Should this method still throw exceptions..?
+
+        fInputSource = inputSource;
+
+    } // setInputSource(XMLInputSource)
+</source>
+        <source file="com/sun/org/apache/xerces/internal/parsers/XML11NonValidatingConfiguration.java" startline="440" endline="450">
+    public void setInputSource(XMLInputSource inputSource)
+        throws XMLConfigurationException, IOException {
+
+        // REVISIT: this method used to reset all the components and
+        //          construct the pipeline. Now reset() is called
+        //          in parse (boolean) just before we parse the document
+        //          Should this method still throw exceptions..?
+
+        fInputSource = inputSource;
+
+    } // setInputSource(XMLInputSource)
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- short -->
+        <source file="com/sun/org/apache/xerces/internal/jaxp/datatype/DatatypeFactoryImpl.java" startline="218" endline="229">
+        public Duration newDurationYearMonth(
+                final boolean isPositive,
+                final BigInteger year,
+                final BigInteger month) {
+
+                return new DurationYearMonthImpl(
+                         isPositive,
+                         year,
+                         month
+                 );
+
+        }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/jaxp/datatype/DatatypeFactoryImpl.java" startline="248" endline="258">
+    @Override
+        public Duration newDurationYearMonth(
+                final boolean isPositive,
+                final int year,
+                final int month) {
+
+                return new DurationYearMonthImpl(
+                        isPositive,
+                        year,
+                        month);
+                }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- short -->
+        <source file="com/sun/org/apache/xerces/internal/dom/AttrImpl.java" startline="1225" endline="1236">
+    private void readObject(ObjectInputStream ois)
+        throws ClassNotFoundException, IOException {
+
+        // perform default deseralization
+        ois.defaultReadObject();
+
+        // hardset synchildren - so we don't try to sync -
+        // it does not make any sense to try to synchildren when we just
+        // deserialize object.
+        needsSyncChildren(false);
+
+    } // readObject(ObjectInputStream)
+</source>
+        <source file="com/sun/org/apache/xerces/internal/dom/ParentNode.java" startline="1011" endline="1021">
+    private void readObject(ObjectInputStream ois)
+        throws ClassNotFoundException, IOException {
+
+        // perform default deseralization
+        ois.defaultReadObject();
+
+        // hardset synchildren - so we don't try to sync - it does not make any
+        // sense to try to synchildren when we just deserialize object.
+        needsSyncChildren(false);
+
+    } // readObject(ObjectInputStream)
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xml/internal/serializer/CharInfo.java" startline="419" endline="430">
+    final boolean isSpecialAttrChar(int value)
+    {
+        // for performance try the values in the boolean array first,
+        // this is faster access than the BitSet for common ASCII values
+
+        if (value &lt; ASCII_MAX)
+            return isSpecialAttrASCII[value];
+
+        // rather than java.util.BitSet, our private
+        // implementation is faster (and less general).
+        return get(value);
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/serializer/CharInfo.java" startline="442" endline="453">
+    final boolean isSpecialTextChar(int value)
+    {
+        // for performance try the values in the boolean array first,
+        // this is faster access than the BitSet for common ASCII values
+
+        if (value &lt; ASCII_MAX)
+            return isSpecialTextASCII[value];
+
+        // rather than java.util.BitSet, our private
+        // implementation is faster (and less general).
+        return get(value);
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xerces/internal/impl/dtd/models/CMUniOp.java" startline="106" endline="116">
+    public boolean isNullable()
+    {
+        //
+        //  For debugging purposes, make sure we got rid of all non '*'
+        //  repetitions. Otherwise, '*' style nodes are always nullable.
+        //
+        if (type() == XMLContentSpec.CONTENTSPECNODE_ONE_OR_MORE)
+            return fChild.isNullable();
+        else
+            return true;
+    }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/models/XSCMUniOp.java" startline="66" endline="75">
+    public boolean isNullable() {
+        //
+        //  For debugging purposes, make sure we got rid of all non '*'
+        //  repetitions. Otherwise, '*' style nodes are always nullable.
+        //
+        if (type() == XSParticleDecl.PARTICLE_ONE_OR_MORE)
+                return fChild.isNullable();
+            else
+                return true;
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- short -->
+        <source file="com/sun/org/apache/xpath/internal/CachedXPathAPI.java" startline="138" endline="148">
+  public  Node selectSingleNode(
+          Node contextNode, String str, Node namespaceNode)
+            throws TransformerException
+  {
+
+    // Have the XObject return its result as a NodeSetDTM.
+    NodeIterator nl = selectNodeIterator(contextNode, str, namespaceNode);
+
+    // Return the first node, or null
+    return nl.nextNode();
+  }
+</source>
+        <source file="com/sun/org/apache/xpath/internal/CachedXPathAPI.java" startline="177" endline="187">
+  public  NodeIterator selectNodeIterator(
+          Node contextNode, String str, Node namespaceNode)
+            throws TransformerException
+  {
+
+    // Execute the XPath, and have it return the result
+    XObject list = eval(contextNode, str, namespaceNode);
+
+    // Have the XObject return its result as a NodeSetDTM.
+    return list.nodeset();
+  }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- short -->
+        <source file="com/sun/org/apache/xpath/internal/CachedXPathAPI.java" startline="138" endline="148">
+  public  Node selectSingleNode(
+          Node contextNode, String str, Node namespaceNode)
+            throws TransformerException
+  {
+
+    // Have the XObject return its result as a NodeSetDTM.
+    NodeIterator nl = selectNodeIterator(contextNode, str, namespaceNode);
+
+    // Return the first node, or null
+    return nl.nextNode();
+  }
+</source>
+        <source file="com/sun/org/apache/xpath/internal/CachedXPathAPI.java" startline="216" endline="226">
+  public  NodeList selectNodeList(
+          Node contextNode, String str, Node namespaceNode)
+            throws TransformerException
+  {
+
+    // Execute the XPath, and have it return the result
+    XObject list = eval(contextNode, str, namespaceNode);
+
+    // Return a NodeList.
+    return list.nodelist();
+  }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- short -->
+        <source file="com/sun/org/apache/xpath/internal/CachedXPathAPI.java" startline="177" endline="187">
+  public  NodeIterator selectNodeIterator(
+          Node contextNode, String str, Node namespaceNode)
+            throws TransformerException
+  {
+
+    // Execute the XPath, and have it return the result
+    XObject list = eval(contextNode, str, namespaceNode);
+
+    // Have the XObject return its result as a NodeSetDTM.
+    return list.nodeset();
+  }
+</source>
+        <source file="com/sun/org/apache/xpath/internal/CachedXPathAPI.java" startline="216" endline="226">
+  public  NodeList selectNodeList(
+          Node contextNode, String str, Node namespaceNode)
+            throws TransformerException
+  {
+
+    // Execute the XPath, and have it return the result
+    XObject list = eval(contextNode, str, namespaceNode);
+
+    // Return a NodeList.
+    return list.nodelist();
+  }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- short -->
+        <source file="com/sun/org/apache/xpath/internal/XPathAPI.java" startline="85" endline="95">
+  public static Node selectSingleNode(
+          Node contextNode, String str, Node namespaceNode)
+            throws TransformerException
+  {
+
+    // Have the XObject return its result as a NodeSetDTM.
+    NodeIterator nl = selectNodeIterator(contextNode, str, namespaceNode);
+
+    // Return the first node, or null
+    return nl.nextNode();
+  }
+</source>
+        <source file="com/sun/org/apache/xpath/internal/XPathAPI.java" startline="124" endline="134">
+  public static NodeIterator selectNodeIterator(
+          Node contextNode, String str, Node namespaceNode)
+            throws TransformerException
+  {
+
+    // Execute the XPath, and have it return the result
+    XObject list = eval(contextNode, str, namespaceNode);
+
+    // Have the XObject return its result as a NodeSetDTM.
+    return list.nodeset();
+  }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- short -->
+        <source file="com/sun/org/apache/xpath/internal/XPathAPI.java" startline="85" endline="95">
+  public static Node selectSingleNode(
+          Node contextNode, String str, Node namespaceNode)
+            throws TransformerException
+  {
+
+    // Have the XObject return its result as a NodeSetDTM.
+    NodeIterator nl = selectNodeIterator(contextNode, str, namespaceNode);
+
+    // Return the first node, or null
+    return nl.nextNode();
+  }
+</source>
+        <source file="com/sun/org/apache/xpath/internal/XPathAPI.java" startline="163" endline="173">
+  public static NodeList selectNodeList(
+          Node contextNode, String str, Node namespaceNode)
+            throws TransformerException
+  {
+
+    // Execute the XPath, and have it return the result
+    XObject list = eval(contextNode, str, namespaceNode);
+
+    // Return a NodeList.
+    return list.nodelist();
+  }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- short -->
+        <source file="com/sun/org/apache/xpath/internal/XPathAPI.java" startline="124" endline="134">
+  public static NodeIterator selectNodeIterator(
+          Node contextNode, String str, Node namespaceNode)
+            throws TransformerException
+  {
+
+    // Execute the XPath, and have it return the result
+    XObject list = eval(contextNode, str, namespaceNode);
+
+    // Have the XObject return its result as a NodeSetDTM.
+    return list.nodeset();
+  }
+</source>
+        <source file="com/sun/org/apache/xpath/internal/XPathAPI.java" startline="163" endline="173">
+  public static NodeList selectNodeList(
+          Node contextNode, String str, Node namespaceNode)
+            throws TransformerException
+  {
+
+    // Execute the XPath, and have it return the result
+    XObject list = eval(contextNode, str, namespaceNode);
+
+    // Return a NodeList.
+    return list.nodelist();
+  }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xml/internal/utils/IntStack.java" startline="158" endline="167">
+  public void setTop(int val)
+  {
+    try {
+      m_map[m_firstFree - 1] = val;
+    }
+    catch (ArrayIndexOutOfBoundsException e)
+    {
+      throw new EmptyStackException();
+    }
+  }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/ObjectStack.java" startline="161" endline="170">
+  public void setTop(Object val)
+  {
+    try {
+      m_map[m_firstFree - 1] = val;
+    }
+    catch (ArrayIndexOutOfBoundsException e)
+    {
+      throw new EmptyStackException();
+    }
+  }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xml/internal/utils/IntStack.java" startline="140" endline="149">
+  public int peek(int n)
+  {
+    try {
+      return m_map[m_firstFree-(1+n)];
+    }
+    catch (ArrayIndexOutOfBoundsException e)
+    {
+      throw new EmptyStackException();
+    }
+  }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/ObjectStack.java" startline="143" endline="152">
+  public Object peek(int n)
+  {
+    try {
+      return m_map[m_firstFree-(1+n)];
+    }
+    catch (ArrayIndexOutOfBoundsException e)
+    {
+      throw new EmptyStackException();
+    }
+  }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xml/internal/utils/IntStack.java" startline="190" endline="201">
+  public int search(int o)
+  {
+
+    int i = lastIndexOf(o);
+
+    if (i &gt;= 0)
+    {
+      return size() - i;
+    }
+
+    return -1;
+  }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/ObjectStack.java" startline="193" endline="204">
+  public int search(Object o)
+  {
+
+    int i = lastIndexOf(o);
+
+    if (i &gt;= 0)
+    {
+      return size() - i;
+    }
+
+    return -1;
+  }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xml/internal/serializer/ToUnknownStream.java" startline="323" endline="332">
+    public void addUniqueAttribute(String rawName, String value, int flags)
+        throws SAXException
+    {
+        if (m_firstTagNotEmitted)
+        {
+            flush();
+        }
+        m_handler.addUniqueAttribute(rawName, value, flags);
+
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToUnknownStream.java" startline="775" endline="786">
+    public void externalEntityDecl(
+        String name,
+        String publicId,
+        String systemId)
+        throws SAXException
+    {
+        if (m_firstTagNotEmitted)
+        {
+            flush();
+        }
+        m_handler.externalEntityDecl(name, publicId, systemId);
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers, normalization -->
+        <source file="com/sun/org/apache/xalan/internal/xsltc/compiler/util/IntType.java" startline="78" endline="87">
+    public int distanceTo(Type type) {
+        if (type == this) {
+            return 0;
+        }
+        else if (type == Type.Real) {
+            return 1;
+        }
+        else
+            return Integer.MAX_VALUE;
+    }
+</source>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/compiler/util/RealType.java" startline="71" endline="81">
+    public int distanceTo(Type type) {
+        if (type == this) {
+            return 0;
+        }
+        else if (type == Type.Int) {
+            return 1;
+        }
+        else {
+            return Integer.MAX_VALUE;
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- short -->
+        <source file="com/sun/org/apache/xerces/internal/jaxp/datatype/XMLGregorianCalendarImpl.java" startline="689" endline="708">
+    public static XMLGregorianCalendar createDateTime(
+        BigInteger year,
+        int month,
+        int day,
+        int hours,
+        int minutes,
+        int seconds,
+        BigDecimal fractionalSecond,
+        int timezone) {
+
+        return new XMLGregorianCalendarImpl(
+            year,
+            month,
+            day,
+            hours,
+            minutes,
+            seconds,
+            fractionalSecond,
+            timezone);
+    }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/jaxp/datatype/XMLGregorianCalendarImpl.java" startline="767" endline="786">
+    public static XMLGregorianCalendar createDateTime(
+        int year,
+        int month,
+        int day,
+        int hours,
+        int minutes,
+        int seconds,
+        int milliseconds,
+        int timezone) {
+
+        return new XMLGregorianCalendarImpl(
+            year,
+            month,
+            day,
+            hours,
+            minutes,
+            seconds,
+            milliseconds,
+            timezone);
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xml/internal/utils/IntVector.java" startline="331" endline="341">
+  public final boolean contains(int s)
+  {
+
+    for (int i = 0; i &lt; m_firstFree; i++)
+    {
+      if (m_map[i] == s)
+        return true;
+    }
+
+    return false;
+  }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/ObjectVector.java" startline="328" endline="338">
+  public final boolean contains(Object s)
+  {
+
+    for (int i = 0; i &lt; m_firstFree; i++)
+    {
+      if (m_map[i] == s)
+        return true;
+    }
+
+    return false;
+  }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators.java" startline="78" endline="89">
+  public DTMDefaultBaseIterators(DTMManager mgr, Source source,
+                                 int dtmIdentity,
+                                 DTMWSFilter whiteSpaceFilter,
+                                 XMLStringFactory xstringfactory,
+                                 boolean doIndexing,
+                                 int blocksize,
+                                 boolean usePrevsib,
+                                 boolean newNameTable)
+  {
+    super(mgr, source, dtmIdentity, whiteSpaceFilter,
+          xstringfactory, doIndexing, blocksize, usePrevsib, newNameTable);
+  }
+</source>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseTraversers.java" startline="83" endline="94">
+  public DTMDefaultBaseTraversers(DTMManager mgr, Source source,
+                                  int dtmIdentity,
+                                  DTMWSFilter whiteSpaceFilter,
+                                  XMLStringFactory xstringfactory,
+                                  boolean doIndexing,
+                                  int blocksize,
+                                  boolean usePrevsib,
+                                  boolean newNameTable)
+  {
+    super(mgr, source, dtmIdentity, whiteSpaceFilter, xstringfactory,
+          doIndexing, blocksize, usePrevsib, newNameTable);
+  }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xml/internal/utils/IntVector.java" startline="376" endline="386">
+  public final int indexOf(int elem)
+  {
+
+    for (int i = 0; i &lt; m_firstFree; i++)
+    {
+      if (m_map[i] == elem)
+        return i;
+    }
+
+    return java.lang.Integer.MIN_VALUE;
+  }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/ObjectVector.java" startline="373" endline="383">
+  public final int indexOf(Object elem)
+  {
+
+    for (int i = 0; i &lt; m_firstFree; i++)
+    {
+      if (m_map[i] == elem)
+        return i;
+    }
+
+    return java.lang.Integer.MIN_VALUE;
+  }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xml/internal/utils/IntVector.java" startline="398" endline="408">
+  public final int lastIndexOf(int elem)
+  {
+
+    for (int i = (m_firstFree - 1); i &gt;= 0; i--)
+    {
+      if (m_map[i] == elem)
+        return i;
+    }
+
+    return java.lang.Integer.MIN_VALUE;
+  }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/ObjectVector.java" startline="395" endline="405">
+  public final int lastIndexOf(Object elem)
+  {
+
+    for (int i = (m_firstFree - 1); i &gt;= 0; i--)
+    {
+      if (m_map[i] == elem)
+        return i;
+    }
+
+    return java.lang.Integer.MIN_VALUE;
+  }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xml/internal/utils/IntVector.java" startline="354" endline="364">
+  public final int indexOf(int elem, int index)
+  {
+
+    for (int i = index; i &lt; m_firstFree; i++)
+    {
+      if (m_map[i] == elem)
+        return i;
+    }
+
+    return java.lang.Integer.MIN_VALUE;
+  }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/ObjectVector.java" startline="351" endline="361">
+  public final int indexOf(Object elem, int index)
+  {
+
+    for (int i = index; i &lt; m_firstFree; i++)
+    {
+      if (m_map[i] == elem)
+        return i;
+    }
+
+    return java.lang.Integer.MIN_VALUE;
+  }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="796" endline="807">
+    public int getParentNode(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return -1;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkIndex(fNodeParent, chunk, index)
+                    : getChunkIndex(fNodeParent, chunk, index);
+
+    } // getParentNode(int):int
+</source>
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="1119" endline="1130">
+    public String getNodeName(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return null;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkValue(fNodeName, chunk, index)
+                    : getChunkValue(fNodeName, chunk, index);
+
+    } // getNodeName(int,boolean):String
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="796" endline="807">
+    public int getParentNode(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return -1;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkIndex(fNodeParent, chunk, index)
+                    : getChunkIndex(fNodeParent, chunk, index);
+
+    } // getParentNode(int):int
+</source>
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="1258" endline="1269">
+    public String getNodeValue(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return null;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkValue(fNodeValue, chunk, index)
+                    : getChunkValue(fNodeValue, chunk, index);
+
+    } // getNodeValue(int,boolean):String
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="796" endline="807">
+    public int getParentNode(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return -1;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkIndex(fNodeParent, chunk, index)
+                    : getChunkIndex(fNodeParent, chunk, index);
+
+    } // getParentNode(int):int
+</source>
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="1346" endline="1357">
+    public String getNodeURI(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return null;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkValue(fNodeURI, chunk, index)
+                    : getChunkValue(fNodeURI, chunk, index);
+
+    } // getNodeURI(int,int):String
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="818" endline="829">
+    public int getLastChild(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return -1;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkIndex(fNodeLastChild, chunk, index)
+                    : getChunkIndex(fNodeLastChild, chunk, index);
+
+    } // getLastChild(int,boolean):int
+</source>
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="1119" endline="1130">
+    public String getNodeName(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return null;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkValue(fNodeName, chunk, index)
+                    : getChunkValue(fNodeName, chunk, index);
+
+    } // getNodeName(int,boolean):String
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="818" endline="829">
+    public int getLastChild(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return -1;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkIndex(fNodeLastChild, chunk, index)
+                    : getChunkIndex(fNodeLastChild, chunk, index);
+
+    } // getLastChild(int,boolean):int
+</source>
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="1258" endline="1269">
+    public String getNodeValue(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return null;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkValue(fNodeValue, chunk, index)
+                    : getChunkValue(fNodeValue, chunk, index);
+
+    } // getNodeValue(int,boolean):String
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="818" endline="829">
+    public int getLastChild(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return -1;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkIndex(fNodeLastChild, chunk, index)
+                    : getChunkIndex(fNodeLastChild, chunk, index);
+
+    } // getLastChild(int,boolean):int
+</source>
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="1346" endline="1357">
+    public String getNodeURI(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return null;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkValue(fNodeURI, chunk, index)
+                    : getChunkValue(fNodeURI, chunk, index);
+
+    } // getNodeURI(int,int):String
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="884" endline="895">
+    public int getRealPrevSibling(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return -1;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkIndex(fNodePrevSib, chunk, index)
+                    : getChunkIndex(fNodePrevSib, chunk, index);
+
+    } // getReadPrevSibling(int,boolean):int
+</source>
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="1119" endline="1130">
+    public String getNodeName(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return null;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkValue(fNodeName, chunk, index)
+                    : getChunkValue(fNodeName, chunk, index);
+
+    } // getNodeName(int,boolean):String
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="884" endline="895">
+    public int getRealPrevSibling(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return -1;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkIndex(fNodePrevSib, chunk, index)
+                    : getChunkIndex(fNodePrevSib, chunk, index);
+
+    } // getReadPrevSibling(int,boolean):int
+</source>
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="1258" endline="1269">
+    public String getNodeValue(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return null;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkValue(fNodeValue, chunk, index)
+                    : getChunkValue(fNodeValue, chunk, index);
+
+    } // getNodeValue(int,boolean):String
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="884" endline="895">
+    public int getRealPrevSibling(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return -1;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkIndex(fNodePrevSib, chunk, index)
+                    : getChunkIndex(fNodePrevSib, chunk, index);
+
+    } // getReadPrevSibling(int,boolean):int
+</source>
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="1346" endline="1357">
+    public String getNodeURI(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return null;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkValue(fNodeURI, chunk, index)
+                    : getChunkValue(fNodeURI, chunk, index);
+
+    } // getNodeURI(int,int):String
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="1119" endline="1130">
+    public String getNodeName(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return null;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkValue(fNodeName, chunk, index)
+                    : getChunkValue(fNodeName, chunk, index);
+
+    } // getNodeName(int,boolean):String
+</source>
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="1283" endline="1294">
+    public int getNodeExtra(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return -1;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkIndex(fNodeExtra, chunk, index)
+                    : getChunkIndex(fNodeExtra, chunk, index);
+
+    } // getNodeExtra(int,boolean):int
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="1258" endline="1269">
+    public String getNodeValue(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return null;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkValue(fNodeValue, chunk, index)
+                    : getChunkValue(fNodeValue, chunk, index);
+
+    } // getNodeValue(int,boolean):String
+</source>
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="1283" endline="1294">
+    public int getNodeExtra(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return -1;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkIndex(fNodeExtra, chunk, index)
+                    : getChunkIndex(fNodeExtra, chunk, index);
+
+    } // getNodeExtra(int,boolean):int
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="1283" endline="1294">
+    public int getNodeExtra(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return -1;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkIndex(fNodeExtra, chunk, index)
+                    : getChunkIndex(fNodeExtra, chunk, index);
+
+    } // getNodeExtra(int,boolean):int
+</source>
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="1346" endline="1357">
+    public String getNodeURI(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return null;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkValue(fNodeURI, chunk, index)
+                    : getChunkValue(fNodeURI, chunk, index);
+
+    } // getNodeURI(int,int):String
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xerces/internal/util/ParserConfigurationSettings.java" startline="140" endline="150">
+    public void setFeature(String featureId, boolean state)
+        throws XMLConfigurationException {
+
+        // check and store
+        FeatureState checkState = checkFeature(featureId);
+        if (checkState.isExceptional()) {
+            throw new XMLConfigurationException(checkState.status, featureId);
+        }
+
+        fFeatures.put(featureId, state);
+    } // setFeature(String,boolean)
+</source>
+        <source file="com/sun/org/apache/xerces/internal/util/ParserConfigurationSettings.java" startline="171" endline="181">
+    public void setProperty(String propertyId, Object value)
+        throws XMLConfigurationException {
+
+        // check and store
+        PropertyState checkState = checkProperty(propertyId);
+        if (checkState.isExceptional()) {
+            throw new XMLConfigurationException(checkState.status, propertyId);
+        }
+        fProperties.put(propertyId, value);
+
+    } // setProperty(String,Object)
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xerces/internal/xinclude/SecuritySupport.java" startline="133" endline="140">
+    boolean getFileExists(final File f) {
+        return ((Boolean)
+                AccessController.doPrivileged(new PrivilegedAction() {
+                    public Object run() {
+                        return new Boolean(f.exists());
+                    }
+                })).booleanValue();
+    }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/xinclude/SecuritySupport.java" startline="142" endline="149">
+    long getLastModified(final File f) {
+        return ((Long)
+                AccessController.doPrivileged(new PrivilegedAction() {
+                    public Object run() {
+                        return new Long(f.lastModified());
+                    }
+                })).longValue();
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xerces/internal/xinclude/SecuritySupport.java" startline="133" endline="140">
+    boolean getFileExists(final File f) {
+        return ((Boolean)
+                AccessController.doPrivileged(new PrivilegedAction() {
+                    public Object run() {
+                        return new Boolean(f.exists());
+                    }
+                })).booleanValue();
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/serialize/SecuritySupport.java" startline="142" endline="149">
+    long getLastModified(final File f) {
+        return ((Long)
+                AccessController.doPrivileged(new PrivilegedAction() {
+                    public Object run() {
+                        return new Long(f.lastModified());
+                    }
+                })).longValue();
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xerces/internal/xinclude/SecuritySupport.java" startline="142" endline="149">
+    long getLastModified(final File f) {
+        return ((Long)
+                AccessController.doPrivileged(new PrivilegedAction() {
+                    public Object run() {
+                        return new Long(f.lastModified());
+                    }
+                })).longValue();
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/serialize/SecuritySupport.java" startline="133" endline="140">
+    boolean getFileExists(final File f) {
+        return ((Boolean)
+                AccessController.doPrivileged(new PrivilegedAction() {
+                    public Object run() {
+                        return new Boolean(f.exists());
+                    }
+                })).booleanValue();
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xerces/internal/xinclude/SecuritySupport.java" startline="142" endline="149">
+    long getLastModified(final File f) {
+        return ((Long)
+                AccessController.doPrivileged(new PrivilegedAction() {
+                    public Object run() {
+                        return new Long(f.lastModified());
+                    }
+                })).longValue();
+    }
+</source>
+        <source file="javax/xml/datatype/SecuritySupport.java" startline="97" endline="104">
+    boolean doesFileExist(final File f) {
+    return ((Boolean)
+            AccessController.doPrivileged(new PrivilegedAction() {
+                public Object run() {
+                    return new Boolean(f.exists());
+                }
+            })).booleanValue();
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xerces/internal/xinclude/SecuritySupport.java" startline="142" endline="149">
+    long getLastModified(final File f) {
+        return ((Long)
+                AccessController.doPrivileged(new PrivilegedAction() {
+                    public Object run() {
+                        return new Long(f.lastModified());
+                    }
+                })).longValue();
+    }
+</source>
+        <source file="javax/xml/parsers/SecuritySupport.java" startline="101" endline="108">
+    boolean doesFileExist(final File f) {
+    return ((Boolean)
+            AccessController.doPrivileged(new PrivilegedAction() {
+                public Object run() {
+                    return new Boolean(f.exists());
+                }
+            })).booleanValue();
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xerces/internal/xinclude/SecuritySupport.java" startline="142" endline="149">
+    long getLastModified(final File f) {
+        return ((Long)
+                AccessController.doPrivileged(new PrivilegedAction() {
+                    public Object run() {
+                        return new Long(f.lastModified());
+                    }
+                })).longValue();
+    }
+</source>
+        <source file="javax/xml/stream/SecuritySupport.java" startline="101" endline="108">
+    boolean doesFileExist(final File f) {
+    return ((Boolean)
+            AccessController.doPrivileged(new PrivilegedAction() {
+                public Object run() {
+                    return new Boolean(f.exists());
+                }
+            })).booleanValue();
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xerces/internal/xinclude/SecuritySupport.java" startline="142" endline="149">
+    long getLastModified(final File f) {
+        return ((Long)
+                AccessController.doPrivileged(new PrivilegedAction() {
+                    public Object run() {
+                        return new Long(f.lastModified());
+                    }
+                })).longValue();
+    }
+</source>
+        <source file="javax/xml/transform/SecuritySupport.java" startline="99" endline="106">
+    boolean doesFileExist(final File f) {
+    return ((Boolean)
+            AccessController.doPrivileged(new PrivilegedAction() {
+                public Object run() {
+                    return new Boolean(f.exists());
+                }
+            })).booleanValue();
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xerces/internal/xinclude/SecuritySupport.java" startline="142" endline="149">
+    long getLastModified(final File f) {
+        return ((Long)
+                AccessController.doPrivileged(new PrivilegedAction() {
+                    public Object run() {
+                        return new Long(f.lastModified());
+                    }
+                })).longValue();
+    }
+</source>
+        <source file="javax/xml/validation/SecuritySupport.java" startline="154" endline="161">
+    boolean doesFileExist(final File f) {
+    return ((Boolean)
+            AccessController.doPrivileged(new PrivilegedAction() {
+                public Object run() {
+                    return new Boolean(f.exists());
+                }
+            })).booleanValue();
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xerces/internal/xinclude/SecuritySupport.java" startline="142" endline="149">
+    long getLastModified(final File f) {
+        return ((Long)
+                AccessController.doPrivileged(new PrivilegedAction() {
+                    public Object run() {
+                        return new Long(f.lastModified());
+                    }
+                })).longValue();
+    }
+</source>
+        <source file="javax/xml/xpath/SecuritySupport.java" startline="151" endline="158">
+    boolean doesFileExist(final File f) {
+    return ((Boolean)
+            AccessController.doPrivileged(new PrivilegedAction() {
+                public Object run() {
+                    return new Boolean(f.exists());
+                }
+            })).booleanValue();
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xerces/internal/xinclude/SecuritySupport.java" startline="142" endline="149">
+    long getLastModified(final File f) {
+        return ((Long)
+                AccessController.doPrivileged(new PrivilegedAction() {
+                    public Object run() {
+                        return new Long(f.lastModified());
+                    }
+                })).longValue();
+    }
+</source>
+        <source file="org/xml/sax/helpers/SecuritySupport.java" startline="99" endline="106">
+    boolean doesFileExist(final File f) {
+    return ((Boolean)
+            AccessController.doPrivileged(new PrivilegedAction() {
+                public Object run() {
+                    return new Boolean(f.exists());
+                }
+            })).booleanValue();
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xml/internal/serialize/SecuritySupport.java" startline="133" endline="140">
+    boolean getFileExists(final File f) {
+        return ((Boolean)
+                AccessController.doPrivileged(new PrivilegedAction() {
+                    public Object run() {
+                        return new Boolean(f.exists());
+                    }
+                })).booleanValue();
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/serialize/SecuritySupport.java" startline="142" endline="149">
+    long getLastModified(final File f) {
+        return ((Long)
+                AccessController.doPrivileged(new PrivilegedAction() {
+                    public Object run() {
+                        return new Long(f.lastModified());
+                    }
+                })).longValue();
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xml/internal/serialize/SecuritySupport.java" startline="142" endline="149">
+    long getLastModified(final File f) {
+        return ((Long)
+                AccessController.doPrivileged(new PrivilegedAction() {
+                    public Object run() {
+                        return new Long(f.lastModified());
+                    }
+                })).longValue();
+    }
+</source>
+        <source file="javax/xml/datatype/SecuritySupport.java" startline="97" endline="104">
+    boolean doesFileExist(final File f) {
+    return ((Boolean)
+            AccessController.doPrivileged(new PrivilegedAction() {
+                public Object run() {
+                    return new Boolean(f.exists());
+                }
+            })).booleanValue();
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xml/internal/serialize/SecuritySupport.java" startline="142" endline="149">
+    long getLastModified(final File f) {
+        return ((Long)
+                AccessController.doPrivileged(new PrivilegedAction() {
+                    public Object run() {
+                        return new Long(f.lastModified());
+                    }
+                })).longValue();
+    }
+</source>
+        <source file="javax/xml/parsers/SecuritySupport.java" startline="101" endline="108">
+    boolean doesFileExist(final File f) {
+    return ((Boolean)
+            AccessController.doPrivileged(new PrivilegedAction() {
+                public Object run() {
+                    return new Boolean(f.exists());
+                }
+            })).booleanValue();
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xml/internal/serialize/SecuritySupport.java" startline="142" endline="149">
+    long getLastModified(final File f) {
+        return ((Long)
+                AccessController.doPrivileged(new PrivilegedAction() {
+                    public Object run() {
+                        return new Long(f.lastModified());
+                    }
+                })).longValue();
+    }
+</source>
+        <source file="javax/xml/stream/SecuritySupport.java" startline="101" endline="108">
+    boolean doesFileExist(final File f) {
+    return ((Boolean)
+            AccessController.doPrivileged(new PrivilegedAction() {
+                public Object run() {
+                    return new Boolean(f.exists());
+                }
+            })).booleanValue();
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xml/internal/serialize/SecuritySupport.java" startline="142" endline="149">
+    long getLastModified(final File f) {
+        return ((Long)
+                AccessController.doPrivileged(new PrivilegedAction() {
+                    public Object run() {
+                        return new Long(f.lastModified());
+                    }
+                })).longValue();
+    }
+</source>
+        <source file="javax/xml/transform/SecuritySupport.java" startline="99" endline="106">
+    boolean doesFileExist(final File f) {
+    return ((Boolean)
+            AccessController.doPrivileged(new PrivilegedAction() {
+                public Object run() {
+                    return new Boolean(f.exists());
+                }
+            })).booleanValue();
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xml/internal/serialize/SecuritySupport.java" startline="142" endline="149">
+    long getLastModified(final File f) {
+        return ((Long)
+                AccessController.doPrivileged(new PrivilegedAction() {
+                    public Object run() {
+                        return new Long(f.lastModified());
+                    }
+                })).longValue();
+    }
+</source>
+        <source file="javax/xml/validation/SecuritySupport.java" startline="154" endline="161">
+    boolean doesFileExist(final File f) {
+    return ((Boolean)
+            AccessController.doPrivileged(new PrivilegedAction() {
+                public Object run() {
+                    return new Boolean(f.exists());
+                }
+            })).booleanValue();
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xml/internal/serialize/SecuritySupport.java" startline="142" endline="149">
+    long getLastModified(final File f) {
+        return ((Long)
+                AccessController.doPrivileged(new PrivilegedAction() {
+                    public Object run() {
+                        return new Long(f.lastModified());
+                    }
+                })).longValue();
+    }
+</source>
+        <source file="javax/xml/xpath/SecuritySupport.java" startline="151" endline="158">
+    boolean doesFileExist(final File f) {
+    return ((Boolean)
+            AccessController.doPrivileged(new PrivilegedAction() {
+                public Object run() {
+                    return new Boolean(f.exists());
+                }
+            })).booleanValue();
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xml/internal/serialize/SecuritySupport.java" startline="142" endline="149">
+    long getLastModified(final File f) {
+        return ((Long)
+                AccessController.doPrivileged(new PrivilegedAction() {
+                    public Object run() {
+                        return new Long(f.lastModified());
+                    }
+                })).longValue();
+    }
+</source>
+        <source file="org/xml/sax/helpers/SecuritySupport.java" startline="99" endline="106">
+    boolean doesFileExist(final File f) {
+    return ((Boolean)
+            AccessController.doPrivileged(new PrivilegedAction() {
+                public Object run() {
+                    return new Boolean(f.exists());
+                }
+            })).booleanValue();
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers, normalization -->
+        <source file="com/sun/org/apache/xml/internal/res/XMLMessages.java" startline="82" endline="94">
+  public static final String createXMLMessage(String msgKey, Object args[])
+  {
+    if (XMLBundle == null) {
+        XMLBundle = SecuritySupport.getResourceBundle(XML_ERROR_RESOURCES);
+    }
+
+    if (XMLBundle != null)
+    {
+      return createMsg(XMLBundle, msgKey, args);
+    }
+    else
+      return "Could not load any resource bundles.";
+  }
+</source>
+        <source file="com/sun/org/apache/xpath/internal/res/XPATHMessages.java" startline="56" endline="67">
+    public static final String createXPATHMessage(String msgKey, Object args[]) //throws Exception
+    {
+        if (XPATHBundle == null) {
+            XPATHBundle = SecuritySupport.getResourceBundle(XPATH_ERROR_RESOURCES);
+        }
+
+        if (XPATHBundle != null) {
+            return createXPATHMsg(XPATHBundle, msgKey, args);
+        } else {
+            return "Could not load any resource bundles.";
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers, normalization -->
+        <source file="com/sun/org/apache/xml/internal/res/XMLMessages.java" startline="82" endline="94">
+  public static final String createXMLMessage(String msgKey, Object args[])
+  {
+    if (XMLBundle == null) {
+        XMLBundle = SecuritySupport.getResourceBundle(XML_ERROR_RESOURCES);
+    }
+
+    if (XMLBundle != null)
+    {
+      return createMsg(XMLBundle, msgKey, args);
+    }
+    else
+      return "Could not load any resource bundles.";
+  }
+</source>
+        <source file="com/sun/org/apache/xpath/internal/res/XPATHMessages.java" startline="79" endline="90">
+    public static final String createXPATHWarning(String msgKey, Object args[]) //throws Exception
+    {
+        if (XPATHBundle == null) {
+            XPATHBundle = SecuritySupport.getResourceBundle(XPATH_ERROR_RESOURCES);
+        }
+
+        if (XPATHBundle != null) {
+            return createXPATHMsg(XPATHBundle, msgKey, args);
+        } else {
+            return "Could not load any resource bundles.";
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="13" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/bcel/internal/generic/ConstantPoolGen.java" startline="308" endline="320">
+  public int addInteger(int n) {
+    int  ret;
+
+    if((ret = lookupInteger(n)) != -1)
+      return ret; // Already in CP
+
+    adjustSize();
+
+    ret = index;
+    constants[index++] = new ConstantInteger(n);
+
+    return ret;
+  }
+</source>
+        <source file="com/sun/org/apache/bcel/internal/generic/ConstantPoolGen.java" startline="349" endline="361">
+  public int addFloat(float n) {
+    int  ret;
+
+    if((ret = lookupFloat(n)) != -1)
+      return ret; // Already in CP
+
+    adjustSize();
+
+    ret = index;
+    constants[index++] = new ConstantFloat(n);
+
+    return ret;
+  }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xalan/internal/xsltc/runtime/BasisLibrary.java" startline="1075" endline="1084">
+    public static long referenceToLong(Object obj) {
+        if (obj instanceof Number) {
+            return ((Number) obj).longValue();    // handles Integer and Double
+        }
+        else {
+            final String className = obj.getClass().getName();
+            runTimeError(DATA_CONVERSION_ERR, className, Long.TYPE);
+            return 0;
+        }
+    }
+</source>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/runtime/BasisLibrary.java" startline="1089" endline="1098">
+    public static double referenceToDouble(Object obj) {
+        if (obj instanceof Number) {
+            return ((Number) obj).doubleValue();   // handles Integer and Double
+        }
+        else {
+            final String className = obj.getClass().getName();
+            runTimeError(DATA_CONVERSION_ERR, className, Double.TYPE);
+            return 0;
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="com/sun/org/apache/xalan/internal/xsltc/runtime/BasisLibrary.java" startline="1075" endline="1084">
+    public static long referenceToLong(Object obj) {
+        if (obj instanceof Number) {
+            return ((Number) obj).longValue();    // handles Integer and Double
+        }
+        else {
+            final String className = obj.getClass().getName();
+            runTimeError(DATA_CONVERSION_ERR, className, Long.TYPE);
+            return 0;
+        }
+    }
+</source>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/runtime/BasisLibrary.java" startline="1103" endline="1112">
+    public static boolean referenceToBoolean(Object obj) {
+        if (obj instanceof Boolean) {
+            return ((Boolean) obj).booleanValue();
+        }
+        else {
+            final String className = obj.getClass().getName();
+            runTimeError(DATA_CONVERSION_ERR, className, Boolean.TYPE);
+            return false;
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="com/sun/org/apache/xalan/internal/xsltc/runtime/BasisLibrary.java" startline="1089" endline="1098">
+    public static double referenceToDouble(Object obj) {
+        if (obj instanceof Number) {
+            return ((Number) obj).doubleValue();   // handles Integer and Double
+        }
+        else {
+            final String className = obj.getClass().getName();
+            runTimeError(DATA_CONVERSION_ERR, className, Double.TYPE);
+            return 0;
+        }
+    }
+</source>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/runtime/BasisLibrary.java" startline="1103" endline="1112">
+    public static boolean referenceToBoolean(Object obj) {
+        if (obj instanceof Boolean) {
+            return ((Boolean) obj).booleanValue();
+        }
+        else {
+            final String className = obj.getClass().getName();
+            runTimeError(DATA_CONVERSION_ERR, className, Boolean.TYPE);
+            return false;
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="14" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/bcel/internal/generic/ConstantPoolGen.java" startline="424" endline="437">
+  public int addLong(long n) {
+    int  ret;
+
+    if((ret = lookupLong(n)) != -1)
+      return ret; // Already in CP
+
+    adjustSize();
+
+    ret = index;
+    constants[index] = new ConstantLong(n);
+    index += 2;   // Wastes one entry according to spec
+
+    return ret;
+  }
+</source>
+        <source file="com/sun/org/apache/bcel/internal/generic/ConstantPoolGen.java" startline="466" endline="479">
+  public int addDouble(double n) {
+    int  ret;
+
+    if((ret = lookupDouble(n)) != -1)
+      return ret; // Already in CP
+
+    adjustSize();
+
+    ret = index;
+    constants[index] = new ConstantDouble(n);
+    index += 2;   // Wastes one entry according to spec
+
+    return ret;
+  }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, normalization -->
+        <source file="com/sun/org/apache/xml/internal/serialize/OutputFormat.java" startline="655" endline="665">
+    public boolean isCDataElement( String tagName )
+    {
+        int i;
+
+        if ( _cdataElements == null )
+            return false;
+        for ( i = 0 ; i &lt; _cdataElements.length ; ++i )
+            if ( _cdataElements[ i ].equals( tagName ) )
+                return true;
+        return false;
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/serialize/OutputFormat.java" startline="698" endline="709">
+    public boolean isNonEscapingElement( String tagName )
+    {
+        int i;
+
+        if ( _nonEscapingElements == null ) {
+            return false;
+        }
+        for ( i = 0 ; i &lt; _nonEscapingElements.length ; ++i )
+            if ( _nonEscapingElements[ i ].equals( tagName ) )
+                return true;
+        return false;
+    }
+</source>
+    </clone>
+    <clone nlines="16" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xml/internal/utils/IntVector.java" startline="178" endline="193">
+  public final void addElements(int numberOfElements)
+  {
+
+    if ((m_firstFree + numberOfElements) &gt;= m_mapSize)
+    {
+      m_mapSize += (m_blocksize+numberOfElements);
+
+      int newMap[] = new int[m_mapSize];
+
+      System.arraycopy(m_map, 0, newMap, 0, m_firstFree + 1);
+
+      m_map = newMap;
+    }
+
+    m_firstFree += numberOfElements;
+  }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/ObjectVector.java" startline="178" endline="193">
+  public final void addElements(int numberOfElements)
+  {
+
+    if ((m_firstFree + numberOfElements) &gt;= m_mapSize)
+    {
+      m_mapSize += (m_blocksize+numberOfElements);
+
+      Object newMap[] = new Object[m_mapSize];
+
+      System.arraycopy(m_map, 0, newMap, 0, m_firstFree + 1);
+
+      m_map = newMap;
+    }
+
+    m_firstFree += numberOfElements;
+  }
+</source>
+    </clone>
+    <clone nlines="13" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="com/sun/org/apache/xerces/internal/impl/dv/xs/DecimalDV.java" startline="336" endline="348">
+        @Override
+        public long getLong() throws NumberFormatException {
+            if (fracDigits != 0) {
+                throw new NumberFormatException();
+            }
+            if (sign == 0) {
+                return 0L;
+            }
+            if (sign == 1) {
+                return Long.parseLong(ivalue);
+            }
+            return Long.parseLong("-" + ivalue);
+        }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/impl/dv/xs/DecimalDV.java" startline="350" endline="362">
+        @Override
+        public int getInt() throws NumberFormatException {
+            if (fracDigits != 0) {
+                throw new NumberFormatException();
+            }
+            if (sign == 0) {
+                return 0;
+            }
+            if (sign == 1) {
+                return Integer.parseInt(ivalue);
+            }
+            return Integer.parseInt("-" + ivalue);
+        }
+</source>
+    </clone>
+    <clone nlines="13" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="com/sun/org/apache/xerces/internal/impl/dv/xs/DecimalDV.java" startline="336" endline="348">
+        @Override
+        public long getLong() throws NumberFormatException {
+            if (fracDigits != 0) {
+                throw new NumberFormatException();
+            }
+            if (sign == 0) {
+                return 0L;
+            }
+            if (sign == 1) {
+                return Long.parseLong(ivalue);
+            }
+            return Long.parseLong("-" + ivalue);
+        }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/impl/dv/xs/DecimalDV.java" startline="364" endline="376">
+        @Override
+        public short getShort() throws NumberFormatException {
+            if (fracDigits != 0) {
+                throw new NumberFormatException();
+            }
+            if (sign == 0) {
+                return 0;
+            }
+            if (sign == 1) {
+                return Short.parseShort(ivalue);
+            }
+            return Short.parseShort("-" + ivalue);
+        }
+</source>
+    </clone>
+    <clone nlines="13" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="com/sun/org/apache/xerces/internal/impl/dv/xs/DecimalDV.java" startline="336" endline="348">
+        @Override
+        public long getLong() throws NumberFormatException {
+            if (fracDigits != 0) {
+                throw new NumberFormatException();
+            }
+            if (sign == 0) {
+                return 0L;
+            }
+            if (sign == 1) {
+                return Long.parseLong(ivalue);
+            }
+            return Long.parseLong("-" + ivalue);
+        }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/impl/dv/xs/DecimalDV.java" startline="378" endline="390">
+        @Override
+        public byte getByte() throws NumberFormatException {
+            if (fracDigits != 0) {
+                throw new NumberFormatException();
+            }
+            if (sign == 0) {
+                return 0;
+            }
+            if (sign == 1) {
+                return Byte.parseByte(ivalue);
+            }
+            return Byte.parseByte("-" + ivalue);
+        }
+</source>
+    </clone>
+    <clone nlines="13" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xerces/internal/impl/dv/xs/DecimalDV.java" startline="350" endline="362">
+        @Override
+        public int getInt() throws NumberFormatException {
+            if (fracDigits != 0) {
+                throw new NumberFormatException();
+            }
+            if (sign == 0) {
+                return 0;
+            }
+            if (sign == 1) {
+                return Integer.parseInt(ivalue);
+            }
+            return Integer.parseInt("-" + ivalue);
+        }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/impl/dv/xs/DecimalDV.java" startline="364" endline="376">
+        @Override
+        public short getShort() throws NumberFormatException {
+            if (fracDigits != 0) {
+                throw new NumberFormatException();
+            }
+            if (sign == 0) {
+                return 0;
+            }
+            if (sign == 1) {
+                return Short.parseShort(ivalue);
+            }
+            return Short.parseShort("-" + ivalue);
+        }
+</source>
+    </clone>
+    <clone nlines="13" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xerces/internal/impl/dv/xs/DecimalDV.java" startline="350" endline="362">
+        @Override
+        public int getInt() throws NumberFormatException {
+            if (fracDigits != 0) {
+                throw new NumberFormatException();
+            }
+            if (sign == 0) {
+                return 0;
+            }
+            if (sign == 1) {
+                return Integer.parseInt(ivalue);
+            }
+            return Integer.parseInt("-" + ivalue);
+        }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/impl/dv/xs/DecimalDV.java" startline="378" endline="390">
+        @Override
+        public byte getByte() throws NumberFormatException {
+            if (fracDigits != 0) {
+                throw new NumberFormatException();
+            }
+            if (sign == 0) {
+                return 0;
+            }
+            if (sign == 1) {
+                return Byte.parseByte(ivalue);
+            }
+            return Byte.parseByte("-" + ivalue);
+        }
+</source>
+    </clone>
+    <clone nlines="13" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xerces/internal/impl/dv/xs/DecimalDV.java" startline="364" endline="376">
+        @Override
+        public short getShort() throws NumberFormatException {
+            if (fracDigits != 0) {
+                throw new NumberFormatException();
+            }
+            if (sign == 0) {
+                return 0;
+            }
+            if (sign == 1) {
+                return Short.parseShort(ivalue);
+            }
+            return Short.parseShort("-" + ivalue);
+        }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/impl/dv/xs/DecimalDV.java" startline="378" endline="390">
+        @Override
+        public byte getByte() throws NumberFormatException {
+            if (fracDigits != 0) {
+                throw new NumberFormatException();
+            }
+            if (sign == 0) {
+                return 0;
+            }
+            if (sign == 1) {
+                return Byte.parseByte(ivalue);
+            }
+            return Byte.parseByte("-" + ivalue);
+        }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/bcel/internal/generic/ConstantPoolGen.java" startline="289" endline="300">
+  public int lookupInteger(int n) {
+    for(int i=1; i &lt; index; i++) {
+      if(constants[i] instanceof ConstantInteger) {
+        ConstantInteger c = (ConstantInteger)constants[i];
+
+        if(c.getBytes() == n)
+          return i;
+      }
+    }
+
+    return -1;
+  }
+</source>
+        <source file="com/sun/org/apache/bcel/internal/generic/ConstantPoolGen.java" startline="405" endline="416">
+  public int lookupLong(long n) {
+    for(int i=1; i &lt; index; i++) {
+      if(constants[i] instanceof ConstantLong) {
+        ConstantLong c = (ConstantLong)constants[i];
+
+        if(c.getBytes() == n)
+          return i;
+      }
+    }
+
+    return -1;
+  }
+</source>
+    </clone>
+    <clone nlines="15" similarity="100">
+        <!-- normalization -->
+        <source file="com/sun/org/apache/xalan/internal/xsltc/dom/SAXImpl.java" startline="1414" endline="1428">
+        public DTMAxisIterator setStartNode(int node) {
+            //%HZ%: Added reference to DTMDefaultBase.ROOTNODE back in, temporarily
+            if (node == DTMDefaultBase.ROOTNODE) {
+                node = getDocument();
+            }
+
+            if (_isRestartable) {
+                _startNode = node;
+                _currentNode = (node == DTM.NULL) ? DTM.NULL : NOTPROCESSED;
+
+                return resetPosition();
+            }
+
+            return this;
+        }
+</source>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMDefaultBaseIterators.java" startline="541" endline="555">
+    public DTMAxisIterator setStartNode(int node)
+    {
+//%HZ%: Added reference to DTMDefaultBase.ROOTNODE back in, temporarily
+      if (node == DTMDefaultBase.ROOTNODE)
+        node = getDocument();
+      if (_isRestartable)
+      {
+        _startNode = node;
+        _currentNode = (node == DTM.NULL) ? DTM.NULL : NOTPROCESSED;
+
+        return resetPosition();
+      }
+
+      return this;
+    }
+</source>
+    </clone>
+    <clone nlines="18" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xml/internal/utils/IntVector.java" startline="128" endline="145">
+  public final void addElement(int value)
+  {
+
+    if ((m_firstFree + 1) &gt;= m_mapSize)
+    {
+      m_mapSize += m_blocksize;
+
+      int newMap[] = new int[m_mapSize];
+
+      System.arraycopy(m_map, 0, newMap, 0, m_firstFree + 1);
+
+      m_map = newMap;
+    }
+
+    m_map[m_firstFree] = value;
+
+    m_firstFree++;
+  }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/ObjectVector.java" startline="128" endline="145">
+  public final void addElement(Object value)
+  {
+
+    if ((m_firstFree + 1) &gt;= m_mapSize)
+    {
+      m_mapSize += m_blocksize;
+
+      Object newMap[] = new Object[m_mapSize];
+
+      System.arraycopy(m_map, 0, newMap, 0, m_firstFree + 1);
+
+      m_map = newMap;
+    }
+
+    m_map[m_firstFree] = value;
+
+    m_firstFree++;
+  }
+</source>
+    </clone>
+    <clone nlines="18" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xml/internal/utils/IntVector.java" startline="128" endline="145">
+  public final void addElement(int value)
+  {
+
+    if ((m_firstFree + 1) &gt;= m_mapSize)
+    {
+      m_mapSize += m_blocksize;
+
+      int newMap[] = new int[m_mapSize];
+
+      System.arraycopy(m_map, 0, newMap, 0, m_firstFree + 1);
+
+      m_map = newMap;
+    }
+
+    m_map[m_firstFree] = value;
+
+    m_firstFree++;
+  }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/StringToStringTableVector.java" startline="95" endline="112">
+  public final void addElement(StringToStringTable value)
+  {
+
+    if ((m_firstFree + 1) &gt;= m_mapSize)
+    {
+      m_mapSize += m_blocksize;
+
+      StringToStringTable newMap[] = new StringToStringTable[m_mapSize];
+
+      System.arraycopy(m_map, 0, newMap, 0, m_firstFree + 1);
+
+      m_map = newMap;
+    }
+
+    m_map[m_firstFree] = value;
+
+    m_firstFree++;
+  }
+</source>
+    </clone>
+    <clone nlines="18" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xml/internal/utils/IntVector.java" startline="128" endline="145">
+  public final void addElement(int value)
+  {
+
+    if ((m_firstFree + 1) &gt;= m_mapSize)
+    {
+      m_mapSize += m_blocksize;
+
+      int newMap[] = new int[m_mapSize];
+
+      System.arraycopy(m_map, 0, newMap, 0, m_firstFree + 1);
+
+      m_map = newMap;
+    }
+
+    m_map[m_firstFree] = value;
+
+    m_firstFree++;
+  }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/StringVector.java" startline="96" endline="113">
+  public final void addElement(String value)
+  {
+
+    if ((m_firstFree + 1) &gt;= m_mapSize)
+    {
+      m_mapSize += m_blocksize;
+
+      String newMap[] = new String[m_mapSize];
+
+      System.arraycopy(m_map, 0, newMap, 0, m_firstFree + 1);
+
+      m_map = newMap;
+    }
+
+    m_map[m_firstFree] = value;
+
+    m_firstFree++;
+  }
+</source>
+    </clone>
+    <clone nlines="18" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xml/internal/utils/IntVector.java" startline="128" endline="145">
+  public final void addElement(int value)
+  {
+
+    if ((m_firstFree + 1) &gt;= m_mapSize)
+    {
+      m_mapSize += m_blocksize;
+
+      int newMap[] = new int[m_mapSize];
+
+      System.arraycopy(m_map, 0, newMap, 0, m_firstFree + 1);
+
+      m_map = newMap;
+    }
+
+    m_map[m_firstFree] = value;
+
+    m_firstFree++;
+  }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/StringVector.java" startline="176" endline="193">
+  public final void push(String s)
+  {
+
+    if ((m_firstFree + 1) &gt;= m_mapSize)
+    {
+      m_mapSize += m_blocksize;
+
+      String newMap[] = new String[m_mapSize];
+
+      System.arraycopy(m_map, 0, newMap, 0, m_firstFree + 1);
+
+      m_map = newMap;
+    }
+
+    m_map[m_firstFree] = s;
+
+    m_firstFree++;
+  }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xerces/internal/dom/DocumentImpl.java" startline="342" endline="351">
+    void deletedText(NodeImpl node, int offset, int count) {
+        // notify ranges
+        if (ranges != null) {
+            int size = ranges.size();
+            for (int i = 0; i != size; i++) {
+                ((RangeImpl)ranges.elementAt(i)).receiveDeletedText(node,
+                                                                offset, count);
+            }
+        }
+    }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/dom/DocumentImpl.java" startline="372" endline="381">
+    void splitData(Node node, Node newNode, int offset) {
+        // notify ranges
+        if (ranges != null) {
+            int size = ranges.size();
+            for (int i = 0; i != size; i++) {
+                ((RangeImpl)ranges.elementAt(i)).receiveSplitData(node,
+                                                              newNode, offset);
+            }
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xerces/internal/dom/DocumentImpl.java" startline="357" endline="366">
+    void insertedText(NodeImpl node, int offset, int count) {
+        // notify ranges
+        if (ranges != null) {
+            int size = ranges.size();
+            for (int i = 0; i != size; i++) {
+                ((RangeImpl)ranges.elementAt(i)).receiveInsertedText(node,
+                                                                offset, count);
+            }
+        }
+    }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/dom/DocumentImpl.java" startline="372" endline="381">
+    void splitData(Node node, Node newNode, int offset) {
+        // notify ranges
+        if (ranges != null) {
+            int size = ranges.size();
+            for (int i = 0; i != size; i++) {
+                ((RangeImpl)ranges.elementAt(i)).receiveSplitData(node,
+                                                              newNode, offset);
+            }
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="com/sun/org/apache/xerces/internal/impl/dtd/XMLEntityDecl.java" startline="146" endline="156">
+    public void clear() {
+       this.name         = null;
+       this.publicId     = null;
+       this.systemId     = null;
+       this.baseSystemId = null;
+       this.notation     = null;
+       this.value        = null;
+       this.isPE         = false;
+       this.inExternal   = false;
+
+    } // clear
+</source>
+        <source file="com/sun/org/apache/xerces/internal/impl/dtd/XMLSimpleType.java" startline="201" endline="210">
+    public void clear() {
+        this.type              = -1;
+        this.name              = null;
+        this.enumeration       = null;
+        this.list              = false;
+        this.defaultType       = -1;
+        this.defaultValue      = null;
+        this.nonNormalizedDefaultValue      = null;
+        this.datatypeValidator = null;
+    } // clear
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xml/internal/utils/IntStack.java" startline="74" endline="93">
+  public int push(int i)
+  {
+
+    if ((m_firstFree + 1) &gt;= m_mapSize)
+    {
+      m_mapSize += m_blocksize;
+
+      int newMap[] = new int[m_mapSize];
+
+      System.arraycopy(m_map, 0, newMap, 0, m_firstFree + 1);
+
+      m_map = newMap;
+    }
+
+    m_map[m_firstFree] = i;
+
+    m_firstFree++;
+
+    return i;
+  }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/ObjectStack.java" startline="74" endline="93">
+  public Object push(Object i)
+  {
+
+    if ((m_firstFree + 1) &gt;= m_mapSize)
+    {
+      m_mapSize += m_blocksize;
+
+      Object newMap[] = new Object[m_mapSize];
+
+      System.arraycopy(m_map, 0, newMap, 0, m_firstFree + 1);
+
+      m_map = newMap;
+    }
+
+    m_map[m_firstFree] = i;
+
+    m_firstFree++;
+
+    return i;
+  }
+</source>
+    </clone>
+    <clone nlines="13" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xerces/internal/parsers/BasicParserConfiguration.java" startline="441" endline="453">
+    public void setFeature(String featureId, boolean state)
+        throws XMLConfigurationException {
+
+        // forward to every component
+        int count = fComponents.size();
+        for (int i = 0; i &lt; count; i++) {
+            XMLComponent c = (XMLComponent) fComponents.get(i);
+            c.setFeature(featureId, state);
+        }
+        // save state if noone "objects"
+        super.setFeature(featureId, state);
+
+    } // setFeature(String,boolean)
+</source>
+        <source file="com/sun/org/apache/xerces/internal/parsers/BasicParserConfiguration.java" startline="461" endline="474">
+    public void setProperty(String propertyId, Object value)
+        throws XMLConfigurationException {
+
+        // forward to every component
+        int count = fComponents.size();
+        for (int i = 0; i &lt; count; i++) {
+            XMLComponent c = (XMLComponent) fComponents.get(i);
+            c.setProperty(propertyId, value);
+        }
+
+        // store value if noone "objects"
+        super.setProperty(propertyId, value);
+
+    } // setProperty(String,Object)
+</source>
+    </clone>
+    <clone nlines="14" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/xml/internal/stream/util/BufferAllocator.java" startline="72" endline="85">
+    public void returnCharBuffer(char[] c) {
+        if (c == null) {
+            return;
+        }
+        if (c.length &lt;= SMALL_SIZE_LIMIT) {
+            smallCharBuffer = c;
+        }
+        else if (c.length &lt;= MEDIUM_SIZE_LIMIT) {
+            mediumCharBuffer = c;
+        }
+        else if (c.length &lt;= LARGE_SIZE_LIMIT) {
+            largeCharBuffer = c;
+        }
+    }
+</source>
+        <source file="com/sun/xml/internal/stream/util/BufferAllocator.java" startline="106" endline="119">
+    public void returnByteBuffer(byte[] b) {
+        if (b == null) {
+            return;
+        }
+        if (b.length &lt;= SMALL_SIZE_LIMIT) {
+            smallByteBuffer = b;
+        }
+        else if (b.length &lt;= MEDIUM_SIZE_LIMIT) {
+            mediumByteBuffer = b;
+        }
+        else if (b.length &lt;= LARGE_SIZE_LIMIT) {
+            largeByteBuffer = b;
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="com/sun/org/apache/xalan/internal/lib/NodeInfo.java" startline="50" endline="61">
+  public static String systemId(ExpressionContext context)
+  {
+    Node contextNode = context.getContextNode();
+    int nodeHandler = ((DTMNodeProxy)contextNode).getDTMNodeNumber();
+    SourceLocator locator = ((DTMNodeProxy)contextNode).getDTM()
+      .getSourceLocatorFor(nodeHandler);
+
+    if (locator != null)
+      return locator.getSystemId();
+    else
+      return null;
+  }
+</source>
+        <source file="com/sun/org/apache/xalan/internal/lib/NodeInfo.java" startline="149" endline="160">
+  public static int lineNumber(ExpressionContext context)
+  {
+    Node contextNode = context.getContextNode();
+    int nodeHandler = ((DTMNodeProxy)contextNode).getDTMNodeNumber();
+    SourceLocator locator = ((DTMNodeProxy)contextNode).getDTM()
+      .getSourceLocatorFor(nodeHandler);
+
+    if (locator != null)
+      return locator.getLineNumber();
+    else
+      return -1;
+  }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="com/sun/org/apache/xalan/internal/lib/NodeInfo.java" startline="50" endline="61">
+  public static String systemId(ExpressionContext context)
+  {
+    Node contextNode = context.getContextNode();
+    int nodeHandler = ((DTMNodeProxy)contextNode).getDTMNodeNumber();
+    SourceLocator locator = ((DTMNodeProxy)contextNode).getDTM()
+      .getSourceLocatorFor(nodeHandler);
+
+    if (locator != null)
+      return locator.getSystemId();
+    else
+      return null;
+  }
+</source>
+        <source file="com/sun/org/apache/xalan/internal/lib/NodeInfo.java" startline="207" endline="218">
+  public static int columnNumber(ExpressionContext context)
+  {
+    Node contextNode = context.getContextNode();
+    int nodeHandler = ((DTMNodeProxy)contextNode).getDTMNodeNumber();
+    SourceLocator locator = ((DTMNodeProxy)contextNode).getDTM()
+      .getSourceLocatorFor(nodeHandler);
+
+    if (locator != null)
+      return locator.getColumnNumber();
+    else
+      return -1;
+  }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="com/sun/org/apache/xalan/internal/lib/NodeInfo.java" startline="96" endline="107">
+  public static String publicId(ExpressionContext context)
+  {
+    Node contextNode = context.getContextNode();
+    int nodeHandler = ((DTMNodeProxy)contextNode).getDTMNodeNumber();
+    SourceLocator locator = ((DTMNodeProxy)contextNode).getDTM()
+      .getSourceLocatorFor(nodeHandler);
+
+    if (locator != null)
+      return locator.getPublicId();
+    else
+      return null;
+  }
+</source>
+        <source file="com/sun/org/apache/xalan/internal/lib/NodeInfo.java" startline="149" endline="160">
+  public static int lineNumber(ExpressionContext context)
+  {
+    Node contextNode = context.getContextNode();
+    int nodeHandler = ((DTMNodeProxy)contextNode).getDTMNodeNumber();
+    SourceLocator locator = ((DTMNodeProxy)contextNode).getDTM()
+      .getSourceLocatorFor(nodeHandler);
+
+    if (locator != null)
+      return locator.getLineNumber();
+    else
+      return -1;
+  }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="com/sun/org/apache/xalan/internal/lib/NodeInfo.java" startline="96" endline="107">
+  public static String publicId(ExpressionContext context)
+  {
+    Node contextNode = context.getContextNode();
+    int nodeHandler = ((DTMNodeProxy)contextNode).getDTMNodeNumber();
+    SourceLocator locator = ((DTMNodeProxy)contextNode).getDTM()
+      .getSourceLocatorFor(nodeHandler);
+
+    if (locator != null)
+      return locator.getPublicId();
+    else
+      return null;
+  }
+</source>
+        <source file="com/sun/org/apache/xalan/internal/lib/NodeInfo.java" startline="207" endline="218">
+  public static int columnNumber(ExpressionContext context)
+  {
+    Node contextNode = context.getContextNode();
+    int nodeHandler = ((DTMNodeProxy)contextNode).getDTMNodeNumber();
+    SourceLocator locator = ((DTMNodeProxy)contextNode).getDTM()
+      .getSourceLocatorFor(nodeHandler);
+
+    if (locator != null)
+      return locator.getColumnNumber();
+    else
+      return -1;
+  }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/opti/SchemaDOMParser.java" startline="600" endline="609">
+        private void ensureCapacity(int size) {
+            if (fData == null) {
+                fData = new boolean[32];
+            }
+            else if (fData.length &lt;= size) {
+                boolean[] newdata = new boolean[fData.length * 2];
+                System.arraycopy(fData, 0, newdata, 0, fData.length);
+                fData = newdata;
+            }
+        }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/XMLSchemaValidator.java" startline="4301" endline="4310">
+        private void ensureCapacity(int size) {
+            if (fData == null) {
+                fData = new short[8];
+            }
+            else if (fData.length &lt;= size) {
+                short[] newdata = new short[fData.length * 2];
+                System.arraycopy(fData, 0, newdata, 0, fData.length);
+                fData = newdata;
+            }
+        }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/opti/SchemaDOMParser.java" startline="600" endline="609">
+        private void ensureCapacity(int size) {
+            if (fData == null) {
+                fData = new boolean[32];
+            }
+            else if (fData.length &lt;= size) {
+                boolean[] newdata = new boolean[fData.length * 2];
+                System.arraycopy(fData, 0, newdata, 0, fData.length);
+                fData = newdata;
+            }
+        }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/util/IntStack.java" startline="105" endline="114">
+    private void ensureCapacity(int size) {
+        if (fData == null) {
+            fData = new int[32];
+        }
+        else if (fData.length &lt;= size) {
+            int[] newdata = new int[fData.length * 2];
+            System.arraycopy(fData, 0, newdata, 0, fData.length);
+            fData = newdata;
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/XMLSchemaValidator.java" startline="4301" endline="4310">
+        private void ensureCapacity(int size) {
+            if (fData == null) {
+                fData = new short[8];
+            }
+            else if (fData.length &lt;= size) {
+                short[] newdata = new short[fData.length * 2];
+                System.arraycopy(fData, 0, newdata, 0, fData.length);
+                fData = newdata;
+            }
+        }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/util/IntStack.java" startline="105" endline="114">
+    private void ensureCapacity(int size) {
+        if (fData == null) {
+            fData = new int[32];
+        }
+        else if (fData.length &lt;= size) {
+            int[] newdata = new int[fData.length * 2];
+            System.arraycopy(fData, 0, newdata, 0, fData.length);
+            fData = newdata;
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="27" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xerces/internal/impl/dv/xs/DoubleDV.java" startline="147" endline="173">
+        private int compareTo(XDouble val) {
+            double oval = val.value;
+
+            // this &lt; other
+            if (value &lt; oval)
+                return -1;
+            // this &gt; other
+            if (value &gt; oval)
+                return 1;
+            // this == other
+            // NOTE: we don't distinguish 0.0 from -0.0
+            if (value == oval)
+                return 0;
+
+            // one of the 2 values or both is/are NaN(s)
+
+            if (value != value) {
+                // this = NaN = other
+                if (oval != oval)
+                    return 0;
+                // this is NaN &lt;&gt; other
+                return INDETERMINATE;
+            }
+
+            // other is NaN &lt;&gt; this
+            return INDETERMINATE;
+        }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/impl/dv/xs/FloatDV.java" startline="127" endline="153">
+        private int compareTo(XFloat val) {
+            float oval = val.value;
+
+            // this &lt; other
+            if (value &lt; oval)
+                return -1;
+            // this &gt; other
+            if (value &gt; oval)
+                return 1;
+            // this == other
+            // NOTE: we don't distinguish 0.0 from -0.0
+            if (value == oval)
+                return 0;
+
+            // one of the 2 values or both is/are NaN(s)
+
+            if (value != value) {
+                // this = NaN = other
+                if (oval != oval)
+                    return 0;
+                // this is NaN &lt;&gt; other
+                return INDETERMINATE;
+            }
+
+            // other is NaN &lt;&gt; this
+            return INDETERMINATE;
+        }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals, normalization -->
+        <source file="com/sun/org/apache/xerces/internal/impl/XMLStreamReaderImpl.java" startline="715" endline="726">
+    public String getAttributeNamespace(int index) {
+        //State should be either START_ELEMENT or ATTRIBUTE
+        if( fEventType == XMLEvent.START_ELEMENT || fEventType == XMLEvent.ATTRIBUTE) {
+            return fScanner.getAttributeIterator().getURI(index);
+        } else{
+            throw new java.lang.IllegalStateException("Current state is not among the states "
+                     + getEventTypeString(XMLEvent.START_ELEMENT) + " , "
+                     + getEventTypeString(XMLEvent.ATTRIBUTE)
+                     + "valid for getAttributeNamespace()") ;
+        }
+
+    }//getAttributeNamespace
+</source>
+        <source file="com/sun/org/apache/xerces/internal/impl/XMLStreamReaderImpl.java" startline="1207" endline="1217">
+    public boolean isAttributeSpecified(int index) {
+        //check that current state should be either START_ELEMENT or ATTRIBUTE
+        if( (fEventType == XMLEvent.START_ELEMENT) || (fEventType == XMLEvent.ATTRIBUTE)){
+            return fScanner.getAttributeIterator().isSpecified(index) ;
+        } else{
+            throw new IllegalStateException("Current state is not among the states "
+                     + getEventTypeString(XMLEvent.START_ELEMENT) + " , "
+                     + getEventTypeString(XMLEvent.ATTRIBUTE)
+                     + "valid for isAttributeSpecified()")  ;
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals, normalization -->
+        <source file="com/sun/org/apache/xerces/internal/impl/XMLStreamReaderImpl.java" startline="734" endline="744">
+    public String getAttributePrefix(int index) {
+        //State should be either START_ELEMENT or ATTRIBUTE
+        if( fEventType == XMLEvent.START_ELEMENT || fEventType == XMLEvent.ATTRIBUTE) {
+            return fScanner.getAttributeIterator().getPrefix(index);
+        } else{
+            throw new java.lang.IllegalStateException("Current state is not among the states "
+                     + getEventTypeString(XMLEvent.START_ELEMENT) + " , "
+                     + getEventTypeString(XMLEvent.ATTRIBUTE)
+                     + "valid for getAttributePrefix()") ;
+        }
+    }//getAttributePrefix
+</source>
+        <source file="com/sun/org/apache/xerces/internal/impl/XMLStreamReaderImpl.java" startline="1207" endline="1217">
+    public boolean isAttributeSpecified(int index) {
+        //check that current state should be either START_ELEMENT or ATTRIBUTE
+        if( (fEventType == XMLEvent.START_ELEMENT) || (fEventType == XMLEvent.ATTRIBUTE)){
+            return fScanner.getAttributeIterator().isSpecified(index) ;
+        } else{
+            throw new IllegalStateException("Current state is not among the states "
+                     + getEventTypeString(XMLEvent.START_ELEMENT) + " , "
+                     + getEventTypeString(XMLEvent.ATTRIBUTE)
+                     + "valid for isAttributeSpecified()")  ;
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals, normalization -->
+        <source file="com/sun/org/apache/xerces/internal/impl/XMLStreamReaderImpl.java" startline="773" endline="784">
+    public String getAttributeType(int index) {
+        //State should be either START_ELEMENT or ATTRIBUTE
+        if( fEventType == XMLEvent.START_ELEMENT || fEventType == XMLEvent.ATTRIBUTE) {
+            return fScanner.getAttributeIterator().getType(index) ;
+        } else{
+            throw new java.lang.IllegalStateException("Current state is not among the states "
+                     + getEventTypeString(XMLEvent.START_ELEMENT) + " , "
+                     + getEventTypeString(XMLEvent.ATTRIBUTE)
+                     + "valid for getAttributeType()") ;
+        }
+
+    }//getAttributeType
+</source>
+        <source file="com/sun/org/apache/xerces/internal/impl/XMLStreamReaderImpl.java" startline="1207" endline="1217">
+    public boolean isAttributeSpecified(int index) {
+        //check that current state should be either START_ELEMENT or ATTRIBUTE
+        if( (fEventType == XMLEvent.START_ELEMENT) || (fEventType == XMLEvent.ATTRIBUTE)){
+            return fScanner.getAttributeIterator().isSpecified(index) ;
+        } else{
+            throw new IllegalStateException("Current state is not among the states "
+                     + getEventTypeString(XMLEvent.START_ELEMENT) + " , "
+                     + getEventTypeString(XMLEvent.ATTRIBUTE)
+                     + "valid for isAttributeSpecified()")  ;
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals, normalization -->
+        <source file="com/sun/org/apache/xerces/internal/impl/XMLStreamReaderImpl.java" startline="792" endline="803">
+    public String getAttributeValue(int index) {
+        //State should be either START_ELEMENT or ATTRIBUTE
+        if( fEventType == XMLEvent.START_ELEMENT || fEventType == XMLEvent.ATTRIBUTE) {
+            return fScanner.getAttributeIterator().getValue(index) ;
+        } else{
+            throw new java.lang.IllegalStateException("Current state is not among the states "
+                     + getEventTypeString(XMLEvent.START_ELEMENT) + " , "
+                     + getEventTypeString(XMLEvent.ATTRIBUTE)
+                     + "valid for getAttributeValue()") ;
+        }
+
+    }//getAttributeValue
+</source>
+        <source file="com/sun/org/apache/xerces/internal/impl/XMLStreamReaderImpl.java" startline="1207" endline="1217">
+    public boolean isAttributeSpecified(int index) {
+        //check that current state should be either START_ELEMENT or ATTRIBUTE
+        if( (fEventType == XMLEvent.START_ELEMENT) || (fEventType == XMLEvent.ATTRIBUTE)){
+            return fScanner.getAttributeIterator().isSpecified(index) ;
+        } else{
+            throw new IllegalStateException("Current state is not among the states "
+                     + getEventTypeString(XMLEvent.START_ELEMENT) + " , "
+                     + getEventTypeString(XMLEvent.ATTRIBUTE)
+                     + "valid for isAttributeSpecified()")  ;
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers, normalization -->
+        <source file="com/sun/org/apache/bcel/internal/classfile/InnerClasses.java" startline="110" endline="120">
+  InnerClasses(int name_index, int length, DataInputStream file,
+               ConstantPool constant_pool) throws IOException
+  {
+    this(name_index, length, (InnerClass[])null, constant_pool);
+
+    number_of_classes = file.readUnsignedShort();
+    inner_classes = new InnerClass[number_of_classes];
+
+    for(int i=0; i &lt; number_of_classes; i++)
+      inner_classes[i] = new InnerClass(file);
+  }
+</source>
+        <source file="com/sun/org/apache/bcel/internal/classfile/LineNumberTable.java" startline="108" endline="117">
+  LineNumberTable(int name_index, int length, DataInputStream file,
+                  ConstantPool constant_pool) throws IOException
+  {
+    this(name_index, length, (LineNumber[])null, constant_pool);
+    line_number_table_length = (file.readUnsignedShort());
+    line_number_table = new LineNumber[line_number_table_length];
+
+    for(int i=0; i &lt; line_number_table_length; i++)
+      line_number_table[i] = new LineNumber(file);
+  }
+</source>
+    </clone>
+    <clone nlines="14" similarity="100">
+        <!-- normalization -->
+        <source file="com/sun/org/apache/xalan/internal/xsltc/dom/MultiDOM.java" startline="213" endline="226">
+        public int next() {
+
+            int node;
+            while ((node = _source.next()) != END) {
+                String val = getStringValueX(node);
+                if (_value.equals(val) == _op) {
+                    if (_returnType == RETURN_CURRENT)
+                        return returnNode(node);
+                    else
+                        return returnNode(getParent(node));
+                }
+            }
+            return END;
+        }
+</source>
+        <source file="com/sun/org/apache/xalan/internal/xsltc/dom/SAXImpl.java" startline="412" endline="427">
+        public int next()
+        {
+            int node;
+            while ((node = _source.next()) != END) {
+                String val = getStringValueX(node);
+                if (_value.equals(val) == _op) {
+                    if (_returnType == RETURN_CURRENT) {
+                        return returnNode(node);
+                    }
+                    else {
+                        return returnNode(getParent(node));
+                    }
+                }
+            }
+            return END;
+        }
+</source>
+    </clone>
+    <clone nlines="18" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/xml/internal/stream/util/BufferAllocator.java" startline="53" endline="70">
+    public char[] getCharBuffer(int size) {
+        if (size &lt;= SMALL_SIZE_LIMIT) {
+            char[] buffer = smallCharBuffer;
+            smallCharBuffer = null;
+            return buffer;
+        }
+        else if (size &lt;= MEDIUM_SIZE_LIMIT) {
+            char[] buffer = mediumCharBuffer;
+            mediumCharBuffer = null;
+            return buffer;
+        }
+        else if (size &lt;= LARGE_SIZE_LIMIT) {
+            char[] buffer = largeCharBuffer;
+            largeCharBuffer = null;
+            return buffer;
+        }
+        return null;
+    }
+</source>
+        <source file="com/sun/xml/internal/stream/util/BufferAllocator.java" startline="87" endline="104">
+    public byte[] getByteBuffer(int size) {
+        if (size &lt;= SMALL_SIZE_LIMIT) {
+            byte[] buffer = smallByteBuffer;
+            smallByteBuffer = null;
+            return buffer;
+        }
+        else if (size &lt;= MEDIUM_SIZE_LIMIT) {
+            byte[] buffer = mediumByteBuffer;
+            mediumByteBuffer = null;
+            return buffer;
+        }
+        else if (size &lt;= LARGE_SIZE_LIMIT) {
+            byte[] buffer = largeByteBuffer;
+            largeByteBuffer = null;
+            return buffer;
+        }
+        return null;
+    }
+</source>
+    </clone>
+    <clone nlines="14" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/bcel/internal/generic/ConstantPoolGen.java" startline="328" endline="341">
+  public int lookupFloat(float n) {
+    int bits = Float.floatToIntBits(n);
+
+    for(int i=1; i &lt; index; i++) {
+      if(constants[i] instanceof ConstantFloat) {
+        ConstantFloat c = (ConstantFloat)constants[i];
+
+        if(Float.floatToIntBits(c.getBytes()) == bits)
+          return i;
+      }
+    }
+
+    return -1;
+  }
+</source>
+        <source file="com/sun/org/apache/bcel/internal/generic/ConstantPoolGen.java" startline="445" endline="458">
+  public int lookupDouble(double n) {
+    long bits = Double.doubleToLongBits(n);
+
+    for(int i=1; i &lt; index; i++) {
+      if(constants[i] instanceof ConstantDouble) {
+        ConstantDouble c = (ConstantDouble)constants[i];
+
+        if(Double.doubleToLongBits(c.getBytes()) == bits)
+          return i;
+      }
+    }
+
+    return -1;
+  }
+</source>
+    </clone>
+    <clone nlines="14" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xml/internal/utils/NodeVector.java" startline="88" endline="101">
+  public Object clone() throws CloneNotSupportedException
+  {
+
+    NodeVector clone = (NodeVector) super.clone();
+
+    if ((null != this.m_map) &amp;&amp; (this.m_map == clone.m_map))
+    {
+      clone.m_map = new int[this.m_map.length];
+
+      System.arraycopy(this.m_map, 0, clone.m_map, 0, this.m_map.length);
+    }
+
+    return clone;
+  }
+</source>
+        <source file="com/sun/org/apache/xpath/internal/NodeSet.java" startline="847" endline="860">
+  public Object clone() throws CloneNotSupportedException
+  {
+
+    NodeSet clone = (NodeSet) super.clone();
+
+    if ((null != this.m_map) &amp;&amp; (this.m_map == clone.m_map))
+    {
+      clone.m_map = new Node[this.m_map.length];
+
+      System.arraycopy(this.m_map, 0, clone.m_map, 0, this.m_map.length);
+    }
+
+    return clone;
+  }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- normalization -->
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/identity/IdentityConstraint.java" startline="237" endline="248">
+    public void addAnnotation(XSAnnotationImpl annotation) {
+        if(annotation == null)
+            return;
+        if(fAnnotations == null) {
+            fAnnotations = new XSAnnotationImpl[2];
+        } else if(fNumAnnotations == fAnnotations.length) {
+            XSAnnotationImpl[] newArray = new XSAnnotationImpl[fNumAnnotations &lt;&lt; 1];
+            System.arraycopy(fAnnotations, 0, newArray, 0, fNumAnnotations);
+            fAnnotations = newArray;
+        }
+        fAnnotations[fNumAnnotations++] = annotation;
+    }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/SchemaGrammar.java" startline="1665" endline="1678">
+    public void addAnnotation(XSAnnotationImpl annotation) {
+        if (annotation == null) {
+            return;
+        }
+        if (fAnnotations == null) {
+            fAnnotations = new XSAnnotationImpl[2];
+        }
+        else if (fNumAnnotations == fAnnotations.length) {
+            XSAnnotationImpl[] newArray = new XSAnnotationImpl[fNumAnnotations &lt;&lt; 1];
+            System.arraycopy(fAnnotations, 0, newArray, 0, fNumAnnotations);
+            fAnnotations = newArray;
+        }
+        fAnnotations[fNumAnnotations++] = annotation;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xml/internal/utils/IntVector.java" startline="152" endline="171">
+  public final void addElements(int value, int numberOfElements)
+  {
+
+    if ((m_firstFree + numberOfElements) &gt;= m_mapSize)
+    {
+      m_mapSize += (m_blocksize+numberOfElements);
+
+      int newMap[] = new int[m_mapSize];
+
+      System.arraycopy(m_map, 0, newMap, 0, m_firstFree + 1);
+
+      m_map = newMap;
+    }
+
+    for (int i = 0; i &lt; numberOfElements; i++)
+    {
+      m_map[m_firstFree] = value;
+      m_firstFree++;
+    }
+  }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/ObjectVector.java" startline="152" endline="171">
+  public final void addElements(Object value, int numberOfElements)
+  {
+
+    if ((m_firstFree + numberOfElements) &gt;= m_mapSize)
+    {
+      m_mapSize += (m_blocksize+numberOfElements);
+
+      Object newMap[] = new Object[m_mapSize];
+
+      System.arraycopy(m_map, 0, newMap, 0, m_firstFree + 1);
+
+      m_map = newMap;
+    }
+
+    for (int i = 0; i &lt; numberOfElements; i++)
+    {
+      m_map[m_firstFree] = value;
+      m_firstFree++;
+    }
+  }
+</source>
+    </clone>
+    <clone nlines="14" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xpath/internal/domapi/XPathResultImpl.java" startline="185" endline="198">
+        public double getNumberValue() throws XPathException {
+                if (getResultType() != NUMBER_TYPE) {
+                        String fmsg = XPATHMessages.createXPATHMessage(XPATHErrorResources.ER_CANT_CONVERT_XPATHRESULTTYPE_TO_NUMBER, new Object[] {m_xpath.getPatternString(), getTypeString(m_resultType)});
+                        throw new XPathException(XPathException.TYPE_ERR,fmsg);
+//              "The XPathResult of XPath expression {0} has an XPathResultType of {1} which cannot be converted to a number"
+                } else {
+                        try {
+                           return m_resultObj.num();
+                        } catch (Exception e) {
+                                // Type check above should prevent this exception from occurring.
+                                throw new XPathException(XPathException.TYPE_ERR,e.getMessage());
+                        }
+                }
+        }
+</source>
+        <source file="com/sun/org/apache/xpath/internal/domapi/XPathResultImpl.java" startline="226" endline="239">
+        public boolean getBooleanValue() throws XPathException {
+                if (getResultType() != BOOLEAN_TYPE) {
+                        String fmsg = XPATHMessages.createXPATHMessage(XPATHErrorResources.ER_CANT_CONVERT_TO_BOOLEAN, new Object[] {m_xpath.getPatternString(), getTypeString(m_resultType)});
+                        throw new XPathException(XPathException.TYPE_ERR,fmsg);
+//              "The XPathResult of XPath expression {0} has an XPathResultType of {1} which cannot be converted to a boolean."
+                } else {
+                        try {
+                           return m_resultObj.bool();
+                        } catch (TransformerException e) {
+                                // Type check above should prevent this exception from occurring.
+                                throw new XPathException(XPathException.TYPE_ERR,e.getMessage());
+                        }
+                }
+        }
+</source>
+    </clone>
+    <clone nlines="15" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="com/sun/org/apache/xalan/internal/lib/NodeInfo.java" startline="71" endline="85">
+  public static String systemId(NodeList nodeList)
+  {
+    if (nodeList == null || nodeList.getLength() == 0)
+      return null;
+
+    Node node = nodeList.item(0);
+    int nodeHandler = ((DTMNodeProxy)node).getDTMNodeNumber();
+    SourceLocator locator = ((DTMNodeProxy)node).getDTM()
+      .getSourceLocatorFor(nodeHandler);
+
+    if (locator != null)
+      return locator.getSystemId();
+    else
+      return null;
+  }
+</source>
+        <source file="com/sun/org/apache/xalan/internal/lib/NodeInfo.java" startline="177" endline="191">
+  public static int lineNumber(NodeList nodeList)
+  {
+    if (nodeList == null || nodeList.getLength() == 0)
+      return -1;
+
+    Node node = nodeList.item(0);
+    int nodeHandler = ((DTMNodeProxy)node).getDTMNodeNumber();
+    SourceLocator locator = ((DTMNodeProxy)node).getDTM()
+      .getSourceLocatorFor(nodeHandler);
+
+    if (locator != null)
+      return locator.getLineNumber();
+    else
+      return -1;
+  }
+</source>
+    </clone>
+    <clone nlines="15" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="com/sun/org/apache/xalan/internal/lib/NodeInfo.java" startline="71" endline="85">
+  public static String systemId(NodeList nodeList)
+  {
+    if (nodeList == null || nodeList.getLength() == 0)
+      return null;
+
+    Node node = nodeList.item(0);
+    int nodeHandler = ((DTMNodeProxy)node).getDTMNodeNumber();
+    SourceLocator locator = ((DTMNodeProxy)node).getDTM()
+      .getSourceLocatorFor(nodeHandler);
+
+    if (locator != null)
+      return locator.getSystemId();
+    else
+      return null;
+  }
+</source>
+        <source file="com/sun/org/apache/xalan/internal/lib/NodeInfo.java" startline="235" endline="249">
+  public static int columnNumber(NodeList nodeList)
+  {
+    if (nodeList == null || nodeList.getLength() == 0)
+      return -1;
+
+    Node node = nodeList.item(0);
+    int nodeHandler = ((DTMNodeProxy)node).getDTMNodeNumber();
+    SourceLocator locator = ((DTMNodeProxy)node).getDTM()
+      .getSourceLocatorFor(nodeHandler);
+
+    if (locator != null)
+      return locator.getColumnNumber();
+    else
+      return -1;
+  }
+</source>
+    </clone>
+    <clone nlines="15" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="com/sun/org/apache/xalan/internal/lib/NodeInfo.java" startline="119" endline="133">
+  public static String publicId(NodeList nodeList)
+  {
+    if (nodeList == null || nodeList.getLength() == 0)
+      return null;
+
+    Node node = nodeList.item(0);
+    int nodeHandler = ((DTMNodeProxy)node).getDTMNodeNumber();
+    SourceLocator locator = ((DTMNodeProxy)node).getDTM()
+      .getSourceLocatorFor(nodeHandler);
+
+    if (locator != null)
+      return locator.getPublicId();
+    else
+      return null;
+  }
+</source>
+        <source file="com/sun/org/apache/xalan/internal/lib/NodeInfo.java" startline="177" endline="191">
+  public static int lineNumber(NodeList nodeList)
+  {
+    if (nodeList == null || nodeList.getLength() == 0)
+      return -1;
+
+    Node node = nodeList.item(0);
+    int nodeHandler = ((DTMNodeProxy)node).getDTMNodeNumber();
+    SourceLocator locator = ((DTMNodeProxy)node).getDTM()
+      .getSourceLocatorFor(nodeHandler);
+
+    if (locator != null)
+      return locator.getLineNumber();
+    else
+      return -1;
+  }
+</source>
+    </clone>
+    <clone nlines="15" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="com/sun/org/apache/xalan/internal/lib/NodeInfo.java" startline="119" endline="133">
+  public static String publicId(NodeList nodeList)
+  {
+    if (nodeList == null || nodeList.getLength() == 0)
+      return null;
+
+    Node node = nodeList.item(0);
+    int nodeHandler = ((DTMNodeProxy)node).getDTMNodeNumber();
+    SourceLocator locator = ((DTMNodeProxy)node).getDTM()
+      .getSourceLocatorFor(nodeHandler);
+
+    if (locator != null)
+      return locator.getPublicId();
+    else
+      return null;
+  }
+</source>
+        <source file="com/sun/org/apache/xalan/internal/lib/NodeInfo.java" startline="235" endline="249">
+  public static int columnNumber(NodeList nodeList)
+  {
+    if (nodeList == null || nodeList.getLength() == 0)
+      return -1;
+
+    Node node = nodeList.item(0);
+    int nodeHandler = ((DTMNodeProxy)node).getDTMNodeNumber();
+    SourceLocator locator = ((DTMNodeProxy)node).getDTM()
+      .getSourceLocatorFor(nodeHandler);
+
+    if (locator != null)
+      return locator.getColumnNumber();
+    else
+      return -1;
+  }
+</source>
+    </clone>
+    <clone nlines="30" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xml/internal/utils/NodeVector.java" startline="150" endline="179">
+  public final void push(int value)
+  {
+
+    int ff = m_firstFree;
+
+    if ((ff + 1) &gt;= m_mapSize)
+    {
+      if (null == m_map)
+      {
+        m_map = new int[m_blocksize];
+        m_mapSize = m_blocksize;
+      }
+      else
+      {
+        m_mapSize += m_blocksize;
+
+        int newMap[] = new int[m_mapSize];
+
+        System.arraycopy(m_map, 0, newMap, 0, ff + 1);
+
+        m_map = newMap;
+      }
+    }
+
+    m_map[ff] = value;
+
+    ff++;
+
+    m_firstFree = ff;
+  }
+</source>
+        <source file="com/sun/org/apache/xpath/internal/NodeSet.java" startline="911" endline="940">
+  public final void push(Node value)
+  {
+
+    int ff = m_firstFree;
+
+    if ((ff + 1) &gt;= m_mapSize)
+    {
+      if (null == m_map)
+      {
+        m_map = new Node[m_blocksize];
+        m_mapSize = m_blocksize;
+      }
+      else
+      {
+        m_mapSize += m_blocksize;
+
+        Node newMap[] = new Node[m_mapSize];
+
+        System.arraycopy(m_map, 0, newMap, 0, ff + 1);
+
+        m_map = newMap;
+      }
+    }
+
+    m_map[ff] = value;
+
+    ff++;
+
+    m_firstFree = ff;
+  }
+</source>
+    </clone>
+    <clone nlines="17" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="com/sun/org/apache/xerces/internal/jaxp/validation/ValidatorHandlerImpl.java" startline="242" endline="258">
+    public boolean getFeature(String name)
+        throws SAXNotRecognizedException, SAXNotSupportedException {
+        if (name == null) {
+            throw new NullPointerException();
+        }
+        try {
+            return fComponentManager.getFeature(name);
+        }
+        catch (XMLConfigurationException e) {
+            final String identifier = e.getIdentifier();
+            final String key = e.getType() == Status.NOT_RECOGNIZED ?
+                    "feature-not-recognized" : "feature-not-supported";
+            throw new SAXNotRecognizedException(
+                    SAXMessageFormatter.formatMessage(fComponentManager.getLocale(),
+                    key, new Object [] {identifier}));
+        }
+    }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/jaxp/validation/ValidatorHandlerImpl.java" startline="287" endline="303">
+    public Object getProperty(String name)
+        throws SAXNotRecognizedException, SAXNotSupportedException {
+        if (name == null) {
+            throw new NullPointerException();
+        }
+        try {
+            return fComponentManager.getProperty(name);
+        }
+        catch (XMLConfigurationException e) {
+            final String identifier = e.getIdentifier();
+            final String key = e.getType() == Status.NOT_RECOGNIZED ?
+                    "property-not-recognized" : "property-not-supported";
+            throw new SAXNotRecognizedException(
+                    SAXMessageFormatter.formatMessage(fComponentManager.getLocale(),
+                    key, new Object [] {identifier}));
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="17" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="com/sun/org/apache/xerces/internal/jaxp/validation/ValidatorHandlerImpl.java" startline="287" endline="303">
+    public Object getProperty(String name)
+        throws SAXNotRecognizedException, SAXNotSupportedException {
+        if (name == null) {
+            throw new NullPointerException();
+        }
+        try {
+            return fComponentManager.getProperty(name);
+        }
+        catch (XMLConfigurationException e) {
+            final String identifier = e.getIdentifier();
+            final String key = e.getType() == Status.NOT_RECOGNIZED ?
+                    "property-not-recognized" : "property-not-supported";
+            throw new SAXNotRecognizedException(
+                    SAXMessageFormatter.formatMessage(fComponentManager.getLocale(),
+                    key, new Object [] {identifier}));
+        }
+    }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/jaxp/validation/ValidatorImpl.java" startline="155" endline="171">
+    public boolean getFeature(String name)
+        throws SAXNotRecognizedException, SAXNotSupportedException {
+        if (name == null) {
+            throw new NullPointerException();
+        }
+        try {
+            return fComponentManager.getFeature(name);
+        }
+        catch (XMLConfigurationException e) {
+            final String identifier = e.getIdentifier();
+            final String key = e.getType() == Status.NOT_RECOGNIZED ?
+                    "feature-not-recognized" : "feature-not-supported";
+            throw new SAXNotRecognizedException(
+                    SAXMessageFormatter.formatMessage(fComponentManager.getLocale(),
+                    key, new Object [] {identifier}));
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="17" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xerces/internal/jaxp/datatype/XMLGregorianCalendarImpl.java" startline="1366" endline="1387">
+    public void setTime(
+            int hour,
+            int minute,
+            int second,
+            BigDecimal fractional) {
+
+        setHour(hour, false);
+
+        setMinute(minute);
+        if (second != 60) {
+            setSecond(second);
+        } else if ((hour == 23 &amp;&amp; minute == 59) || (hour == 0 &amp;&amp; minute == 0)) {
+            setSecond(second);
+        } else {
+            invalidFieldValue(SECOND, second);
+        }
+
+        setFractionalSecond(fractional);
+
+        // must test hour after setting seconds
+        testHour();
+    }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/jaxp/datatype/XMLGregorianCalendarImpl.java" startline="1406" endline="1422">
+    public void setTime(int hour, int minute, int second, int millisecond) {
+
+        setHour(hour, false);
+
+        setMinute(minute);
+        if (second != 60) {
+            setSecond(second);
+        } else if ((hour == 23 &amp;&amp; minute == 59) || (hour == 0 &amp;&amp; minute == 0)) {
+            setSecond(second);
+        } else {
+            invalidFieldValue(SECOND, second);
+        }
+        setMillisecond(millisecond);
+
+        // must test hour after setting seconds
+        testHour();
+    }
+</source>
+    </clone>
+    <clone nlines="23" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xml/internal/utils/IntVector.java" startline="205" endline="227">
+  public final void insertElementAt(int value, int at)
+  {
+
+    if ((m_firstFree + 1) &gt;= m_mapSize)
+    {
+      m_mapSize += m_blocksize;
+
+      int newMap[] = new int[m_mapSize];
+
+      System.arraycopy(m_map, 0, newMap, 0, m_firstFree + 1);
+
+      m_map = newMap;
+    }
+
+    if (at &lt;= (m_firstFree - 1))
+    {
+      System.arraycopy(m_map, at, m_map, at + 1, m_firstFree - at);
+    }
+
+    m_map[at] = value;
+
+    m_firstFree++;
+  }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/ObjectVector.java" startline="205" endline="227">
+  public final void insertElementAt(Object value, int at)
+  {
+
+    if ((m_firstFree + 1) &gt;= m_mapSize)
+    {
+      m_mapSize += m_blocksize;
+
+      Object newMap[] = new Object[m_mapSize];
+
+      System.arraycopy(m_map, 0, newMap, 0, m_firstFree + 1);
+
+      m_map = newMap;
+    }
+
+    if (at &lt;= (m_firstFree - 1))
+    {
+      System.arraycopy(m_map, at, m_map, at + 1, m_firstFree - at);
+    }
+
+    m_map[at] = value;
+
+    m_firstFree++;
+  }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="com/sun/org/apache/bcel/internal/generic/DCONST.java" startline="78" endline="89">
+  public DCONST(double f) {
+    super(com.sun.org.apache.bcel.internal.Constants.DCONST_0, (short)1);
+
+    if(f == 0.0)
+      opcode = com.sun.org.apache.bcel.internal.Constants.DCONST_0;
+    else if(f == 1.0)
+      opcode = com.sun.org.apache.bcel.internal.Constants.DCONST_1;
+    else
+      throw new ClassGenException("DCONST can be used only for 0.0 and 1.0: " + f);
+
+    value = f;
+  }
+</source>
+        <source file="com/sun/org/apache/bcel/internal/generic/LCONST.java" startline="78" endline="89">
+  public LCONST(long l) {
+    super(com.sun.org.apache.bcel.internal.Constants.LCONST_0, (short)1);
+
+    if(l == 0)
+      opcode = com.sun.org.apache.bcel.internal.Constants.LCONST_0;
+    else if(l == 1)
+      opcode = com.sun.org.apache.bcel.internal.Constants.LCONST_1;
+    else
+      throw new ClassGenException("LCONST can be used only for 0 and 1: " + l);
+
+    value = l;
+  }
+</source>
+    </clone>
+    <clone nlines="26" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xml/internal/utils/NodeVector.java" startline="246" endline="271">
+  public final void pushPair(int v1, int v2)
+  {
+
+    if (null == m_map)
+    {
+      m_map = new int[m_blocksize];
+      m_mapSize = m_blocksize;
+    }
+    else
+    {
+      if ((m_firstFree + 2) &gt;= m_mapSize)
+      {
+        m_mapSize += m_blocksize;
+
+        int newMap[] = new int[m_mapSize];
+
+        System.arraycopy(m_map, 0, newMap, 0, m_firstFree);
+
+        m_map = newMap;
+      }
+    }
+
+    m_map[m_firstFree] = v1;
+    m_map[m_firstFree + 1] = v2;
+    m_firstFree += 2;
+  }
+</source>
+        <source file="com/sun/org/apache/xpath/internal/NodeSet.java" startline="1007" endline="1032">
+  public final void pushPair(Node v1, Node v2)
+  {
+
+    if (null == m_map)
+    {
+      m_map = new Node[m_blocksize];
+      m_mapSize = m_blocksize;
+    }
+    else
+    {
+      if ((m_firstFree + 2) &gt;= m_mapSize)
+      {
+        m_mapSize += m_blocksize;
+
+        Node newMap[] = new Node[m_mapSize];
+
+        System.arraycopy(m_map, 0, newMap, 0, m_firstFree);
+
+        m_map = newMap;
+      }
+    }
+
+    m_map[m_firstFree] = v1;
+    m_map[m_firstFree + 1] = v2;
+    m_firstFree += 2;
+  }
+</source>
+    </clone>
+    <clone nlines="25" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xml/internal/utils/NodeVector.java" startline="398" endline="422">
+  public void appendNodes(NodeVector nodes)
+  {
+
+    int nNodes = nodes.size();
+
+    if (null == m_map)
+    {
+      m_mapSize = nNodes + m_blocksize;
+      m_map = new int[m_mapSize];
+    }
+    else if ((m_firstFree + nNodes) &gt;= m_mapSize)
+    {
+      m_mapSize += (nNodes + m_blocksize);
+
+      int newMap[] = new int[m_mapSize];
+
+      System.arraycopy(m_map, 0, newMap, 0, m_firstFree + nNodes);
+
+      m_map = newMap;
+    }
+
+    System.arraycopy(nodes.m_map, 0, m_map, m_firstFree, nNodes);
+
+    m_firstFree += nNodes;
+  }
+</source>
+        <source file="com/sun/org/apache/xpath/internal/NodeSet.java" startline="1140" endline="1164">
+  public void appendNodes(NodeSet nodes)
+  {
+
+    int nNodes = nodes.size();
+
+    if (null == m_map)
+    {
+      m_mapSize = nNodes + m_blocksize;
+      m_map = new Node[m_mapSize];
+    }
+    else if ((m_firstFree + nNodes) &gt;= m_mapSize)
+    {
+      m_mapSize += (nNodes + m_blocksize);
+
+      Node newMap[] = new Node[m_mapSize];
+
+      System.arraycopy(m_map, 0, newMap, 0, m_firstFree + nNodes);
+
+      m_map = newMap;
+    }
+
+    System.arraycopy(nodes.m_map, 0, m_map, m_firstFree, nNodes);
+
+    m_firstFree += nNodes;
+  }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="com/sun/org/apache/xerces/internal/jaxp/SAXParserImpl.java" startline="692" endline="711">
+        private void setSchemaValidatorFeature(String name, boolean value)
+            throws SAXNotRecognizedException, SAXNotSupportedException {
+            try {
+                fSAXParser.fSchemaValidator.setFeature(name, value);
+            }
+            // This should never be thrown from the schema validator.
+            catch (XMLConfigurationException e) {
+                String identifier = e.getIdentifier();
+                if (e.getType() == Status.NOT_RECOGNIZED) {
+                    throw new SAXNotRecognizedException(
+                        SAXMessageFormatter.formatMessage(fConfiguration.getLocale(),
+                        "feature-not-recognized", new Object [] {identifier}));
+                }
+                else {
+                    throw new SAXNotSupportedException(
+                        SAXMessageFormatter.formatMessage(fConfiguration.getLocale(),
+                        "feature-not-supported", new Object [] {identifier}));
+                }
+            }
+        }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/jaxp/SAXParserImpl.java" startline="713" endline="732">
+        private void setSchemaValidatorProperty(String name, Object value)
+            throws SAXNotRecognizedException, SAXNotSupportedException {
+            try {
+                fSAXParser.fSchemaValidator.setProperty(name, value);
+            }
+            // This should never be thrown from the schema validator.
+            catch (XMLConfigurationException e) {
+                String identifier = e.getIdentifier();
+                if (e.getType() == Status.NOT_RECOGNIZED) {
+                    throw new SAXNotRecognizedException(
+                        SAXMessageFormatter.formatMessage(fConfiguration.getLocale(),
+                        "property-not-recognized", new Object [] {identifier}));
+                }
+                else {
+                    throw new SAXNotSupportedException(
+                        SAXMessageFormatter.formatMessage(fConfiguration.getLocale(),
+                        "property-not-supported", new Object [] {identifier}));
+                }
+            }
+        }
+</source>
+    </clone>
+    <clone nlines="18" similarity="100">
+        <!-- identifiers, normalization -->
+        <source file="com/sun/org/apache/bcel/internal/generic/ConstantPoolGen.java" startline="598" endline="615">
+  public int addInterfaceMethodref(String class_name, String method_name, String signature) {
+    int ret, class_index, name_and_type_index;
+
+    if((ret = lookupInterfaceMethodref(class_name, method_name, signature)) != -1)
+      return ret; // Already in CP
+
+    adjustSize();
+
+    class_index         = addClass(class_name);
+    name_and_type_index = addNameAndType(method_name, signature);
+    ret = index;
+    constants[index++] = new ConstantInterfaceMethodref(class_index, name_and_type_index);
+
+    cp_table.put(class_name + IMETHODREF_DELIM + method_name +
+                 IMETHODREF_DELIM + signature, new Index(ret));
+
+    return ret;
+  }
+</source>
+        <source file="com/sun/org/apache/bcel/internal/generic/ConstantPoolGen.java" startline="643" endline="660">
+  public int addFieldref(String class_name, String field_name, String signature) {
+    int  ret;
+    int  class_index, name_and_type_index;
+
+    if((ret = lookupFieldref(class_name, field_name, signature)) != -1)
+      return ret; // Already in CP
+
+    adjustSize();
+
+    class_index         = addClass(class_name);
+    name_and_type_index = addNameAndType(field_name, signature);
+    ret = index;
+    constants[index++] = new ConstantFieldref(class_index, name_and_type_index);
+
+    cp_table.put(class_name + FIELDREF_DELIM + field_name + FIELDREF_DELIM + signature, new Index(ret));
+
+    return ret;
+  }
+</source>
+    </clone>
+    <clone nlines="23" similarity="100">
+        <!-- identifiers, normalization -->
+        <source file="com/sun/org/apache/xpath/internal/axes/PredicatedNodeTest.java" startline="570" endline="592">
+    public boolean deepEquals(Expression expr)
+    {
+      if (!super.deepEquals(expr))
+            return false;
+
+      PredicatedNodeTest pnt = (PredicatedNodeTest) expr;
+      if (null != m_predicates)
+      {
+
+        int n = m_predicates.length;
+        if ((null == pnt.m_predicates) || (pnt.m_predicates.length != n))
+              return false;
+        for (int i = 0; i &lt; n; i++)
+        {
+          if (!m_predicates[i].deepEquals(pnt.m_predicates[i]))
+                return false;
+        }
+      }
+      else if (null != pnt.m_predicates)
+              return false;
+
+      return true;
+    }
+</source>
+        <source file="com/sun/org/apache/xpath/internal/axes/UnionPathIterator.java" startline="557" endline="583">
+    public boolean deepEquals(Expression expr)
+    {
+      if (!super.deepEquals(expr))
+            return false;
+
+      UnionPathIterator upi = (UnionPathIterator) expr;
+
+      if (null != m_exprs)
+      {
+        int n = m_exprs.length;
+
+        if((null == upi.m_exprs) || (upi.m_exprs.length != n))
+                return false;
+
+        for (int i = 0; i &lt; n; i++)
+        {
+          if(!m_exprs[i].deepEquals(upi.m_exprs[i]))
+                return false;
+        }
+      }
+      else if (null != upi.m_exprs)
+      {
+          return false;
+      }
+
+      return true;
+    }
+</source>
+    </clone>
+    <clone nlines="17" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xerces/internal/impl/dtd/DTDGrammar.java" startline="2540" endline="2556">
+    private void ensureNotationDeclCapacity(int chunk) {
+        if (chunk &gt;= fNotationName.length) {
+            fNotationName = resize(fNotationName, fNotationName.length * 2);
+            fNotationPublicId = resize(fNotationPublicId, fNotationPublicId.length * 2);
+            fNotationSystemId = resize(fNotationSystemId, fNotationSystemId.length * 2);
+            fNotationBaseSystemId = resize(fNotationBaseSystemId, fNotationBaseSystemId.length * 2);
+        }
+        else if (fNotationName[chunk] != null) {
+            return;
+        }
+
+        fNotationName[chunk] = new String[CHUNK_SIZE];
+        fNotationPublicId[chunk] = new String[CHUNK_SIZE];
+        fNotationSystemId[chunk] = new String[CHUNK_SIZE];
+        fNotationBaseSystemId[chunk] = new String[CHUNK_SIZE];
+        return;
+    }
+</source>
+        <source file="com/sun/xml/internal/stream/dtd/nonvalidating/DTDGrammar.java" startline="750" endline="767">
+    private void ensureElementDeclCapacity(int chunk) {
+        if (chunk &gt;= fElementDeclName.length) {
+
+            fElementDeclName = resize(fElementDeclName, fElementDeclName.length * 2);
+            fElementDeclType = resize(fElementDeclType, fElementDeclType.length * 2);
+            fElementDeclFirstAttributeDeclIndex = resize(fElementDeclFirstAttributeDeclIndex, fElementDeclFirstAttributeDeclIndex.length * 2);
+            fElementDeclLastAttributeDeclIndex = resize(fElementDeclLastAttributeDeclIndex, fElementDeclLastAttributeDeclIndex.length * 2);
+        }
+        else if (fElementDeclName[chunk] != null) {
+            return;
+        }
+
+        fElementDeclName[chunk] = new QName[CHUNK_SIZE];
+        fElementDeclType[chunk] = new short[CHUNK_SIZE];
+        fElementDeclFirstAttributeDeclIndex[chunk] = new int[CHUNK_SIZE];
+        fElementDeclLastAttributeDeclIndex[chunk] = new int[CHUNK_SIZE];
+        return;
+    }
+</source>
+    </clone>
+    <clone nlines="31" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xerces/internal/parsers/XML11Configuration.java" startline="904" endline="934">
+        public void setFeature(String featureId, boolean state)
+                throws XMLConfigurationException {
+                fConfigUpdated = true;
+                // forward to every XML 1.0 component
+                int count = fComponents.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fComponents.get(i);
+                        c.setFeature(featureId, state);
+                }
+                // forward it to common components
+                count = fCommonComponents.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fCommonComponents.get(i);
+                        c.setFeature(featureId, state);
+                }
+
+                // forward to every XML 1.1 component
+                count = fXML11Components.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fXML11Components.get(i);
+                        try{
+                                c.setFeature(featureId, state);
+                        }
+                        catch (Exception e){
+                                // no op
+                        }
+                }
+                // save state if noone "objects"
+                super.setFeature(featureId, state);
+
+        } // setFeature(String,boolean)
+</source>
+        <source file="com/sun/org/apache/xerces/internal/parsers/XML11DTDConfiguration.java" startline="836" endline="866">
+        public void setProperty(String propertyId, Object value)
+                throws XMLConfigurationException {
+                fConfigUpdated = true;
+                // forward to every XML 1.0 component
+                int count = fComponents.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fComponents.get(i);
+                        c.setProperty(propertyId, value);
+                }
+                // forward it to every common Component
+                count = fCommonComponents.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fCommonComponents.get(i);
+                        c.setProperty(propertyId, value);
+                }
+                // forward it to every XML 1.1 component
+                count = fXML11Components.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fXML11Components.get(i);
+                        try{
+                                c.setProperty(propertyId, value);
+                        }
+                        catch (Exception e){
+                                // ignore it
+                        }
+                }
+
+                // store value if noone "objects"
+                super.setProperty(propertyId, value);
+
+        } // setProperty(String,Object)
+</source>
+    </clone>
+    <clone nlines="31" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xerces/internal/parsers/XML11Configuration.java" startline="904" endline="934">
+        public void setFeature(String featureId, boolean state)
+                throws XMLConfigurationException {
+                fConfigUpdated = true;
+                // forward to every XML 1.0 component
+                int count = fComponents.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fComponents.get(i);
+                        c.setFeature(featureId, state);
+                }
+                // forward it to common components
+                count = fCommonComponents.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fCommonComponents.get(i);
+                        c.setFeature(featureId, state);
+                }
+
+                // forward to every XML 1.1 component
+                count = fXML11Components.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fXML11Components.get(i);
+                        try{
+                                c.setFeature(featureId, state);
+                        }
+                        catch (Exception e){
+                                // no op
+                        }
+                }
+                // save state if noone "objects"
+                super.setFeature(featureId, state);
+
+        } // setFeature(String,boolean)
+</source>
+        <source file="com/sun/org/apache/xerces/internal/parsers/XML11NonValidatingConfiguration.java" startline="762" endline="792">
+        public void setProperty(String propertyId, Object value)
+                throws XMLConfigurationException {
+                fConfigUpdated = true;
+                // forward to every XML 1.0 component
+                int count = fComponents.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fComponents.get(i);
+                        c.setProperty(propertyId, value);
+                }
+                // forward it to every common Component
+                count = fCommonComponents.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fCommonComponents.get(i);
+                        c.setProperty(propertyId, value);
+                }
+                // forward it to every XML 1.1 component
+                count = fXML11Components.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fXML11Components.get(i);
+                        try{
+                                c.setProperty(propertyId, value);
+                        }
+                        catch (Exception e){
+                                // ignore it
+                        }
+                }
+
+                // store value if noone "objects"
+                super.setProperty(propertyId, value);
+
+        } // setProperty(String,Object)
+</source>
+    </clone>
+    <clone nlines="31" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xerces/internal/parsers/XML11DTDConfiguration.java" startline="798" endline="828">
+        public void setFeature(String featureId, boolean state)
+                throws XMLConfigurationException {
+                fConfigUpdated = true;
+                // forward to every XML 1.0 component
+                int count = fComponents.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fComponents.get(i);
+                        c.setFeature(featureId, state);
+                }
+                // forward it to common components
+                count = fCommonComponents.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fCommonComponents.get(i);
+                        c.setFeature(featureId, state);
+                }
+
+                // forward to every XML 1.1 component
+                count = fXML11Components.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fXML11Components.get(i);
+                        try{
+                                c.setFeature(featureId, state);
+                        }
+                        catch (Exception e){
+                                // no op
+                        }
+                }
+                // save state if noone "objects"
+                super.setFeature(featureId, state);
+
+        } // setFeature(String,boolean)
+</source>
+        <source file="com/sun/org/apache/xerces/internal/parsers/XML11DTDConfiguration.java" startline="836" endline="866">
+        public void setProperty(String propertyId, Object value)
+                throws XMLConfigurationException {
+                fConfigUpdated = true;
+                // forward to every XML 1.0 component
+                int count = fComponents.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fComponents.get(i);
+                        c.setProperty(propertyId, value);
+                }
+                // forward it to every common Component
+                count = fCommonComponents.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fCommonComponents.get(i);
+                        c.setProperty(propertyId, value);
+                }
+                // forward it to every XML 1.1 component
+                count = fXML11Components.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fXML11Components.get(i);
+                        try{
+                                c.setProperty(propertyId, value);
+                        }
+                        catch (Exception e){
+                                // ignore it
+                        }
+                }
+
+                // store value if noone "objects"
+                super.setProperty(propertyId, value);
+
+        } // setProperty(String,Object)
+</source>
+    </clone>
+    <clone nlines="31" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xerces/internal/parsers/XML11DTDConfiguration.java" startline="798" endline="828">
+        public void setFeature(String featureId, boolean state)
+                throws XMLConfigurationException {
+                fConfigUpdated = true;
+                // forward to every XML 1.0 component
+                int count = fComponents.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fComponents.get(i);
+                        c.setFeature(featureId, state);
+                }
+                // forward it to common components
+                count = fCommonComponents.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fCommonComponents.get(i);
+                        c.setFeature(featureId, state);
+                }
+
+                // forward to every XML 1.1 component
+                count = fXML11Components.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fXML11Components.get(i);
+                        try{
+                                c.setFeature(featureId, state);
+                        }
+                        catch (Exception e){
+                                // no op
+                        }
+                }
+                // save state if noone "objects"
+                super.setFeature(featureId, state);
+
+        } // setFeature(String,boolean)
+</source>
+        <source file="com/sun/org/apache/xerces/internal/parsers/XML11NonValidatingConfiguration.java" startline="762" endline="792">
+        public void setProperty(String propertyId, Object value)
+                throws XMLConfigurationException {
+                fConfigUpdated = true;
+                // forward to every XML 1.0 component
+                int count = fComponents.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fComponents.get(i);
+                        c.setProperty(propertyId, value);
+                }
+                // forward it to every common Component
+                count = fCommonComponents.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fCommonComponents.get(i);
+                        c.setProperty(propertyId, value);
+                }
+                // forward it to every XML 1.1 component
+                count = fXML11Components.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fXML11Components.get(i);
+                        try{
+                                c.setProperty(propertyId, value);
+                        }
+                        catch (Exception e){
+                                // ignore it
+                        }
+                }
+
+                // store value if noone "objects"
+                super.setProperty(propertyId, value);
+
+        } // setProperty(String,Object)
+</source>
+    </clone>
+    <clone nlines="31" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xerces/internal/parsers/XML11DTDConfiguration.java" startline="836" endline="866">
+        public void setProperty(String propertyId, Object value)
+                throws XMLConfigurationException {
+                fConfigUpdated = true;
+                // forward to every XML 1.0 component
+                int count = fComponents.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fComponents.get(i);
+                        c.setProperty(propertyId, value);
+                }
+                // forward it to every common Component
+                count = fCommonComponents.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fCommonComponents.get(i);
+                        c.setProperty(propertyId, value);
+                }
+                // forward it to every XML 1.1 component
+                count = fXML11Components.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fXML11Components.get(i);
+                        try{
+                                c.setProperty(propertyId, value);
+                        }
+                        catch (Exception e){
+                                // ignore it
+                        }
+                }
+
+                // store value if noone "objects"
+                super.setProperty(propertyId, value);
+
+        } // setProperty(String,Object)
+</source>
+        <source file="com/sun/org/apache/xerces/internal/parsers/XML11NonValidatingConfiguration.java" startline="724" endline="754">
+        public void setFeature(String featureId, boolean state)
+                throws XMLConfigurationException {
+                fConfigUpdated = true;
+                // forward to every XML 1.0 component
+                int count = fComponents.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fComponents.get(i);
+                        c.setFeature(featureId, state);
+                }
+                // forward it to common components
+                count = fCommonComponents.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fCommonComponents.get(i);
+                        c.setFeature(featureId, state);
+                }
+
+                // forward to every XML 1.1 component
+                count = fXML11Components.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fXML11Components.get(i);
+                        try{
+                                c.setFeature(featureId, state);
+                        }
+                        catch (Exception e){
+                                // no op
+                        }
+                }
+                // save state if noone "objects"
+                super.setFeature(featureId, state);
+
+        } // setFeature(String,boolean)
+</source>
+    </clone>
+    <clone nlines="31" similarity="100">
+        <!-- identifiers -->
+        <source file="com/sun/org/apache/xerces/internal/parsers/XML11NonValidatingConfiguration.java" startline="724" endline="754">
+        public void setFeature(String featureId, boolean state)
+                throws XMLConfigurationException {
+                fConfigUpdated = true;
+                // forward to every XML 1.0 component
+                int count = fComponents.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fComponents.get(i);
+                        c.setFeature(featureId, state);
+                }
+                // forward it to common components
+                count = fCommonComponents.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fCommonComponents.get(i);
+                        c.setFeature(featureId, state);
+                }
+
+                // forward to every XML 1.1 component
+                count = fXML11Components.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fXML11Components.get(i);
+                        try{
+                                c.setFeature(featureId, state);
+                        }
+                        catch (Exception e){
+                                // no op
+                        }
+                }
+                // save state if noone "objects"
+                super.setFeature(featureId, state);
+
+        } // setFeature(String,boolean)
+</source>
+        <source file="com/sun/org/apache/xerces/internal/parsers/XML11NonValidatingConfiguration.java" startline="762" endline="792">
+        public void setProperty(String propertyId, Object value)
+                throws XMLConfigurationException {
+                fConfigUpdated = true;
+                // forward to every XML 1.0 component
+                int count = fComponents.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fComponents.get(i);
+                        c.setProperty(propertyId, value);
+                }
+                // forward it to every common Component
+                count = fCommonComponents.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fCommonComponents.get(i);
+                        c.setProperty(propertyId, value);
+                }
+                // forward it to every XML 1.1 component
+                count = fXML11Components.size();
+                for (int i = 0; i &lt; count; i++) {
+                        XMLComponent c = (XMLComponent) fXML11Components.get(i);
+                        try{
+                                c.setProperty(propertyId, value);
+                        }
+                        catch (Exception e){
+                                // ignore it
+                        }
+                }
+
+                // store value if noone "objects"
+                super.setProperty(propertyId, value);
+
+        } // setProperty(String,Object)
+</source>
+    </clone>
+</clones>

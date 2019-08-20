@@ -1,0 +1,4445 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- The clones reported by DrDup and not reported by NiCad
+112x    identifiers, literals
+15x     type 1
+10x     identifiers
+7x      identifiers, literals, normalization
+-->
+<clones>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcArray.java" startline="145" endline="154">
+    @Override
+    public String getBaseTypeName() throws SQLException {
+        try {
+            debugCodeCall("getBaseTypeName");
+            checkClosed();
+            return "NULL";
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcStatement.java" startline="482" endline="491">
+    @Override
+    public int getMaxFieldSize() throws SQLException {
+        try {
+            debugCodeCall("getMaxFieldSize");
+            checkClosed();
+            return 0;
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcConnection.java" startline="627" endline="636">
+    @Override
+    public SQLWarning getWarnings() throws SQLException {
+        try {
+            debugCodeCall("getWarnings");
+            checkClosed();
+            return null;
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcStatement.java" startline="482" endline="491">
+    @Override
+    public int getMaxFieldSize() throws SQLException {
+        try {
+            debugCodeCall("getMaxFieldSize");
+            checkClosed();
+            return 0;
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="258" endline="267">
+    @Override
+    public SQLWarning getWarnings() throws SQLException {
+        try {
+            debugCodeCall("getWarnings");
+            checkClosed();
+            return null;
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcStatement.java" startline="482" endline="491">
+    @Override
+    public int getMaxFieldSize() throws SQLException {
+        try {
+            debugCodeCall("getMaxFieldSize");
+            checkClosed();
+            return 0;
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcStatement.java" startline="286" endline="295">
+    @Override
+    public SQLWarning getWarnings() throws SQLException {
+        try {
+            debugCodeCall("getWarnings");
+            checkClosed();
+            return null;
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcStatement.java" startline="482" endline="491">
+    @Override
+    public int getMaxFieldSize() throws SQLException {
+        try {
+            debugCodeCall("getMaxFieldSize");
+            checkClosed();
+            return 0;
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcConnection.java" startline="849" endline="858">
+    @Override
+    public int getHoldability() throws SQLException {
+        try {
+            debugCodeCall("getHoldability");
+            checkClosed();
+            return holdability;
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="165" endline="174">
+    @Override
+    public boolean wasNull() throws SQLException {
+        try {
+            debugCodeCall("wasNull");
+            checkClosed();
+            return wasNull;
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcParameterMetaData.java" startline="43" endline="52">
+    @Override
+    public int getParameterCount() throws SQLException {
+        try {
+            debugCodeCall("getParameterCount");
+            checkClosed();
+            return paramCount;
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="165" endline="174">
+    @Override
+    public boolean wasNull() throws SQLException {
+        try {
+            debugCodeCall("wasNull");
+            checkClosed();
+            return wasNull;
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="165" endline="174">
+    @Override
+    public boolean wasNull() throws SQLException {
+        try {
+            debugCodeCall("wasNull");
+            checkClosed();
+            return wasNull;
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSetMetaData.java" startline="45" endline="54">
+    @Override
+    public int getColumnCount() throws SQLException {
+        try {
+            debugCodeCall("getColumnCount");
+            checkClosed();
+            return columnCount;
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="165" endline="174">
+    @Override
+    public boolean wasNull() throws SQLException {
+        try {
+            debugCodeCall("wasNull");
+            checkClosed();
+            return wasNull;
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcStatement.java" startline="238" endline="247">
+    @Override
+    public int getUpdateCount() throws SQLException {
+        try {
+            debugCodeCall("getUpdateCount");
+            checkClosed();
+            return updateCount;
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="165" endline="174">
+    @Override
+    public boolean wasNull() throws SQLException {
+        try {
+            debugCodeCall("wasNull");
+            checkClosed();
+            return wasNull;
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcStatement.java" startline="367" endline="376">
+    @Override
+    public int getMaxRows() throws SQLException {
+        try {
+            debugCodeCall("getMaxRows");
+            checkClosed();
+            return maxRows;
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="165" endline="174">
+    @Override
+    public boolean wasNull() throws SQLException {
+        try {
+            debugCodeCall("wasNull");
+            checkClosed();
+            return wasNull;
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcStatement.java" startline="432" endline="441">
+    @Override
+    public int getFetchSize() throws SQLException {
+        try {
+            debugCodeCall("getFetchSize");
+            checkClosed();
+            return fetchSize;
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="165" endline="174">
+    @Override
+    public boolean wasNull() throws SQLException {
+        try {
+            debugCodeCall("wasNull");
+            checkClosed();
+            return wasNull;
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcStatement.java" startline="448" endline="457">
+    @Override
+    public int getResultSetConcurrency() throws SQLException {
+        try {
+            debugCodeCall("getResultSetConcurrency");
+            checkClosed();
+            return resultSetConcurrency;
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="165" endline="174">
+    @Override
+    public boolean wasNull() throws SQLException {
+        try {
+            debugCodeCall("wasNull");
+            checkClosed();
+            return wasNull;
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcStatement.java" startline="465" endline="474">
+    @Override
+    public int getResultSetType()  throws SQLException {
+        try {
+            debugCodeCall("getResultSetType");
+            checkClosed();
+            return resultSetType;
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcArray.java" startline="43" endline="52">
+    @Override
+    public Object getArray() throws SQLException {
+        try {
+            debugCodeCall("getArray");
+            checkClosed();
+            return get();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="126" endline="135">
+    @Override
+    public boolean next() throws SQLException {
+        try {
+            debugCodeCall("next");
+            checkClosed();
+            return nextRow();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers -->
+        <source file="org/h2/expression/Parameter.java" startline="110" endline="119">
+    @Override
+    public int getScale() {
+        if (value != null) {
+            return value.getScale();
+        }
+        if (column != null) {
+            return column.getScale();
+        }
+        return 0;
+    }
+</source>
+        <source file="org/h2/expression/Parameter.java" startline="121" endline="130">
+    @Override
+    public long getPrecision() {
+        if (value != null) {
+            return value.getPrecision();
+        }
+        if (column != null) {
+            return column.getPrecision();
+        }
+        return 0;
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers -->
+        <source file="org/h2/expression/Parameter.java" startline="121" endline="130">
+    @Override
+    public long getPrecision() {
+        if (value != null) {
+            return value.getPrecision();
+        }
+        if (column != null) {
+            return column.getPrecision();
+        }
+        return 0;
+    }
+</source>
+        <source file="org/h2/expression/Parameter.java" startline="132" endline="141">
+    @Override
+    public int getDisplaySize() {
+        if (value != null) {
+            return value.getDisplaySize();
+        }
+        if (column != null) {
+            return column.getDisplaySize();
+        }
+        return 0;
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcBlob.java" startline="147" endline="156">
+    @Override
+    public InputStream getBinaryStream() throws SQLException {
+        try {
+            debugCodeCall("getBinaryStream");
+            checkClosed();
+            return value.getInputStream();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="2589" endline="2598">
+    @Override
+    public int getFetchSize() throws SQLException {
+        try {
+            debugCodeCall("getFetchSize");
+            checkClosed();
+            return result.getFetchSize();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcBlob.java" startline="147" endline="156">
+    @Override
+    public InputStream getBinaryStream() throws SQLException {
+        try {
+            debugCodeCall("getBinaryStream");
+            checkClosed();
+            return value.getInputStream();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="3334" endline="3343">
+    @Override
+    public int getHoldability() throws SQLException {
+        try {
+            debugCodeCall("getHoldability");
+            checkClosed();
+            return conn.getHoldability();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcBlob.java" startline="147" endline="156">
+    @Override
+    public InputStream getBinaryStream() throws SQLException {
+        try {
+            debugCodeCall("getBinaryStream");
+            checkClosed();
+            return value.getInputStream();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcStatement.java" startline="580" endline="589">
+    @Override
+    public int getQueryTimeout() throws SQLException {
+        try {
+            debugCodeCall("getQueryTimeout");
+            checkClosed();
+            return conn.getQueryTimeout();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcClob.java" startline="106" endline="115">
+    @Override
+    public Reader getCharacterStream() throws SQLException {
+        try {
+            debugCodeCall("getCharacterStream");
+            checkClosed();
+            return value.getReader();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="2589" endline="2598">
+    @Override
+    public int getFetchSize() throws SQLException {
+        try {
+            debugCodeCall("getFetchSize");
+            checkClosed();
+            return result.getFetchSize();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcClob.java" startline="106" endline="115">
+    @Override
+    public Reader getCharacterStream() throws SQLException {
+        try {
+            debugCodeCall("getCharacterStream");
+            checkClosed();
+            return value.getReader();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="3334" endline="3343">
+    @Override
+    public int getHoldability() throws SQLException {
+        try {
+            debugCodeCall("getHoldability");
+            checkClosed();
+            return conn.getHoldability();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcClob.java" startline="106" endline="115">
+    @Override
+    public Reader getCharacterStream() throws SQLException {
+        try {
+            debugCodeCall("getCharacterStream");
+            checkClosed();
+            return value.getReader();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcStatement.java" startline="580" endline="589">
+    @Override
+    public int getQueryTimeout() throws SQLException {
+        try {
+            debugCodeCall("getQueryTimeout");
+            checkClosed();
+            return conn.getQueryTimeout();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="509" endline="518">
+    @Override
+    public Object getObject(int columnIndex) throws SQLException {
+        try {
+            debugCodeCall("getObject", columnIndex);
+            Value v = get(columnIndex);
+            return conn.convertToDefaultObject(v);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="529" endline="538">
+    @Override
+    public Object getObject(String columnLabel) throws SQLException {
+        try {
+            debugCodeCall("getObject", columnLabel);
+            Value v = get(columnLabel);
+            return conn.convertToDefaultObject(v);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSetMetaData.java" startline="63" endline="72">
+    @Override
+    public String getColumnLabel(int column) throws SQLException {
+        try {
+            debugCodeCall("getColumnLabel", column);
+            checkColumnIndex(column);
+            return result.getAlias(--column);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSetMetaData.java" startline="81" endline="90">
+    @Override
+    public String getColumnName(int column) throws SQLException {
+        try {
+            debugCodeCall("getColumnName", column);
+            checkColumnIndex(column);
+            return result.getColumnName(--column);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSetMetaData.java" startline="63" endline="72">
+    @Override
+    public String getColumnLabel(int column) throws SQLException {
+        try {
+            debugCodeCall("getColumnLabel", column);
+            checkColumnIndex(column);
+            return result.getAlias(--column);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSetMetaData.java" startline="194" endline="203">
+    @Override
+    public boolean isAutoIncrement(int column) throws SQLException {
+        try {
+            debugCodeCall("isAutoIncrement", column);
+            checkColumnIndex(column);
+            return result.isAutoIncrement(--column);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSetMetaData.java" startline="81" endline="90">
+    @Override
+    public String getColumnName(int column) throws SQLException {
+        try {
+            debugCodeCall("getColumnName", column);
+            checkColumnIndex(column);
+            return result.getColumnName(--column);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSetMetaData.java" startline="194" endline="203">
+    @Override
+    public boolean isAutoIncrement(int column) throws SQLException {
+        try {
+            debugCodeCall("isAutoIncrement", column);
+            checkColumnIndex(column);
+            return result.isAutoIncrement(--column);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="13" similarity="100">
+        <!-- identifiers, literals, normalization -->
+        <source file="org/h2/jdbc/JdbcDatabaseMetaData.java" startline="729" endline="745">
+    @Override
+    public ResultSet getSchemas() throws SQLException {
+        try {
+            debugCodeCall("getSchemas");
+            checkClosed();
+            PreparedStatement prep = conn
+                    .prepareAutoCloseStatement("SELECT "
+                            + "SCHEMA_NAME TABLE_SCHEM, "
+                            + "CATALOG_NAME TABLE_CATALOG, "
+                            +" IS_DEFAULT "
+                            + "FROM INFORMATION_SCHEMA.SCHEMATA "
+                            + "ORDER BY SCHEMA_NAME");
+            return prep.executeQuery();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcDatabaseMetaData.java" startline="758" endline="770">
+    @Override
+    public ResultSet getCatalogs() throws SQLException {
+        try {
+            debugCodeCall("getCatalogs");
+            checkClosed();
+            PreparedStatement prep = conn.prepareAutoCloseStatement(
+                    "SELECT CATALOG_NAME TABLE_CAT "
+                    + "FROM INFORMATION_SCHEMA.CATALOGS");
+            return prep.executeQuery();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="13" similarity="100">
+        <!-- identifiers, literals, normalization -->
+        <source file="org/h2/jdbc/JdbcDatabaseMetaData.java" startline="729" endline="745">
+    @Override
+    public ResultSet getSchemas() throws SQLException {
+        try {
+            debugCodeCall("getSchemas");
+            checkClosed();
+            PreparedStatement prep = conn
+                    .prepareAutoCloseStatement("SELECT "
+                            + "SCHEMA_NAME TABLE_SCHEM, "
+                            + "CATALOG_NAME TABLE_CATALOG, "
+                            +" IS_DEFAULT "
+                            + "FROM INFORMATION_SCHEMA.SCHEMATA "
+                            + "ORDER BY SCHEMA_NAME");
+            return prep.executeQuery();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcDatabaseMetaData.java" startline="782" endline="795">
+    @Override
+    public ResultSet getTableTypes() throws SQLException {
+        try {
+            debugCodeCall("getTableTypes");
+            checkClosed();
+            PreparedStatement prep = conn.prepareAutoCloseStatement("SELECT "
+                    + "TYPE TABLE_TYPE "
+                    + "FROM INFORMATION_SCHEMA.TABLE_TYPES "
+                    + "ORDER BY TABLE_TYPE");
+            return prep.executeQuery();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="13" similarity="100">
+        <!-- identifiers, literals, normalization -->
+        <source file="org/h2/jdbc/JdbcDatabaseMetaData.java" startline="758" endline="770">
+    @Override
+    public ResultSet getCatalogs() throws SQLException {
+        try {
+            debugCodeCall("getCatalogs");
+            checkClosed();
+            PreparedStatement prep = conn.prepareAutoCloseStatement(
+                    "SELECT CATALOG_NAME TABLE_CAT "
+                    + "FROM INFORMATION_SCHEMA.CATALOGS");
+            return prep.executeQuery();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcDatabaseMetaData.java" startline="782" endline="795">
+    @Override
+    public ResultSet getTableTypes() throws SQLException {
+        try {
+            debugCodeCall("getTableTypes");
+            checkClosed();
+            PreparedStatement prep = conn.prepareAutoCloseStatement("SELECT "
+                    + "TYPE TABLE_TYPE "
+                    + "FROM INFORMATION_SCHEMA.TABLE_TYPES "
+                    + "ORDER BY TABLE_TYPE");
+            return prep.executeQuery();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- type 1 -->
+        <source file="org/h2/jdbc/JdbcConnection.java" startline="1851" endline="1862">
+    @Override
+    @SuppressWarnings("unchecked")
+    public &lt;T&gt; T unwrap(Class&lt;T&gt; iface) throws SQLException {
+        try {
+            if (isWrapperFor(iface)) {
+                return (T) this;
+            }
+            throw DbException.getInvalidValueException("iface", iface);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcDatabaseMetaData.java" startline="3094" endline="3105">
+    @Override
+    @SuppressWarnings("unchecked")
+    public &lt;T&gt; T unwrap(Class&lt;T&gt; iface) throws SQLException {
+        try {
+            if (isWrapperFor(iface)) {
+                return (T) this;
+            }
+            throw DbException.getInvalidValueException("iface", iface);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- type 1 -->
+        <source file="org/h2/jdbc/JdbcConnection.java" startline="1851" endline="1862">
+    @Override
+    @SuppressWarnings("unchecked")
+    public &lt;T&gt; T unwrap(Class&lt;T&gt; iface) throws SQLException {
+        try {
+            if (isWrapperFor(iface)) {
+                return (T) this;
+            }
+            throw DbException.getInvalidValueException("iface", iface);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcParameterMetaData.java" startline="227" endline="238">
+    @Override
+    @SuppressWarnings("unchecked")
+    public &lt;T&gt; T unwrap(Class&lt;T&gt; iface) throws SQLException {
+        try {
+            if (isWrapperFor(iface)) {
+                return (T) this;
+            }
+            throw DbException.getInvalidValueException("iface", iface);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- type 1 -->
+        <source file="org/h2/jdbc/JdbcConnection.java" startline="1851" endline="1862">
+    @Override
+    @SuppressWarnings("unchecked")
+    public &lt;T&gt; T unwrap(Class&lt;T&gt; iface) throws SQLException {
+        try {
+            if (isWrapperFor(iface)) {
+                return (T) this;
+            }
+            throw DbException.getInvalidValueException("iface", iface);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="3698" endline="3709">
+    @Override
+    @SuppressWarnings("unchecked")
+    public &lt;T&gt; T unwrap(Class&lt;T&gt; iface) throws SQLException {
+        try {
+            if (isWrapperFor(iface)) {
+                return (T) this;
+            }
+            throw DbException.getInvalidValueException("iface", iface);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- type 1 -->
+        <source file="org/h2/jdbc/JdbcConnection.java" startline="1851" endline="1862">
+    @Override
+    @SuppressWarnings("unchecked")
+    public &lt;T&gt; T unwrap(Class&lt;T&gt; iface) throws SQLException {
+        try {
+            if (isWrapperFor(iface)) {
+                return (T) this;
+            }
+            throw DbException.getInvalidValueException("iface", iface);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSetMetaData.java" startline="457" endline="468">
+    @Override
+    @SuppressWarnings("unchecked")
+    public &lt;T&gt; T unwrap(Class&lt;T&gt; iface) throws SQLException {
+        try {
+            if (isWrapperFor(iface)) {
+                return (T) this;
+            }
+            throw DbException.getInvalidValueException("iface", iface);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- type 1 -->
+        <source file="org/h2/jdbc/JdbcConnection.java" startline="1851" endline="1862">
+    @Override
+    @SuppressWarnings("unchecked")
+    public &lt;T&gt; T unwrap(Class&lt;T&gt; iface) throws SQLException {
+        try {
+            if (isWrapperFor(iface)) {
+                return (T) this;
+            }
+            throw DbException.getInvalidValueException("iface", iface);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcStatement.java" startline="1089" endline="1100">
+    @Override
+    @SuppressWarnings("unchecked")
+    public &lt;T&gt; T unwrap(Class&lt;T&gt; iface) throws SQLException {
+        try {
+            if (isWrapperFor(iface)) {
+                return (T) this;
+            }
+            throw DbException.getInvalidValueException("iface", iface);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- type 1 -->
+        <source file="org/h2/jdbc/JdbcDatabaseMetaData.java" startline="3094" endline="3105">
+    @Override
+    @SuppressWarnings("unchecked")
+    public &lt;T&gt; T unwrap(Class&lt;T&gt; iface) throws SQLException {
+        try {
+            if (isWrapperFor(iface)) {
+                return (T) this;
+            }
+            throw DbException.getInvalidValueException("iface", iface);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcParameterMetaData.java" startline="227" endline="238">
+    @Override
+    @SuppressWarnings("unchecked")
+    public &lt;T&gt; T unwrap(Class&lt;T&gt; iface) throws SQLException {
+        try {
+            if (isWrapperFor(iface)) {
+                return (T) this;
+            }
+            throw DbException.getInvalidValueException("iface", iface);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- type 1 -->
+        <source file="org/h2/jdbc/JdbcDatabaseMetaData.java" startline="3094" endline="3105">
+    @Override
+    @SuppressWarnings("unchecked")
+    public &lt;T&gt; T unwrap(Class&lt;T&gt; iface) throws SQLException {
+        try {
+            if (isWrapperFor(iface)) {
+                return (T) this;
+            }
+            throw DbException.getInvalidValueException("iface", iface);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="3698" endline="3709">
+    @Override
+    @SuppressWarnings("unchecked")
+    public &lt;T&gt; T unwrap(Class&lt;T&gt; iface) throws SQLException {
+        try {
+            if (isWrapperFor(iface)) {
+                return (T) this;
+            }
+            throw DbException.getInvalidValueException("iface", iface);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- type 1 -->
+        <source file="org/h2/jdbc/JdbcDatabaseMetaData.java" startline="3094" endline="3105">
+    @Override
+    @SuppressWarnings("unchecked")
+    public &lt;T&gt; T unwrap(Class&lt;T&gt; iface) throws SQLException {
+        try {
+            if (isWrapperFor(iface)) {
+                return (T) this;
+            }
+            throw DbException.getInvalidValueException("iface", iface);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSetMetaData.java" startline="457" endline="468">
+    @Override
+    @SuppressWarnings("unchecked")
+    public &lt;T&gt; T unwrap(Class&lt;T&gt; iface) throws SQLException {
+        try {
+            if (isWrapperFor(iface)) {
+                return (T) this;
+            }
+            throw DbException.getInvalidValueException("iface", iface);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- type 1 -->
+        <source file="org/h2/jdbc/JdbcDatabaseMetaData.java" startline="3094" endline="3105">
+    @Override
+    @SuppressWarnings("unchecked")
+    public &lt;T&gt; T unwrap(Class&lt;T&gt; iface) throws SQLException {
+        try {
+            if (isWrapperFor(iface)) {
+                return (T) this;
+            }
+            throw DbException.getInvalidValueException("iface", iface);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcStatement.java" startline="1089" endline="1100">
+    @Override
+    @SuppressWarnings("unchecked")
+    public &lt;T&gt; T unwrap(Class&lt;T&gt; iface) throws SQLException {
+        try {
+            if (isWrapperFor(iface)) {
+                return (T) this;
+            }
+            throw DbException.getInvalidValueException("iface", iface);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- type 1 -->
+        <source file="org/h2/jdbc/JdbcParameterMetaData.java" startline="227" endline="238">
+    @Override
+    @SuppressWarnings("unchecked")
+    public &lt;T&gt; T unwrap(Class&lt;T&gt; iface) throws SQLException {
+        try {
+            if (isWrapperFor(iface)) {
+                return (T) this;
+            }
+            throw DbException.getInvalidValueException("iface", iface);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="3698" endline="3709">
+    @Override
+    @SuppressWarnings("unchecked")
+    public &lt;T&gt; T unwrap(Class&lt;T&gt; iface) throws SQLException {
+        try {
+            if (isWrapperFor(iface)) {
+                return (T) this;
+            }
+            throw DbException.getInvalidValueException("iface", iface);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- type 1 -->
+        <source file="org/h2/jdbc/JdbcParameterMetaData.java" startline="227" endline="238">
+    @Override
+    @SuppressWarnings("unchecked")
+    public &lt;T&gt; T unwrap(Class&lt;T&gt; iface) throws SQLException {
+        try {
+            if (isWrapperFor(iface)) {
+                return (T) this;
+            }
+            throw DbException.getInvalidValueException("iface", iface);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSetMetaData.java" startline="457" endline="468">
+    @Override
+    @SuppressWarnings("unchecked")
+    public &lt;T&gt; T unwrap(Class&lt;T&gt; iface) throws SQLException {
+        try {
+            if (isWrapperFor(iface)) {
+                return (T) this;
+            }
+            throw DbException.getInvalidValueException("iface", iface);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- type 1 -->
+        <source file="org/h2/jdbc/JdbcParameterMetaData.java" startline="227" endline="238">
+    @Override
+    @SuppressWarnings("unchecked")
+    public &lt;T&gt; T unwrap(Class&lt;T&gt; iface) throws SQLException {
+        try {
+            if (isWrapperFor(iface)) {
+                return (T) this;
+            }
+            throw DbException.getInvalidValueException("iface", iface);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcStatement.java" startline="1089" endline="1100">
+    @Override
+    @SuppressWarnings("unchecked")
+    public &lt;T&gt; T unwrap(Class&lt;T&gt; iface) throws SQLException {
+        try {
+            if (isWrapperFor(iface)) {
+                return (T) this;
+            }
+            throw DbException.getInvalidValueException("iface", iface);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- type 1 -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="3698" endline="3709">
+    @Override
+    @SuppressWarnings("unchecked")
+    public &lt;T&gt; T unwrap(Class&lt;T&gt; iface) throws SQLException {
+        try {
+            if (isWrapperFor(iface)) {
+                return (T) this;
+            }
+            throw DbException.getInvalidValueException("iface", iface);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSetMetaData.java" startline="457" endline="468">
+    @Override
+    @SuppressWarnings("unchecked")
+    public &lt;T&gt; T unwrap(Class&lt;T&gt; iface) throws SQLException {
+        try {
+            if (isWrapperFor(iface)) {
+                return (T) this;
+            }
+            throw DbException.getInvalidValueException("iface", iface);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- type 1 -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="3698" endline="3709">
+    @Override
+    @SuppressWarnings("unchecked")
+    public &lt;T&gt; T unwrap(Class&lt;T&gt; iface) throws SQLException {
+        try {
+            if (isWrapperFor(iface)) {
+                return (T) this;
+            }
+            throw DbException.getInvalidValueException("iface", iface);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcStatement.java" startline="1089" endline="1100">
+    @Override
+    @SuppressWarnings("unchecked")
+    public &lt;T&gt; T unwrap(Class&lt;T&gt; iface) throws SQLException {
+        try {
+            if (isWrapperFor(iface)) {
+                return (T) this;
+            }
+            throw DbException.getInvalidValueException("iface", iface);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- type 1 -->
+        <source file="org/h2/jdbc/JdbcResultSetMetaData.java" startline="457" endline="468">
+    @Override
+    @SuppressWarnings("unchecked")
+    public &lt;T&gt; T unwrap(Class&lt;T&gt; iface) throws SQLException {
+        try {
+            if (isWrapperFor(iface)) {
+                return (T) this;
+            }
+            throw DbException.getInvalidValueException("iface", iface);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcStatement.java" startline="1089" endline="1100">
+    @Override
+    @SuppressWarnings("unchecked")
+    public &lt;T&gt; T unwrap(Class&lt;T&gt; iface) throws SQLException {
+        try {
+            if (isWrapperFor(iface)) {
+                return (T) this;
+            }
+            throw DbException.getInvalidValueException("iface", iface);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="548" endline="557">
+    @Override
+    public boolean getBoolean(int columnIndex) throws SQLException {
+        try {
+            debugCodeCall("getBoolean", columnIndex);
+            Boolean v = get(columnIndex).getBoolean();
+            return v == null ? false : v.booleanValue();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="567" endline="576">
+    @Override
+    public boolean getBoolean(String columnLabel) throws SQLException {
+        try {
+            debugCodeCall("getBoolean", columnLabel);
+            Boolean v = get(columnLabel).getBoolean();
+            return v == null ? false : v.booleanValue();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="539" endline="549">
+    @Override
+    public void setBoolean(int parameterIndex, boolean x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setBoolean("+parameterIndex+", "+x+");");
+            }
+            setParameter(parameterIndex, ValueBoolean.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="558" endline="568">
+    @Override
+    public void setByte(int parameterIndex, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setByte("+parameterIndex+", "+x+");");
+            }
+            setParameter(parameterIndex, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="539" endline="549">
+    @Override
+    public void setBoolean(int parameterIndex, boolean x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setBoolean("+parameterIndex+", "+x+");");
+            }
+            setParameter(parameterIndex, ValueBoolean.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="577" endline="587">
+    @Override
+    public void setShort(int parameterIndex, short x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setShort("+parameterIndex+", (short) "+x+");");
+            }
+            setParameter(parameterIndex, ValueShort.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="539" endline="549">
+    @Override
+    public void setBoolean(int parameterIndex, boolean x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setBoolean("+parameterIndex+", "+x+");");
+            }
+            setParameter(parameterIndex, ValueBoolean.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="596" endline="606">
+    @Override
+    public void setLong(int parameterIndex, long x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setLong("+parameterIndex+", "+x+"L);");
+            }
+            setParameter(parameterIndex, ValueLong.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="539" endline="549">
+    @Override
+    public void setBoolean(int parameterIndex, boolean x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setBoolean("+parameterIndex+", "+x+");");
+            }
+            setParameter(parameterIndex, ValueBoolean.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="615" endline="625">
+    @Override
+    public void setFloat(int parameterIndex, float x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setFloat("+parameterIndex+", "+x+"f);");
+            }
+            setParameter(parameterIndex, ValueFloat.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="539" endline="549">
+    @Override
+    public void setBoolean(int parameterIndex, boolean x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setBoolean("+parameterIndex+", "+x+");");
+            }
+            setParameter(parameterIndex, ValueBoolean.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="634" endline="644">
+    @Override
+    public void setDouble(int parameterIndex, double x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setDouble("+parameterIndex+", "+x+"d);");
+            }
+            setParameter(parameterIndex, ValueDouble.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="539" endline="549">
+    @Override
+    public void setBoolean(int parameterIndex, boolean x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setBoolean("+parameterIndex+", "+x+");");
+            }
+            setParameter(parameterIndex, ValueBoolean.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1395" endline="1405">
+    @Override
+    public void updateByte(int columnIndex, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateByte("+columnIndex+", "+x+");");
+            }
+            update(columnIndex, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="539" endline="549">
+    @Override
+    public void setBoolean(int parameterIndex, boolean x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setBoolean("+parameterIndex+", "+x+");");
+            }
+            setParameter(parameterIndex, ValueBoolean.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1414" endline="1424">
+    @Override
+    public void updateByte(String columnLabel, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateByte("+columnLabel+", "+x+");");
+            }
+            update(columnLabel, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="539" endline="549">
+    @Override
+    public void setBoolean(int parameterIndex, boolean x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setBoolean("+parameterIndex+", "+x+");");
+            }
+            setParameter(parameterIndex, ValueBoolean.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1471" endline="1481">
+    @Override
+    public void updateShort(int columnIndex, short x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateShort("+columnIndex+", (short) "+x+");");
+            }
+            update(columnIndex, ValueShort.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="539" endline="549">
+    @Override
+    public void setBoolean(int parameterIndex, boolean x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setBoolean("+parameterIndex+", "+x+");");
+            }
+            setParameter(parameterIndex, ValueBoolean.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1547" endline="1557">
+    @Override
+    public void updateLong(int columnIndex, long x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateLong("+columnIndex+", "+x+"L);");
+            }
+            update(columnIndex, ValueLong.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="539" endline="549">
+    @Override
+    public void setBoolean(int parameterIndex, boolean x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setBoolean("+parameterIndex+", "+x+");");
+            }
+            setParameter(parameterIndex, ValueBoolean.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1585" endline="1595">
+    @Override
+    public void updateFloat(int columnIndex, float x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateFloat("+columnIndex+", "+x+"f);");
+            }
+            update(columnIndex, ValueFloat.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="539" endline="549">
+    @Override
+    public void setBoolean(int parameterIndex, boolean x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setBoolean("+parameterIndex+", "+x+");");
+            }
+            setParameter(parameterIndex, ValueBoolean.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1623" endline="1633">
+    @Override
+    public void updateDouble(int columnIndex, double x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateDouble("+columnIndex+", "+x+"d);");
+            }
+            update(columnIndex, ValueDouble.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="558" endline="568">
+    @Override
+    public void setByte(int parameterIndex, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setByte("+parameterIndex+", "+x+");");
+            }
+            setParameter(parameterIndex, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="577" endline="587">
+    @Override
+    public void setShort(int parameterIndex, short x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setShort("+parameterIndex+", (short) "+x+");");
+            }
+            setParameter(parameterIndex, ValueShort.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="558" endline="568">
+    @Override
+    public void setByte(int parameterIndex, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setByte("+parameterIndex+", "+x+");");
+            }
+            setParameter(parameterIndex, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="596" endline="606">
+    @Override
+    public void setLong(int parameterIndex, long x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setLong("+parameterIndex+", "+x+"L);");
+            }
+            setParameter(parameterIndex, ValueLong.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="558" endline="568">
+    @Override
+    public void setByte(int parameterIndex, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setByte("+parameterIndex+", "+x+");");
+            }
+            setParameter(parameterIndex, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="615" endline="625">
+    @Override
+    public void setFloat(int parameterIndex, float x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setFloat("+parameterIndex+", "+x+"f);");
+            }
+            setParameter(parameterIndex, ValueFloat.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="558" endline="568">
+    @Override
+    public void setByte(int parameterIndex, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setByte("+parameterIndex+", "+x+");");
+            }
+            setParameter(parameterIndex, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="634" endline="644">
+    @Override
+    public void setDouble(int parameterIndex, double x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setDouble("+parameterIndex+", "+x+"d);");
+            }
+            setParameter(parameterIndex, ValueDouble.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="558" endline="568">
+    @Override
+    public void setByte(int parameterIndex, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setByte("+parameterIndex+", "+x+");");
+            }
+            setParameter(parameterIndex, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1356" endline="1366">
+    @Override
+    public void updateBoolean(int columnIndex, boolean x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateBoolean("+columnIndex+", "+x+");");
+            }
+            update(columnIndex, ValueBoolean.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="558" endline="568">
+    @Override
+    public void setByte(int parameterIndex, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setByte("+parameterIndex+", "+x+");");
+            }
+            setParameter(parameterIndex, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1414" endline="1424">
+    @Override
+    public void updateByte(String columnLabel, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateByte("+columnLabel+", "+x+");");
+            }
+            update(columnLabel, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="558" endline="568">
+    @Override
+    public void setByte(int parameterIndex, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setByte("+parameterIndex+", "+x+");");
+            }
+            setParameter(parameterIndex, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1471" endline="1481">
+    @Override
+    public void updateShort(int columnIndex, short x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateShort("+columnIndex+", (short) "+x+");");
+            }
+            update(columnIndex, ValueShort.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="558" endline="568">
+    @Override
+    public void setByte(int parameterIndex, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setByte("+parameterIndex+", "+x+");");
+            }
+            setParameter(parameterIndex, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1547" endline="1557">
+    @Override
+    public void updateLong(int columnIndex, long x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateLong("+columnIndex+", "+x+"L);");
+            }
+            update(columnIndex, ValueLong.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="558" endline="568">
+    @Override
+    public void setByte(int parameterIndex, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setByte("+parameterIndex+", "+x+");");
+            }
+            setParameter(parameterIndex, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1585" endline="1595">
+    @Override
+    public void updateFloat(int columnIndex, float x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateFloat("+columnIndex+", "+x+"f);");
+            }
+            update(columnIndex, ValueFloat.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="558" endline="568">
+    @Override
+    public void setByte(int parameterIndex, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setByte("+parameterIndex+", "+x+");");
+            }
+            setParameter(parameterIndex, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1623" endline="1633">
+    @Override
+    public void updateDouble(int columnIndex, double x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateDouble("+columnIndex+", "+x+"d);");
+            }
+            update(columnIndex, ValueDouble.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="577" endline="587">
+    @Override
+    public void setShort(int parameterIndex, short x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setShort("+parameterIndex+", (short) "+x+");");
+            }
+            setParameter(parameterIndex, ValueShort.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="596" endline="606">
+    @Override
+    public void setLong(int parameterIndex, long x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setLong("+parameterIndex+", "+x+"L);");
+            }
+            setParameter(parameterIndex, ValueLong.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="577" endline="587">
+    @Override
+    public void setShort(int parameterIndex, short x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setShort("+parameterIndex+", (short) "+x+");");
+            }
+            setParameter(parameterIndex, ValueShort.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="615" endline="625">
+    @Override
+    public void setFloat(int parameterIndex, float x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setFloat("+parameterIndex+", "+x+"f);");
+            }
+            setParameter(parameterIndex, ValueFloat.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="577" endline="587">
+    @Override
+    public void setShort(int parameterIndex, short x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setShort("+parameterIndex+", (short) "+x+");");
+            }
+            setParameter(parameterIndex, ValueShort.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="634" endline="644">
+    @Override
+    public void setDouble(int parameterIndex, double x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setDouble("+parameterIndex+", "+x+"d);");
+            }
+            setParameter(parameterIndex, ValueDouble.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="577" endline="587">
+    @Override
+    public void setShort(int parameterIndex, short x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setShort("+parameterIndex+", (short) "+x+");");
+            }
+            setParameter(parameterIndex, ValueShort.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1356" endline="1366">
+    @Override
+    public void updateBoolean(int columnIndex, boolean x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateBoolean("+columnIndex+", "+x+");");
+            }
+            update(columnIndex, ValueBoolean.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="577" endline="587">
+    @Override
+    public void setShort(int parameterIndex, short x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setShort("+parameterIndex+", (short) "+x+");");
+            }
+            setParameter(parameterIndex, ValueShort.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1395" endline="1405">
+    @Override
+    public void updateByte(int columnIndex, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateByte("+columnIndex+", "+x+");");
+            }
+            update(columnIndex, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="577" endline="587">
+    @Override
+    public void setShort(int parameterIndex, short x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setShort("+parameterIndex+", (short) "+x+");");
+            }
+            setParameter(parameterIndex, ValueShort.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1414" endline="1424">
+    @Override
+    public void updateByte(String columnLabel, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateByte("+columnLabel+", "+x+");");
+            }
+            update(columnLabel, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="577" endline="587">
+    @Override
+    public void setShort(int parameterIndex, short x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setShort("+parameterIndex+", (short) "+x+");");
+            }
+            setParameter(parameterIndex, ValueShort.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1547" endline="1557">
+    @Override
+    public void updateLong(int columnIndex, long x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateLong("+columnIndex+", "+x+"L);");
+            }
+            update(columnIndex, ValueLong.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="577" endline="587">
+    @Override
+    public void setShort(int parameterIndex, short x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setShort("+parameterIndex+", (short) "+x+");");
+            }
+            setParameter(parameterIndex, ValueShort.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1585" endline="1595">
+    @Override
+    public void updateFloat(int columnIndex, float x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateFloat("+columnIndex+", "+x+"f);");
+            }
+            update(columnIndex, ValueFloat.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="577" endline="587">
+    @Override
+    public void setShort(int parameterIndex, short x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setShort("+parameterIndex+", (short) "+x+");");
+            }
+            setParameter(parameterIndex, ValueShort.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1623" endline="1633">
+    @Override
+    public void updateDouble(int columnIndex, double x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateDouble("+columnIndex+", "+x+"d);");
+            }
+            update(columnIndex, ValueDouble.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="596" endline="606">
+    @Override
+    public void setLong(int parameterIndex, long x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setLong("+parameterIndex+", "+x+"L);");
+            }
+            setParameter(parameterIndex, ValueLong.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="615" endline="625">
+    @Override
+    public void setFloat(int parameterIndex, float x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setFloat("+parameterIndex+", "+x+"f);");
+            }
+            setParameter(parameterIndex, ValueFloat.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="596" endline="606">
+    @Override
+    public void setLong(int parameterIndex, long x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setLong("+parameterIndex+", "+x+"L);");
+            }
+            setParameter(parameterIndex, ValueLong.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="634" endline="644">
+    @Override
+    public void setDouble(int parameterIndex, double x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setDouble("+parameterIndex+", "+x+"d);");
+            }
+            setParameter(parameterIndex, ValueDouble.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="596" endline="606">
+    @Override
+    public void setLong(int parameterIndex, long x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setLong("+parameterIndex+", "+x+"L);");
+            }
+            setParameter(parameterIndex, ValueLong.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1356" endline="1366">
+    @Override
+    public void updateBoolean(int columnIndex, boolean x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateBoolean("+columnIndex+", "+x+");");
+            }
+            update(columnIndex, ValueBoolean.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="596" endline="606">
+    @Override
+    public void setLong(int parameterIndex, long x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setLong("+parameterIndex+", "+x+"L);");
+            }
+            setParameter(parameterIndex, ValueLong.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1395" endline="1405">
+    @Override
+    public void updateByte(int columnIndex, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateByte("+columnIndex+", "+x+");");
+            }
+            update(columnIndex, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="596" endline="606">
+    @Override
+    public void setLong(int parameterIndex, long x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setLong("+parameterIndex+", "+x+"L);");
+            }
+            setParameter(parameterIndex, ValueLong.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1414" endline="1424">
+    @Override
+    public void updateByte(String columnLabel, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateByte("+columnLabel+", "+x+");");
+            }
+            update(columnLabel, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="596" endline="606">
+    @Override
+    public void setLong(int parameterIndex, long x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setLong("+parameterIndex+", "+x+"L);");
+            }
+            setParameter(parameterIndex, ValueLong.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1471" endline="1481">
+    @Override
+    public void updateShort(int columnIndex, short x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateShort("+columnIndex+", (short) "+x+");");
+            }
+            update(columnIndex, ValueShort.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="596" endline="606">
+    @Override
+    public void setLong(int parameterIndex, long x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setLong("+parameterIndex+", "+x+"L);");
+            }
+            setParameter(parameterIndex, ValueLong.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1585" endline="1595">
+    @Override
+    public void updateFloat(int columnIndex, float x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateFloat("+columnIndex+", "+x+"f);");
+            }
+            update(columnIndex, ValueFloat.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="596" endline="606">
+    @Override
+    public void setLong(int parameterIndex, long x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setLong("+parameterIndex+", "+x+"L);");
+            }
+            setParameter(parameterIndex, ValueLong.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1623" endline="1633">
+    @Override
+    public void updateDouble(int columnIndex, double x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateDouble("+columnIndex+", "+x+"d);");
+            }
+            update(columnIndex, ValueDouble.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="615" endline="625">
+    @Override
+    public void setFloat(int parameterIndex, float x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setFloat("+parameterIndex+", "+x+"f);");
+            }
+            setParameter(parameterIndex, ValueFloat.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="634" endline="644">
+    @Override
+    public void setDouble(int parameterIndex, double x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setDouble("+parameterIndex+", "+x+"d);");
+            }
+            setParameter(parameterIndex, ValueDouble.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="615" endline="625">
+    @Override
+    public void setFloat(int parameterIndex, float x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setFloat("+parameterIndex+", "+x+"f);");
+            }
+            setParameter(parameterIndex, ValueFloat.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1356" endline="1366">
+    @Override
+    public void updateBoolean(int columnIndex, boolean x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateBoolean("+columnIndex+", "+x+");");
+            }
+            update(columnIndex, ValueBoolean.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="615" endline="625">
+    @Override
+    public void setFloat(int parameterIndex, float x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setFloat("+parameterIndex+", "+x+"f);");
+            }
+            setParameter(parameterIndex, ValueFloat.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1395" endline="1405">
+    @Override
+    public void updateByte(int columnIndex, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateByte("+columnIndex+", "+x+");");
+            }
+            update(columnIndex, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="615" endline="625">
+    @Override
+    public void setFloat(int parameterIndex, float x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setFloat("+parameterIndex+", "+x+"f);");
+            }
+            setParameter(parameterIndex, ValueFloat.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1414" endline="1424">
+    @Override
+    public void updateByte(String columnLabel, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateByte("+columnLabel+", "+x+");");
+            }
+            update(columnLabel, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="615" endline="625">
+    @Override
+    public void setFloat(int parameterIndex, float x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setFloat("+parameterIndex+", "+x+"f);");
+            }
+            setParameter(parameterIndex, ValueFloat.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1471" endline="1481">
+    @Override
+    public void updateShort(int columnIndex, short x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateShort("+columnIndex+", (short) "+x+");");
+            }
+            update(columnIndex, ValueShort.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="615" endline="625">
+    @Override
+    public void setFloat(int parameterIndex, float x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setFloat("+parameterIndex+", "+x+"f);");
+            }
+            setParameter(parameterIndex, ValueFloat.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1547" endline="1557">
+    @Override
+    public void updateLong(int columnIndex, long x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateLong("+columnIndex+", "+x+"L);");
+            }
+            update(columnIndex, ValueLong.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="615" endline="625">
+    @Override
+    public void setFloat(int parameterIndex, float x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setFloat("+parameterIndex+", "+x+"f);");
+            }
+            setParameter(parameterIndex, ValueFloat.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1623" endline="1633">
+    @Override
+    public void updateDouble(int columnIndex, double x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateDouble("+columnIndex+", "+x+"d);");
+            }
+            update(columnIndex, ValueDouble.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="634" endline="644">
+    @Override
+    public void setDouble(int parameterIndex, double x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setDouble("+parameterIndex+", "+x+"d);");
+            }
+            setParameter(parameterIndex, ValueDouble.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1356" endline="1366">
+    @Override
+    public void updateBoolean(int columnIndex, boolean x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateBoolean("+columnIndex+", "+x+");");
+            }
+            update(columnIndex, ValueBoolean.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="634" endline="644">
+    @Override
+    public void setDouble(int parameterIndex, double x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setDouble("+parameterIndex+", "+x+"d);");
+            }
+            setParameter(parameterIndex, ValueDouble.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1395" endline="1405">
+    @Override
+    public void updateByte(int columnIndex, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateByte("+columnIndex+", "+x+");");
+            }
+            update(columnIndex, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="634" endline="644">
+    @Override
+    public void setDouble(int parameterIndex, double x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setDouble("+parameterIndex+", "+x+"d);");
+            }
+            setParameter(parameterIndex, ValueDouble.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1414" endline="1424">
+    @Override
+    public void updateByte(String columnLabel, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateByte("+columnLabel+", "+x+");");
+            }
+            update(columnLabel, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="634" endline="644">
+    @Override
+    public void setDouble(int parameterIndex, double x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setDouble("+parameterIndex+", "+x+"d);");
+            }
+            setParameter(parameterIndex, ValueDouble.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1471" endline="1481">
+    @Override
+    public void updateShort(int columnIndex, short x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateShort("+columnIndex+", (short) "+x+");");
+            }
+            update(columnIndex, ValueShort.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="634" endline="644">
+    @Override
+    public void setDouble(int parameterIndex, double x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setDouble("+parameterIndex+", "+x+"d);");
+            }
+            setParameter(parameterIndex, ValueDouble.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1547" endline="1557">
+    @Override
+    public void updateLong(int columnIndex, long x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateLong("+columnIndex+", "+x+"L);");
+            }
+            update(columnIndex, ValueLong.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="634" endline="644">
+    @Override
+    public void setDouble(int parameterIndex, double x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setDouble("+parameterIndex+", "+x+"d);");
+            }
+            setParameter(parameterIndex, ValueDouble.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1585" endline="1595">
+    @Override
+    public void updateFloat(int columnIndex, float x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateFloat("+columnIndex+", "+x+"f);");
+            }
+            update(columnIndex, ValueFloat.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1356" endline="1366">
+    @Override
+    public void updateBoolean(int columnIndex, boolean x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateBoolean("+columnIndex+", "+x+");");
+            }
+            update(columnIndex, ValueBoolean.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1395" endline="1405">
+    @Override
+    public void updateByte(int columnIndex, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateByte("+columnIndex+", "+x+");");
+            }
+            update(columnIndex, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1356" endline="1366">
+    @Override
+    public void updateBoolean(int columnIndex, boolean x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateBoolean("+columnIndex+", "+x+");");
+            }
+            update(columnIndex, ValueBoolean.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1414" endline="1424">
+    @Override
+    public void updateByte(String columnLabel, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateByte("+columnLabel+", "+x+");");
+            }
+            update(columnLabel, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1356" endline="1366">
+    @Override
+    public void updateBoolean(int columnIndex, boolean x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateBoolean("+columnIndex+", "+x+");");
+            }
+            update(columnIndex, ValueBoolean.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1471" endline="1481">
+    @Override
+    public void updateShort(int columnIndex, short x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateShort("+columnIndex+", (short) "+x+");");
+            }
+            update(columnIndex, ValueShort.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1356" endline="1366">
+    @Override
+    public void updateBoolean(int columnIndex, boolean x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateBoolean("+columnIndex+", "+x+");");
+            }
+            update(columnIndex, ValueBoolean.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1547" endline="1557">
+    @Override
+    public void updateLong(int columnIndex, long x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateLong("+columnIndex+", "+x+"L);");
+            }
+            update(columnIndex, ValueLong.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1356" endline="1366">
+    @Override
+    public void updateBoolean(int columnIndex, boolean x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateBoolean("+columnIndex+", "+x+");");
+            }
+            update(columnIndex, ValueBoolean.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1585" endline="1595">
+    @Override
+    public void updateFloat(int columnIndex, float x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateFloat("+columnIndex+", "+x+"f);");
+            }
+            update(columnIndex, ValueFloat.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1356" endline="1366">
+    @Override
+    public void updateBoolean(int columnIndex, boolean x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateBoolean("+columnIndex+", "+x+");");
+            }
+            update(columnIndex, ValueBoolean.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1623" endline="1633">
+    @Override
+    public void updateDouble(int columnIndex, double x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateDouble("+columnIndex+", "+x+"d);");
+            }
+            update(columnIndex, ValueDouble.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1395" endline="1405">
+    @Override
+    public void updateByte(int columnIndex, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateByte("+columnIndex+", "+x+");");
+            }
+            update(columnIndex, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1414" endline="1424">
+    @Override
+    public void updateByte(String columnLabel, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateByte("+columnLabel+", "+x+");");
+            }
+            update(columnLabel, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1395" endline="1405">
+    @Override
+    public void updateByte(int columnIndex, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateByte("+columnIndex+", "+x+");");
+            }
+            update(columnIndex, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1471" endline="1481">
+    @Override
+    public void updateShort(int columnIndex, short x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateShort("+columnIndex+", (short) "+x+");");
+            }
+            update(columnIndex, ValueShort.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1395" endline="1405">
+    @Override
+    public void updateByte(int columnIndex, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateByte("+columnIndex+", "+x+");");
+            }
+            update(columnIndex, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1547" endline="1557">
+    @Override
+    public void updateLong(int columnIndex, long x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateLong("+columnIndex+", "+x+"L);");
+            }
+            update(columnIndex, ValueLong.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1395" endline="1405">
+    @Override
+    public void updateByte(int columnIndex, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateByte("+columnIndex+", "+x+");");
+            }
+            update(columnIndex, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1585" endline="1595">
+    @Override
+    public void updateFloat(int columnIndex, float x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateFloat("+columnIndex+", "+x+"f);");
+            }
+            update(columnIndex, ValueFloat.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1395" endline="1405">
+    @Override
+    public void updateByte(int columnIndex, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateByte("+columnIndex+", "+x+");");
+            }
+            update(columnIndex, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1623" endline="1633">
+    @Override
+    public void updateDouble(int columnIndex, double x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateDouble("+columnIndex+", "+x+"d);");
+            }
+            update(columnIndex, ValueDouble.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1414" endline="1424">
+    @Override
+    public void updateByte(String columnLabel, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateByte("+columnLabel+", "+x+");");
+            }
+            update(columnLabel, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1471" endline="1481">
+    @Override
+    public void updateShort(int columnIndex, short x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateShort("+columnIndex+", (short) "+x+");");
+            }
+            update(columnIndex, ValueShort.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1414" endline="1424">
+    @Override
+    public void updateByte(String columnLabel, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateByte("+columnLabel+", "+x+");");
+            }
+            update(columnLabel, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1547" endline="1557">
+    @Override
+    public void updateLong(int columnIndex, long x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateLong("+columnIndex+", "+x+"L);");
+            }
+            update(columnIndex, ValueLong.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1414" endline="1424">
+    @Override
+    public void updateByte(String columnLabel, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateByte("+columnLabel+", "+x+");");
+            }
+            update(columnLabel, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1585" endline="1595">
+    @Override
+    public void updateFloat(int columnIndex, float x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateFloat("+columnIndex+", "+x+"f);");
+            }
+            update(columnIndex, ValueFloat.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1414" endline="1424">
+    @Override
+    public void updateByte(String columnLabel, byte x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateByte("+columnLabel+", "+x+");");
+            }
+            update(columnLabel, ValueByte.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1623" endline="1633">
+    @Override
+    public void updateDouble(int columnIndex, double x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateDouble("+columnIndex+", "+x+"d);");
+            }
+            update(columnIndex, ValueDouble.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1471" endline="1481">
+    @Override
+    public void updateShort(int columnIndex, short x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateShort("+columnIndex+", (short) "+x+");");
+            }
+            update(columnIndex, ValueShort.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1547" endline="1557">
+    @Override
+    public void updateLong(int columnIndex, long x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateLong("+columnIndex+", "+x+"L);");
+            }
+            update(columnIndex, ValueLong.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1471" endline="1481">
+    @Override
+    public void updateShort(int columnIndex, short x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateShort("+columnIndex+", (short) "+x+");");
+            }
+            update(columnIndex, ValueShort.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1585" endline="1595">
+    @Override
+    public void updateFloat(int columnIndex, float x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateFloat("+columnIndex+", "+x+"f);");
+            }
+            update(columnIndex, ValueFloat.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1471" endline="1481">
+    @Override
+    public void updateShort(int columnIndex, short x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateShort("+columnIndex+", (short) "+x+");");
+            }
+            update(columnIndex, ValueShort.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1623" endline="1633">
+    @Override
+    public void updateDouble(int columnIndex, double x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateDouble("+columnIndex+", "+x+"d);");
+            }
+            update(columnIndex, ValueDouble.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1547" endline="1557">
+    @Override
+    public void updateLong(int columnIndex, long x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateLong("+columnIndex+", "+x+"L);");
+            }
+            update(columnIndex, ValueLong.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1585" endline="1595">
+    @Override
+    public void updateFloat(int columnIndex, float x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateFloat("+columnIndex+", "+x+"f);");
+            }
+            update(columnIndex, ValueFloat.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1547" endline="1557">
+    @Override
+    public void updateLong(int columnIndex, long x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateLong("+columnIndex+", "+x+"L);");
+            }
+            update(columnIndex, ValueLong.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1623" endline="1633">
+    @Override
+    public void updateDouble(int columnIndex, double x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateDouble("+columnIndex+", "+x+"d);");
+            }
+            update(columnIndex, ValueDouble.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1585" endline="1595">
+    @Override
+    public void updateFloat(int columnIndex, float x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateFloat("+columnIndex+", "+x+"f);");
+            }
+            update(columnIndex, ValueFloat.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1623" endline="1633">
+    @Override
+    public void updateDouble(int columnIndex, double x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateDouble("+columnIndex+", "+x+"d);");
+            }
+            update(columnIndex, ValueDouble.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcStatement.java" startline="838" endline="848">
+    @Override
+    public int executeUpdate(String sql, String[] columnNames) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("executeUpdate("+quote(sql)+", "+quoteArray(columnNames)+");");
+            }
+            return executeUpdateInternal(sql);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcStatement.java" startline="913" endline="923">
+    @Override
+    public boolean execute(String sql, String[] columnNames) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("execute("+quote(sql)+", "+quoteArray(columnNames)+");");
+            }
+            return executeInternal(sql);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1375" endline="1386">
+    @Override
+    public void updateBoolean(String columnLabel, boolean x)
+            throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateBoolean("+quote(columnLabel)+", "+x+");");
+            }
+            update(columnLabel, ValueBoolean.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1490" endline="1500">
+    @Override
+    public void updateShort(String columnLabel, short x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateShort("+quote(columnLabel)+", (short) "+x+");");
+            }
+            update(columnLabel, ValueShort.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1375" endline="1386">
+    @Override
+    public void updateBoolean(String columnLabel, boolean x)
+            throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateBoolean("+quote(columnLabel)+", "+x+");");
+            }
+            update(columnLabel, ValueBoolean.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1528" endline="1538">
+    @Override
+    public void updateInt(String columnLabel, int x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateInt("+quote(columnLabel)+", "+x+");");
+            }
+            update(columnLabel, ValueInt.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1375" endline="1386">
+    @Override
+    public void updateBoolean(String columnLabel, boolean x)
+            throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateBoolean("+quote(columnLabel)+", "+x+");");
+            }
+            update(columnLabel, ValueBoolean.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1566" endline="1576">
+    @Override
+    public void updateLong(String columnLabel, long x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateLong("+quote(columnLabel)+", "+x+"L);");
+            }
+            update(columnLabel, ValueLong.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1375" endline="1386">
+    @Override
+    public void updateBoolean(String columnLabel, boolean x)
+            throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateBoolean("+quote(columnLabel)+", "+x+");");
+            }
+            update(columnLabel, ValueBoolean.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1604" endline="1614">
+    @Override
+    public void updateFloat(String columnLabel, float x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateFloat("+quote(columnLabel)+", "+x+"f);");
+            }
+            update(columnLabel, ValueFloat.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1375" endline="1386">
+    @Override
+    public void updateBoolean(String columnLabel, boolean x)
+            throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateBoolean("+quote(columnLabel)+", "+x+");");
+            }
+            update(columnLabel, ValueBoolean.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1642" endline="1652">
+    @Override
+    public void updateDouble(String columnLabel, double x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateDouble("+quote(columnLabel)+", "+x+"d);");
+            }
+            update(columnLabel, ValueDouble.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1490" endline="1500">
+    @Override
+    public void updateShort(String columnLabel, short x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateShort("+quote(columnLabel)+", (short) "+x+");");
+            }
+            update(columnLabel, ValueShort.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1528" endline="1538">
+    @Override
+    public void updateInt(String columnLabel, int x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateInt("+quote(columnLabel)+", "+x+");");
+            }
+            update(columnLabel, ValueInt.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1490" endline="1500">
+    @Override
+    public void updateShort(String columnLabel, short x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateShort("+quote(columnLabel)+", (short) "+x+");");
+            }
+            update(columnLabel, ValueShort.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1566" endline="1576">
+    @Override
+    public void updateLong(String columnLabel, long x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateLong("+quote(columnLabel)+", "+x+"L);");
+            }
+            update(columnLabel, ValueLong.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1490" endline="1500">
+    @Override
+    public void updateShort(String columnLabel, short x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateShort("+quote(columnLabel)+", (short) "+x+");");
+            }
+            update(columnLabel, ValueShort.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1604" endline="1614">
+    @Override
+    public void updateFloat(String columnLabel, float x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateFloat("+quote(columnLabel)+", "+x+"f);");
+            }
+            update(columnLabel, ValueFloat.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1490" endline="1500">
+    @Override
+    public void updateShort(String columnLabel, short x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateShort("+quote(columnLabel)+", (short) "+x+");");
+            }
+            update(columnLabel, ValueShort.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1642" endline="1652">
+    @Override
+    public void updateDouble(String columnLabel, double x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateDouble("+quote(columnLabel)+", "+x+"d);");
+            }
+            update(columnLabel, ValueDouble.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1528" endline="1538">
+    @Override
+    public void updateInt(String columnLabel, int x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateInt("+quote(columnLabel)+", "+x+");");
+            }
+            update(columnLabel, ValueInt.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1566" endline="1576">
+    @Override
+    public void updateLong(String columnLabel, long x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateLong("+quote(columnLabel)+", "+x+"L);");
+            }
+            update(columnLabel, ValueLong.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1528" endline="1538">
+    @Override
+    public void updateInt(String columnLabel, int x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateInt("+quote(columnLabel)+", "+x+");");
+            }
+            update(columnLabel, ValueInt.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1604" endline="1614">
+    @Override
+    public void updateFloat(String columnLabel, float x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateFloat("+quote(columnLabel)+", "+x+"f);");
+            }
+            update(columnLabel, ValueFloat.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1528" endline="1538">
+    @Override
+    public void updateInt(String columnLabel, int x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateInt("+quote(columnLabel)+", "+x+");");
+            }
+            update(columnLabel, ValueInt.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1642" endline="1652">
+    @Override
+    public void updateDouble(String columnLabel, double x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateDouble("+quote(columnLabel)+", "+x+"d);");
+            }
+            update(columnLabel, ValueDouble.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1566" endline="1576">
+    @Override
+    public void updateLong(String columnLabel, long x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateLong("+quote(columnLabel)+", "+x+"L);");
+            }
+            update(columnLabel, ValueLong.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1604" endline="1614">
+    @Override
+    public void updateFloat(String columnLabel, float x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateFloat("+quote(columnLabel)+", "+x+"f);");
+            }
+            update(columnLabel, ValueFloat.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1566" endline="1576">
+    @Override
+    public void updateLong(String columnLabel, long x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateLong("+quote(columnLabel)+", "+x+"L);");
+            }
+            update(columnLabel, ValueLong.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1642" endline="1652">
+    @Override
+    public void updateDouble(String columnLabel, double x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateDouble("+quote(columnLabel)+", "+x+"d);");
+            }
+            update(columnLabel, ValueDouble.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1604" endline="1614">
+    @Override
+    public void updateFloat(String columnLabel, float x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateFloat("+quote(columnLabel)+", "+x+"f);");
+            }
+            update(columnLabel, ValueFloat.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="1642" endline="1652">
+    @Override
+    public void updateDouble(String columnLabel, double x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateDouble("+quote(columnLabel)+", "+x+"d);");
+            }
+            update(columnLabel, ValueDouble.get(x));
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers -->
+        <source file="org/h2/jmx/DatabaseInfo.java" startline="156" endline="166">
+    @Override
+    public long getFileWriteCount() {
+        if (!database.isPersistent()) {
+            return 0;
+        }
+        PageStore p = database.getPageStore();
+        if (p != null) {
+            return p.getWriteCount();
+        }
+        return database.getMvStore().getStore().getFileStore().getReadCount();
+    }
+</source>
+        <source file="org/h2/jmx/DatabaseInfo.java" startline="168" endline="178">
+    @Override
+    public long getFileReadCount() {
+        if (!database.isPersistent()) {
+            return 0;
+        }
+        PageStore p = database.getPageStore();
+        if (p != null) {
+            return p.getReadCount();
+        }
+        return database.getMvStore().getStore().getFileStore().getReadCount();
+    }
+</source>
+    </clone>
+    <clone nlines="14" similarity="100">
+        <!-- identifiers -->
+        <source file="org/h2/expression/Aggregate.java" startline="361" endline="374">
+    @Override
+    public void mapColumns(ColumnResolver resolver, int level) {
+        if (on != null) {
+            on.mapColumns(resolver, level);
+        }
+        if (groupConcatOrderList != null) {
+            for (SelectOrderBy o : groupConcatOrderList) {
+                o.expression.mapColumns(resolver, level);
+            }
+        }
+        if (groupConcatSeparator != null) {
+            groupConcatSeparator.mapColumns(resolver, level);
+        }
+    }
+</source>
+        <source file="org/h2/expression/Aggregate.java" startline="464" endline="477">
+    @Override
+    public void setEvaluatable(TableFilter tableFilter, boolean b) {
+        if (on != null) {
+            on.setEvaluatable(tableFilter, b);
+        }
+        if (groupConcatOrderList != null) {
+            for (SelectOrderBy o : groupConcatOrderList) {
+                o.expression.setEvaluatable(tableFilter, b);
+            }
+        }
+        if (groupConcatSeparator != null) {
+            groupConcatSeparator.setEvaluatable(tableFilter, b);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="13" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="1339" endline="1352">
+    @Override
+    public int executeUpdate(String sql, String[] columnNames)
+            throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("executeUpdate(" + quote(sql) + ", " +
+                                quoteArray(columnNames) + ");");
+            }
+            throw DbException.get(
+                    ErrorCode.METHOD_NOT_ALLOWED_FOR_PREPARED_STATEMENT);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="1401" endline="1413">
+    @Override
+    public boolean execute(String sql, String[] columnNames)
+            throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("execute(" + quote(sql) + ", " + quoteArray(columnNames) + ");");
+            }
+            throw DbException.get(
+                    ErrorCode.METHOD_NOT_ALLOWED_FOR_PREPARED_STATEMENT);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="13" similarity="100">
+        <!-- identifiers -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="3732" endline="3744">
+    @Override
+    public &lt;T&gt; T getObject(int columnIndex, Class&lt;T&gt; type) throws SQLException {
+        try {
+            if (type == null) {
+                throw DbException.getInvalidValueException("type", type);
+            }
+            debugCodeCall("getObject", columnIndex);
+            Value value = get(columnIndex);
+            return extractObjectOfType(type, value);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="3754" endline="3766">
+    @Override
+    public &lt;T&gt; T getObject(String columnName, Class&lt;T&gt; type) throws SQLException {
+        try {
+            if (type == null) {
+                throw DbException.getInvalidValueException("type", type);
+            }
+            debugCodeCall("getObject", columnName);
+            Value value = get(columnName);
+            return extractObjectOfType(type, value);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="17" similarity="100">
+        <!-- identifiers -->
+        <source file="org/h2/util/IOUtils.java" startline="340" endline="356">
+    public static int readFully(InputStream in, byte[] buffer, int max)
+            throws IOException {
+        try {
+            int result = 0, len = Math.min(max, buffer.length);
+            while (len &gt; 0) {
+                int l = in.read(buffer, result, len);
+                if (l &lt; 0) {
+                    break;
+                }
+                result += l;
+                len -= l;
+            }
+            return result;
+        } catch (Exception e) {
+            throw DbException.convertToIOException(e);
+        }
+    }
+</source>
+        <source file="org/h2/util/IOUtils.java" startline="368" endline="384">
+    public static int readFully(Reader in, char[] buffer, int max)
+            throws IOException {
+        try {
+            int result = 0, len = Math.min(max, buffer.length);
+            while (len &gt; 0) {
+                int l = in.read(buffer, result, len);
+                if (l &lt; 0) {
+                    break;
+                }
+                result += l;
+                len -= l;
+            }
+            return result;
+        } catch (Exception e) {
+            throw DbException.convertToIOException(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="17" similarity="100">
+        <!-- identifiers -->
+        <source file="org/h2/command/Parser.java" startline="5555" endline="5571">
+    private FunctionAlias findFunctionAlias(String schema, String aliasName) {
+        FunctionAlias functionAlias = database.getSchema(schema).findFunction(
+                aliasName);
+        if (functionAlias != null) {
+            return functionAlias;
+        }
+        String[] schemaNames = session.getSchemaSearchPath();
+        if (schemaNames != null) {
+            for (String n : schemaNames) {
+                functionAlias = database.getSchema(n).findFunction(aliasName);
+                if (functionAlias != null) {
+                    return functionAlias;
+                }
+            }
+        }
+        return null;
+    }
+</source>
+        <source file="org/h2/command/Parser.java" startline="5573" endline="5589">
+    private Sequence findSequence(String schema, String sequenceName) {
+        Sequence sequence = database.getSchema(schema).findSequence(
+                sequenceName);
+        if (sequence != null) {
+            return sequence;
+        }
+        String[] schemaNames = session.getSchemaSearchPath();
+        if (schemaNames != null) {
+            for (String n : schemaNames) {
+                sequence = database.getSchema(n).findSequence(sequenceName);
+                if (sequence != null) {
+                    return sequence;
+                }
+            }
+        }
+        return null;
+    }
+</source>
+    </clone>
+    <clone nlines="19" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/command/Parser.java" startline="3137" endline="3155">
+    private int readInt() {
+        boolean minus = false;
+        if (currentTokenType == MINUS) {
+            minus = true;
+            read();
+        } else if (currentTokenType == PLUS) {
+            read();
+        }
+        if (currentTokenType != VALUE) {
+            throw DbException.getSyntaxError(sqlCommand, parseIndex, "integer");
+        }
+        if (minus) {
+            // must do that now, otherwise Integer.MIN_VALUE would not work
+            currentValue = currentValue.negate();
+        }
+        int i = currentValue.getInt();
+        read();
+        return i;
+    }
+</source>
+        <source file="org/h2/command/Parser.java" startline="3157" endline="3175">
+    private long readLong() {
+        boolean minus = false;
+        if (currentTokenType == MINUS) {
+            minus = true;
+            read();
+        } else if (currentTokenType == PLUS) {
+            read();
+        }
+        if (currentTokenType != VALUE) {
+            throw DbException.getSyntaxError(sqlCommand, parseIndex, "long");
+        }
+        if (minus) {
+            // must do that now, otherwise Long.MIN_VALUE would not work
+            currentValue = currentValue.negate();
+        }
+        long i = currentValue.getLong();
+        read();
+        return i;
+    }
+</source>
+    </clone>
+    <clone nlines="23" similarity="100">
+        <!-- identifiers, literals, normalization -->
+        <source file="org/h2/jdbc/JdbcDatabaseMetaData.java" startline="1017" endline="1043">
+    @Override
+    public ResultSet getVersionColumns(String catalog, String schema,
+            String tableName) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("getVersionColumns("
+                        +quote(catalog)+", "
+                        +quote(schema)+", "
+                        +quote(tableName)+");");
+            }
+            checkClosed();
+            PreparedStatement prep = conn.prepareAutoCloseStatement("SELECT "
+                    + "ZERO() SCOPE, "
+                    + "COLUMN_NAME, "
+                    + "CAST(DATA_TYPE AS INT) DATA_TYPE, "
+                    + "TYPE_NAME, "
+                    + "NUMERIC_PRECISION COLUMN_SIZE, "
+                    + "NUMERIC_PRECISION BUFFER_LENGTH, "
+                    + "NUMERIC_PRECISION DECIMAL_DIGITS, "
+                    + "ZERO() PSEUDO_COLUMN "
+                    + "FROM INFORMATION_SCHEMA.COLUMNS "
+                    + "WHERE FALSE");
+            return prep.executeQuery();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcDatabaseMetaData.java" startline="2843" endline="2865">
+    @Override
+    public ResultSet getSuperTables(String catalog, String schemaPattern,
+            String tableNamePattern) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("getSuperTables("
+                        +quote(catalog)+", "
+                        +quote(schemaPattern)+", "
+                        +quote(tableNamePattern)+");");
+            }
+            checkClosed();
+            PreparedStatement prep = conn.prepareAutoCloseStatement("SELECT "
+                    + "CATALOG_NAME TABLE_CAT, "
+                    + "CATALOG_NAME TABLE_SCHEM, "
+                    + "CATALOG_NAME TABLE_NAME, "
+                    + "CATALOG_NAME SUPERTABLE_NAME "
+                    + "FROM INFORMATION_SCHEMA.CATALOGS "
+                    + "WHERE FALSE");
+            return prep.executeQuery();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="19" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcConnection.java" startline="1561" endline="1579">
+    @Override
+    public Clob createClob() throws SQLException {
+        try {
+            int id = getNextId(TraceObject.CLOB);
+            debugCodeAssign("Clob", TraceObject.CLOB, id, "createClob()");
+            checkClosedForWrite();
+            try {
+                Value v = session.getDataHandler().getLobStorage().createClob(
+                        new InputStreamReader(
+                        new ByteArrayInputStream(Utils.EMPTY_BYTES)), 0);
+                session.addTemporaryLob(v);
+                return new JdbcClob(this, v, id);
+            } finally {
+                afterWriting();
+            }
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcConnection.java" startline="1610" endline="1628">
+    @Override
+    public NClob createNClob() throws SQLException {
+        try {
+            int id = getNextId(TraceObject.CLOB);
+            debugCodeAssign("NClob", TraceObject.CLOB, id, "createNClob()");
+            checkClosedForWrite();
+            try {
+                Value v = session.getDataHandler().getLobStorage().createClob(
+                        new InputStreamReader(
+                        new ByteArrayInputStream(Utils.EMPTY_BYTES)), 0);
+                session.addTemporaryLob(v);
+                return new JdbcClob(this, v, id);
+            } finally {
+                afterWriting();
+            }
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="34" similarity="100">
+        <!-- identifiers, literals, normalization -->
+        <source file="org/h2/jdbc/JdbcDatabaseMetaData.java" startline="395" endline="428">
+    @Override
+    public ResultSet getPrimaryKeys(String catalogPattern,
+            String schemaPattern, String tableName) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("getPrimaryKeys("
+                        +quote(catalogPattern)+", "
+                        +quote(schemaPattern)+", "
+                        +quote(tableName)+");");
+            }
+            checkClosed();
+            PreparedStatement prep = conn.prepareAutoCloseStatement("SELECT "
+                    + "TABLE_CATALOG TABLE_CAT, "
+                    + "TABLE_SCHEMA TABLE_SCHEM, "
+                    + "TABLE_NAME, "
+                    + "COLUMN_NAME, "
+                    + "ORDINAL_POSITION KEY_SEQ, "
+                    + "IFNULL(CONSTRAINT_NAME, INDEX_NAME) PK_NAME "
+                    + "FROM INFORMATION_SCHEMA.INDEXES "
+                    + "WHERE TABLE_CATALOG LIKE ? ESCAPE ? "
+                    + "AND TABLE_SCHEMA LIKE ? ESCAPE ? "
+                    + "AND TABLE_NAME = ? "
+                    + "AND PRIMARY_KEY = TRUE "
+                    + "ORDER BY COLUMN_NAME");
+            prep.setString(1, getCatalogPattern(catalogPattern));
+            prep.setString(2, "\\");
+            prep.setString(3, getSchemaPattern(schemaPattern));
+            prep.setString(4, "\\");
+            prep.setString(5, tableName);
+            return prep.executeQuery();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcDatabaseMetaData.java" startline="1076" endline="1116">
+    @Override
+    public ResultSet getImportedKeys(String catalogPattern,
+            String schemaPattern, String tableName) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("getImportedKeys("
+                        +quote(catalogPattern)+", "
+                        +quote(schemaPattern)+", "
+                        +quote(tableName)+");");
+            }
+            checkClosed();
+            PreparedStatement prep = conn.prepareAutoCloseStatement("SELECT "
+                    + "PKTABLE_CATALOG PKTABLE_CAT, "
+                    + "PKTABLE_SCHEMA PKTABLE_SCHEM, "
+                    + "PKTABLE_NAME PKTABLE_NAME, "
+                    + "PKCOLUMN_NAME, "
+                    + "FKTABLE_CATALOG FKTABLE_CAT, "
+                    + "FKTABLE_SCHEMA FKTABLE_SCHEM, "
+                    + "FKTABLE_NAME, "
+                    + "FKCOLUMN_NAME, "
+                    + "ORDINAL_POSITION KEY_SEQ, "
+                    + "UPDATE_RULE, "
+                    + "DELETE_RULE, "
+                    + "FK_NAME, "
+                    + "PK_NAME, "
+                    + "DEFERRABILITY "
+                    + "FROM INFORMATION_SCHEMA.CROSS_REFERENCES "
+                    + "WHERE FKTABLE_CATALOG LIKE ? ESCAPE ? "
+                    + "AND FKTABLE_SCHEMA LIKE ? ESCAPE ? "
+                    + "AND FKTABLE_NAME = ? "
+                    + "ORDER BY PKTABLE_CAT, PKTABLE_SCHEM, PKTABLE_NAME, FK_NAME, KEY_SEQ");
+            prep.setString(1, getCatalogPattern(catalogPattern));
+            prep.setString(2, "\\");
+            prep.setString(3, getSchemaPattern(schemaPattern));
+            prep.setString(4, "\\");
+            prep.setString(5, tableName);
+            return prep.executeQuery();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="34" similarity="100">
+        <!-- identifiers, literals, normalization -->
+        <source file="org/h2/jdbc/JdbcDatabaseMetaData.java" startline="395" endline="428">
+    @Override
+    public ResultSet getPrimaryKeys(String catalogPattern,
+            String schemaPattern, String tableName) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("getPrimaryKeys("
+                        +quote(catalogPattern)+", "
+                        +quote(schemaPattern)+", "
+                        +quote(tableName)+");");
+            }
+            checkClosed();
+            PreparedStatement prep = conn.prepareAutoCloseStatement("SELECT "
+                    + "TABLE_CATALOG TABLE_CAT, "
+                    + "TABLE_SCHEMA TABLE_SCHEM, "
+                    + "TABLE_NAME, "
+                    + "COLUMN_NAME, "
+                    + "ORDINAL_POSITION KEY_SEQ, "
+                    + "IFNULL(CONSTRAINT_NAME, INDEX_NAME) PK_NAME "
+                    + "FROM INFORMATION_SCHEMA.INDEXES "
+                    + "WHERE TABLE_CATALOG LIKE ? ESCAPE ? "
+                    + "AND TABLE_SCHEMA LIKE ? ESCAPE ? "
+                    + "AND TABLE_NAME = ? "
+                    + "AND PRIMARY_KEY = TRUE "
+                    + "ORDER BY COLUMN_NAME");
+            prep.setString(1, getCatalogPattern(catalogPattern));
+            prep.setString(2, "\\");
+            prep.setString(3, getSchemaPattern(schemaPattern));
+            prep.setString(4, "\\");
+            prep.setString(5, tableName);
+            return prep.executeQuery();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcDatabaseMetaData.java" startline="1149" endline="1189">
+    @Override
+    public ResultSet getExportedKeys(String catalogPattern,
+            String schemaPattern, String tableName) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("getExportedKeys("
+                        +quote(catalogPattern)+", "
+                        +quote(schemaPattern)+", "
+                        +quote(tableName)+");");
+            }
+            checkClosed();
+            PreparedStatement prep = conn.prepareAutoCloseStatement("SELECT "
+                    + "PKTABLE_CATALOG PKTABLE_CAT, "
+                    + "PKTABLE_SCHEMA PKTABLE_SCHEM, "
+                    + "PKTABLE_NAME PKTABLE_NAME, "
+                    + "PKCOLUMN_NAME, "
+                    + "FKTABLE_CATALOG FKTABLE_CAT, "
+                    + "FKTABLE_SCHEMA FKTABLE_SCHEM, "
+                    + "FKTABLE_NAME, "
+                    + "FKCOLUMN_NAME, "
+                    + "ORDINAL_POSITION KEY_SEQ, "
+                    + "UPDATE_RULE, "
+                    + "DELETE_RULE, "
+                    + "FK_NAME, "
+                    + "PK_NAME, "
+                    + "DEFERRABILITY "
+                    + "FROM INFORMATION_SCHEMA.CROSS_REFERENCES "
+                    + "WHERE PKTABLE_CATALOG LIKE ? ESCAPE ? "
+                    + "AND PKTABLE_SCHEMA LIKE ? ESCAPE ? "
+                    + "AND PKTABLE_NAME = ? "
+                    + "ORDER BY FKTABLE_CAT, FKTABLE_SCHEM, FKTABLE_NAME, FK_NAME, KEY_SEQ");
+            prep.setString(1, getCatalogPattern(catalogPattern));
+            prep.setString(2, "\\");
+            prep.setString(3, getSchemaPattern(schemaPattern));
+            prep.setString(4, "\\");
+            prep.setString(5, tableName);
+            return prep.executeQuery();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="35" similarity="100">
+        <!-- identifiers, literals, normalization -->
+        <source file="org/h2/jdbc/JdbcDatabaseMetaData.java" startline="582" endline="618">
+    @Override
+    public ResultSet getProcedures(String catalogPattern, String schemaPattern,
+            String procedureNamePattern) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("getProcedures("
+                        +quote(catalogPattern)+", "
+                        +quote(schemaPattern)+", "
+                        +quote(procedureNamePattern)+");");
+            }
+            checkClosed();
+            PreparedStatement prep = conn.prepareAutoCloseStatement("SELECT "
+                    + "ALIAS_CATALOG PROCEDURE_CAT, "
+                    + "ALIAS_SCHEMA PROCEDURE_SCHEM, "
+                    + "ALIAS_NAME PROCEDURE_NAME, "
+                    + "COLUMN_COUNT NUM_INPUT_PARAMS, "
+                    + "ZERO() NUM_OUTPUT_PARAMS, "
+                    + "ZERO() NUM_RESULT_SETS, "
+                    + "REMARKS, "
+                    + "RETURNS_RESULT PROCEDURE_TYPE, "
+                    + "ALIAS_NAME SPECIFIC_NAME "
+                    + "FROM INFORMATION_SCHEMA.FUNCTION_ALIASES "
+                    + "WHERE ALIAS_CATALOG LIKE ? ESCAPE ? "
+                    + "AND ALIAS_SCHEMA LIKE ? ESCAPE ? "
+                    + "AND ALIAS_NAME LIKE ? ESCAPE ? "
+                    + "ORDER BY PROCEDURE_SCHEM, PROCEDURE_NAME, NUM_INPUT_PARAMS");
+            prep.setString(1, getCatalogPattern(catalogPattern));
+            prep.setString(2, "\\");
+            prep.setString(3, getSchemaPattern(schemaPattern));
+            prep.setString(4, "\\");
+            prep.setString(5, getPattern(procedureNamePattern));
+            prep.setString(6, "\\");
+            return prep.executeQuery();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcDatabaseMetaData.java" startline="888" endline="922">
+    @Override
+    public ResultSet getTablePrivileges(String catalogPattern,
+            String schemaPattern, String tableNamePattern) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("getTablePrivileges("
+                        +quote(catalogPattern)+", "
+                        +quote(schemaPattern)+", "
+                        +quote(tableNamePattern)+");");
+            }
+            checkClosed();
+            PreparedStatement prep = conn.prepareAutoCloseStatement("SELECT "
+                    + "TABLE_CATALOG TABLE_CAT, "
+                    + "TABLE_SCHEMA TABLE_SCHEM, "
+                    + "TABLE_NAME, "
+                    + "GRANTOR, "
+                    + "GRANTEE, "
+                    + "PRIVILEGE_TYPE PRIVILEGE, "
+                    + "IS_GRANTABLE "
+                    + "FROM INFORMATION_SCHEMA.TABLE_PRIVILEGES "
+                    + "WHERE TABLE_CATALOG LIKE ? ESCAPE ? "
+                    + "AND TABLE_SCHEMA LIKE ? ESCAPE ? "
+                    + "AND TABLE_NAME LIKE ? ESCAPE ? "
+                    + "ORDER BY TABLE_SCHEM, TABLE_NAME, PRIVILEGE");
+            prep.setString(1, getCatalogPattern(catalogPattern));
+            prep.setString(2, "\\");
+            prep.setString(3, getSchemaPattern(schemaPattern));
+            prep.setString(4, "\\");
+            prep.setString(5, getPattern(tableNamePattern));
+            prep.setString(6, "\\");
+            return prep.executeQuery();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+</clones>

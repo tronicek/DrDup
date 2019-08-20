@@ -1,0 +1,3606 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- The clones reported by DrDup and missed by NiCad
+41x     true clone
+27x     short
+3x      distance (due to normalization)
+-->
+<clones>
+    <clone nlines="15">
+        <!-- short -->
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/opti/SchemaDOM.java" startline="293" endline="307">
+    public void printDOM() {
+        /*
+         for (int i=0; i&lt;relations.length; i++) {
+         if (relations[i][0] != null) {
+         for (int j=0; j&lt;relations[i].length; j++) {
+         if (relations[i][j] != null) {
+         System.out.print(relations[i][j].nodeType+"-"+relations[i][j].parentRow+"  ");
+         }
+         }
+         System.out.println("");
+         }
+         }
+         */
+        //traverse(getDocumentElement(), 0);
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/serializer/ToXMLSAXHandler.java" startline="417" endline="440">
+    public void endCDATA() throws SAXException
+    {
+        /* Normally we would do somthing with this but we ignore it.
+         * The neccessary call to m_lexHandler.endCDATA() will be made
+         * in flushPending().
+         *
+         * This is so that if we get calls like these:
+         *   this.startCDATA();
+         *   this.characters(chars1, off1, len1);
+         *   this.endCDATA();
+         *   this.startCDATA();
+         *   this.characters(chars2, off2, len2);
+         *   this.endCDATA();
+         *
+         * that we will only make these calls to the wrapped handlers:
+         *
+         *   m_lexHandler.startCDATA();
+         *   m_saxHandler.characters(chars1, off1, len1);
+         *   m_saxHandler.characters(chars1, off2, len2);
+         *   m_lexHandler.endCDATA();
+         *
+         * We will merge adjacent CDATA blocks.
+         */
+    }
+</source>
+    </clone>
+    <clone nlines="15">
+        <!-- short -->
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/opti/SchemaDOM.java" startline="293" endline="307">
+    public void printDOM() {
+        /*
+         for (int i=0; i&lt;relations.length; i++) {
+         if (relations[i][0] != null) {
+         for (int j=0; j&lt;relations[i].length; j++) {
+         if (relations[i][j] != null) {
+         System.out.print(relations[i][j].nodeType+"-"+relations[i][j].parentRow+"  ");
+         }
+         }
+         System.out.println("");
+         }
+         }
+         */
+        //traverse(getDocumentElement(), 0);
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="2304" endline="2323">
+    @Override
+    public String getWholeText(){
+
+/*
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+        if (nextSibling == null) {
+            return data;
+        }
+        StringBuffer buffer = new StringBuffer();
+        if (data != null &amp;&amp; data.length() != 0) {
+            buffer.append(data);
+        }
+        getWholeText(nextSibling, buffer);
+        return buffer.toString();
+*/
+        return null; // PENDING
+
+    }
+</source>
+    </clone>
+    <clone nlines="15">
+        <!-- short -->
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/opti/SchemaDOM.java" startline="293" endline="307">
+    public void printDOM() {
+        /*
+         for (int i=0; i&lt;relations.length; i++) {
+         if (relations[i][0] != null) {
+         for (int j=0; j&lt;relations[i].length; j++) {
+         if (relations[i][j] != null) {
+         System.out.print(relations[i][j].nodeType+"-"+relations[i][j].parentRow+"  ");
+         }
+         }
+         System.out.println("");
+         }
+         }
+         */
+        //traverse(getDocumentElement(), 0);
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1952" endline="1970">
+    public String getWholeText(){
+
+/*
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+        if (nextSibling == null) {
+            return data;
+        }
+        StringBuffer buffer = new StringBuffer();
+        if (data != null &amp;&amp; data.length() != 0) {
+            buffer.append(data);
+        }
+        getWholeText(nextSibling, buffer);
+        return buffer.toString();
+*/
+        return null; // PENDING
+
+    }
+</source>
+    </clone>
+    <clone nlines="20">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/serializer/ToXMLSAXHandler.java" startline="417" endline="440">
+    public void endCDATA() throws SAXException
+    {
+        /* Normally we would do somthing with this but we ignore it.
+         * The neccessary call to m_lexHandler.endCDATA() will be made
+         * in flushPending().
+         *
+         * This is so that if we get calls like these:
+         *   this.startCDATA();
+         *   this.characters(chars1, off1, len1);
+         *   this.endCDATA();
+         *   this.startCDATA();
+         *   this.characters(chars2, off2, len2);
+         *   this.endCDATA();
+         *
+         * that we will only make these calls to the wrapped handlers:
+         *
+         *   m_lexHandler.startCDATA();
+         *   m_saxHandler.characters(chars1, off1, len1);
+         *   m_saxHandler.characters(chars1, off2, len2);
+         *   m_lexHandler.endCDATA();
+         *
+         * We will merge adjacent CDATA blocks.
+         */
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="2304" endline="2323">
+    @Override
+    public String getWholeText(){
+
+/*
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+        if (nextSibling == null) {
+            return data;
+        }
+        StringBuffer buffer = new StringBuffer();
+        if (data != null &amp;&amp; data.length() != 0) {
+            buffer.append(data);
+        }
+        getWholeText(nextSibling, buffer);
+        return buffer.toString();
+*/
+        return null; // PENDING
+
+    }
+</source>
+    </clone>
+    <clone nlines="19">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/serializer/ToXMLSAXHandler.java" startline="417" endline="440">
+    public void endCDATA() throws SAXException
+    {
+        /* Normally we would do somthing with this but we ignore it.
+         * The neccessary call to m_lexHandler.endCDATA() will be made
+         * in flushPending().
+         *
+         * This is so that if we get calls like these:
+         *   this.startCDATA();
+         *   this.characters(chars1, off1, len1);
+         *   this.endCDATA();
+         *   this.startCDATA();
+         *   this.characters(chars2, off2, len2);
+         *   this.endCDATA();
+         *
+         * that we will only make these calls to the wrapped handlers:
+         *
+         *   m_lexHandler.startCDATA();
+         *   m_saxHandler.characters(chars1, off1, len1);
+         *   m_saxHandler.characters(chars1, off2, len2);
+         *   m_lexHandler.endCDATA();
+         *
+         * We will merge adjacent CDATA blocks.
+         */
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1952" endline="1970">
+    public String getWholeText(){
+
+/*
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+        if (nextSibling == null) {
+            return data;
+        }
+        StringBuffer buffer = new StringBuffer();
+        if (data != null &amp;&amp; data.length() != 0) {
+            buffer.append(data);
+        }
+        getWholeText(nextSibling, buffer);
+        return buffer.toString();
+*/
+        return null; // PENDING
+
+    }
+</source>
+    </clone>
+    <clone nlines="20">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="2304" endline="2323">
+    @Override
+    public String getWholeText(){
+
+/*
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+        if (nextSibling == null) {
+            return data;
+        }
+        StringBuffer buffer = new StringBuffer();
+        if (data != null &amp;&amp; data.length() != 0) {
+            buffer.append(data);
+        }
+        getWholeText(nextSibling, buffer);
+        return buffer.toString();
+*/
+        return null; // PENDING
+
+    }
+</source>
+        <source file="com/sun/org/apache/xpath/internal/operations/Variable.java" startline="328" endline="349">
+  public int getAnalysisBits()
+  {
+
+    // J2SE does not support Xalan interpretive
+    /*
+        com.sun.org.apache.xalan.internal.templates.ElemVariable vvar = getElemVariable();
+        if(null != vvar)
+        {
+                XPath xpath = vvar.getSelect();
+                if(null != xpath)
+                {
+                        Expression expr = xpath.getExpression();
+                        if(null != expr &amp;&amp; expr instanceof PathComponent)
+                        {
+                                return ((PathComponent)expr).getAnalysisBits();
+                        }
+                }
+        }
+    */
+
+    return WalkerFactory.BIT_FILTER;
+  }
+</source>
+    </clone>
+    <clone nlines="20">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="2304" endline="2323">
+    @Override
+    public String getWholeText(){
+
+/*
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+        if (nextSibling == null) {
+            return data;
+        }
+        StringBuffer buffer = new StringBuffer();
+        if (data != null &amp;&amp; data.length() != 0) {
+            buffer.append(data);
+        }
+        getWholeText(nextSibling, buffer);
+        return buffer.toString();
+*/
+        return null; // PENDING
+
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/dom2dtm/DOM2DTMdefaultNamespaceDeclarationNode.java" startline="402" endline="466">
+    public boolean isDefaultNamespace(String namespaceURI){
+       /*
+        // REVISIT: remove casts when DOM L3 becomes REC.
+        short type = this.getNodeType();
+        switch (type) {
+        case Node.ELEMENT_NODE: {
+            String namespace = this.getNamespaceURI();
+            String prefix = this.getPrefix();
+
+            // REVISIT: is it possible that prefix is empty string?
+            if (prefix == null || prefix.length() == 0) {
+                if (namespaceURI == null) {
+                    return (namespace == namespaceURI);
+                }
+                return namespaceURI.equals(namespace);
+            }
+            if (this.hasAttributes()) {
+                ElementImpl elem = (ElementImpl)this;
+                NodeImpl attr = (NodeImpl)elem.getAttributeNodeNS("http://www.w3.org/2000/xmlns/", "xmlns");
+                if (attr != null) {
+                    String value = attr.getNodeValue();
+                    if (namespaceURI == null) {
+                        return (namespace == value);
+                    }
+                    return namespaceURI.equals(value);
+                }
+            }
+
+            NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+            if (ancestor != null) {
+                return ancestor.isDefaultNamespace(namespaceURI);
+            }
+            return false;
+        }
+        case Node.DOCUMENT_NODE:{
+                return((NodeImpl)((Document)this).getDocumentElement()).isDefaultNamespace(namespaceURI);
+            }
+
+        case Node.ENTITY_NODE :
+          case Node.NOTATION_NODE:
+        case Node.DOCUMENT_FRAGMENT_NODE:
+        case Node.DOCUMENT_TYPE_NODE:
+            // type is unknown
+            return false;
+        case Node.ATTRIBUTE_NODE:{
+                if (this.ownerNode.getNodeType() == Node.ELEMENT_NODE) {
+                    return ownerNode.isDefaultNamespace(namespaceURI);
+
+                }
+                return false;
+            }
+        default:{
+                NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+                if (ancestor != null) {
+                    return ancestor.isDefaultNamespace(namespaceURI);
+                }
+                return false;
+            }
+
+        }
+*/
+        return false;
+
+
+    }
+</source>
+    </clone>
+    <clone nlines="20">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="2304" endline="2323">
+    @Override
+    public String getWholeText(){
+
+/*
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+        if (nextSibling == null) {
+            return data;
+        }
+        StringBuffer buffer = new StringBuffer();
+        if (data != null &amp;&amp; data.length() != 0) {
+            buffer.append(data);
+        }
+        getWholeText(nextSibling, buffer);
+        return buffer.toString();
+*/
+        return null; // PENDING
+
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="1879" endline="1944">
+    @Override
+    public boolean isDefaultNamespace(String namespaceURI){
+       /*
+        // REVISIT: remove casts when DOM L3 becomes REC.
+        short type = this.getNodeType();
+        switch (type) {
+        case Node.ELEMENT_NODE: {
+            String namespace = this.getNamespaceURI();
+            String prefix = this.getPrefix();
+
+            // REVISIT: is it possible that prefix is empty string?
+            if (prefix == null || prefix.length() == 0) {
+                if (namespaceURI == null) {
+                    return (namespace == namespaceURI);
+                }
+                return namespaceURI.equals(namespace);
+            }
+            if (this.hasAttributes()) {
+                ElementImpl elem = (ElementImpl)this;
+                NodeImpl attr = (NodeImpl)elem.getAttributeNodeNS("http://www.w3.org/2000/xmlns/", "xmlns");
+                if (attr != null) {
+                    String value = attr.getNodeValue();
+                    if (namespaceURI == null) {
+                        return (namespace == value);
+                    }
+                    return namespaceURI.equals(value);
+                }
+            }
+
+            NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+            if (ancestor != null) {
+                return ancestor.isDefaultNamespace(namespaceURI);
+            }
+            return false;
+        }
+        case Node.DOCUMENT_NODE:{
+                return((NodeImpl)((Document)this).getDocumentElement()).isDefaultNamespace(namespaceURI);
+            }
+
+        case Node.ENTITY_NODE :
+          case Node.NOTATION_NODE:
+        case Node.DOCUMENT_FRAGMENT_NODE:
+        case Node.DOCUMENT_TYPE_NODE:
+            // type is unknown
+            return false;
+        case Node.ATTRIBUTE_NODE:{
+                if (this.ownerNode.getNodeType() == Node.ELEMENT_NODE) {
+                    return ownerNode.isDefaultNamespace(namespaceURI);
+
+                }
+                return false;
+            }
+        default:{
+                NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+                if (ancestor != null) {
+                    return ancestor.isDefaultNamespace(namespaceURI);
+                }
+                return false;
+            }
+
+        }
+*/
+        return false;
+
+
+    }
+</source>
+    </clone>
+    <clone nlines="20">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="2304" endline="2323">
+    @Override
+    public String getWholeText(){
+
+/*
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+        if (nextSibling == null) {
+            return data;
+        }
+        StringBuffer buffer = new StringBuffer();
+        if (data != null &amp;&amp; data.length() != 0) {
+            buffer.append(data);
+        }
+        getWholeText(nextSibling, buffer);
+        return buffer.toString();
+*/
+        return null; // PENDING
+
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1539" endline="1603">
+    public boolean isDefaultNamespace(String namespaceURI){
+       /*
+        // REVISIT: remove casts when DOM L3 becomes REC.
+        short type = this.getNodeType();
+        switch (type) {
+        case Node.ELEMENT_NODE: {
+            String namespace = this.getNamespaceURI();
+            String prefix = this.getPrefix();
+
+            // REVISIT: is it possible that prefix is empty string?
+            if (prefix == null || prefix.length() == 0) {
+                if (namespaceURI == null) {
+                    return (namespace == namespaceURI);
+                }
+                return namespaceURI.equals(namespace);
+            }
+            if (this.hasAttributes()) {
+                ElementImpl elem = (ElementImpl)this;
+                NodeImpl attr = (NodeImpl)elem.getAttributeNodeNS("http://www.w3.org/2000/xmlns/", "xmlns");
+                if (attr != null) {
+                    String value = attr.getNodeValue();
+                    if (namespaceURI == null) {
+                        return (namespace == value);
+                    }
+                    return namespaceURI.equals(value);
+                }
+            }
+
+            NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+            if (ancestor != null) {
+                return ancestor.isDefaultNamespace(namespaceURI);
+            }
+            return false;
+        }
+        case Node.DOCUMENT_NODE:{
+                return((NodeImpl)((Document)this).getDocumentElement()).isDefaultNamespace(namespaceURI);
+            }
+
+        case Node.ENTITY_NODE :
+          case Node.NOTATION_NODE:
+        case Node.DOCUMENT_FRAGMENT_NODE:
+        case Node.DOCUMENT_TYPE_NODE:
+            // type is unknown
+            return false;
+        case Node.ATTRIBUTE_NODE:{
+                if (this.ownerNode.getNodeType() == Node.ELEMENT_NODE) {
+                    return ownerNode.isDefaultNamespace(namespaceURI);
+
+                }
+                return false;
+            }
+        default:{
+                NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+                if (ancestor != null) {
+                    return ancestor.isDefaultNamespace(namespaceURI);
+                }
+                return false;
+            }
+
+        }
+*/
+        return false;
+
+
+    }
+</source>
+    </clone>
+    <clone nlines="19">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1952" endline="1970">
+    public String getWholeText(){
+
+/*
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+        if (nextSibling == null) {
+            return data;
+        }
+        StringBuffer buffer = new StringBuffer();
+        if (data != null &amp;&amp; data.length() != 0) {
+            buffer.append(data);
+        }
+        getWholeText(nextSibling, buffer);
+        return buffer.toString();
+*/
+        return null; // PENDING
+
+    }
+</source>
+        <source file="com/sun/org/apache/xpath/internal/operations/Variable.java" startline="328" endline="349">
+  public int getAnalysisBits()
+  {
+
+    // J2SE does not support Xalan interpretive
+    /*
+        com.sun.org.apache.xalan.internal.templates.ElemVariable vvar = getElemVariable();
+        if(null != vvar)
+        {
+                XPath xpath = vvar.getSelect();
+                if(null != xpath)
+                {
+                        Expression expr = xpath.getExpression();
+                        if(null != expr &amp;&amp; expr instanceof PathComponent)
+                        {
+                                return ((PathComponent)expr).getAnalysisBits();
+                        }
+                }
+        }
+    */
+
+    return WalkerFactory.BIT_FILTER;
+  }
+</source>
+    </clone>
+    <clone nlines="19">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1952" endline="1970">
+    public String getWholeText(){
+
+/*
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+        if (nextSibling == null) {
+            return data;
+        }
+        StringBuffer buffer = new StringBuffer();
+        if (data != null &amp;&amp; data.length() != 0) {
+            buffer.append(data);
+        }
+        getWholeText(nextSibling, buffer);
+        return buffer.toString();
+*/
+        return null; // PENDING
+
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/dom2dtm/DOM2DTMdefaultNamespaceDeclarationNode.java" startline="402" endline="466">
+    public boolean isDefaultNamespace(String namespaceURI){
+       /*
+        // REVISIT: remove casts when DOM L3 becomes REC.
+        short type = this.getNodeType();
+        switch (type) {
+        case Node.ELEMENT_NODE: {
+            String namespace = this.getNamespaceURI();
+            String prefix = this.getPrefix();
+
+            // REVISIT: is it possible that prefix is empty string?
+            if (prefix == null || prefix.length() == 0) {
+                if (namespaceURI == null) {
+                    return (namespace == namespaceURI);
+                }
+                return namespaceURI.equals(namespace);
+            }
+            if (this.hasAttributes()) {
+                ElementImpl elem = (ElementImpl)this;
+                NodeImpl attr = (NodeImpl)elem.getAttributeNodeNS("http://www.w3.org/2000/xmlns/", "xmlns");
+                if (attr != null) {
+                    String value = attr.getNodeValue();
+                    if (namespaceURI == null) {
+                        return (namespace == value);
+                    }
+                    return namespaceURI.equals(value);
+                }
+            }
+
+            NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+            if (ancestor != null) {
+                return ancestor.isDefaultNamespace(namespaceURI);
+            }
+            return false;
+        }
+        case Node.DOCUMENT_NODE:{
+                return((NodeImpl)((Document)this).getDocumentElement()).isDefaultNamespace(namespaceURI);
+            }
+
+        case Node.ENTITY_NODE :
+          case Node.NOTATION_NODE:
+        case Node.DOCUMENT_FRAGMENT_NODE:
+        case Node.DOCUMENT_TYPE_NODE:
+            // type is unknown
+            return false;
+        case Node.ATTRIBUTE_NODE:{
+                if (this.ownerNode.getNodeType() == Node.ELEMENT_NODE) {
+                    return ownerNode.isDefaultNamespace(namespaceURI);
+
+                }
+                return false;
+            }
+        default:{
+                NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+                if (ancestor != null) {
+                    return ancestor.isDefaultNamespace(namespaceURI);
+                }
+                return false;
+            }
+
+        }
+*/
+        return false;
+
+
+    }
+</source>
+    </clone>
+    <clone nlines="19">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1952" endline="1970">
+    public String getWholeText(){
+
+/*
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+        if (nextSibling == null) {
+            return data;
+        }
+        StringBuffer buffer = new StringBuffer();
+        if (data != null &amp;&amp; data.length() != 0) {
+            buffer.append(data);
+        }
+        getWholeText(nextSibling, buffer);
+        return buffer.toString();
+*/
+        return null; // PENDING
+
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="1879" endline="1944">
+    @Override
+    public boolean isDefaultNamespace(String namespaceURI){
+       /*
+        // REVISIT: remove casts when DOM L3 becomes REC.
+        short type = this.getNodeType();
+        switch (type) {
+        case Node.ELEMENT_NODE: {
+            String namespace = this.getNamespaceURI();
+            String prefix = this.getPrefix();
+
+            // REVISIT: is it possible that prefix is empty string?
+            if (prefix == null || prefix.length() == 0) {
+                if (namespaceURI == null) {
+                    return (namespace == namespaceURI);
+                }
+                return namespaceURI.equals(namespace);
+            }
+            if (this.hasAttributes()) {
+                ElementImpl elem = (ElementImpl)this;
+                NodeImpl attr = (NodeImpl)elem.getAttributeNodeNS("http://www.w3.org/2000/xmlns/", "xmlns");
+                if (attr != null) {
+                    String value = attr.getNodeValue();
+                    if (namespaceURI == null) {
+                        return (namespace == value);
+                    }
+                    return namespaceURI.equals(value);
+                }
+            }
+
+            NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+            if (ancestor != null) {
+                return ancestor.isDefaultNamespace(namespaceURI);
+            }
+            return false;
+        }
+        case Node.DOCUMENT_NODE:{
+                return((NodeImpl)((Document)this).getDocumentElement()).isDefaultNamespace(namespaceURI);
+            }
+
+        case Node.ENTITY_NODE :
+          case Node.NOTATION_NODE:
+        case Node.DOCUMENT_FRAGMENT_NODE:
+        case Node.DOCUMENT_TYPE_NODE:
+            // type is unknown
+            return false;
+        case Node.ATTRIBUTE_NODE:{
+                if (this.ownerNode.getNodeType() == Node.ELEMENT_NODE) {
+                    return ownerNode.isDefaultNamespace(namespaceURI);
+
+                }
+                return false;
+            }
+        default:{
+                NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+                if (ancestor != null) {
+                    return ancestor.isDefaultNamespace(namespaceURI);
+                }
+                return false;
+            }
+
+        }
+*/
+        return false;
+
+
+    }
+</source>
+    </clone>
+    <clone nlines="19">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1952" endline="1970">
+    public String getWholeText(){
+
+/*
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+        if (nextSibling == null) {
+            return data;
+        }
+        StringBuffer buffer = new StringBuffer();
+        if (data != null &amp;&amp; data.length() != 0) {
+            buffer.append(data);
+        }
+        getWholeText(nextSibling, buffer);
+        return buffer.toString();
+*/
+        return null; // PENDING
+
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1539" endline="1603">
+    public boolean isDefaultNamespace(String namespaceURI){
+       /*
+        // REVISIT: remove casts when DOM L3 becomes REC.
+        short type = this.getNodeType();
+        switch (type) {
+        case Node.ELEMENT_NODE: {
+            String namespace = this.getNamespaceURI();
+            String prefix = this.getPrefix();
+
+            // REVISIT: is it possible that prefix is empty string?
+            if (prefix == null || prefix.length() == 0) {
+                if (namespaceURI == null) {
+                    return (namespace == namespaceURI);
+                }
+                return namespaceURI.equals(namespace);
+            }
+            if (this.hasAttributes()) {
+                ElementImpl elem = (ElementImpl)this;
+                NodeImpl attr = (NodeImpl)elem.getAttributeNodeNS("http://www.w3.org/2000/xmlns/", "xmlns");
+                if (attr != null) {
+                    String value = attr.getNodeValue();
+                    if (namespaceURI == null) {
+                        return (namespace == value);
+                    }
+                    return namespaceURI.equals(value);
+                }
+            }
+
+            NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+            if (ancestor != null) {
+                return ancestor.isDefaultNamespace(namespaceURI);
+            }
+            return false;
+        }
+        case Node.DOCUMENT_NODE:{
+                return((NodeImpl)((Document)this).getDocumentElement()).isDefaultNamespace(namespaceURI);
+            }
+
+        case Node.ENTITY_NODE :
+          case Node.NOTATION_NODE:
+        case Node.DOCUMENT_FRAGMENT_NODE:
+        case Node.DOCUMENT_TYPE_NODE:
+            // type is unknown
+            return false;
+        case Node.ATTRIBUTE_NODE:{
+                if (this.ownerNode.getNodeType() == Node.ELEMENT_NODE) {
+                    return ownerNode.isDefaultNamespace(namespaceURI);
+
+                }
+                return false;
+            }
+        default:{
+                NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+                if (ancestor != null) {
+                    return ancestor.isDefaultNamespace(namespaceURI);
+                }
+                return false;
+            }
+
+        }
+*/
+        return false;
+
+
+    }
+</source>
+    </clone>
+    <clone nlines="47">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/dom2dtm/DOM2DTMdefaultNamespaceDeclarationNode.java" startline="402" endline="466">
+    public boolean isDefaultNamespace(String namespaceURI){
+       /*
+        // REVISIT: remove casts when DOM L3 becomes REC.
+        short type = this.getNodeType();
+        switch (type) {
+        case Node.ELEMENT_NODE: {
+            String namespace = this.getNamespaceURI();
+            String prefix = this.getPrefix();
+
+            // REVISIT: is it possible that prefix is empty string?
+            if (prefix == null || prefix.length() == 0) {
+                if (namespaceURI == null) {
+                    return (namespace == namespaceURI);
+                }
+                return namespaceURI.equals(namespace);
+            }
+            if (this.hasAttributes()) {
+                ElementImpl elem = (ElementImpl)this;
+                NodeImpl attr = (NodeImpl)elem.getAttributeNodeNS("http://www.w3.org/2000/xmlns/", "xmlns");
+                if (attr != null) {
+                    String value = attr.getNodeValue();
+                    if (namespaceURI == null) {
+                        return (namespace == value);
+                    }
+                    return namespaceURI.equals(value);
+                }
+            }
+
+            NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+            if (ancestor != null) {
+                return ancestor.isDefaultNamespace(namespaceURI);
+            }
+            return false;
+        }
+        case Node.DOCUMENT_NODE:{
+                return((NodeImpl)((Document)this).getDocumentElement()).isDefaultNamespace(namespaceURI);
+            }
+
+        case Node.ENTITY_NODE :
+          case Node.NOTATION_NODE:
+        case Node.DOCUMENT_FRAGMENT_NODE:
+        case Node.DOCUMENT_TYPE_NODE:
+            // type is unknown
+            return false;
+        case Node.ATTRIBUTE_NODE:{
+                if (this.ownerNode.getNodeType() == Node.ELEMENT_NODE) {
+                    return ownerNode.isDefaultNamespace(namespaceURI);
+
+                }
+                return false;
+            }
+        default:{
+                NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+                if (ancestor != null) {
+                    return ancestor.isDefaultNamespace(namespaceURI);
+                }
+                return false;
+            }
+
+        }
+*/
+        return false;
+
+
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="2250" endline="2296">
+    @Override
+    public Text replaceWholeText(String content)
+                                 throws DOMException{
+/*
+
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+
+        // make sure we can make the replacement
+        if (!canModify(nextSibling)) {
+            throw new DOMException(DOMException.NO_MODIFICATION_ALLOWED_ERR,
+                DOMMessageFormatter.formatMessage(DOMMessageFormatter.DOM_DOMAIN, "NO_MODIFICATION_ALLOWED_ERR", null));
+        }
+
+        Node parent = this.getParentNode();
+        if (content == null || content.length() == 0) {
+            // remove current node
+            if (parent !=null) { // check if node in the tree
+                parent.removeChild(this);
+                return null;
+            }
+        }
+        Text currentNode = null;
+        if (isReadOnly()){
+            Text newNode = this.ownerDocument().createTextNode(content);
+            if (parent !=null) { // check if node in the tree
+                parent.insertBefore(newNode, this);
+                parent.removeChild(this);
+                currentNode = newNode;
+            } else {
+                return newNode;
+            }
+        }  else {
+            this.setData(content);
+            currentNode = this;
+        }
+        Node sibling =  currentNode.getNextSibling();
+        while ( sibling !=null) {
+            parent.removeChild(sibling);
+            sibling = currentNode.getNextSibling();
+        }
+
+        return currentNode;
+*/
+        return null; //Pending
+    }
+</source>
+    </clone>
+    <clone nlines="46">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/dom2dtm/DOM2DTMdefaultNamespaceDeclarationNode.java" startline="402" endline="466">
+    public boolean isDefaultNamespace(String namespaceURI){
+       /*
+        // REVISIT: remove casts when DOM L3 becomes REC.
+        short type = this.getNodeType();
+        switch (type) {
+        case Node.ELEMENT_NODE: {
+            String namespace = this.getNamespaceURI();
+            String prefix = this.getPrefix();
+
+            // REVISIT: is it possible that prefix is empty string?
+            if (prefix == null || prefix.length() == 0) {
+                if (namespaceURI == null) {
+                    return (namespace == namespaceURI);
+                }
+                return namespaceURI.equals(namespace);
+            }
+            if (this.hasAttributes()) {
+                ElementImpl elem = (ElementImpl)this;
+                NodeImpl attr = (NodeImpl)elem.getAttributeNodeNS("http://www.w3.org/2000/xmlns/", "xmlns");
+                if (attr != null) {
+                    String value = attr.getNodeValue();
+                    if (namespaceURI == null) {
+                        return (namespace == value);
+                    }
+                    return namespaceURI.equals(value);
+                }
+            }
+
+            NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+            if (ancestor != null) {
+                return ancestor.isDefaultNamespace(namespaceURI);
+            }
+            return false;
+        }
+        case Node.DOCUMENT_NODE:{
+                return((NodeImpl)((Document)this).getDocumentElement()).isDefaultNamespace(namespaceURI);
+            }
+
+        case Node.ENTITY_NODE :
+          case Node.NOTATION_NODE:
+        case Node.DOCUMENT_FRAGMENT_NODE:
+        case Node.DOCUMENT_TYPE_NODE:
+            // type is unknown
+            return false;
+        case Node.ATTRIBUTE_NODE:{
+                if (this.ownerNode.getNodeType() == Node.ELEMENT_NODE) {
+                    return ownerNode.isDefaultNamespace(namespaceURI);
+
+                }
+                return false;
+            }
+        default:{
+                NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+                if (ancestor != null) {
+                    return ancestor.isDefaultNamespace(namespaceURI);
+                }
+                return false;
+            }
+
+        }
+*/
+        return false;
+
+
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1899" endline="1944">
+    public Text replaceWholeText(String content)
+                                 throws DOMException{
+/*
+
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+
+        // make sure we can make the replacement
+        if (!canModify(nextSibling)) {
+            throw new DOMException(DOMException.NO_MODIFICATION_ALLOWED_ERR,
+                DOMMessageFormatter.formatMessage(DOMMessageFormatter.DOM_DOMAIN, "NO_MODIFICATION_ALLOWED_ERR", null));
+        }
+
+        Node parent = this.getParentNode();
+        if (content == null || content.length() == 0) {
+            // remove current node
+            if (parent !=null) { // check if node in the tree
+                parent.removeChild(this);
+                return null;
+            }
+        }
+        Text currentNode = null;
+        if (isReadOnly()){
+            Text newNode = this.ownerDocument().createTextNode(content);
+            if (parent !=null) { // check if node in the tree
+                parent.insertBefore(newNode, this);
+                parent.removeChild(this);
+                currentNode = newNode;
+            } else {
+                return newNode;
+            }
+        }  else {
+            this.setData(content);
+            currentNode = this;
+        }
+        Node sibling =  currentNode.getNextSibling();
+        while ( sibling !=null) {
+            parent.removeChild(sibling);
+            sibling = currentNode.getNextSibling();
+        }
+
+        return currentNode;
+*/
+        return null; //Pending
+    }
+</source>
+    </clone>
+    <clone nlines="47">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="1879" endline="1944">
+    @Override
+    public boolean isDefaultNamespace(String namespaceURI){
+       /*
+        // REVISIT: remove casts when DOM L3 becomes REC.
+        short type = this.getNodeType();
+        switch (type) {
+        case Node.ELEMENT_NODE: {
+            String namespace = this.getNamespaceURI();
+            String prefix = this.getPrefix();
+
+            // REVISIT: is it possible that prefix is empty string?
+            if (prefix == null || prefix.length() == 0) {
+                if (namespaceURI == null) {
+                    return (namespace == namespaceURI);
+                }
+                return namespaceURI.equals(namespace);
+            }
+            if (this.hasAttributes()) {
+                ElementImpl elem = (ElementImpl)this;
+                NodeImpl attr = (NodeImpl)elem.getAttributeNodeNS("http://www.w3.org/2000/xmlns/", "xmlns");
+                if (attr != null) {
+                    String value = attr.getNodeValue();
+                    if (namespaceURI == null) {
+                        return (namespace == value);
+                    }
+                    return namespaceURI.equals(value);
+                }
+            }
+
+            NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+            if (ancestor != null) {
+                return ancestor.isDefaultNamespace(namespaceURI);
+            }
+            return false;
+        }
+        case Node.DOCUMENT_NODE:{
+                return((NodeImpl)((Document)this).getDocumentElement()).isDefaultNamespace(namespaceURI);
+            }
+
+        case Node.ENTITY_NODE :
+          case Node.NOTATION_NODE:
+        case Node.DOCUMENT_FRAGMENT_NODE:
+        case Node.DOCUMENT_TYPE_NODE:
+            // type is unknown
+            return false;
+        case Node.ATTRIBUTE_NODE:{
+                if (this.ownerNode.getNodeType() == Node.ELEMENT_NODE) {
+                    return ownerNode.isDefaultNamespace(namespaceURI);
+
+                }
+                return false;
+            }
+        default:{
+                NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+                if (ancestor != null) {
+                    return ancestor.isDefaultNamespace(namespaceURI);
+                }
+                return false;
+            }
+
+        }
+*/
+        return false;
+
+
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="2250" endline="2296">
+    @Override
+    public Text replaceWholeText(String content)
+                                 throws DOMException{
+/*
+
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+
+        // make sure we can make the replacement
+        if (!canModify(nextSibling)) {
+            throw new DOMException(DOMException.NO_MODIFICATION_ALLOWED_ERR,
+                DOMMessageFormatter.formatMessage(DOMMessageFormatter.DOM_DOMAIN, "NO_MODIFICATION_ALLOWED_ERR", null));
+        }
+
+        Node parent = this.getParentNode();
+        if (content == null || content.length() == 0) {
+            // remove current node
+            if (parent !=null) { // check if node in the tree
+                parent.removeChild(this);
+                return null;
+            }
+        }
+        Text currentNode = null;
+        if (isReadOnly()){
+            Text newNode = this.ownerDocument().createTextNode(content);
+            if (parent !=null) { // check if node in the tree
+                parent.insertBefore(newNode, this);
+                parent.removeChild(this);
+                currentNode = newNode;
+            } else {
+                return newNode;
+            }
+        }  else {
+            this.setData(content);
+            currentNode = this;
+        }
+        Node sibling =  currentNode.getNextSibling();
+        while ( sibling !=null) {
+            parent.removeChild(sibling);
+            sibling = currentNode.getNextSibling();
+        }
+
+        return currentNode;
+*/
+        return null; //Pending
+    }
+</source>
+    </clone>
+    <clone nlines="46">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="1879" endline="1944">
+    @Override
+    public boolean isDefaultNamespace(String namespaceURI){
+       /*
+        // REVISIT: remove casts when DOM L3 becomes REC.
+        short type = this.getNodeType();
+        switch (type) {
+        case Node.ELEMENT_NODE: {
+            String namespace = this.getNamespaceURI();
+            String prefix = this.getPrefix();
+
+            // REVISIT: is it possible that prefix is empty string?
+            if (prefix == null || prefix.length() == 0) {
+                if (namespaceURI == null) {
+                    return (namespace == namespaceURI);
+                }
+                return namespaceURI.equals(namespace);
+            }
+            if (this.hasAttributes()) {
+                ElementImpl elem = (ElementImpl)this;
+                NodeImpl attr = (NodeImpl)elem.getAttributeNodeNS("http://www.w3.org/2000/xmlns/", "xmlns");
+                if (attr != null) {
+                    String value = attr.getNodeValue();
+                    if (namespaceURI == null) {
+                        return (namespace == value);
+                    }
+                    return namespaceURI.equals(value);
+                }
+            }
+
+            NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+            if (ancestor != null) {
+                return ancestor.isDefaultNamespace(namespaceURI);
+            }
+            return false;
+        }
+        case Node.DOCUMENT_NODE:{
+                return((NodeImpl)((Document)this).getDocumentElement()).isDefaultNamespace(namespaceURI);
+            }
+
+        case Node.ENTITY_NODE :
+          case Node.NOTATION_NODE:
+        case Node.DOCUMENT_FRAGMENT_NODE:
+        case Node.DOCUMENT_TYPE_NODE:
+            // type is unknown
+            return false;
+        case Node.ATTRIBUTE_NODE:{
+                if (this.ownerNode.getNodeType() == Node.ELEMENT_NODE) {
+                    return ownerNode.isDefaultNamespace(namespaceURI);
+
+                }
+                return false;
+            }
+        default:{
+                NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+                if (ancestor != null) {
+                    return ancestor.isDefaultNamespace(namespaceURI);
+                }
+                return false;
+            }
+
+        }
+*/
+        return false;
+
+
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1899" endline="1944">
+    public Text replaceWholeText(String content)
+                                 throws DOMException{
+/*
+
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+
+        // make sure we can make the replacement
+        if (!canModify(nextSibling)) {
+            throw new DOMException(DOMException.NO_MODIFICATION_ALLOWED_ERR,
+                DOMMessageFormatter.formatMessage(DOMMessageFormatter.DOM_DOMAIN, "NO_MODIFICATION_ALLOWED_ERR", null));
+        }
+
+        Node parent = this.getParentNode();
+        if (content == null || content.length() == 0) {
+            // remove current node
+            if (parent !=null) { // check if node in the tree
+                parent.removeChild(this);
+                return null;
+            }
+        }
+        Text currentNode = null;
+        if (isReadOnly()){
+            Text newNode = this.ownerDocument().createTextNode(content);
+            if (parent !=null) { // check if node in the tree
+                parent.insertBefore(newNode, this);
+                parent.removeChild(this);
+                currentNode = newNode;
+            } else {
+                return newNode;
+            }
+        }  else {
+            this.setData(content);
+            currentNode = this;
+        }
+        Node sibling =  currentNode.getNextSibling();
+        while ( sibling !=null) {
+            parent.removeChild(sibling);
+            sibling = currentNode.getNextSibling();
+        }
+
+        return currentNode;
+*/
+        return null; //Pending
+    }
+</source>
+    </clone>
+    <clone nlines="47">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1539" endline="1603">
+    public boolean isDefaultNamespace(String namespaceURI){
+       /*
+        // REVISIT: remove casts when DOM L3 becomes REC.
+        short type = this.getNodeType();
+        switch (type) {
+        case Node.ELEMENT_NODE: {
+            String namespace = this.getNamespaceURI();
+            String prefix = this.getPrefix();
+
+            // REVISIT: is it possible that prefix is empty string?
+            if (prefix == null || prefix.length() == 0) {
+                if (namespaceURI == null) {
+                    return (namespace == namespaceURI);
+                }
+                return namespaceURI.equals(namespace);
+            }
+            if (this.hasAttributes()) {
+                ElementImpl elem = (ElementImpl)this;
+                NodeImpl attr = (NodeImpl)elem.getAttributeNodeNS("http://www.w3.org/2000/xmlns/", "xmlns");
+                if (attr != null) {
+                    String value = attr.getNodeValue();
+                    if (namespaceURI == null) {
+                        return (namespace == value);
+                    }
+                    return namespaceURI.equals(value);
+                }
+            }
+
+            NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+            if (ancestor != null) {
+                return ancestor.isDefaultNamespace(namespaceURI);
+            }
+            return false;
+        }
+        case Node.DOCUMENT_NODE:{
+                return((NodeImpl)((Document)this).getDocumentElement()).isDefaultNamespace(namespaceURI);
+            }
+
+        case Node.ENTITY_NODE :
+          case Node.NOTATION_NODE:
+        case Node.DOCUMENT_FRAGMENT_NODE:
+        case Node.DOCUMENT_TYPE_NODE:
+            // type is unknown
+            return false;
+        case Node.ATTRIBUTE_NODE:{
+                if (this.ownerNode.getNodeType() == Node.ELEMENT_NODE) {
+                    return ownerNode.isDefaultNamespace(namespaceURI);
+
+                }
+                return false;
+            }
+        default:{
+                NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+                if (ancestor != null) {
+                    return ancestor.isDefaultNamespace(namespaceURI);
+                }
+                return false;
+            }
+
+        }
+*/
+        return false;
+
+
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="2250" endline="2296">
+    @Override
+    public Text replaceWholeText(String content)
+                                 throws DOMException{
+/*
+
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+
+        // make sure we can make the replacement
+        if (!canModify(nextSibling)) {
+            throw new DOMException(DOMException.NO_MODIFICATION_ALLOWED_ERR,
+                DOMMessageFormatter.formatMessage(DOMMessageFormatter.DOM_DOMAIN, "NO_MODIFICATION_ALLOWED_ERR", null));
+        }
+
+        Node parent = this.getParentNode();
+        if (content == null || content.length() == 0) {
+            // remove current node
+            if (parent !=null) { // check if node in the tree
+                parent.removeChild(this);
+                return null;
+            }
+        }
+        Text currentNode = null;
+        if (isReadOnly()){
+            Text newNode = this.ownerDocument().createTextNode(content);
+            if (parent !=null) { // check if node in the tree
+                parent.insertBefore(newNode, this);
+                parent.removeChild(this);
+                currentNode = newNode;
+            } else {
+                return newNode;
+            }
+        }  else {
+            this.setData(content);
+            currentNode = this;
+        }
+        Node sibling =  currentNode.getNextSibling();
+        while ( sibling !=null) {
+            parent.removeChild(sibling);
+            sibling = currentNode.getNextSibling();
+        }
+
+        return currentNode;
+*/
+        return null; //Pending
+    }
+</source>
+    </clone>
+    <clone nlines="46">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1539" endline="1603">
+    public boolean isDefaultNamespace(String namespaceURI){
+       /*
+        // REVISIT: remove casts when DOM L3 becomes REC.
+        short type = this.getNodeType();
+        switch (type) {
+        case Node.ELEMENT_NODE: {
+            String namespace = this.getNamespaceURI();
+            String prefix = this.getPrefix();
+
+            // REVISIT: is it possible that prefix is empty string?
+            if (prefix == null || prefix.length() == 0) {
+                if (namespaceURI == null) {
+                    return (namespace == namespaceURI);
+                }
+                return namespaceURI.equals(namespace);
+            }
+            if (this.hasAttributes()) {
+                ElementImpl elem = (ElementImpl)this;
+                NodeImpl attr = (NodeImpl)elem.getAttributeNodeNS("http://www.w3.org/2000/xmlns/", "xmlns");
+                if (attr != null) {
+                    String value = attr.getNodeValue();
+                    if (namespaceURI == null) {
+                        return (namespace == value);
+                    }
+                    return namespaceURI.equals(value);
+                }
+            }
+
+            NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+            if (ancestor != null) {
+                return ancestor.isDefaultNamespace(namespaceURI);
+            }
+            return false;
+        }
+        case Node.DOCUMENT_NODE:{
+                return((NodeImpl)((Document)this).getDocumentElement()).isDefaultNamespace(namespaceURI);
+            }
+
+        case Node.ENTITY_NODE :
+          case Node.NOTATION_NODE:
+        case Node.DOCUMENT_FRAGMENT_NODE:
+        case Node.DOCUMENT_TYPE_NODE:
+            // type is unknown
+            return false;
+        case Node.ATTRIBUTE_NODE:{
+                if (this.ownerNode.getNodeType() == Node.ELEMENT_NODE) {
+                    return ownerNode.isDefaultNamespace(namespaceURI);
+
+                }
+                return false;
+            }
+        default:{
+                NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+                if (ancestor != null) {
+                    return ancestor.isDefaultNamespace(namespaceURI);
+                }
+                return false;
+            }
+
+        }
+*/
+        return false;
+
+
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1899" endline="1944">
+    public Text replaceWholeText(String content)
+                                 throws DOMException{
+/*
+
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+
+        // make sure we can make the replacement
+        if (!canModify(nextSibling)) {
+            throw new DOMException(DOMException.NO_MODIFICATION_ALLOWED_ERR,
+                DOMMessageFormatter.formatMessage(DOMMessageFormatter.DOM_DOMAIN, "NO_MODIFICATION_ALLOWED_ERR", null));
+        }
+
+        Node parent = this.getParentNode();
+        if (content == null || content.length() == 0) {
+            // remove current node
+            if (parent !=null) { // check if node in the tree
+                parent.removeChild(this);
+                return null;
+            }
+        }
+        Text currentNode = null;
+        if (isReadOnly()){
+            Text newNode = this.ownerDocument().createTextNode(content);
+            if (parent !=null) { // check if node in the tree
+                parent.insertBefore(newNode, this);
+                parent.removeChild(this);
+                currentNode = newNode;
+            } else {
+                return newNode;
+            }
+        }  else {
+            this.setData(content);
+            currentNode = this;
+        }
+        Node sibling =  currentNode.getNextSibling();
+        while ( sibling !=null) {
+            parent.removeChild(sibling);
+            sibling = currentNode.getNextSibling();
+        }
+
+        return currentNode;
+*/
+        return null; //Pending
+    }
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: Object to int -->
+        <source file="com/sun/org/apache/xml/internal/utils/ObjectStack.java" startline="193" endline="204">
+  public int search(Object o)
+  {
+
+    int i = lastIndexOf(o);
+
+    if (i &gt;= 0)
+    {
+      return size() - i;
+    }
+
+    return -1;
+  }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/IntStack.java" startline="190" endline="201">
+  public int search(int o)
+  {
+
+    int i = lastIndexOf(o);
+
+    if (i &gt;= 0)
+    {
+      return size() - i;
+    }
+
+    return -1;
+  }
+</source>
+    </clone>
+    <clone nlines="13">
+        <!-- short -->
+        <source file="com/sun/org/apache/xerces/internal/xinclude/XIncludeHandler.java" startline="1322" endline="1336">
+    @Override
+    public void internalEntityDecl(
+        String name,
+        XMLString text,
+        XMLString nonNormalizedText,
+        Augmentations augmentations)
+        throws XNIException {
+        if (fDTDHandler != null) {
+            fDTDHandler.internalEntityDecl(
+                name,
+                text,
+                nonNormalizedText,
+                augmentations);
+        }
+    }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/XMLSchemaValidator.java" startline="720" endline="732">
+    public void doctypeDecl(
+        String rootElement,
+        String publicId,
+        String systemId,
+        Augmentations augs)
+        throws XNIException {
+
+        // call handlers
+        if (fDocumentHandler != null) {
+            fDocumentHandler.doctypeDecl(rootElement, publicId, systemId, augs);
+        }
+
+    } // doctypeDecl(String,String,String)
+</source>
+    </clone>
+    <clone nlines="13">
+        <!-- short -->
+        <source file="com/sun/org/apache/xerces/internal/xinclude/XIncludeHandler.java" startline="1411" endline="1425">
+    @Override
+    public void startParameterEntity(
+        String name,
+        XMLResourceIdentifier identifier,
+        String encoding,
+        Augmentations augmentations)
+        throws XNIException {
+        if (fDTDHandler != null) {
+            fDTDHandler.startParameterEntity(
+                name,
+                identifier,
+                encoding,
+                augmentations);
+        }
+    }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/impl/xs/XMLSchemaValidator.java" startline="720" endline="732">
+    public void doctypeDecl(
+        String rootElement,
+        String publicId,
+        String systemId,
+        Augmentations augs)
+        throws XNIException {
+
+        // call handlers
+        if (fDocumentHandler != null) {
+            fDocumentHandler.doctypeDecl(rootElement, publicId, systemId, augs);
+        }
+
+    } // doctypeDecl(String,String,String)
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: String to int -->
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="1119" endline="1130">
+    public String getNodeName(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return null;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkValue(fNodeName, chunk, index)
+                    : getChunkValue(fNodeName, chunk, index);
+
+    } // getNodeName(int,boolean):String
+</source>
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="796" endline="807">
+    public int getParentNode(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return -1;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkIndex(fNodeParent, chunk, index)
+                    : getChunkIndex(fNodeParent, chunk, index);
+
+    } // getParentNode(int):int
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: String to int -->
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="1119" endline="1130">
+    public String getNodeName(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return null;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkValue(fNodeName, chunk, index)
+                    : getChunkValue(fNodeName, chunk, index);
+
+    } // getNodeName(int,boolean):String
+</source>
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="818" endline="829">
+    public int getLastChild(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return -1;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkIndex(fNodeLastChild, chunk, index)
+                    : getChunkIndex(fNodeLastChild, chunk, index);
+
+    } // getLastChild(int,boolean):int
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: String to int -->
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="1119" endline="1130">
+    public String getNodeName(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return null;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkValue(fNodeName, chunk, index)
+                    : getChunkValue(fNodeName, chunk, index);
+
+    } // getNodeName(int,boolean):String
+</source>
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="884" endline="895">
+    public int getRealPrevSibling(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return -1;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkIndex(fNodePrevSib, chunk, index)
+                    : getChunkIndex(fNodePrevSib, chunk, index);
+
+    } // getReadPrevSibling(int,boolean):int
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: String to int -->
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="1119" endline="1130">
+    public String getNodeName(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return null;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkValue(fNodeName, chunk, index)
+                    : getChunkValue(fNodeName, chunk, index);
+
+    } // getNodeName(int,boolean):String
+</source>
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="1283" endline="1294">
+    public int getNodeExtra(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return -1;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkIndex(fNodeExtra, chunk, index)
+                    : getChunkIndex(fNodeExtra, chunk, index);
+
+    } // getNodeExtra(int,boolean):int
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: String to int -->
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="1258" endline="1269">
+    public String getNodeValue(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return null;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkValue(fNodeValue, chunk, index)
+                    : getChunkValue(fNodeValue, chunk, index);
+
+    } // getNodeValue(int,boolean):String
+</source>
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="796" endline="807">
+    public int getParentNode(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return -1;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkIndex(fNodeParent, chunk, index)
+                    : getChunkIndex(fNodeParent, chunk, index);
+
+    } // getParentNode(int):int
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: String to int -->
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="1258" endline="1269">
+    public String getNodeValue(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return null;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkValue(fNodeValue, chunk, index)
+                    : getChunkValue(fNodeValue, chunk, index);
+
+    } // getNodeValue(int,boolean):String
+</source>
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="818" endline="829">
+    public int getLastChild(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return -1;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkIndex(fNodeLastChild, chunk, index)
+                    : getChunkIndex(fNodeLastChild, chunk, index);
+
+    } // getLastChild(int,boolean):int
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: String to int -->
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="1258" endline="1269">
+    public String getNodeValue(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return null;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkValue(fNodeValue, chunk, index)
+                    : getChunkValue(fNodeValue, chunk, index);
+
+    } // getNodeValue(int,boolean):String
+</source>
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="884" endline="895">
+    public int getRealPrevSibling(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return -1;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkIndex(fNodePrevSib, chunk, index)
+                    : getChunkIndex(fNodePrevSib, chunk, index);
+
+    } // getReadPrevSibling(int,boolean):int
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: String to int -->
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="1258" endline="1269">
+    public String getNodeValue(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return null;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkValue(fNodeValue, chunk, index)
+                    : getChunkValue(fNodeValue, chunk, index);
+
+    } // getNodeValue(int,boolean):String
+</source>
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="1283" endline="1294">
+    public int getNodeExtra(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return -1;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkIndex(fNodeExtra, chunk, index)
+                    : getChunkIndex(fNodeExtra, chunk, index);
+
+    } // getNodeExtra(int,boolean):int
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: String to int -->
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="1346" endline="1357">
+    public String getNodeURI(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return null;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkValue(fNodeURI, chunk, index)
+                    : getChunkValue(fNodeURI, chunk, index);
+
+    } // getNodeURI(int,int):String
+</source>
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="796" endline="807">
+    public int getParentNode(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return -1;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkIndex(fNodeParent, chunk, index)
+                    : getChunkIndex(fNodeParent, chunk, index);
+
+    } // getParentNode(int):int
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: String to int -->
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="1346" endline="1357">
+    public String getNodeURI(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return null;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkValue(fNodeURI, chunk, index)
+                    : getChunkValue(fNodeURI, chunk, index);
+
+    } // getNodeURI(int,int):String
+</source>
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="818" endline="829">
+    public int getLastChild(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return -1;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkIndex(fNodeLastChild, chunk, index)
+                    : getChunkIndex(fNodeLastChild, chunk, index);
+
+    } // getLastChild(int,boolean):int
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: String to int -->
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="1346" endline="1357">
+    public String getNodeURI(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return null;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkValue(fNodeURI, chunk, index)
+                    : getChunkValue(fNodeURI, chunk, index);
+
+    } // getNodeURI(int,int):String
+</source>
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="884" endline="895">
+    public int getRealPrevSibling(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return -1;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkIndex(fNodePrevSib, chunk, index)
+                    : getChunkIndex(fNodePrevSib, chunk, index);
+
+    } // getReadPrevSibling(int,boolean):int
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: String to int -->
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="1346" endline="1357">
+    public String getNodeURI(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return null;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkValue(fNodeURI, chunk, index)
+                    : getChunkValue(fNodeURI, chunk, index);
+
+    } // getNodeURI(int,int):String
+</source>
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="1283" endline="1294">
+    public int getNodeExtra(int nodeIndex, boolean free) {
+
+        if (nodeIndex == -1) {
+            return -1;
+        }
+
+        int chunk = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index = nodeIndex &amp; CHUNK_MASK;
+        return free ? clearChunkIndex(fNodeExtra, chunk, index)
+                    : getChunkIndex(fNodeExtra, chunk, index);
+
+    } // getNodeExtra(int,boolean):int
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- distance -->
+        <source file="com/sun/org/apache/xml/internal/res/XMLMessages.java" startline="82" endline="94">
+  public static final String createXMLMessage(String msgKey, Object args[])
+  {
+    if (XMLBundle == null) {
+        XMLBundle = SecuritySupport.getResourceBundle(XML_ERROR_RESOURCES);
+    }
+
+    if (XMLBundle != null)
+    {
+      return createMsg(XMLBundle, msgKey, args);
+    }
+    else
+      return "Could not load any resource bundles.";
+  }
+</source>
+        <source file="com/sun/org/apache/xml/internal/serializer/utils/Messages.java" startline="150" endline="161">
+    public final String createMessage(String msgKey, Object args[])
+    {
+        if (m_resourceBundle == null)
+            m_resourceBundle = SecuritySupport.getResourceBundle(m_resourceBundleName);
+
+        if (m_resourceBundle != null)
+        {
+            return createMsg(m_resourceBundle, msgKey, args);
+        }
+        else
+            return "Could not load the resource bundles: "+ m_resourceBundleName;
+    }
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- distance -->
+        <source file="com/sun/org/apache/xpath/internal/res/XPATHMessages.java" startline="56" endline="67">
+    public static final String createXPATHMessage(String msgKey, Object args[]) //throws Exception
+    {
+        if (XPATHBundle == null) {
+            XPATHBundle = SecuritySupport.getResourceBundle(XPATH_ERROR_RESOURCES);
+        }
+
+        if (XPATHBundle != null) {
+            return createXPATHMsg(XPATHBundle, msgKey, args);
+        } else {
+            return "Could not load any resource bundles.";
+        }
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/serializer/utils/Messages.java" startline="150" endline="161">
+    public final String createMessage(String msgKey, Object args[])
+    {
+        if (m_resourceBundle == null)
+            m_resourceBundle = SecuritySupport.getResourceBundle(m_resourceBundleName);
+
+        if (m_resourceBundle != null)
+        {
+            return createMsg(m_resourceBundle, msgKey, args);
+        }
+        else
+            return "Could not load the resource bundles: "+ m_resourceBundleName;
+    }
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- distance -->
+        <source file="com/sun/org/apache/xpath/internal/res/XPATHMessages.java" startline="79" endline="90">
+    public static final String createXPATHWarning(String msgKey, Object args[]) //throws Exception
+    {
+        if (XPATHBundle == null) {
+            XPATHBundle = SecuritySupport.getResourceBundle(XPATH_ERROR_RESOURCES);
+        }
+
+        if (XPATHBundle != null) {
+            return createXPATHMsg(XPATHBundle, msgKey, args);
+        } else {
+            return "Could not load any resource bundles.";
+        }
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/serializer/utils/Messages.java" startline="150" endline="161">
+    public final String createMessage(String msgKey, Object args[])
+    {
+        if (m_resourceBundle == null)
+            m_resourceBundle = SecuritySupport.getResourceBundle(m_resourceBundleName);
+
+        if (m_resourceBundle != null)
+        {
+            return createMsg(m_resourceBundle, msgKey, args);
+        }
+        else
+            return "Could not load the resource bundles: "+ m_resourceBundleName;
+    }
+</source>
+    </clone>
+    <clone nlines="14">
+        <!-- short -->
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="539" endline="552">
+  public boolean lessThan(XObject obj2)
+          throws javax.xml.transform.TransformerException
+  {
+
+    // In order to handle the 'all' semantics of
+    // nodeset comparisons, we always call the
+    // nodeset function.  Because the arguments
+    // are backwards, we call the opposite comparison
+    // function.
+    if (obj2.getType() == XObject.CLASS_NODESET)
+      return obj2.greaterThan(this);
+
+    return this.num() &lt; obj2.num();
+  }
+</source>
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="563" endline="576">
+  public boolean lessThanOrEqual(XObject obj2)
+          throws javax.xml.transform.TransformerException
+  {
+
+    // In order to handle the 'all' semantics of
+    // nodeset comparisons, we always call the
+    // nodeset function.  Because the arguments
+    // are backwards, we call the opposite comparison
+    // function.
+    if (obj2.getType() == XObject.CLASS_NODESET)
+      return obj2.greaterThanOrEqual(this);
+
+    return this.num() &lt;= obj2.num();
+  }
+</source>
+    </clone>
+    <clone nlines="14">
+        <!-- short -->
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="539" endline="552">
+  public boolean lessThan(XObject obj2)
+          throws javax.xml.transform.TransformerException
+  {
+
+    // In order to handle the 'all' semantics of
+    // nodeset comparisons, we always call the
+    // nodeset function.  Because the arguments
+    // are backwards, we call the opposite comparison
+    // function.
+    if (obj2.getType() == XObject.CLASS_NODESET)
+      return obj2.greaterThan(this);
+
+    return this.num() &lt; obj2.num();
+  }
+</source>
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="587" endline="600">
+  public boolean greaterThan(XObject obj2)
+          throws javax.xml.transform.TransformerException
+  {
+
+    // In order to handle the 'all' semantics of
+    // nodeset comparisons, we always call the
+    // nodeset function.  Because the arguments
+    // are backwards, we call the opposite comparison
+    // function.
+    if (obj2.getType() == XObject.CLASS_NODESET)
+      return obj2.lessThan(this);
+
+    return this.num() &gt; obj2.num();
+  }
+</source>
+    </clone>
+    <clone nlines="14">
+        <!-- short -->
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="539" endline="552">
+  public boolean lessThan(XObject obj2)
+          throws javax.xml.transform.TransformerException
+  {
+
+    // In order to handle the 'all' semantics of
+    // nodeset comparisons, we always call the
+    // nodeset function.  Because the arguments
+    // are backwards, we call the opposite comparison
+    // function.
+    if (obj2.getType() == XObject.CLASS_NODESET)
+      return obj2.greaterThan(this);
+
+    return this.num() &lt; obj2.num();
+  }
+</source>
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="611" endline="624">
+  public boolean greaterThanOrEqual(XObject obj2)
+          throws javax.xml.transform.TransformerException
+  {
+
+    // In order to handle the 'all' semantics of
+    // nodeset comparisons, we always call the
+    // nodeset function.  Because the arguments
+    // are backwards, we call the opposite comparison
+    // function.
+    if (obj2.getType() == XObject.CLASS_NODESET)
+      return obj2.lessThanOrEqual(this);
+
+    return this.num() &gt;= obj2.num();
+  }
+</source>
+    </clone>
+    <clone nlines="14">
+        <!-- short -->
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="563" endline="576">
+  public boolean lessThanOrEqual(XObject obj2)
+          throws javax.xml.transform.TransformerException
+  {
+
+    // In order to handle the 'all' semantics of
+    // nodeset comparisons, we always call the
+    // nodeset function.  Because the arguments
+    // are backwards, we call the opposite comparison
+    // function.
+    if (obj2.getType() == XObject.CLASS_NODESET)
+      return obj2.greaterThanOrEqual(this);
+
+    return this.num() &lt;= obj2.num();
+  }
+</source>
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="587" endline="600">
+  public boolean greaterThan(XObject obj2)
+          throws javax.xml.transform.TransformerException
+  {
+
+    // In order to handle the 'all' semantics of
+    // nodeset comparisons, we always call the
+    // nodeset function.  Because the arguments
+    // are backwards, we call the opposite comparison
+    // function.
+    if (obj2.getType() == XObject.CLASS_NODESET)
+      return obj2.lessThan(this);
+
+    return this.num() &gt; obj2.num();
+  }
+</source>
+    </clone>
+    <clone nlines="14">
+        <!-- short -->
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="563" endline="576">
+  public boolean lessThanOrEqual(XObject obj2)
+          throws javax.xml.transform.TransformerException
+  {
+
+    // In order to handle the 'all' semantics of
+    // nodeset comparisons, we always call the
+    // nodeset function.  Because the arguments
+    // are backwards, we call the opposite comparison
+    // function.
+    if (obj2.getType() == XObject.CLASS_NODESET)
+      return obj2.greaterThanOrEqual(this);
+
+    return this.num() &lt;= obj2.num();
+  }
+</source>
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="611" endline="624">
+  public boolean greaterThanOrEqual(XObject obj2)
+          throws javax.xml.transform.TransformerException
+  {
+
+    // In order to handle the 'all' semantics of
+    // nodeset comparisons, we always call the
+    // nodeset function.  Because the arguments
+    // are backwards, we call the opposite comparison
+    // function.
+    if (obj2.getType() == XObject.CLASS_NODESET)
+      return obj2.lessThanOrEqual(this);
+
+    return this.num() &gt;= obj2.num();
+  }
+</source>
+    </clone>
+    <clone nlines="14">
+        <!-- short -->
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="587" endline="600">
+  public boolean greaterThan(XObject obj2)
+          throws javax.xml.transform.TransformerException
+  {
+
+    // In order to handle the 'all' semantics of
+    // nodeset comparisons, we always call the
+    // nodeset function.  Because the arguments
+    // are backwards, we call the opposite comparison
+    // function.
+    if (obj2.getType() == XObject.CLASS_NODESET)
+      return obj2.lessThan(this);
+
+    return this.num() &gt; obj2.num();
+  }
+</source>
+        <source file="com/sun/org/apache/xpath/internal/objects/XObject.java" startline="611" endline="624">
+  public boolean greaterThanOrEqual(XObject obj2)
+          throws javax.xml.transform.TransformerException
+  {
+
+    // In order to handle the 'all' semantics of
+    // nodeset comparisons, we always call the
+    // nodeset function.  Because the arguments
+    // are backwards, we call the opposite comparison
+    // function.
+    if (obj2.getType() == XObject.CLASS_NODESET)
+      return obj2.lessThanOrEqual(this);
+
+    return this.num() &gt;= obj2.num();
+  }
+</source>
+    </clone>
+    <clone nlines="15">
+        <!-- modification: String to Object -->
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="203" endline="219">
+    public int createDeferredDocumentType(String rootElementName,
+                                          String publicId, String systemId) {
+
+        // create node
+        int nodeIndex = createNode(Node.DOCUMENT_TYPE_NODE);
+        int chunk     = nodeIndex &gt;&gt; CHUNK_SHIFT;
+        int index     = nodeIndex &amp; CHUNK_MASK;
+
+        // save name, public id, system id
+        setChunkValue(fNodeName, rootElementName, chunk, index);
+        setChunkValue(fNodeValue, publicId, chunk, index);
+        setChunkValue(fNodeURI, systemId, chunk, index);
+
+        // return node index
+        return nodeIndex;
+
+    } // createDeferredDocumentType(String,String,String):int
+</source>
+        <source file="com/sun/org/apache/xerces/internal/dom/DeferredDocumentImpl.java" startline="373" endline="387">
+    public int createDeferredElement(String elementURI, String elementName,
+                                      Object type) {
+
+        // create node
+        int elementNodeIndex = createNode(Node.ELEMENT_NODE);
+        int elementChunk     = elementNodeIndex &gt;&gt; CHUNK_SHIFT;
+        int elementIndex     = elementNodeIndex &amp; CHUNK_MASK;
+        setChunkValue(fNodeName, elementName, elementChunk, elementIndex);
+        setChunkValue(fNodeURI, elementURI, elementChunk, elementIndex);
+        setChunkValue(fNodeValue, type, elementChunk, elementIndex);
+
+        // return node index
+        return elementNodeIndex;
+
+    } // createDeferredElement(String,String,Object):int
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: String to int -->
+        <source file="com/sun/org/apache/xalan/internal/lib/NodeInfo.java" startline="50" endline="61">
+  public static String systemId(ExpressionContext context)
+  {
+    Node contextNode = context.getContextNode();
+    int nodeHandler = ((DTMNodeProxy)contextNode).getDTMNodeNumber();
+    SourceLocator locator = ((DTMNodeProxy)contextNode).getDTM()
+      .getSourceLocatorFor(nodeHandler);
+
+    if (locator != null)
+      return locator.getSystemId();
+    else
+      return null;
+  }
+</source>
+        <source file="com/sun/org/apache/xalan/internal/lib/NodeInfo.java" startline="149" endline="160">
+  public static int lineNumber(ExpressionContext context)
+  {
+    Node contextNode = context.getContextNode();
+    int nodeHandler = ((DTMNodeProxy)contextNode).getDTMNodeNumber();
+    SourceLocator locator = ((DTMNodeProxy)contextNode).getDTM()
+      .getSourceLocatorFor(nodeHandler);
+
+    if (locator != null)
+      return locator.getLineNumber();
+    else
+      return -1;
+  }
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: String to int -->
+        <source file="com/sun/org/apache/xalan/internal/lib/NodeInfo.java" startline="50" endline="61">
+  public static String systemId(ExpressionContext context)
+  {
+    Node contextNode = context.getContextNode();
+    int nodeHandler = ((DTMNodeProxy)contextNode).getDTMNodeNumber();
+    SourceLocator locator = ((DTMNodeProxy)contextNode).getDTM()
+      .getSourceLocatorFor(nodeHandler);
+
+    if (locator != null)
+      return locator.getSystemId();
+    else
+      return null;
+  }
+</source>
+        <source file="com/sun/org/apache/xalan/internal/lib/NodeInfo.java" startline="207" endline="218">
+  public static int columnNumber(ExpressionContext context)
+  {
+    Node contextNode = context.getContextNode();
+    int nodeHandler = ((DTMNodeProxy)contextNode).getDTMNodeNumber();
+    SourceLocator locator = ((DTMNodeProxy)contextNode).getDTM()
+      .getSourceLocatorFor(nodeHandler);
+
+    if (locator != null)
+      return locator.getColumnNumber();
+    else
+      return -1;
+  }
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: String to int -->
+        <source file="com/sun/org/apache/xalan/internal/lib/NodeInfo.java" startline="96" endline="107">
+  public static String publicId(ExpressionContext context)
+  {
+    Node contextNode = context.getContextNode();
+    int nodeHandler = ((DTMNodeProxy)contextNode).getDTMNodeNumber();
+    SourceLocator locator = ((DTMNodeProxy)contextNode).getDTM()
+      .getSourceLocatorFor(nodeHandler);
+
+    if (locator != null)
+      return locator.getPublicId();
+    else
+      return null;
+  }
+</source>
+        <source file="com/sun/org/apache/xalan/internal/lib/NodeInfo.java" startline="149" endline="160">
+  public static int lineNumber(ExpressionContext context)
+  {
+    Node contextNode = context.getContextNode();
+    int nodeHandler = ((DTMNodeProxy)contextNode).getDTMNodeNumber();
+    SourceLocator locator = ((DTMNodeProxy)contextNode).getDTM()
+      .getSourceLocatorFor(nodeHandler);
+
+    if (locator != null)
+      return locator.getLineNumber();
+    else
+      return -1;
+  }
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: String to int -->
+        <source file="com/sun/org/apache/xalan/internal/lib/NodeInfo.java" startline="96" endline="107">
+  public static String publicId(ExpressionContext context)
+  {
+    Node contextNode = context.getContextNode();
+    int nodeHandler = ((DTMNodeProxy)contextNode).getDTMNodeNumber();
+    SourceLocator locator = ((DTMNodeProxy)contextNode).getDTM()
+      .getSourceLocatorFor(nodeHandler);
+
+    if (locator != null)
+      return locator.getPublicId();
+    else
+      return null;
+  }
+</source>
+        <source file="com/sun/org/apache/xalan/internal/lib/NodeInfo.java" startline="207" endline="218">
+  public static int columnNumber(ExpressionContext context)
+  {
+    Node contextNode = context.getContextNode();
+    int nodeHandler = ((DTMNodeProxy)contextNode).getDTMNodeNumber();
+    SourceLocator locator = ((DTMNodeProxy)contextNode).getDTM()
+      .getSourceLocatorFor(nodeHandler);
+
+    if (locator != null)
+      return locator.getColumnNumber();
+    else
+      return -1;
+  }
+</source>
+    </clone>
+    <clone nlines="15">
+        <!-- modification: throws SecurityException -->
+        <source file="javax/xml/validation/SecuritySupport.java" startline="45" endline="58">
+    ClassLoader getContextClassLoader() {
+        return (ClassLoader)
+        AccessController.doPrivileged(new PrivilegedAction() {
+            public Object run() {
+                ClassLoader cl = null;
+                //try {
+                cl = Thread.currentThread().getContextClassLoader();
+                //} catch (SecurityException ex) { }
+                if (cl == null)
+                    cl = ClassLoader.getSystemClassLoader();
+                return cl;
+            }
+        });
+    }
+</source>
+        <source file="javax/xml/parsers/SecuritySupport.java" startline="43" endline="58">
+    ClassLoader getContextClassLoader() throws SecurityException{
+        return (ClassLoader)
+                AccessController.doPrivileged(new PrivilegedAction() {
+            public Object run() {
+                ClassLoader cl = null;
+                //try {
+                cl = Thread.currentThread().getContextClassLoader();
+                //} catch (SecurityException ex) { }
+
+                if (cl == null)
+                    cl = ClassLoader.getSystemClassLoader();
+
+                return cl;
+            }
+        });
+    }
+</source>
+    </clone>
+    <clone nlines="15">
+        <!-- modification: throws SecurityException -->
+        <source file="javax/xml/validation/SecuritySupport.java" startline="45" endline="58">
+    ClassLoader getContextClassLoader() {
+        return (ClassLoader)
+        AccessController.doPrivileged(new PrivilegedAction() {
+            public Object run() {
+                ClassLoader cl = null;
+                //try {
+                cl = Thread.currentThread().getContextClassLoader();
+                //} catch (SecurityException ex) { }
+                if (cl == null)
+                    cl = ClassLoader.getSystemClassLoader();
+                return cl;
+            }
+        });
+    }
+</source>
+        <source file="javax/xml/stream/SecuritySupport.java" startline="43" endline="58">
+    ClassLoader getContextClassLoader() throws SecurityException{
+        return (ClassLoader)
+                AccessController.doPrivileged(new PrivilegedAction() {
+            public Object run() {
+                ClassLoader cl = null;
+                //try {
+                cl = Thread.currentThread().getContextClassLoader();
+                //} catch (SecurityException ex) { }
+
+                if (cl == null)
+                    cl = ClassLoader.getSystemClassLoader();
+
+                return cl;
+            }
+        });
+    }
+</source>
+    </clone>
+    <clone nlines="15">
+        <!-- modification: throws SecurityException -->
+        <source file="javax/xml/validation/SecuritySupport.java" startline="45" endline="58">
+    ClassLoader getContextClassLoader() {
+        return (ClassLoader)
+        AccessController.doPrivileged(new PrivilegedAction() {
+            public Object run() {
+                ClassLoader cl = null;
+                //try {
+                cl = Thread.currentThread().getContextClassLoader();
+                //} catch (SecurityException ex) { }
+                if (cl == null)
+                    cl = ClassLoader.getSystemClassLoader();
+                return cl;
+            }
+        });
+    }
+</source>
+        <source file="javax/xml/transform/SecuritySupport.java" startline="43" endline="56">
+    ClassLoader getContextClassLoader() throws SecurityException{
+        return (ClassLoader)
+        AccessController.doPrivileged(new PrivilegedAction() {
+            public Object run() {
+                ClassLoader cl = null;
+                //try {
+                cl = Thread.currentThread().getContextClassLoader();
+                //} catch (SecurityException ex) { }
+                if (cl == null)
+                    cl = ClassLoader.getSystemClassLoader();
+                return cl;
+            }
+        });
+    }
+</source>
+    </clone>
+    <clone nlines="15">
+        <!-- modification: throws SecurityException -->
+        <source file="javax/xml/validation/SecuritySupport.java" startline="45" endline="58">
+    ClassLoader getContextClassLoader() {
+        return (ClassLoader)
+        AccessController.doPrivileged(new PrivilegedAction() {
+            public Object run() {
+                ClassLoader cl = null;
+                //try {
+                cl = Thread.currentThread().getContextClassLoader();
+                //} catch (SecurityException ex) { }
+                if (cl == null)
+                    cl = ClassLoader.getSystemClassLoader();
+                return cl;
+            }
+        });
+    }
+</source>
+        <source file="org/xml/sax/helpers/SecuritySupport.java" startline="41" endline="56">
+    ClassLoader getContextClassLoader() throws SecurityException{
+        return (ClassLoader)
+                AccessController.doPrivileged(new PrivilegedAction() {
+            public Object run() {
+                ClassLoader cl = null;
+                //try {
+                cl = Thread.currentThread().getContextClassLoader();
+                //} catch (SecurityException ex) { }
+
+                if (cl == null)
+                    cl = ClassLoader.getSystemClassLoader();
+
+                return cl;
+            }
+        });
+    }
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: CharacterIterator to char[] -->
+        <source file="com/sun/org/apache/xerces/internal/impl/xpath/regex/RegularExpression.java" startline="2047" endline="2058">
+        void reset(CharacterIterator target, int start, int limit, int nofclosures) {
+            if (characterIteratorTarget == null) {
+                characterIteratorTarget = new CharacterIteratorTarget(target);
+            }
+            else {
+                characterIteratorTarget.resetTarget(target);
+            }
+            this.target = characterIteratorTarget;
+            this.start = start;
+            this.limit = limit;
+            this.resetCommon(nofclosures);
+        }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/impl/xpath/regex/RegularExpression.java" startline="2073" endline="2084">
+        void reset(char[] target, int start, int limit, int nofclosures) {
+            if (charArrayTarget == null) {
+                charArrayTarget = new CharArrayTarget(target);
+            }
+            else {
+                charArrayTarget.resetTarget(target);
+            }
+            this.target = charArrayTarget;
+            this.start = start;
+            this.limit = limit;
+            this.resetCommon(nofclosures);
+        }
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: String to char[] -->
+        <source file="com/sun/org/apache/xerces/internal/impl/xpath/regex/RegularExpression.java" startline="2060" endline="2071">
+        void reset(String target, int start, int limit, int nofclosures) {
+            if (stringTarget == null) {
+                stringTarget = new StringTarget(target);
+            }
+            else {
+                stringTarget.resetTarget(target);
+            }
+            this.target = stringTarget;
+            this.start = start;
+            this.limit = limit;
+            this.resetCommon(nofclosures);
+        }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/impl/xpath/regex/RegularExpression.java" startline="2073" endline="2084">
+        void reset(char[] target, int start, int limit, int nofclosures) {
+            if (charArrayTarget == null) {
+                charArrayTarget = new CharArrayTarget(target);
+            }
+            else {
+                charArrayTarget.resetTarget(target);
+            }
+            this.target = charArrayTarget;
+            this.start = start;
+            this.limit = limit;
+            this.resetCommon(nofclosures);
+        }
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: throws XPathFactoryConfigurationException -->
+        <source file="javax/xml/validation/SchemaFactoryFinder.java" startline="141" endline="152">
+    public SchemaFactory newFactory(String schemaLanguage) {
+        if(schemaLanguage==null) {
+            throw new NullPointerException();
+        }
+        SchemaFactory f = _newFactory(schemaLanguage);
+        if (f != null) {
+            debugPrintln("factory '" + f.getClass().getName() + "' was found for " + schemaLanguage);
+        } else {
+            debugPrintln("unable to find a factory for " + schemaLanguage);
+        }
+        return f;
+    }
+</source>
+        <source file="javax/xml/xpath/XPathFactoryFinder.java" startline="134" endline="145">
+    public XPathFactory newFactory(String uri) throws XPathFactoryConfigurationException {
+        if (uri == null) {
+            throw new NullPointerException();
+        }
+        XPathFactory f = _newFactory(uri);
+        if (f != null) {
+            debugPrintln("factory '" + f.getClass().getName() + "' was found for " + uri);
+        } else {
+            debugPrintln("unable to find a factory for " + uri);
+        }
+        return f;
+    }
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: true to entry.grammar -->
+        <source file="com/sun/org/apache/xerces/internal/util/XMLGrammarPoolImpl.java" startline="249" endline="260">
+    public boolean containsGrammar(XMLGrammarDescription desc) {
+        synchronized (fGrammars) {
+            int hash = hashCode(desc);
+        int index = (hash &amp; 0x7FFFFFFF) % fGrammars.length;
+        for (Entry entry = fGrammars[index] ; entry != null ; entry = entry.next) {
+            if ((entry.hash == hash) &amp;&amp; equals(entry.desc, desc)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    } // containsGrammar(XMLGrammarDescription):boolean
+</source>
+        <source file="com/sun/org/apache/xerces/internal/util/XMLGrammarPoolImpl.java" startline="197" endline="208">
+    public Grammar getGrammar(XMLGrammarDescription desc) {
+        synchronized (fGrammars) {
+            int hash = hashCode(desc);
+        int index = (hash &amp; 0x7FFFFFFF) % fGrammars.length;
+        for (Entry entry = fGrammars[index] ; entry != null ; entry = entry.next) {
+            if ((entry.hash == hash) &amp;&amp; equals(entry.desc, desc)) {
+                return entry.grammar;
+            }
+        }
+        return null;
+    }
+    } // getGrammar(XMLGrammarDescription):Grammar
+</source>
+    </clone>
+    <clone nlines="17">
+        <!-- modification: typecast (XMLErrorHandler) -->
+        <source file="com/sun/org/apache/xerces/internal/impl/XMLErrorReporter.java" startline="505" endline="526">
+    public void setFeature(String featureId, boolean state)
+        throws XMLConfigurationException {
+
+        //
+        // Xerces features
+        //
+
+        if (featureId.startsWith(Constants.XERCES_FEATURE_PREFIX)) {
+            final int suffixLength = featureId.length() - Constants.XERCES_FEATURE_PREFIX.length();
+
+            //
+            // http://apache.org/xml/features/continue-after-fatal-error
+            //   Allows the parser to continue after a fatal error.
+            //   Normally, a fatal error would stop the parse.
+            //
+            if (suffixLength == Constants.CONTINUE_AFTER_FATAL_ERROR_FEATURE.length() &amp;&amp;
+                featureId.endsWith(Constants.CONTINUE_AFTER_FATAL_ERROR_FEATURE)) {
+                fContinueAfterFatalError = state;
+            }
+        }
+
+    } // setFeature(String,boolean)
+</source>
+        <source file="com/sun/org/apache/xerces/internal/impl/XMLErrorReporter.java" startline="577" endline="593">
+    public void setProperty(String propertyId, Object value)
+        throws XMLConfigurationException {
+
+        //
+        // Xerces properties
+        //
+
+        if (propertyId.startsWith(Constants.XERCES_PROPERTY_PREFIX)) {
+            final int suffixLength = propertyId.length() - Constants.XERCES_PROPERTY_PREFIX.length();
+
+            if (suffixLength == Constants.ERROR_HANDLER_PROPERTY.length() &amp;&amp;
+                propertyId.endsWith(Constants.ERROR_HANDLER_PROPERTY)) {
+                fErrorHandler = (XMLErrorHandler)value;
+            }
+        }
+
+    } // setProperty(String,Object)
+</source>
+    </clone>
+    <clone nlines="20">
+        <!-- modification: Object to int -->
+        <source file="com/sun/org/apache/xml/internal/utils/ObjectVector.java" startline="152" endline="171">
+  public final void addElements(Object value, int numberOfElements)
+  {
+
+    if ((m_firstFree + numberOfElements) &gt;= m_mapSize)
+    {
+      m_mapSize += (m_blocksize+numberOfElements);
+
+      Object newMap[] = new Object[m_mapSize];
+
+      System.arraycopy(m_map, 0, newMap, 0, m_firstFree + 1);
+
+      m_map = newMap;
+    }
+
+    for (int i = 0; i &lt; numberOfElements; i++)
+    {
+      m_map[m_firstFree] = value;
+      m_firstFree++;
+    }
+  }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/IntVector.java" startline="152" endline="171">
+  public final void addElements(int value, int numberOfElements)
+  {
+
+    if ((m_firstFree + numberOfElements) &gt;= m_mapSize)
+    {
+      m_mapSize += (m_blocksize+numberOfElements);
+
+      int newMap[] = new int[m_mapSize];
+
+      System.arraycopy(m_map, 0, newMap, 0, m_firstFree + 1);
+
+      m_map = newMap;
+    }
+
+    for (int i = 0; i &lt; numberOfElements; i++)
+    {
+      m_map[m_firstFree] = value;
+      m_firstFree++;
+    }
+  }
+</source>
+    </clone>
+    <clone nlines="15">
+        <!-- modification: String to int -->
+        <source file="com/sun/org/apache/xalan/internal/lib/NodeInfo.java" startline="71" endline="85">
+  public static String systemId(NodeList nodeList)
+  {
+    if (nodeList == null || nodeList.getLength() == 0)
+      return null;
+
+    Node node = nodeList.item(0);
+    int nodeHandler = ((DTMNodeProxy)node).getDTMNodeNumber();
+    SourceLocator locator = ((DTMNodeProxy)node).getDTM()
+      .getSourceLocatorFor(nodeHandler);
+
+    if (locator != null)
+      return locator.getSystemId();
+    else
+      return null;
+  }
+</source>
+        <source file="com/sun/org/apache/xalan/internal/lib/NodeInfo.java" startline="177" endline="191">
+  public static int lineNumber(NodeList nodeList)
+  {
+    if (nodeList == null || nodeList.getLength() == 0)
+      return -1;
+
+    Node node = nodeList.item(0);
+    int nodeHandler = ((DTMNodeProxy)node).getDTMNodeNumber();
+    SourceLocator locator = ((DTMNodeProxy)node).getDTM()
+      .getSourceLocatorFor(nodeHandler);
+
+    if (locator != null)
+      return locator.getLineNumber();
+    else
+      return -1;
+  }
+</source>
+    </clone>
+    <clone nlines="15">
+        <!-- modification: String to int -->
+        <source file="com/sun/org/apache/xalan/internal/lib/NodeInfo.java" startline="71" endline="85">
+  public static String systemId(NodeList nodeList)
+  {
+    if (nodeList == null || nodeList.getLength() == 0)
+      return null;
+
+    Node node = nodeList.item(0);
+    int nodeHandler = ((DTMNodeProxy)node).getDTMNodeNumber();
+    SourceLocator locator = ((DTMNodeProxy)node).getDTM()
+      .getSourceLocatorFor(nodeHandler);
+
+    if (locator != null)
+      return locator.getSystemId();
+    else
+      return null;
+  }
+</source>
+        <source file="com/sun/org/apache/xalan/internal/lib/NodeInfo.java" startline="235" endline="249">
+  public static int columnNumber(NodeList nodeList)
+  {
+    if (nodeList == null || nodeList.getLength() == 0)
+      return -1;
+
+    Node node = nodeList.item(0);
+    int nodeHandler = ((DTMNodeProxy)node).getDTMNodeNumber();
+    SourceLocator locator = ((DTMNodeProxy)node).getDTM()
+      .getSourceLocatorFor(nodeHandler);
+
+    if (locator != null)
+      return locator.getColumnNumber();
+    else
+      return -1;
+  }
+</source>
+    </clone>
+    <clone nlines="15">
+        <!-- modification: String to int -->
+        <source file="com/sun/org/apache/xalan/internal/lib/NodeInfo.java" startline="119" endline="133">
+  public static String publicId(NodeList nodeList)
+  {
+    if (nodeList == null || nodeList.getLength() == 0)
+      return null;
+
+    Node node = nodeList.item(0);
+    int nodeHandler = ((DTMNodeProxy)node).getDTMNodeNumber();
+    SourceLocator locator = ((DTMNodeProxy)node).getDTM()
+      .getSourceLocatorFor(nodeHandler);
+
+    if (locator != null)
+      return locator.getPublicId();
+    else
+      return null;
+  }
+</source>
+        <source file="com/sun/org/apache/xalan/internal/lib/NodeInfo.java" startline="177" endline="191">
+  public static int lineNumber(NodeList nodeList)
+  {
+    if (nodeList == null || nodeList.getLength() == 0)
+      return -1;
+
+    Node node = nodeList.item(0);
+    int nodeHandler = ((DTMNodeProxy)node).getDTMNodeNumber();
+    SourceLocator locator = ((DTMNodeProxy)node).getDTM()
+      .getSourceLocatorFor(nodeHandler);
+
+    if (locator != null)
+      return locator.getLineNumber();
+    else
+      return -1;
+  }
+</source>
+    </clone>
+    <clone nlines="15">
+        <!-- modification: String to int -->
+        <source file="com/sun/org/apache/xalan/internal/lib/NodeInfo.java" startline="119" endline="133">
+  public static String publicId(NodeList nodeList)
+  {
+    if (nodeList == null || nodeList.getLength() == 0)
+      return null;
+
+    Node node = nodeList.item(0);
+    int nodeHandler = ((DTMNodeProxy)node).getDTMNodeNumber();
+    SourceLocator locator = ((DTMNodeProxy)node).getDTM()
+      .getSourceLocatorFor(nodeHandler);
+
+    if (locator != null)
+      return locator.getPublicId();
+    else
+      return null;
+  }
+</source>
+        <source file="com/sun/org/apache/xalan/internal/lib/NodeInfo.java" startline="235" endline="249">
+  public static int columnNumber(NodeList nodeList)
+  {
+    if (nodeList == null || nodeList.getLength() == 0)
+      return -1;
+
+    Node node = nodeList.item(0);
+    int nodeHandler = ((DTMNodeProxy)node).getDTMNodeNumber();
+    SourceLocator locator = ((DTMNodeProxy)node).getDTM()
+      .getSourceLocatorFor(nodeHandler);
+
+    if (locator != null)
+      return locator.getColumnNumber();
+    else
+      return -1;
+  }
+</source>
+    </clone>
+    <clone nlines="30">
+        <!-- modification: Node to int -->
+        <source file="com/sun/org/apache/xpath/internal/NodeSet.java" startline="911" endline="940">
+  public final void push(Node value)
+  {
+
+    int ff = m_firstFree;
+
+    if ((ff + 1) &gt;= m_mapSize)
+    {
+      if (null == m_map)
+      {
+        m_map = new Node[m_blocksize];
+        m_mapSize = m_blocksize;
+      }
+      else
+      {
+        m_mapSize += m_blocksize;
+
+        Node newMap[] = new Node[m_mapSize];
+
+        System.arraycopy(m_map, 0, newMap, 0, ff + 1);
+
+        m_map = newMap;
+      }
+    }
+
+    m_map[ff] = value;
+
+    ff++;
+
+    m_firstFree = ff;
+  }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/NodeVector.java" startline="150" endline="179">
+  public final void push(int value)
+  {
+
+    int ff = m_firstFree;
+
+    if ((ff + 1) &gt;= m_mapSize)
+    {
+      if (null == m_map)
+      {
+        m_map = new int[m_blocksize];
+        m_mapSize = m_blocksize;
+      }
+      else
+      {
+        m_mapSize += m_blocksize;
+
+        int newMap[] = new int[m_mapSize];
+
+        System.arraycopy(m_map, 0, newMap, 0, ff + 1);
+
+        m_map = newMap;
+      }
+    }
+
+    m_map[ff] = value;
+
+    ff++;
+
+    m_firstFree = ff;
+  }
+</source>
+    </clone>
+    <clone nlines="17">
+        <!-- modification: boolean to Object -->
+        <source file="com/sun/org/apache/xerces/internal/jaxp/validation/ValidatorHandlerImpl.java" startline="242" endline="258">
+    public boolean getFeature(String name)
+        throws SAXNotRecognizedException, SAXNotSupportedException {
+        if (name == null) {
+            throw new NullPointerException();
+        }
+        try {
+            return fComponentManager.getFeature(name);
+        }
+        catch (XMLConfigurationException e) {
+            final String identifier = e.getIdentifier();
+            final String key = e.getType() == Status.NOT_RECOGNIZED ?
+                    "feature-not-recognized" : "feature-not-supported";
+            throw new SAXNotRecognizedException(
+                    SAXMessageFormatter.formatMessage(fComponentManager.getLocale(),
+                    key, new Object [] {identifier}));
+        }
+    }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/jaxp/validation/ValidatorHandlerImpl.java" startline="287" endline="303">
+    public Object getProperty(String name)
+        throws SAXNotRecognizedException, SAXNotSupportedException {
+        if (name == null) {
+            throw new NullPointerException();
+        }
+        try {
+            return fComponentManager.getProperty(name);
+        }
+        catch (XMLConfigurationException e) {
+            final String identifier = e.getIdentifier();
+            final String key = e.getType() == Status.NOT_RECOGNIZED ?
+                    "property-not-recognized" : "property-not-supported";
+            throw new SAXNotRecognizedException(
+                    SAXMessageFormatter.formatMessage(fComponentManager.getLocale(),
+                    key, new Object [] {identifier}));
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="17">
+        <!-- modification: boolean to Object -->
+        <source file="com/sun/org/apache/xerces/internal/jaxp/validation/ValidatorImpl.java" startline="155" endline="171">
+    public boolean getFeature(String name)
+        throws SAXNotRecognizedException, SAXNotSupportedException {
+        if (name == null) {
+            throw new NullPointerException();
+        }
+        try {
+            return fComponentManager.getFeature(name);
+        }
+        catch (XMLConfigurationException e) {
+            final String identifier = e.getIdentifier();
+            final String key = e.getType() == Status.NOT_RECOGNIZED ?
+                    "feature-not-recognized" : "feature-not-supported";
+            throw new SAXNotRecognizedException(
+                    SAXMessageFormatter.formatMessage(fComponentManager.getLocale(),
+                    key, new Object [] {identifier}));
+        }
+    }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/jaxp/validation/ValidatorHandlerImpl.java" startline="287" endline="303">
+    public Object getProperty(String name)
+        throws SAXNotRecognizedException, SAXNotSupportedException {
+        if (name == null) {
+            throw new NullPointerException();
+        }
+        try {
+            return fComponentManager.getProperty(name);
+        }
+        catch (XMLConfigurationException e) {
+            final String identifier = e.getIdentifier();
+            final String key = e.getType() == Status.NOT_RECOGNIZED ?
+                    "property-not-recognized" : "property-not-supported";
+            throw new SAXNotRecognizedException(
+                    SAXMessageFormatter.formatMessage(fComponentManager.getLocale(),
+                    key, new Object [] {identifier}));
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="23">
+        <!-- modification: Object to int -->
+        <source file="com/sun/org/apache/xml/internal/utils/ObjectVector.java" startline="205" endline="227">
+  public final void insertElementAt(Object value, int at)
+  {
+
+    if ((m_firstFree + 1) &gt;= m_mapSize)
+    {
+      m_mapSize += m_blocksize;
+
+      Object newMap[] = new Object[m_mapSize];
+
+      System.arraycopy(m_map, 0, newMap, 0, m_firstFree + 1);
+
+      m_map = newMap;
+    }
+
+    if (at &lt;= (m_firstFree - 1))
+    {
+      System.arraycopy(m_map, at, m_map, at + 1, m_firstFree - at);
+    }
+
+    m_map[at] = value;
+
+    m_firstFree++;
+  }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/IntVector.java" startline="205" endline="227">
+  public final void insertElementAt(int value, int at)
+  {
+
+    if ((m_firstFree + 1) &gt;= m_mapSize)
+    {
+      m_mapSize += m_blocksize;
+
+      int newMap[] = new int[m_mapSize];
+
+      System.arraycopy(m_map, 0, newMap, 0, m_firstFree + 1);
+
+      m_map = newMap;
+    }
+
+    if (at &lt;= (m_firstFree - 1))
+    {
+      System.arraycopy(m_map, at, m_map, at + 1, m_firstFree - at);
+    }
+
+    m_map[at] = value;
+
+    m_firstFree++;
+  }
+</source>
+    </clone>
+    <clone nlines="17">
+        <!-- modification: BigDecimal to int -->
+        <source file="com/sun/org/apache/xerces/internal/jaxp/datatype/XMLGregorianCalendarImpl.java" startline="1366" endline="1387">
+    public void setTime(
+            int hour,
+            int minute,
+            int second,
+            BigDecimal fractional) {
+
+        setHour(hour, false);
+
+        setMinute(minute);
+        if (second != 60) {
+            setSecond(second);
+        } else if ((hour == 23 &amp;&amp; minute == 59) || (hour == 0 &amp;&amp; minute == 0)) {
+            setSecond(second);
+        } else {
+            invalidFieldValue(SECOND, second);
+        }
+
+        setFractionalSecond(fractional);
+
+        // must test hour after setting seconds
+        testHour();
+    }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/jaxp/datatype/XMLGregorianCalendarImpl.java" startline="1406" endline="1422">
+    public void setTime(int hour, int minute, int second, int millisecond) {
+
+        setHour(hour, false);
+
+        setMinute(minute);
+        if (second != 60) {
+            setSecond(second);
+        } else if ((hour == 23 &amp;&amp; minute == 59) || (hour == 0 &amp;&amp; minute == 0)) {
+            setSecond(second);
+        } else {
+            invalidFieldValue(SECOND, second);
+        }
+        setMillisecond(millisecond);
+
+        // must test hour after setting seconds
+        testHour();
+    }
+</source>
+    </clone>
+    <clone nlines="20">
+        <!-- modification: boolean to Object -->
+        <source file="com/sun/org/apache/xerces/internal/jaxp/SAXParserImpl.java" startline="692" endline="711">
+        private void setSchemaValidatorFeature(String name, boolean value)
+            throws SAXNotRecognizedException, SAXNotSupportedException {
+            try {
+                fSAXParser.fSchemaValidator.setFeature(name, value);
+            }
+            // This should never be thrown from the schema validator.
+            catch (XMLConfigurationException e) {
+                String identifier = e.getIdentifier();
+                if (e.getType() == Status.NOT_RECOGNIZED) {
+                    throw new SAXNotRecognizedException(
+                        SAXMessageFormatter.formatMessage(fConfiguration.getLocale(),
+                        "feature-not-recognized", new Object [] {identifier}));
+                }
+                else {
+                    throw new SAXNotSupportedException(
+                        SAXMessageFormatter.formatMessage(fConfiguration.getLocale(),
+                        "feature-not-supported", new Object [] {identifier}));
+                }
+            }
+        }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/jaxp/SAXParserImpl.java" startline="713" endline="732">
+        private void setSchemaValidatorProperty(String name, Object value)
+            throws SAXNotRecognizedException, SAXNotSupportedException {
+            try {
+                fSAXParser.fSchemaValidator.setProperty(name, value);
+            }
+            // This should never be thrown from the schema validator.
+            catch (XMLConfigurationException e) {
+                String identifier = e.getIdentifier();
+                if (e.getType() == Status.NOT_RECOGNIZED) {
+                    throw new SAXNotRecognizedException(
+                        SAXMessageFormatter.formatMessage(fConfiguration.getLocale(),
+                        "property-not-recognized", new Object [] {identifier}));
+                }
+                else {
+                    throw new SAXNotSupportedException(
+                        SAXMessageFormatter.formatMessage(fConfiguration.getLocale(),
+                        "property-not-supported", new Object [] {identifier}));
+                }
+            }
+        }
+</source>
+    </clone>
+    <clone nlines="18">
+        <!-- modification: Grammar to boolean -->
+        <source file="com/sun/org/apache/xerces/internal/jaxp/validation/SoftReferenceGrammarPool.java" startline="187" endline="204">
+    public Grammar getGrammar(XMLGrammarDescription desc) {
+        synchronized (fGrammars) {
+            clean();
+            int hash = hashCode(desc);
+            int index = (hash &amp; 0x7FFFFFFF) % fGrammars.length;
+            for (Entry entry = fGrammars[index]; entry != null; entry = entry.next) {
+                Grammar tempGrammar = (Grammar) entry.grammar.get();
+                /** If the soft reference has been cleared, remove this entry from the pool. */
+                if (tempGrammar == null) {
+                    removeEntry(entry);
+                }
+                else if ((entry.hash == hash) &amp;&amp; equals(entry.desc, desc)) {
+                    return tempGrammar;
+                }
+            }
+            return null;
+        }
+    } // getGrammar(XMLGrammarDescription):Grammar
+</source>
+        <source file="com/sun/org/apache/xerces/internal/jaxp/validation/SoftReferenceGrammarPool.java" startline="237" endline="254">
+    public boolean containsGrammar(XMLGrammarDescription desc) {
+        synchronized (fGrammars) {
+            clean();
+            int hash = hashCode(desc);
+            int index = (hash &amp; 0x7FFFFFFF) % fGrammars.length;
+            for (Entry entry = fGrammars[index]; entry != null ; entry = entry.next) {
+                Grammar tempGrammar = (Grammar) entry.grammar.get();
+                /** If the soft reference has been cleared, remove this entry from the pool. */
+                if (tempGrammar == null) {
+                    removeEntry(entry);
+                }
+                else if ((entry.hash == hash) &amp;&amp; equals(entry.desc, desc)) {
+                    return true;
+                }
+            }
+            return false;
+        }
+    } // containsGrammar(XMLGrammarDescription):boolean
+</source>
+    </clone>
+    <clone nlines="51">
+        <!-- modification: literal to BASE_NAME -->
+        <source file="com/sun/org/apache/xerces/internal/jaxp/validation/JAXPValidationMessageFormatter.java" startline="51" endline="101">
+    public static String formatMessage(Locale locale,
+        String key, Object[] arguments)
+        throws MissingResourceException {
+
+        ResourceBundle resourceBundle = null;
+        if (locale != null) {
+            resourceBundle =
+                SecuritySupport.getResourceBundle("com.sun.org.apache.xerces.internal.impl.msg.JAXPValidationMessages", locale);
+        }
+        else {
+            resourceBundle =
+                SecuritySupport.getResourceBundle("com.sun.org.apache.xerces.internal.impl.msg.JAXPValidationMessages");
+        }
+
+        // format message
+        String msg;
+        try {
+            msg = resourceBundle.getString(key);
+            if (arguments != null) {
+                try {
+                    msg = java.text.MessageFormat.format(msg, arguments);
+                }
+                catch (Exception e) {
+                    msg = resourceBundle.getString("FormatFailed");
+                    msg += " " + resourceBundle.getString(key);
+                }
+            }
+        }
+
+        // error
+        catch (MissingResourceException e) {
+            msg = resourceBundle.getString("BadMessageKey");
+            throw new MissingResourceException(key, msg, key);
+        }
+
+        // no message
+        if (msg == null) {
+            msg = key;
+            if (arguments.length &gt; 0) {
+                StringBuffer str = new StringBuffer(msg);
+                str.append('?');
+                for (int i = 0; i &lt; arguments.length; i++) {
+                    if (i &gt; 0) {
+                        str.append('&amp;');
+                    }
+                    str.append(String.valueOf(arguments[i]));
+                }
+            }
+        }
+        return msg;
+    }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/util/DatatypeMessageFormatter.java" startline="53" endline="103">
+    public static String formatMessage(Locale locale,
+        String key, Object[] arguments)
+        throws MissingResourceException {
+
+        ResourceBundle resourceBundle = null;
+        if (locale != null) {
+            resourceBundle =
+                SecuritySupport.getResourceBundle(BASE_NAME, locale);
+        }
+        else {
+            resourceBundle =
+                SecuritySupport.getResourceBundle(BASE_NAME);
+        }
+
+        // format message
+        String msg;
+        try {
+            msg = resourceBundle.getString(key);
+            if (arguments != null) {
+                try {
+                    msg = java.text.MessageFormat.format(msg, arguments);
+                }
+                catch (Exception e) {
+                    msg = resourceBundle.getString("FormatFailed");
+                    msg += " " + resourceBundle.getString(key);
+                }
+            }
+        }
+
+        // error
+        catch (MissingResourceException e) {
+            msg = resourceBundle.getString("BadMessageKey");
+            throw new MissingResourceException(key, msg, key);
+        }
+
+        // no message
+        if (msg == null) {
+            msg = key;
+            if (arguments.length &gt; 0) {
+                StringBuffer str = new StringBuffer(msg);
+                str.append('?');
+                for (int i = 0; i &lt; arguments.length; i++) {
+                    if (i &gt; 0) {
+                        str.append('&amp;');
+                    }
+                    str.append(String.valueOf(arguments[i]));
+                }
+            }
+        }
+        return msg;
+    }
+</source>
+    </clone>
+    <clone nlines="51">
+        <!-- modification: literal to BASE_NAME -->
+        <source file="com/sun/org/apache/xerces/internal/util/SAXMessageFormatter.java" startline="51" endline="101">
+    public static String formatMessage(Locale locale,
+        String key, Object[] arguments)
+        throws MissingResourceException {
+
+        ResourceBundle resourceBundle = null;
+        if (locale != null) {
+            resourceBundle =
+                SecuritySupport.getResourceBundle("com.sun.org.apache.xerces.internal.impl.msg.SAXMessages", locale);
+        }
+        else {
+            resourceBundle =
+                SecuritySupport.getResourceBundle("com.sun.org.apache.xerces.internal.impl.msg.SAXMessages");
+        }
+
+        // format message
+        String msg;
+        try {
+            msg = resourceBundle.getString(key);
+            if (arguments != null) {
+                try {
+                    msg = java.text.MessageFormat.format(msg, arguments);
+                }
+                catch (Exception e) {
+                    msg = resourceBundle.getString("FormatFailed");
+                    msg += " " + resourceBundle.getString(key);
+                }
+            }
+        }
+
+        // error
+        catch (MissingResourceException e) {
+            msg = resourceBundle.getString("BadMessageKey");
+            throw new MissingResourceException(key, msg, key);
+        }
+
+        // no message
+        if (msg == null) {
+            msg = key;
+            if (arguments.length &gt; 0) {
+                StringBuffer str = new StringBuffer(msg);
+                str.append('?');
+                for (int i = 0; i &lt; arguments.length; i++) {
+                    if (i &gt; 0) {
+                        str.append('&amp;');
+                    }
+                    str.append(String.valueOf(arguments[i]));
+                }
+            }
+        }
+        return msg;
+    }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/util/DatatypeMessageFormatter.java" startline="53" endline="103">
+    public static String formatMessage(Locale locale,
+        String key, Object[] arguments)
+        throws MissingResourceException {
+
+        ResourceBundle resourceBundle = null;
+        if (locale != null) {
+            resourceBundle =
+                SecuritySupport.getResourceBundle(BASE_NAME, locale);
+        }
+        else {
+            resourceBundle =
+                SecuritySupport.getResourceBundle(BASE_NAME);
+        }
+
+        // format message
+        String msg;
+        try {
+            msg = resourceBundle.getString(key);
+            if (arguments != null) {
+                try {
+                    msg = java.text.MessageFormat.format(msg, arguments);
+                }
+                catch (Exception e) {
+                    msg = resourceBundle.getString("FormatFailed");
+                    msg += " " + resourceBundle.getString(key);
+                }
+            }
+        }
+
+        // error
+        catch (MissingResourceException e) {
+            msg = resourceBundle.getString("BadMessageKey");
+            throw new MissingResourceException(key, msg, key);
+        }
+
+        // no message
+        if (msg == null) {
+            msg = key;
+            if (arguments.length &gt; 0) {
+                StringBuffer str = new StringBuffer(msg);
+                str.append('?');
+                for (int i = 0; i &lt; arguments.length; i++) {
+                    if (i &gt; 0) {
+                        str.append('&amp;');
+                    }
+                    str.append(String.valueOf(arguments[i]));
+                }
+            }
+        }
+        return msg;
+    }
+</source>
+    </clone>
+</clones>

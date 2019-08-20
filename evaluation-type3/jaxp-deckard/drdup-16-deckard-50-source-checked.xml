@@ -1,0 +1,1458 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- The clones reported by DrDup and not reported by Deckard
+10x     true clone
+6x      short
+-->
+<clones>
+    <clone nlines="47">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/dom2dtm/DOM2DTMdefaultNamespaceDeclarationNode.java" startline="402" endline="466">
+    public boolean isDefaultNamespace(String namespaceURI){
+       /*
+        // REVISIT: remove casts when DOM L3 becomes REC.
+        short type = this.getNodeType();
+        switch (type) {
+        case Node.ELEMENT_NODE: {
+            String namespace = this.getNamespaceURI();
+            String prefix = this.getPrefix();
+
+            // REVISIT: is it possible that prefix is empty string?
+            if (prefix == null || prefix.length() == 0) {
+                if (namespaceURI == null) {
+                    return (namespace == namespaceURI);
+                }
+                return namespaceURI.equals(namespace);
+            }
+            if (this.hasAttributes()) {
+                ElementImpl elem = (ElementImpl)this;
+                NodeImpl attr = (NodeImpl)elem.getAttributeNodeNS("http://www.w3.org/2000/xmlns/", "xmlns");
+                if (attr != null) {
+                    String value = attr.getNodeValue();
+                    if (namespaceURI == null) {
+                        return (namespace == value);
+                    }
+                    return namespaceURI.equals(value);
+                }
+            }
+
+            NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+            if (ancestor != null) {
+                return ancestor.isDefaultNamespace(namespaceURI);
+            }
+            return false;
+        }
+        case Node.DOCUMENT_NODE:{
+                return((NodeImpl)((Document)this).getDocumentElement()).isDefaultNamespace(namespaceURI);
+            }
+
+        case Node.ENTITY_NODE :
+          case Node.NOTATION_NODE:
+        case Node.DOCUMENT_FRAGMENT_NODE:
+        case Node.DOCUMENT_TYPE_NODE:
+            // type is unknown
+            return false;
+        case Node.ATTRIBUTE_NODE:{
+                if (this.ownerNode.getNodeType() == Node.ELEMENT_NODE) {
+                    return ownerNode.isDefaultNamespace(namespaceURI);
+
+                }
+                return false;
+            }
+        default:{
+                NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+                if (ancestor != null) {
+                    return ancestor.isDefaultNamespace(namespaceURI);
+                }
+                return false;
+            }
+
+        }
+*/
+        return false;
+
+
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="2250" endline="2296">
+    @Override
+    public Text replaceWholeText(String content)
+                                 throws DOMException{
+/*
+
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+
+        // make sure we can make the replacement
+        if (!canModify(nextSibling)) {
+            throw new DOMException(DOMException.NO_MODIFICATION_ALLOWED_ERR,
+                DOMMessageFormatter.formatMessage(DOMMessageFormatter.DOM_DOMAIN, "NO_MODIFICATION_ALLOWED_ERR", null));
+        }
+
+        Node parent = this.getParentNode();
+        if (content == null || content.length() == 0) {
+            // remove current node
+            if (parent !=null) { // check if node in the tree
+                parent.removeChild(this);
+                return null;
+            }
+        }
+        Text currentNode = null;
+        if (isReadOnly()){
+            Text newNode = this.ownerDocument().createTextNode(content);
+            if (parent !=null) { // check if node in the tree
+                parent.insertBefore(newNode, this);
+                parent.removeChild(this);
+                currentNode = newNode;
+            } else {
+                return newNode;
+            }
+        }  else {
+            this.setData(content);
+            currentNode = this;
+        }
+        Node sibling =  currentNode.getNextSibling();
+        while ( sibling !=null) {
+            parent.removeChild(sibling);
+            sibling = currentNode.getNextSibling();
+        }
+
+        return currentNode;
+*/
+        return null; //Pending
+    }
+</source>
+    </clone>
+    <clone nlines="46">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/dom2dtm/DOM2DTMdefaultNamespaceDeclarationNode.java" startline="402" endline="466">
+    public boolean isDefaultNamespace(String namespaceURI){
+       /*
+        // REVISIT: remove casts when DOM L3 becomes REC.
+        short type = this.getNodeType();
+        switch (type) {
+        case Node.ELEMENT_NODE: {
+            String namespace = this.getNamespaceURI();
+            String prefix = this.getPrefix();
+
+            // REVISIT: is it possible that prefix is empty string?
+            if (prefix == null || prefix.length() == 0) {
+                if (namespaceURI == null) {
+                    return (namespace == namespaceURI);
+                }
+                return namespaceURI.equals(namespace);
+            }
+            if (this.hasAttributes()) {
+                ElementImpl elem = (ElementImpl)this;
+                NodeImpl attr = (NodeImpl)elem.getAttributeNodeNS("http://www.w3.org/2000/xmlns/", "xmlns");
+                if (attr != null) {
+                    String value = attr.getNodeValue();
+                    if (namespaceURI == null) {
+                        return (namespace == value);
+                    }
+                    return namespaceURI.equals(value);
+                }
+            }
+
+            NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+            if (ancestor != null) {
+                return ancestor.isDefaultNamespace(namespaceURI);
+            }
+            return false;
+        }
+        case Node.DOCUMENT_NODE:{
+                return((NodeImpl)((Document)this).getDocumentElement()).isDefaultNamespace(namespaceURI);
+            }
+
+        case Node.ENTITY_NODE :
+          case Node.NOTATION_NODE:
+        case Node.DOCUMENT_FRAGMENT_NODE:
+        case Node.DOCUMENT_TYPE_NODE:
+            // type is unknown
+            return false;
+        case Node.ATTRIBUTE_NODE:{
+                if (this.ownerNode.getNodeType() == Node.ELEMENT_NODE) {
+                    return ownerNode.isDefaultNamespace(namespaceURI);
+
+                }
+                return false;
+            }
+        default:{
+                NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+                if (ancestor != null) {
+                    return ancestor.isDefaultNamespace(namespaceURI);
+                }
+                return false;
+            }
+
+        }
+*/
+        return false;
+
+
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1899" endline="1944">
+    public Text replaceWholeText(String content)
+                                 throws DOMException{
+/*
+
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+
+        // make sure we can make the replacement
+        if (!canModify(nextSibling)) {
+            throw new DOMException(DOMException.NO_MODIFICATION_ALLOWED_ERR,
+                DOMMessageFormatter.formatMessage(DOMMessageFormatter.DOM_DOMAIN, "NO_MODIFICATION_ALLOWED_ERR", null));
+        }
+
+        Node parent = this.getParentNode();
+        if (content == null || content.length() == 0) {
+            // remove current node
+            if (parent !=null) { // check if node in the tree
+                parent.removeChild(this);
+                return null;
+            }
+        }
+        Text currentNode = null;
+        if (isReadOnly()){
+            Text newNode = this.ownerDocument().createTextNode(content);
+            if (parent !=null) { // check if node in the tree
+                parent.insertBefore(newNode, this);
+                parent.removeChild(this);
+                currentNode = newNode;
+            } else {
+                return newNode;
+            }
+        }  else {
+            this.setData(content);
+            currentNode = this;
+        }
+        Node sibling =  currentNode.getNextSibling();
+        while ( sibling !=null) {
+            parent.removeChild(sibling);
+            sibling = currentNode.getNextSibling();
+        }
+
+        return currentNode;
+*/
+        return null; //Pending
+    }
+</source>
+    </clone>
+    <clone nlines="47">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="1879" endline="1944">
+    @Override
+    public boolean isDefaultNamespace(String namespaceURI){
+       /*
+        // REVISIT: remove casts when DOM L3 becomes REC.
+        short type = this.getNodeType();
+        switch (type) {
+        case Node.ELEMENT_NODE: {
+            String namespace = this.getNamespaceURI();
+            String prefix = this.getPrefix();
+
+            // REVISIT: is it possible that prefix is empty string?
+            if (prefix == null || prefix.length() == 0) {
+                if (namespaceURI == null) {
+                    return (namespace == namespaceURI);
+                }
+                return namespaceURI.equals(namespace);
+            }
+            if (this.hasAttributes()) {
+                ElementImpl elem = (ElementImpl)this;
+                NodeImpl attr = (NodeImpl)elem.getAttributeNodeNS("http://www.w3.org/2000/xmlns/", "xmlns");
+                if (attr != null) {
+                    String value = attr.getNodeValue();
+                    if (namespaceURI == null) {
+                        return (namespace == value);
+                    }
+                    return namespaceURI.equals(value);
+                }
+            }
+
+            NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+            if (ancestor != null) {
+                return ancestor.isDefaultNamespace(namespaceURI);
+            }
+            return false;
+        }
+        case Node.DOCUMENT_NODE:{
+                return((NodeImpl)((Document)this).getDocumentElement()).isDefaultNamespace(namespaceURI);
+            }
+
+        case Node.ENTITY_NODE :
+          case Node.NOTATION_NODE:
+        case Node.DOCUMENT_FRAGMENT_NODE:
+        case Node.DOCUMENT_TYPE_NODE:
+            // type is unknown
+            return false;
+        case Node.ATTRIBUTE_NODE:{
+                if (this.ownerNode.getNodeType() == Node.ELEMENT_NODE) {
+                    return ownerNode.isDefaultNamespace(namespaceURI);
+
+                }
+                return false;
+            }
+        default:{
+                NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+                if (ancestor != null) {
+                    return ancestor.isDefaultNamespace(namespaceURI);
+                }
+                return false;
+            }
+
+        }
+*/
+        return false;
+
+
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="2250" endline="2296">
+    @Override
+    public Text replaceWholeText(String content)
+                                 throws DOMException{
+/*
+
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+
+        // make sure we can make the replacement
+        if (!canModify(nextSibling)) {
+            throw new DOMException(DOMException.NO_MODIFICATION_ALLOWED_ERR,
+                DOMMessageFormatter.formatMessage(DOMMessageFormatter.DOM_DOMAIN, "NO_MODIFICATION_ALLOWED_ERR", null));
+        }
+
+        Node parent = this.getParentNode();
+        if (content == null || content.length() == 0) {
+            // remove current node
+            if (parent !=null) { // check if node in the tree
+                parent.removeChild(this);
+                return null;
+            }
+        }
+        Text currentNode = null;
+        if (isReadOnly()){
+            Text newNode = this.ownerDocument().createTextNode(content);
+            if (parent !=null) { // check if node in the tree
+                parent.insertBefore(newNode, this);
+                parent.removeChild(this);
+                currentNode = newNode;
+            } else {
+                return newNode;
+            }
+        }  else {
+            this.setData(content);
+            currentNode = this;
+        }
+        Node sibling =  currentNode.getNextSibling();
+        while ( sibling !=null) {
+            parent.removeChild(sibling);
+            sibling = currentNode.getNextSibling();
+        }
+
+        return currentNode;
+*/
+        return null; //Pending
+    }
+</source>
+    </clone>
+    <clone nlines="46">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="1879" endline="1944">
+    @Override
+    public boolean isDefaultNamespace(String namespaceURI){
+       /*
+        // REVISIT: remove casts when DOM L3 becomes REC.
+        short type = this.getNodeType();
+        switch (type) {
+        case Node.ELEMENT_NODE: {
+            String namespace = this.getNamespaceURI();
+            String prefix = this.getPrefix();
+
+            // REVISIT: is it possible that prefix is empty string?
+            if (prefix == null || prefix.length() == 0) {
+                if (namespaceURI == null) {
+                    return (namespace == namespaceURI);
+                }
+                return namespaceURI.equals(namespace);
+            }
+            if (this.hasAttributes()) {
+                ElementImpl elem = (ElementImpl)this;
+                NodeImpl attr = (NodeImpl)elem.getAttributeNodeNS("http://www.w3.org/2000/xmlns/", "xmlns");
+                if (attr != null) {
+                    String value = attr.getNodeValue();
+                    if (namespaceURI == null) {
+                        return (namespace == value);
+                    }
+                    return namespaceURI.equals(value);
+                }
+            }
+
+            NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+            if (ancestor != null) {
+                return ancestor.isDefaultNamespace(namespaceURI);
+            }
+            return false;
+        }
+        case Node.DOCUMENT_NODE:{
+                return((NodeImpl)((Document)this).getDocumentElement()).isDefaultNamespace(namespaceURI);
+            }
+
+        case Node.ENTITY_NODE :
+          case Node.NOTATION_NODE:
+        case Node.DOCUMENT_FRAGMENT_NODE:
+        case Node.DOCUMENT_TYPE_NODE:
+            // type is unknown
+            return false;
+        case Node.ATTRIBUTE_NODE:{
+                if (this.ownerNode.getNodeType() == Node.ELEMENT_NODE) {
+                    return ownerNode.isDefaultNamespace(namespaceURI);
+
+                }
+                return false;
+            }
+        default:{
+                NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+                if (ancestor != null) {
+                    return ancestor.isDefaultNamespace(namespaceURI);
+                }
+                return false;
+            }
+
+        }
+*/
+        return false;
+
+
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1899" endline="1944">
+    public Text replaceWholeText(String content)
+                                 throws DOMException{
+/*
+
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+
+        // make sure we can make the replacement
+        if (!canModify(nextSibling)) {
+            throw new DOMException(DOMException.NO_MODIFICATION_ALLOWED_ERR,
+                DOMMessageFormatter.formatMessage(DOMMessageFormatter.DOM_DOMAIN, "NO_MODIFICATION_ALLOWED_ERR", null));
+        }
+
+        Node parent = this.getParentNode();
+        if (content == null || content.length() == 0) {
+            // remove current node
+            if (parent !=null) { // check if node in the tree
+                parent.removeChild(this);
+                return null;
+            }
+        }
+        Text currentNode = null;
+        if (isReadOnly()){
+            Text newNode = this.ownerDocument().createTextNode(content);
+            if (parent !=null) { // check if node in the tree
+                parent.insertBefore(newNode, this);
+                parent.removeChild(this);
+                currentNode = newNode;
+            } else {
+                return newNode;
+            }
+        }  else {
+            this.setData(content);
+            currentNode = this;
+        }
+        Node sibling =  currentNode.getNextSibling();
+        while ( sibling !=null) {
+            parent.removeChild(sibling);
+            sibling = currentNode.getNextSibling();
+        }
+
+        return currentNode;
+*/
+        return null; //Pending
+    }
+</source>
+    </clone>
+    <clone nlines="47">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1539" endline="1603">
+    public boolean isDefaultNamespace(String namespaceURI){
+       /*
+        // REVISIT: remove casts when DOM L3 becomes REC.
+        short type = this.getNodeType();
+        switch (type) {
+        case Node.ELEMENT_NODE: {
+            String namespace = this.getNamespaceURI();
+            String prefix = this.getPrefix();
+
+            // REVISIT: is it possible that prefix is empty string?
+            if (prefix == null || prefix.length() == 0) {
+                if (namespaceURI == null) {
+                    return (namespace == namespaceURI);
+                }
+                return namespaceURI.equals(namespace);
+            }
+            if (this.hasAttributes()) {
+                ElementImpl elem = (ElementImpl)this;
+                NodeImpl attr = (NodeImpl)elem.getAttributeNodeNS("http://www.w3.org/2000/xmlns/", "xmlns");
+                if (attr != null) {
+                    String value = attr.getNodeValue();
+                    if (namespaceURI == null) {
+                        return (namespace == value);
+                    }
+                    return namespaceURI.equals(value);
+                }
+            }
+
+            NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+            if (ancestor != null) {
+                return ancestor.isDefaultNamespace(namespaceURI);
+            }
+            return false;
+        }
+        case Node.DOCUMENT_NODE:{
+                return((NodeImpl)((Document)this).getDocumentElement()).isDefaultNamespace(namespaceURI);
+            }
+
+        case Node.ENTITY_NODE :
+          case Node.NOTATION_NODE:
+        case Node.DOCUMENT_FRAGMENT_NODE:
+        case Node.DOCUMENT_TYPE_NODE:
+            // type is unknown
+            return false;
+        case Node.ATTRIBUTE_NODE:{
+                if (this.ownerNode.getNodeType() == Node.ELEMENT_NODE) {
+                    return ownerNode.isDefaultNamespace(namespaceURI);
+
+                }
+                return false;
+            }
+        default:{
+                NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+                if (ancestor != null) {
+                    return ancestor.isDefaultNamespace(namespaceURI);
+                }
+                return false;
+            }
+
+        }
+*/
+        return false;
+
+
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/dtm/ref/DTMNodeProxy.java" startline="2250" endline="2296">
+    @Override
+    public Text replaceWholeText(String content)
+                                 throws DOMException{
+/*
+
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+
+        // make sure we can make the replacement
+        if (!canModify(nextSibling)) {
+            throw new DOMException(DOMException.NO_MODIFICATION_ALLOWED_ERR,
+                DOMMessageFormatter.formatMessage(DOMMessageFormatter.DOM_DOMAIN, "NO_MODIFICATION_ALLOWED_ERR", null));
+        }
+
+        Node parent = this.getParentNode();
+        if (content == null || content.length() == 0) {
+            // remove current node
+            if (parent !=null) { // check if node in the tree
+                parent.removeChild(this);
+                return null;
+            }
+        }
+        Text currentNode = null;
+        if (isReadOnly()){
+            Text newNode = this.ownerDocument().createTextNode(content);
+            if (parent !=null) { // check if node in the tree
+                parent.insertBefore(newNode, this);
+                parent.removeChild(this);
+                currentNode = newNode;
+            } else {
+                return newNode;
+            }
+        }  else {
+            this.setData(content);
+            currentNode = this;
+        }
+        Node sibling =  currentNode.getNextSibling();
+        while ( sibling !=null) {
+            parent.removeChild(sibling);
+            sibling = currentNode.getNextSibling();
+        }
+
+        return currentNode;
+*/
+        return null; //Pending
+    }
+</source>
+    </clone>
+    <clone nlines="46">
+        <!-- short -->
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1539" endline="1603">
+    public boolean isDefaultNamespace(String namespaceURI){
+       /*
+        // REVISIT: remove casts when DOM L3 becomes REC.
+        short type = this.getNodeType();
+        switch (type) {
+        case Node.ELEMENT_NODE: {
+            String namespace = this.getNamespaceURI();
+            String prefix = this.getPrefix();
+
+            // REVISIT: is it possible that prefix is empty string?
+            if (prefix == null || prefix.length() == 0) {
+                if (namespaceURI == null) {
+                    return (namespace == namespaceURI);
+                }
+                return namespaceURI.equals(namespace);
+            }
+            if (this.hasAttributes()) {
+                ElementImpl elem = (ElementImpl)this;
+                NodeImpl attr = (NodeImpl)elem.getAttributeNodeNS("http://www.w3.org/2000/xmlns/", "xmlns");
+                if (attr != null) {
+                    String value = attr.getNodeValue();
+                    if (namespaceURI == null) {
+                        return (namespace == value);
+                    }
+                    return namespaceURI.equals(value);
+                }
+            }
+
+            NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+            if (ancestor != null) {
+                return ancestor.isDefaultNamespace(namespaceURI);
+            }
+            return false;
+        }
+        case Node.DOCUMENT_NODE:{
+                return((NodeImpl)((Document)this).getDocumentElement()).isDefaultNamespace(namespaceURI);
+            }
+
+        case Node.ENTITY_NODE :
+          case Node.NOTATION_NODE:
+        case Node.DOCUMENT_FRAGMENT_NODE:
+        case Node.DOCUMENT_TYPE_NODE:
+            // type is unknown
+            return false;
+        case Node.ATTRIBUTE_NODE:{
+                if (this.ownerNode.getNodeType() == Node.ELEMENT_NODE) {
+                    return ownerNode.isDefaultNamespace(namespaceURI);
+
+                }
+                return false;
+            }
+        default:{
+                NodeImpl ancestor = (NodeImpl)getElementAncestor(this);
+                if (ancestor != null) {
+                    return ancestor.isDefaultNamespace(namespaceURI);
+                }
+                return false;
+            }
+
+        }
+*/
+        return false;
+
+
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/utils/UnImplNode.java" startline="1899" endline="1944">
+    public Text replaceWholeText(String content)
+                                 throws DOMException{
+/*
+
+        if (needsSyncData()) {
+            synchronizeData();
+        }
+
+        // make sure we can make the replacement
+        if (!canModify(nextSibling)) {
+            throw new DOMException(DOMException.NO_MODIFICATION_ALLOWED_ERR,
+                DOMMessageFormatter.formatMessage(DOMMessageFormatter.DOM_DOMAIN, "NO_MODIFICATION_ALLOWED_ERR", null));
+        }
+
+        Node parent = this.getParentNode();
+        if (content == null || content.length() == 0) {
+            // remove current node
+            if (parent !=null) { // check if node in the tree
+                parent.removeChild(this);
+                return null;
+            }
+        }
+        Text currentNode = null;
+        if (isReadOnly()){
+            Text newNode = this.ownerDocument().createTextNode(content);
+            if (parent !=null) { // check if node in the tree
+                parent.insertBefore(newNode, this);
+                parent.removeChild(this);
+                currentNode = newNode;
+            } else {
+                return newNode;
+            }
+        }  else {
+            this.setData(content);
+            currentNode = this;
+        }
+        Node sibling =  currentNode.getNextSibling();
+        while ( sibling !=null) {
+            parent.removeChild(sibling);
+            sibling = currentNode.getNextSibling();
+        }
+
+        return currentNode;
+*/
+        return null; //Pending
+    }
+</source>
+    </clone>
+    <clone nlines="16">
+        <!-- modification: printEscaped( value ) to _printer.printText( model ) -->
+        <source file="com/sun/org/apache/xml/internal/serialize/BaseMarkupSerializer.java" startline="908" endline="923">
+    public void internalEntityDecl( String name, String value )
+        throws SAXException
+    {
+        try {
+        _printer.enterDTD();
+        _printer.printText( "&lt;!ENTITY " );
+        _printer.printText( name );
+        _printer.printText( " \"" );
+        printEscaped( value );
+        _printer.printText( "\"&gt;" );
+        if ( _indenting )
+            _printer.breakLine();
+        } catch ( IOException except ) {
+            throw new SAXException( except );
+        }
+    }
+</source>
+        <source file="com/sun/org/apache/xml/internal/serialize/BaseMarkupSerializer.java" startline="860" endline="875">
+    public void elementDecl( String name, String model )
+        throws SAXException
+    {
+        try {
+        _printer.enterDTD();
+        _printer.printText( "&lt;!ELEMENT " );
+        _printer.printText( name );
+        _printer.printText( ' ' );
+        _printer.printText( model );
+        _printer.printText( '&gt;' );
+        if ( _indenting )
+            _printer.breakLine();
+        } catch ( IOException except ) {
+            throw new SAXException( except );
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="17">
+        <!-- modification: AndExpr() to EqualityExpr(-1) -->
+        <source file="com/sun/org/apache/xpath/internal/compiler/XPathParser.java" startline="804" endline="820">
+  protected void OrExpr() throws javax.xml.transform.TransformerException
+  {
+
+    int opPos = m_ops.getOp(OpMap.MAPINDEX_LENGTH);
+
+    AndExpr();
+
+    if ((null != m_token) &amp;&amp; tokenIs("or"))
+    {
+      nextToken();
+      insertOp(opPos, 2, OpCodes.OP_OR);
+      OrExpr();
+
+      m_ops.setOp(opPos + OpMap.MAPINDEX_LENGTH,
+        m_ops.getOp(OpMap.MAPINDEX_LENGTH) - opPos);
+    }
+  }
+</source>
+        <source file="com/sun/org/apache/xpath/internal/compiler/XPathParser.java" startline="831" endline="847">
+  protected void AndExpr() throws javax.xml.transform.TransformerException
+  {
+
+    int opPos = m_ops.getOp(OpMap.MAPINDEX_LENGTH);
+
+    EqualityExpr(-1);
+
+    if ((null != m_token) &amp;&amp; tokenIs("and"))
+    {
+      nextToken();
+      insertOp(opPos, 2, OpCodes.OP_AND);
+      AndExpr();
+
+      m_ops.setOp(opPos + OpMap.MAPINDEX_LENGTH,
+        m_ops.getOp(OpMap.MAPINDEX_LENGTH) - opPos);
+    }
+  }
+</source>
+    </clone>
+    <clone nlines="17">
+        <!-- modification: isPossibleFP(s) to DoubleDV.isPossibleFP(s) -->
+        <source file="com/sun/org/apache/xerces/internal/impl/dv/xs/DoubleDV.java" startline="85" endline="101">
+        public XDouble(String s) throws NumberFormatException {
+            if (isPossibleFP(s)) {
+                value = Double.parseDouble(s);
+            }
+            else if ( s.equals("INF") ) {
+                value = Double.POSITIVE_INFINITY;
+            }
+            else if ( s.equals("-INF") ) {
+                value = Double.NEGATIVE_INFINITY;
+            }
+            else if ( s.equals("NaN" ) ) {
+                value = Double.NaN;
+            }
+            else {
+                throw new NumberFormatException(s);
+            }
+        }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/impl/dv/xs/FloatDV.java" startline="69" endline="85">
+        public XFloat(String s) throws NumberFormatException {
+            if (DoubleDV.isPossibleFP(s)) {
+                value = Float.parseFloat(s);
+            }
+            else if ( s.equals("INF") ) {
+                value = Float.POSITIVE_INFINITY;
+            }
+            else if ( s.equals("-INF") ) {
+                value = Float.NEGATIVE_INFINITY;
+            }
+            else if ( s.equals("NaN") ) {
+                value = Float.NaN;
+            }
+            else {
+                throw new NumberFormatException(s);
+            }
+        }
+</source>
+    </clone>
+    <clone nlines="20">
+        <!-- modification: public -->
+        <source file="com/sun/org/apache/xalan/internal/utils/ObjectFactory.java" startline="136" endline="155">
+    static Object newInstance(String className, ClassLoader cl,
+                                      boolean doFallback)
+        throws ConfigurationError
+    {
+        // assert(className != null);
+        try{
+            Class providerClass = findProviderClass(className, cl, doFallback);
+            Object instance = providerClass.newInstance();
+            if (DEBUG) debugPrintln("created new instance of " + providerClass +
+                   " using ClassLoader: " + cl);
+            return instance;
+        } catch (ClassNotFoundException x) {
+            throw new ConfigurationError(
+                "Provider " + className + " not found", x);
+        } catch (Exception x) {
+            throw new ConfigurationError(
+                "Provider " + className + " could not be instantiated: " + x,
+                x);
+        }
+    }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/utils/ObjectFactory.java" startline="151" endline="170">
+    public static Object newInstance(String className, ClassLoader cl,
+                                      boolean doFallback)
+        throws ConfigurationError
+    {
+        // assert(className != null);
+        try{
+            Class providerClass = findProviderClass(className, cl, doFallback);
+            Object instance = providerClass.newInstance();
+            if (DEBUG) debugPrintln("created new instance of " + providerClass +
+                   " using ClassLoader: " + cl);
+            return instance;
+        } catch (ClassNotFoundException x) {
+            throw new ConfigurationError(
+                "Provider " + className + " not found", x);
+        } catch (Exception x) {
+            throw new ConfigurationError(
+                "Provider " + className + " could not be instantiated: " + x,
+                x);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="18">
+        <!-- modification: private -->
+        <source file="com/sun/org/apache/xalan/internal/utils/FeaturePropertyBase.java" startline="197" endline="214">
+    void getSystemProperty(Enum property, String systemProperty) {
+        try {
+            String value = SecuritySupport.getSystemProperty(systemProperty);
+            if (value != null) {
+                values[property.ordinal()] = value;
+                states[property.ordinal()] = State.SYSTEMPROPERTY;
+                return;
+            }
+
+            value = SecuritySupport.readJAXPProperty(systemProperty);
+            if (value != null) {
+                values[property.ordinal()] = value;
+                states[property.ordinal()] = State.JAXPDOTPROPERTIES;
+            }
+        } catch (NumberFormatException e) {
+            //invalid setting ignored
+        }
+    }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/utils/XMLSecurityPropertyManager.java" startline="207" endline="224">
+    private void getSystemProperty(Property property, String systemProperty) {
+        try {
+            String value = SecuritySupport.getSystemProperty(systemProperty);
+            if (value != null) {
+                values[property.ordinal()] = value;
+                states[property.ordinal()] = State.SYSTEMPROPERTY;
+                return;
+            }
+
+            value = SecuritySupport.readJAXPProperty(systemProperty);
+            if (value != null) {
+                values[property.ordinal()] = value;
+                states[property.ordinal()] = State.JAXPDOTPROPERTIES;
+            }
+        } catch (NumberFormatException e) {
+            //invalid setting ignored
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="57">
+        <!-- modification: throws ConfigurationError -->
+        <source file="com/sun/org/apache/xalan/internal/utils/ObjectFactory.java" startline="60" endline="116">
+    public static ClassLoader findClassLoader()
+    {
+        if (System.getSecurityManager()!=null) {
+            //this will ensure bootclassloader is used
+            return null;
+        }
+
+        // Figure out which ClassLoader to use for loading the provider
+        // class.  If there is a Context ClassLoader then use it.
+        ClassLoader context = SecuritySupport.getContextClassLoader();
+        ClassLoader system = SecuritySupport.getSystemClassLoader();
+
+        ClassLoader chain = system;
+        while (true) {
+            if (context == chain) {
+                // Assert: we are on JDK 1.1 or we have no Context ClassLoader
+                // or any Context ClassLoader in chain of system classloader
+                // (including extension ClassLoader) so extend to widest
+                // ClassLoader (always look in system ClassLoader if Xalan
+                // is in boot/extension/system classpath and in current
+                // ClassLoader otherwise); normal classloaders delegate
+                // back to system ClassLoader first so this widening doesn't
+                // change the fact that context ClassLoader will be consulted
+                ClassLoader current = ObjectFactory.class.getClassLoader();
+
+                chain = system;
+                while (true) {
+                    if (current == chain) {
+                        // Assert: Current ClassLoader in chain of
+                        // boot/extension/system ClassLoaders
+                        return system;
+                    }
+                    if (chain == null) {
+                        break;
+                    }
+                    chain = SecuritySupport.getParentClassLoader(chain);
+                }
+
+                // Assert: Current ClassLoader not in chain of
+                // boot/extension/system ClassLoaders
+                return current;
+            }
+
+            if (chain == null) {
+                // boot ClassLoader reached
+                break;
+            }
+
+            // Check for any extension ClassLoaders in chain up to
+            // boot ClassLoader
+            chain = SecuritySupport.getParentClassLoader(chain);
+        }
+
+        // Assert: Context ClassLoader not in chain of
+        // boot/extension/system ClassLoaders
+        return context;
+    } // findClassLoader():ClassLoader
+</source>
+        <source file="com/sun/org/apache/xerces/internal/utils/ObjectFactory.java" startline="75" endline="131">
+    public static ClassLoader findClassLoader()
+        throws ConfigurationError
+    {
+        if (System.getSecurityManager()!=null) {
+            //this will ensure bootclassloader is used
+            return null;
+        }
+        // Figure out which ClassLoader to use for loading the provider
+        // class.  If there is a Context ClassLoader then use it.
+        ClassLoader context = SecuritySupport.getContextClassLoader();
+        ClassLoader system = SecuritySupport.getSystemClassLoader();
+
+        ClassLoader chain = system;
+        while (true) {
+            if (context == chain) {
+                // Assert: we are on JDK 1.1 or we have no Context ClassLoader
+                // or any Context ClassLoader in chain of system classloader
+                // (including extension ClassLoader) so extend to widest
+                // ClassLoader (always look in system ClassLoader if Xerces
+                // is in boot/extension/system classpath and in current
+                // ClassLoader otherwise); normal classloaders delegate
+                // back to system ClassLoader first so this widening doesn't
+                // change the fact that context ClassLoader will be consulted
+                ClassLoader current = ObjectFactory.class.getClassLoader();
+
+                chain = system;
+                while (true) {
+                    if (current == chain) {
+                        // Assert: Current ClassLoader in chain of
+                        // boot/extension/system ClassLoaders
+                        return system;
+                    }
+                    if (chain == null) {
+                        break;
+                    }
+                    chain = SecuritySupport.getParentClassLoader(chain);
+                }
+
+                // Assert: Current ClassLoader not in chain of
+                // boot/extension/system ClassLoaders
+                return current;
+            }
+
+            if (chain == null) {
+                // boot ClassLoader reached
+                break;
+            }
+
+            // Check for any extension ClassLoaders in chain up to
+            // boot ClassLoader
+            chain = SecuritySupport.getParentClassLoader(chain);
+        }
+
+        // Assert: Context ClassLoader not in chain of
+        // boot/extension/system ClassLoaders
+        return context;
+    } // findClassLoader():ClassLoader
+</source>
+    </clone>
+    <clone nlines="28">
+        <!-- modification: throws TransformerFactoryConfigurationError -->
+        <source file="javax/xml/parsers/FactoryFinder.java" startline="287" endline="314">
+    private static &lt;T&gt; T findServiceProvider(final Class&lt;T&gt; type) {
+        try {
+            return AccessController.doPrivileged(new PrivilegedAction&lt;T&gt;() {
+                public T run() {
+                    final ServiceLoader&lt;T&gt; serviceLoader = ServiceLoader.load(type);
+                    final Iterator&lt;T&gt; iterator = serviceLoader.iterator();
+                    if (iterator.hasNext()) {
+                        return iterator.next();
+                    } else {
+                        return null;
+                    }
+                 }
+            });
+        } catch(ServiceConfigurationError e) {
+            // It is not possible to wrap an error directly in
+            // FactoryConfigurationError - so we need to wrap the
+            // ServiceConfigurationError in a RuntimeException.
+            // The alternative would be to modify the logic in
+            // FactoryConfigurationError to allow setting a
+            // Throwable as the cause, but that could cause
+            // compatibility issues down the road.
+            final RuntimeException x = new RuntimeException(
+                    "Provider for " + type + " cannot be created", e);
+            final FactoryConfigurationError error =
+                    new FactoryConfigurationError(x, x.getMessage());
+            throw error;
+        }
+    }
+</source>
+        <source file="javax/xml/transform/FactoryFinder.java" startline="319" endline="348">
+    private static &lt;T&gt; T findServiceProvider(final Class&lt;T&gt; type)
+        throws TransformerFactoryConfigurationError
+    {
+      try {
+            return AccessController.doPrivileged(new PrivilegedAction&lt;T&gt;() {
+                public T run() {
+                    final ServiceLoader&lt;T&gt; serviceLoader = ServiceLoader.load(type);
+                    final Iterator&lt;T&gt; iterator = serviceLoader.iterator();
+                    if (iterator.hasNext()) {
+                        return iterator.next();
+                    } else {
+                        return null;
+                    }
+                 }
+            });
+        } catch(ServiceConfigurationError e) {
+            // It is not possible to wrap an error directly in
+            // FactoryConfigurationError - so we need to wrap the
+            // ServiceConfigurationError in a RuntimeException.
+            // The alternative would be to modify the logic in
+            // FactoryConfigurationError to allow setting a
+            // Throwable as the cause, but that could cause
+            // compatibility issues down the road.
+            final RuntimeException x = new RuntimeException(
+                    "Provider for " + type + " cannot be created", e);
+            final TransformerFactoryConfigurationError error =
+                    new TransformerFactoryConfigurationError(x, x.getMessage());
+            throw error;
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="51">
+        <!-- modification: BASE_NAME to a string (twice) -->
+        <source file="com/sun/org/apache/xerces/internal/jaxp/validation/JAXPValidationMessageFormatter.java" startline="51" endline="101">
+    public static String formatMessage(Locale locale,
+        String key, Object[] arguments)
+        throws MissingResourceException {
+
+        ResourceBundle resourceBundle = null;
+        if (locale != null) {
+            resourceBundle = 
+                SecuritySupport.getResourceBundle("com.sun.org.apache.xerces.internal.impl.msg.JAXPValidationMessages", locale);
+        }
+        else {
+            resourceBundle =
+                SecuritySupport.getResourceBundle("com.sun.org.apache.xerces.internal.impl.msg.JAXPValidationMessages");
+        }
+
+        // format message
+        String msg;
+        try {
+            msg = resourceBundle.getString(key);
+            if (arguments != null) {
+                try {
+                    msg = java.text.MessageFormat.format(msg, arguments);
+                }
+                catch (Exception e) {
+                    msg = resourceBundle.getString("FormatFailed");
+                    msg += " " + resourceBundle.getString(key);
+                }
+            }
+        }
+
+        // error
+        catch (MissingResourceException e) {
+            msg = resourceBundle.getString("BadMessageKey");
+            throw new MissingResourceException(key, msg, key);
+        }
+
+        // no message
+        if (msg == null) {
+            msg = key;
+            if (arguments.length &gt; 0) {
+                StringBuffer str = new StringBuffer(msg);
+                str.append('?');
+                for (int i = 0; i &lt; arguments.length; i++) {
+                    if (i &gt; 0) {
+                        str.append('&amp;');
+                    }
+                    str.append(String.valueOf(arguments[i]));
+                }
+            }
+        }
+        return msg;
+    }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/util/DatatypeMessageFormatter.java" startline="53" endline="103">
+    public static String formatMessage(Locale locale,
+        String key, Object[] arguments)
+        throws MissingResourceException {
+
+        ResourceBundle resourceBundle = null;
+        if (locale != null) {
+            resourceBundle =
+                SecuritySupport.getResourceBundle(BASE_NAME, locale);
+        }
+        else {
+            resourceBundle =
+                SecuritySupport.getResourceBundle(BASE_NAME);
+        }
+
+        // format message
+        String msg;
+        try {
+            msg = resourceBundle.getString(key);
+            if (arguments != null) {
+                try {
+                    msg = java.text.MessageFormat.format(msg, arguments);
+                }
+                catch (Exception e) {
+                    msg = resourceBundle.getString("FormatFailed");
+                    msg += " " + resourceBundle.getString(key);
+                }
+            }
+        }
+
+        // error
+        catch (MissingResourceException e) {
+            msg = resourceBundle.getString("BadMessageKey");
+            throw new MissingResourceException(key, msg, key);
+        }
+
+        // no message
+        if (msg == null) {
+            msg = key;
+            if (arguments.length &gt; 0) {
+                StringBuffer str = new StringBuffer(msg);
+                str.append('?');
+                for (int i = 0; i &lt; arguments.length; i++) {
+                    if (i &gt; 0) {
+                        str.append('&amp;');
+                    }
+                    str.append(String.valueOf(arguments[i]));
+                }
+            }
+        }
+        return msg;
+    }
+</source>
+    </clone>
+    <clone nlines="51">
+        <!-- modification: BASE_NAME to a string (twice) -->
+        <source file="com/sun/org/apache/xerces/internal/util/SAXMessageFormatter.java" startline="51" endline="101">
+    public static String formatMessage(Locale locale,
+        String key, Object[] arguments)
+        throws MissingResourceException {
+
+        ResourceBundle resourceBundle = null;
+        if (locale != null) {
+            resourceBundle =
+                SecuritySupport.getResourceBundle("com.sun.org.apache.xerces.internal.impl.msg.SAXMessages", locale);
+        }
+        else {
+            resourceBundle =
+                SecuritySupport.getResourceBundle("com.sun.org.apache.xerces.internal.impl.msg.SAXMessages");
+        }
+
+        // format message
+        String msg;
+        try {
+            msg = resourceBundle.getString(key);
+            if (arguments != null) {
+                try {
+                    msg = java.text.MessageFormat.format(msg, arguments);
+                }
+                catch (Exception e) {
+                    msg = resourceBundle.getString("FormatFailed");
+                    msg += " " + resourceBundle.getString(key);
+                }
+            }
+        }
+
+        // error
+        catch (MissingResourceException e) {
+            msg = resourceBundle.getString("BadMessageKey");
+            throw new MissingResourceException(key, msg, key);
+        }
+
+        // no message
+        if (msg == null) {
+            msg = key;
+            if (arguments.length &gt; 0) {
+                StringBuffer str = new StringBuffer(msg);
+                str.append('?');
+                for (int i = 0; i &lt; arguments.length; i++) {
+                    if (i &gt; 0) {
+                        str.append('&amp;');
+                    }
+                    str.append(String.valueOf(arguments[i]));
+                }
+            }
+        }
+        return msg;
+    }
+</source>
+        <source file="com/sun/org/apache/xerces/internal/util/DatatypeMessageFormatter.java" startline="53" endline="103">
+    public static String formatMessage(Locale locale,
+        String key, Object[] arguments)
+        throws MissingResourceException {
+
+        ResourceBundle resourceBundle = null;
+        if (locale != null) {
+            resourceBundle =
+                SecuritySupport.getResourceBundle(BASE_NAME, locale);
+        }
+        else {
+            resourceBundle =
+                SecuritySupport.getResourceBundle(BASE_NAME);
+        }
+
+        // format message
+        String msg;
+        try {
+            msg = resourceBundle.getString(key);
+            if (arguments != null) {
+                try {
+                    msg = java.text.MessageFormat.format(msg, arguments);
+                }
+                catch (Exception e) {
+                    msg = resourceBundle.getString("FormatFailed");
+                    msg += " " + resourceBundle.getString(key);
+                }
+            }
+        }
+
+        // error
+        catch (MissingResourceException e) {
+            msg = resourceBundle.getString("BadMessageKey");
+            throw new MissingResourceException(key, msg, key);
+        }
+
+        // no message
+        if (msg == null) {
+            msg = key;
+            if (arguments.length &gt; 0) {
+                StringBuffer str = new StringBuffer(msg);
+                str.append('?');
+                for (int i = 0; i &lt; arguments.length; i++) {
+                    if (i &gt; 0) {
+                        str.append('&amp;');
+                    }
+                    str.append(String.valueOf(arguments[i]));
+                }
+            }
+        }
+        return msg;
+    }
+</source>
+    </clone>
+    <clone nlines="58">
+        <!-- modification: final -->
+        <source file="javax/xml/parsers/FactoryFinder.java" startline="221" endline="278">
+    static &lt;T&gt; T find(Class&lt;T&gt; type, String fallbackClassName)
+        throws FactoryConfigurationError
+    {
+        final String factoryId = type.getName();
+        dPrint("find factoryId =" + factoryId);
+
+        // Use the system property first
+        try {
+            String systemProp = ss.getSystemProperty(factoryId);
+            if (systemProp != null) {
+                dPrint("found system property, value=" + systemProp);
+                return newInstance(type, systemProp, null, true);
+            }
+        }
+        catch (SecurityException se) {
+            if (debug) se.printStackTrace();
+        }
+
+        // try to read from $java.home/lib/jaxp.properties
+        try {
+            if (firstTime) {
+                synchronized (cacheProps) {
+                    if (firstTime) {
+                        String configFile = ss.getSystemProperty("java.home") + File.separator +
+                            "lib" + File.separator + "jaxp.properties";
+                        File f = new File(configFile);
+                        firstTime = false;
+                        if (ss.doesFileExist(f)) {
+                            dPrint("Read properties file "+f);
+                            cacheProps.load(ss.getFileInputStream(f));
+                        }
+                    }
+                }
+            }
+            final String factoryClassName = cacheProps.getProperty(factoryId);
+
+            if (factoryClassName != null) {
+                dPrint("found in $java.home/jaxp.properties, value=" + factoryClassName);
+                return newInstance(type, factoryClassName, null, true);
+            }
+        }
+        catch (Exception ex) {
+            if (debug) ex.printStackTrace();
+        }
+
+        // Try Jar Service Provider Mechanism
+        T provider = findServiceProvider(type);
+        if (provider != null) {
+            return provider;
+        }
+        if (fallbackClassName == null) {
+            throw new FactoryConfigurationError(
+                "Provider for " + factoryId + " cannot be found");
+        }
+
+        dPrint("loaded from fallback value: " + fallbackClassName);
+        return newInstance(type, fallbackClassName, null, true);
+    }
+</source>
+        <source file="javax/xml/datatype/FactoryFinder.java" startline="222" endline="279">
+    static &lt;T&gt; T find(Class&lt;T&gt; type, String fallbackClassName)
+        throws DatatypeConfigurationException
+    {
+        final String factoryId = type.getName();
+        dPrint("find factoryId =" + factoryId);
+
+        // Use the system property first
+        try {
+            String systemProp = ss.getSystemProperty(factoryId);
+            if (systemProp != null) {
+                dPrint("found system property, value=" + systemProp);
+                return newInstance(type, systemProp, null, true);
+            }
+        }
+        catch (SecurityException se) {
+            if (debug) se.printStackTrace();
+        }
+
+        // try to read from $java.home/lib/jaxp.properties
+        try {
+            if (firstTime) {
+                synchronized (cacheProps) {
+                    if (firstTime) {
+                        String configFile = ss.getSystemProperty("java.home") + File.separator +
+                            "lib" + File.separator + "jaxp.properties";
+                        File f = new File(configFile);
+                        firstTime = false;
+                        if (ss.doesFileExist(f)) {
+                            dPrint("Read properties file "+f);
+                            cacheProps.load(ss.getFileInputStream(f));
+                        }
+                    }
+                }
+            }
+            final String factoryClassName = cacheProps.getProperty(factoryId);
+
+            if (factoryClassName != null) {
+                dPrint("found in $java.home/jaxp.properties, value=" + factoryClassName);
+                return newInstance(type, factoryClassName, null, true);
+            }
+        }
+        catch (Exception ex) {
+            if (debug) ex.printStackTrace();
+        }
+
+        // Try Jar Service Provider Mechanism
+        final T provider = findServiceProvider(type);
+        if (provider != null) {
+            return provider;
+        }
+        if (fallbackClassName == null) {
+            throw new DatatypeConfigurationException(
+                "Provider for " + factoryId + " cannot be found");
+        }
+
+        dPrint("loaded from fallback value: " + fallbackClassName);
+        return newInstance(type, fallbackClassName, null, true);
+    }
+</source>
+    </clone>
+</clones>

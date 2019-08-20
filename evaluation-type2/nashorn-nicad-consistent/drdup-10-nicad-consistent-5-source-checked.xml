@@ -1,0 +1,1399 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- The clones reported by DrDup and not reported by NiCad
+37x    identifiers
+-->
+<clones>
+    <clone nlines="13" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/api/scripting/ScriptObjectMirror.java" startline="390" endline="397">
+    @Override
+    public boolean isEmpty() {
+        return inGlobal(new Callable&lt;Boolean&gt;() {
+            @Override public Boolean call() {
+                return sobj.isEmpty();
+            }
+        });
+    }
+</source>
+        <source file="jdk/nashorn/api/scripting/ScriptObjectMirror.java" startline="472" endline="479">
+    @Override
+    public int size() {
+        return inGlobal(new Callable&lt;Integer&gt;() {
+            @Override public Integer call() {
+                return sobj.size();
+            }
+        });
+    }
+</source>
+    </clone>
+    <clone nlines="13" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/api/scripting/ScriptObjectMirror.java" startline="472" endline="479">
+    @Override
+    public int size() {
+        return inGlobal(new Callable&lt;Integer&gt;() {
+            @Override public Integer call() {
+                return sobj.size();
+            }
+        });
+    }
+</source>
+        <source file="jdk/nashorn/api/scripting/ScriptObjectMirror.java" startline="572" endline="578">
+    public boolean isExtensible() {
+        return inGlobal(new Callable&lt;Boolean&gt;() {
+            @Override public Boolean call() {
+                return sobj.isExtensible();
+            }
+        });
+    }
+</source>
+    </clone>
+    <clone nlines="13" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/api/scripting/ScriptObjectMirror.java" startline="472" endline="479">
+    @Override
+    public int size() {
+        return inGlobal(new Callable&lt;Integer&gt;() {
+            @Override public Integer call() {
+                return sobj.size();
+            }
+        });
+    }
+</source>
+        <source file="jdk/nashorn/api/scripting/ScriptObjectMirror.java" startline="597" endline="603">
+    public boolean isSealed() {
+        return inGlobal(new Callable&lt;Boolean&gt;() {
+            @Override public Boolean call() {
+                return sobj.isSealed();
+            }
+        });
+    }
+</source>
+    </clone>
+    <clone nlines="13" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/api/scripting/ScriptObjectMirror.java" startline="472" endline="479">
+    @Override
+    public int size() {
+        return inGlobal(new Callable&lt;Integer&gt;() {
+            @Override public Integer call() {
+                return sobj.size();
+            }
+        });
+    }
+</source>
+        <source file="jdk/nashorn/api/scripting/ScriptObjectMirror.java" startline="622" endline="628">
+    public boolean isFrozen() {
+        return inGlobal(new Callable&lt;Boolean&gt;() {
+            @Override public Boolean call() {
+                return sobj.isFrozen();
+            }
+        });
+    }
+</source>
+    </clone>
+    <clone nlines="13" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/api/scripting/ScriptObjectMirror.java" startline="228" endline="235">
+    @Override
+    public Object getSlot(final int index) {
+        return inGlobal(new Callable&lt;Object&gt;() {
+            @Override public Object call() {
+                return wrapLikeMe(sobj.get(index));
+            }
+        });
+    }
+</source>
+        <source file="jdk/nashorn/api/scripting/ScriptObjectMirror.java" startline="532" endline="538">
+    public Object getOwnPropertyDescriptor(final String key) {
+        return inGlobal(new Callable&lt;Object&gt;() {
+            @Override public Object call() {
+                return wrapLikeMe(sobj.getOwnPropertyDescriptor(key));
+            }
+        });
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/internal/runtime/arrays/LongArrayData.java" startline="352" endline="361">
+    @Override
+    public long fastPopLong() {
+        if (length() == 0) {
+            throw new ClassCastException(); //undefined result
+        }
+        final int newLength = (int)decreaseLength();
+        final long elem = array[newLength];
+        array[newLength] = 0;
+        return elem;
+    }
+</source>
+        <source file="jdk/nashorn/internal/runtime/arrays/NumberArrayData.java" startline="337" endline="346">
+    @Override
+    public double fastPopDouble() {
+        if (length() == 0) {
+            throw new ClassCastException();
+        }
+        final int newLength = (int)decreaseLength();
+        final double elem = array[newLength];
+        array[newLength] = 0;
+        return elem;
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/internal/runtime/ScriptObject.java" startline="2976" endline="2986">
+    @Override
+    public Object get(final double key) {
+        final int index = getArrayIndex(key);
+        final ArrayData array = getArray();
+
+        if (array.has(index)) {
+            return array.getObject(index);
+        }
+
+        return get(index, JSType.toString(key));
+    }
+</source>
+        <source file="jdk/nashorn/internal/runtime/ScriptObject.java" startline="2988" endline="2998">
+    @Override
+    public Object get(final long key) {
+        final int index = getArrayIndex(key);
+        final ArrayData array = getArray();
+
+        if (array.has(index)) {
+            return array.getObject(index);
+        }
+
+        return get(index, JSType.toString(key));
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/internal/runtime/AccessorProperty.java" startline="392" endline="401">
+    @Override
+    public int getIntValue(final ScriptObject self, final ScriptObject owner) {
+        try {
+            return (int)getGetter(int.class).invokeExact((Object)self);
+        } catch (final Error | RuntimeException e) {
+            throw e;
+        } catch (final Throwable e) {
+            throw new RuntimeException(e);
+        }
+     }
+</source>
+        <source file="jdk/nashorn/internal/runtime/AccessorProperty.java" startline="403" endline="412">
+    @Override
+    public long getLongValue(final ScriptObject self, final ScriptObject owner) {
+        try {
+            return (long)getGetter(long.class).invokeExact((Object)self);
+        } catch (final Error | RuntimeException e) {
+            throw e;
+        } catch (final Throwable e) {
+            throw new RuntimeException(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/internal/runtime/AccessorProperty.java" startline="392" endline="401">
+    @Override
+    public int getIntValue(final ScriptObject self, final ScriptObject owner) {
+        try {
+            return (int)getGetter(int.class).invokeExact((Object)self);
+        } catch (final Error | RuntimeException e) {
+            throw e;
+        } catch (final Throwable e) {
+            throw new RuntimeException(e);
+        }
+     }
+</source>
+        <source file="jdk/nashorn/internal/runtime/AccessorProperty.java" startline="414" endline="423">
+     @Override
+     public double getDoubleValue(final ScriptObject self, final ScriptObject owner) {
+        try {
+            return (double)getGetter(double.class).invokeExact((Object)self);
+        } catch (final Error | RuntimeException e) {
+            throw e;
+        } catch (final Throwable e) {
+            throw new RuntimeException(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/internal/runtime/AccessorProperty.java" startline="403" endline="412">
+    @Override
+    public long getLongValue(final ScriptObject self, final ScriptObject owner) {
+        try {
+            return (long)getGetter(long.class).invokeExact((Object)self);
+        } catch (final Error | RuntimeException e) {
+            throw e;
+        } catch (final Throwable e) {
+            throw new RuntimeException(e);
+        }
+    }
+</source>
+        <source file="jdk/nashorn/internal/runtime/AccessorProperty.java" startline="414" endline="423">
+     @Override
+     public double getDoubleValue(final ScriptObject self, final ScriptObject owner) {
+        try {
+            return (double)getGetter(double.class).invokeExact((Object)self);
+        } catch (final Error | RuntimeException e) {
+            throw e;
+        } catch (final Throwable e) {
+            throw new RuntimeException(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/internal/runtime/arrays/IntArrayData.java" startline="147" endline="157">
+    private double[] toDoubleArray() {
+        assert length() &lt;= array.length : "length exceeds internal array size";
+        final int len = (int)length();
+        final double[] darray = new double[array.length];
+
+        for (int index = 0; index &lt; len; index++) {
+            darray[index] = array[index];
+        }
+
+        return darray;
+    }
+</source>
+        <source file="jdk/nashorn/internal/runtime/arrays/IntArrayData.java" startline="159" endline="169">
+    private long[] toLongArray() {
+        assert length() &lt;= array.length : "length exceeds internal array size";
+        final int len = (int)length();
+        final long[] larray = new long[array.length];
+
+        for (int index = 0; index &lt; len; index++) {
+            larray[index] = array[index];
+        }
+
+        return larray;
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/internal/runtime/arrays/IntArrayData.java" startline="159" endline="169">
+    private long[] toLongArray() {
+        assert length() &lt;= array.length : "length exceeds internal array size";
+        final int len = (int)length();
+        final long[] larray = new long[array.length];
+
+        for (int index = 0; index &lt; len; index++) {
+            larray[index] = array[index];
+        }
+
+        return larray;
+    }
+</source>
+        <source file="jdk/nashorn/internal/runtime/arrays/LongArrayData.java" startline="109" endline="119">
+    private double[] toDoubleArray() {
+        assert length() &lt;= array.length : "length exceeds internal array size";
+        final int len = (int)length();
+        final double[] darray = new double[array.length];
+
+        for (int index = 0; index &lt; len; index++) {
+            darray[index] = array[index];
+        }
+
+        return darray;
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/internal/runtime/ScriptObject.java" startline="3036" endline="3046">
+    private boolean doesNotHaveCheckArrayKeys(final long longIndex, final double value, final int callSiteFlags) {
+         if (getMap().containsArrayKeys()) {
+            final String       key  = JSType.toString(longIndex);
+            final FindProperty find = findProperty(key, true);
+            if (find != null) {
+                setObject(find, callSiteFlags, key, value);
+                return true;
+            }
+        }
+        return false;
+    }
+</source>
+        <source file="jdk/nashorn/internal/runtime/ScriptObject.java" startline="3048" endline="3058">
+    private boolean doesNotHaveCheckArrayKeys(final long longIndex, final Object value, final int callSiteFlags) {
+        if (getMap().containsArrayKeys()) {
+            final String       key  = JSType.toString(longIndex);
+            final FindProperty find = findProperty(key, true);
+            if (find != null) {
+                setObject(find, callSiteFlags, key, value);
+                return true;
+            }
+        }
+        return false;
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/internal/runtime/ScriptObject.java" startline="2813" endline="2823">
+    @Override
+    public long getLong(final double key, final int programPoint) {
+        final int       index = getArrayIndex(key);
+        final ArrayData array = getArray();
+
+        if (array.has(index)) {
+            return isValid(programPoint) ? array.getLongOptimistic(index, programPoint) : array.getLong(index);
+        }
+
+        return getLong(index, JSType.toString(key), programPoint);
+    }
+</source>
+        <source file="jdk/nashorn/internal/runtime/ScriptObject.java" startline="2907" endline="2917">
+    @Override
+    public double getDouble(final long key, final int programPoint) {
+        final int       index = getArrayIndex(key);
+        final ArrayData array = getArray();
+
+        if (array.has(index)) {
+            return isValid(programPoint) ? array.getDoubleOptimistic(index, programPoint) : array.getDouble(index);
+        }
+
+        return getDouble(index, JSType.toString(key), programPoint);
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/internal/runtime/ScriptObject.java" startline="2837" endline="2847">
+    @Override
+    public long getLong(final int key, final int programPoint) {
+        final int       index = getArrayIndex(key);
+        final ArrayData array = getArray();
+
+        if (array.has(index)) {
+            return isValid(programPoint) ? array.getLongOptimistic(key, programPoint) : array.getLong(key);
+        }
+
+        return getLong(index, JSType.toString(key), programPoint);
+    }
+</source>
+        <source file="jdk/nashorn/internal/runtime/ScriptObject.java" startline="2919" endline="2929">
+    @Override
+    public double getDouble(final int key, final int programPoint) {
+        final int       index = getArrayIndex(key);
+        final ArrayData array = getArray();
+
+        if (array.has(index)) {
+            return isValid(programPoint) ? array.getDoubleOptimistic(key, programPoint) : array.getDouble(key);
+        }
+
+        return getDouble(index, JSType.toString(key), programPoint);
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/internal/runtime/ScriptObject.java" startline="2731" endline="2741">
+    @Override
+    public int getInt(final double key, final int programPoint) {
+        final int       index = getArrayIndex(key);
+        final ArrayData array = getArray();
+
+        if (array.has(index)) {
+            return isValid(programPoint) ? array.getIntOptimistic(index, programPoint) : array.getInt(index);
+        }
+
+        return getInt(index, JSType.toString(key), programPoint);
+    }
+</source>
+        <source file="jdk/nashorn/internal/runtime/ScriptObject.java" startline="2743" endline="2753">
+    @Override
+    public int getInt(final long key, final int programPoint) {
+        final int       index = getArrayIndex(key);
+        final ArrayData array = getArray();
+
+        if (array.has(index)) {
+            return isValid(programPoint) ? array.getIntOptimistic(index, programPoint) : array.getInt(index);
+        }
+
+        return getInt(index, JSType.toString(key), programPoint);
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/internal/runtime/ScriptObject.java" startline="2825" endline="2835">
+    @Override
+    public long getLong(final long key, final int programPoint) {
+        final int       index = getArrayIndex(key);
+        final ArrayData array = getArray();
+
+        if (array.has(index)) {
+            return isValid(programPoint) ? array.getLongOptimistic(index, programPoint) : array.getLong(index);
+        }
+
+        return getLong(index, JSType.toString(key), programPoint);
+    }
+</source>
+        <source file="jdk/nashorn/internal/runtime/ScriptObject.java" startline="2895" endline="2905">
+    @Override
+    public double getDouble(final double key, final int programPoint) {
+        final int       index = getArrayIndex(key);
+        final ArrayData array = getArray();
+
+        if (array.has(index)) {
+            return isValid(programPoint) ? array.getDoubleOptimistic(index, programPoint) : array.getDouble(index);
+        }
+
+        return getDouble(index, JSType.toString(key), programPoint);
+    }
+</source>
+    </clone>
+    <clone nlines="15" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/internal/runtime/ScriptObject.java" startline="3579" endline="3593">
+    @Override
+    public boolean delete(final long key, final boolean strict) {
+        final int index = getArrayIndex(key);
+        final ArrayData array = getArray();
+
+        if (array.has(index)) {
+            if (array.canDelete(index, strict)) {
+                setArray(array.delete(index));
+                return true;
+            }
+            return false;
+        }
+
+        return deleteObject(JSType.toObject(key), strict);
+    }
+</source>
+        <source file="jdk/nashorn/internal/runtime/ScriptObject.java" startline="3595" endline="3609">
+    @Override
+    public boolean delete(final double key, final boolean strict) {
+        final int index = getArrayIndex(key);
+        final ArrayData array = getArray();
+
+        if (array.has(index)) {
+            if (array.canDelete(index, strict)) {
+                setArray(array.delete(index));
+                return true;
+            }
+            return false;
+        }
+
+        return deleteObject(JSType.toObject(key), strict);
+    }
+</source>
+    </clone>
+    <clone nlines="14" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/internal/runtime/ScriptObject.java" startline="1077" endline="1090">
+    private static long getLongValue(final FindProperty find, final int programPoint) {
+        final MethodHandle getter = find.getGetter(long.class, programPoint, null);
+        if (getter != null) {
+            try {
+                return (long)getter.invokeExact((Object)find.getGetterReceiver());
+            } catch (final Error|RuntimeException e) {
+                throw e;
+            } catch (final Throwable e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        return UNDEFINED_LONG;
+    }
+</source>
+        <source file="jdk/nashorn/internal/runtime/ScriptObject.java" startline="1092" endline="1105">
+    private static double getDoubleValue(final FindProperty find, final int programPoint) {
+        final MethodHandle getter = find.getGetter(double.class, programPoint, null);
+        if (getter != null) {
+            try {
+                return (double)getter.invokeExact((Object)find.getGetterReceiver());
+            } catch (final Error|RuntimeException e) {
+                throw e;
+            } catch (final Throwable e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        return UNDEFINED_DOUBLE;
+    }
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/internal/ir/LiteralNode.java" startline="743" endline="753">
+            private static long[] presetLongArray(final Expression[] value, final int[] postsets) {
+                final long[] array = new long[value.length];
+                int nComputed = 0;
+                for (int i = 0; i &lt; value.length; i++) {
+                    if (!setArrayElement(array, i, objectAsConstant(value[i]))) {
+                        assert postsets[nComputed++] == i;
+                    }
+                }
+                assert postsets.length == nComputed;
+                return array;
+            }
+</source>
+        <source file="jdk/nashorn/internal/ir/LiteralNode.java" startline="755" endline="765">
+            private static double[] presetDoubleArray(final Expression[] value, final int[] postsets) {
+                final double[] array = new double[value.length];
+                int nComputed = 0;
+                for (int i = 0; i &lt; value.length; i++) {
+                    if (!setArrayElement(array, i, objectAsConstant(value[i]))) {
+                        assert postsets[nComputed++] == i;
+                    }
+                }
+                assert postsets.length == nComputed;
+                return array;
+            }
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/internal/runtime/ScriptObject.java" startline="2800" endline="2811">
+    @Override
+    public long getLong(final Object key, final int programPoint) {
+        final Object    primitiveKey = JSType.toPrimitive(key, String.class);
+        final int       index        = getArrayIndex(primitiveKey);
+        final ArrayData array        = getArray();
+
+        if (array.has(index)) {
+            return isValid(programPoint) ? array.getLongOptimistic(index, programPoint) : array.getLong(index);
+        }
+
+        return getLong(index, JSType.toString(primitiveKey), programPoint);
+    }
+</source>
+        <source file="jdk/nashorn/internal/runtime/ScriptObject.java" startline="2882" endline="2893">
+    @Override
+    public double getDouble(final Object key, final int programPoint) {
+        final Object    primitiveKey = JSType.toPrimitive(key, String.class);
+        final int       index        = getArrayIndex(primitiveKey);
+        final ArrayData array        = getArray();
+
+        if (array.has(index)) {
+            return isValid(programPoint) ? array.getDoubleOptimistic(index, programPoint) : array.getDouble(index);
+        }
+
+        return getDouble(index, JSType.toString(primitiveKey), programPoint);
+    }
+</source>
+    </clone>
+    <clone nlines="15" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/internal/runtime/arrays/LongArrayData.java" startline="373" endline="387">
+    @Override
+    public ContinuousArrayData fastConcat(final ContinuousArrayData otherData) {
+        final int   otherLength = (int)otherData.length();
+        final int   thisLength  = (int)length();
+        assert otherLength &gt; 0 &amp;&amp; thisLength &gt; 0;
+
+        final long[] otherArray  = ((LongArrayData)otherData).array;
+        final int    newLength   = otherLength + thisLength;
+        final long[] newArray   = new long[ArrayData.alignUp(newLength)];
+
+        System.arraycopy(array, 0, newArray, 0, thisLength);
+        System.arraycopy(otherArray, 0, newArray, thisLength, otherLength);
+
+        return new LongArrayData(newArray, newLength);
+    }
+</source>
+        <source file="jdk/nashorn/internal/runtime/arrays/NumberArrayData.java" startline="353" endline="367">
+    @Override
+    public ContinuousArrayData fastConcat(final ContinuousArrayData otherData) {
+        final int   otherLength = (int)otherData.length();
+        final int   thisLength  = (int)length();
+        assert otherLength &gt; 0 &amp;&amp; thisLength &gt; 0;
+
+        final double[] otherArray = ((NumberArrayData)otherData).array;
+        final int      newLength  = otherLength + thisLength;
+        final double[] newArray   = new double[ArrayData.alignUp(newLength)];
+
+        System.arraycopy(array, 0, newArray, 0, thisLength);
+        System.arraycopy(otherArray, 0, newArray, thisLength, otherLength);
+
+        return new NumberArrayData(newArray, newLength);
+    }
+</source>
+    </clone>
+    <clone nlines="15" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/internal/runtime/arrays/LongArrayData.java" startline="373" endline="387">
+    @Override
+    public ContinuousArrayData fastConcat(final ContinuousArrayData otherData) {
+        final int   otherLength = (int)otherData.length();
+        final int   thisLength  = (int)length();
+        assert otherLength &gt; 0 &amp;&amp; thisLength &gt; 0;
+
+        final long[] otherArray  = ((LongArrayData)otherData).array;
+        final int    newLength   = otherLength + thisLength;
+        final long[] newArray   = new long[ArrayData.alignUp(newLength)];
+
+        System.arraycopy(array, 0, newArray, 0, thisLength);
+        System.arraycopy(otherArray, 0, newArray, thisLength, otherLength);
+
+        return new LongArrayData(newArray, newLength);
+    }
+</source>
+        <source file="jdk/nashorn/internal/runtime/arrays/ObjectArrayData.java" startline="345" endline="359">
+    @Override
+    public ContinuousArrayData fastConcat(final ContinuousArrayData otherData) {
+        final int   otherLength = (int)otherData.length();
+        final int   thisLength  = (int)length();
+        assert otherLength &gt; 0 &amp;&amp; thisLength &gt; 0;
+
+        final Object[] otherArray = ((ObjectArrayData)otherData).array;
+        final int      newLength  = otherLength + thisLength;
+        final Object[] newArray   = new Object[ArrayData.alignUp(newLength)];
+
+        System.arraycopy(array, 0, newArray, 0, thisLength);
+        System.arraycopy(otherArray, 0, newArray, thisLength, otherLength);
+
+        return new ObjectArrayData(newArray, newLength);
+    }
+</source>
+    </clone>
+    <clone nlines="15" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/internal/runtime/arrays/NumberArrayData.java" startline="353" endline="367">
+    @Override
+    public ContinuousArrayData fastConcat(final ContinuousArrayData otherData) {
+        final int   otherLength = (int)otherData.length();
+        final int   thisLength  = (int)length();
+        assert otherLength &gt; 0 &amp;&amp; thisLength &gt; 0;
+
+        final double[] otherArray = ((NumberArrayData)otherData).array;
+        final int      newLength  = otherLength + thisLength;
+        final double[] newArray   = new double[ArrayData.alignUp(newLength)];
+
+        System.arraycopy(array, 0, newArray, 0, thisLength);
+        System.arraycopy(otherArray, 0, newArray, thisLength, otherLength);
+
+        return new NumberArrayData(newArray, newLength);
+    }
+</source>
+        <source file="jdk/nashorn/internal/runtime/arrays/ObjectArrayData.java" startline="345" endline="359">
+    @Override
+    public ContinuousArrayData fastConcat(final ContinuousArrayData otherData) {
+        final int   otherLength = (int)otherData.length();
+        final int   thisLength  = (int)length();
+        assert otherLength &gt; 0 &amp;&amp; thisLength &gt; 0;
+
+        final Object[] otherArray = ((ObjectArrayData)otherData).array;
+        final int      newLength  = otherLength + thisLength;
+        final Object[] newArray   = new Object[ArrayData.alignUp(newLength)];
+
+        System.arraycopy(array, 0, newArray, 0, thisLength);
+        System.arraycopy(otherArray, 0, newArray, thisLength, otherLength);
+
+        return new ObjectArrayData(newArray, newLength);
+    }
+</source>
+    </clone>
+    <clone nlines="13" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/internal/runtime/arrays/SparseArrayData.java" startline="166" endline="179">
+    @Override
+    public ArrayData set(final int index, final Object value, final boolean strict) {
+        if (index &gt;= 0 &amp;&amp; index &lt; maxDenseLength) {
+            ensure(index);
+            underlying = underlying.set(index, value, strict);
+            setLength(Math.max(underlying.length(), length()));
+        } else {
+            final Long longIndex = indexToKey(index);
+            sparseMap.put(longIndex, value);
+            setLength(Math.max(longIndex + 1, length()));
+        }
+
+        return this;
+    }
+</source>
+        <source file="jdk/nashorn/internal/runtime/arrays/SparseArrayData.java" startline="195" endline="207">
+    @Override
+    public ArrayData set(final int index, final long value, final boolean strict) {
+        if (index &gt;= 0 &amp;&amp; index &lt; maxDenseLength) {
+            ensure(index);
+            underlying = underlying.set(index, value, strict);
+            setLength(Math.max(underlying.length(), length()));
+        } else {
+            final Long longIndex = indexToKey(index);
+            sparseMap.put(longIndex, value);
+            setLength(Math.max(longIndex + 1, length()));
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="18" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/internal/runtime/ScriptObject.java" startline="3328" endline="3345">
+    @Override
+    public void set(final double key, final Object value, final int callSiteFlags) {
+        final int index = getArrayIndex(key);
+
+        if (isValidArrayIndex(index)) {
+            final ArrayData data = getArray();
+            if (data.has(index)) {
+                setArray(data.set(index, value, isStrictFlag(callSiteFlags)));
+            } else {
+                doesNotHave(index, value, callSiteFlags);
+            }
+
+            return;
+        }
+
+        final String propName = JSType.toString(key);
+        setObject(findProperty(propName, true), callSiteFlags, propName, value);
+    }
+</source>
+        <source file="jdk/nashorn/internal/runtime/ScriptObject.java" startline="3404" endline="3421">
+    @Override
+    public void set(final long key, final Object value, final int callSiteFlags) {
+        final int index = getArrayIndex(key);
+
+        if (isValidArrayIndex(index)) {
+            final ArrayData data = getArray();
+            if (data.has(index)) {
+                setArray(data.set(index, value, isStrictFlag(callSiteFlags)));
+            } else {
+                doesNotHave(index, value, callSiteFlags);
+            }
+
+            return;
+        }
+
+        final String propName = JSType.toString(key);
+        setObject(findProperty(propName, true), callSiteFlags, propName, value);
+    }
+</source>
+    </clone>
+    <clone nlines="13" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/internal/runtime/arrays/SparseArrayData.java" startline="166" endline="179">
+    @Override
+    public ArrayData set(final int index, final Object value, final boolean strict) {
+        if (index &gt;= 0 &amp;&amp; index &lt; maxDenseLength) {
+            ensure(index);
+            underlying = underlying.set(index, value, strict);
+            setLength(Math.max(underlying.length(), length()));
+        } else {
+            final Long longIndex = indexToKey(index);
+            sparseMap.put(longIndex, value);
+            setLength(Math.max(longIndex + 1, length()));
+        }
+
+        return this;
+    }
+</source>
+        <source file="jdk/nashorn/internal/runtime/arrays/SparseArrayData.java" startline="209" endline="221">
+    @Override
+    public ArrayData set(final int index, final double value, final boolean strict) {
+        if (index &gt;= 0 &amp;&amp; index &lt; maxDenseLength) {
+            ensure(index);
+            underlying = underlying.set(index, value, strict);
+            setLength(Math.max(underlying.length(), length()));
+        } else {
+            final Long longIndex = indexToKey(index);
+            sparseMap.put(longIndex, value);
+            setLength(Math.max(longIndex + 1, length()));
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="13" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/internal/runtime/arrays/SparseArrayData.java" startline="195" endline="207">
+    @Override
+    public ArrayData set(final int index, final long value, final boolean strict) {
+        if (index &gt;= 0 &amp;&amp; index &lt; maxDenseLength) {
+            ensure(index);
+            underlying = underlying.set(index, value, strict);
+            setLength(Math.max(underlying.length(), length()));
+        } else {
+            final Long longIndex = indexToKey(index);
+            sparseMap.put(longIndex, value);
+            setLength(Math.max(longIndex + 1, length()));
+        }
+        return this;
+    }
+</source>
+        <source file="jdk/nashorn/internal/runtime/arrays/SparseArrayData.java" startline="209" endline="221">
+    @Override
+    public ArrayData set(final int index, final double value, final boolean strict) {
+        if (index &gt;= 0 &amp;&amp; index &lt; maxDenseLength) {
+            ensure(index);
+            underlying = underlying.set(index, value, strict);
+            setLength(Math.max(underlying.length(), length()));
+        } else {
+            final Long longIndex = indexToKey(index);
+            sparseMap.put(longIndex, value);
+            setLength(Math.max(longIndex + 1, length()));
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="18" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/internal/runtime/ScriptObject.java" startline="3271" endline="3288">
+    @Override
+    public void set(final double key, final int value, final int callSiteFlags) {
+        final int index = getArrayIndex(key);
+
+        if (isValidArrayIndex(index)) {
+            final ArrayData data = getArray();
+            if (data.has(index)) {
+                setArray(data.set(index, value, isStrictFlag(callSiteFlags)));
+            } else {
+                doesNotHave(index, value, callSiteFlags);
+            }
+
+            return;
+        }
+
+        final String propName = JSType.toString(key);
+        setObject(findProperty(propName, true), callSiteFlags, propName, JSType.toObject(value));
+    }
+</source>
+        <source file="jdk/nashorn/internal/runtime/ScriptObject.java" startline="3347" endline="3364">
+    @Override
+    public void set(final long key, final int value, final int callSiteFlags) {
+        final int index = getArrayIndex(key);
+
+        if (isValidArrayIndex(index)) {
+            final ArrayData data = getArray();
+            if (data.has(index)) {
+                setArray(data.set(index, value, isStrictFlag(callSiteFlags)));
+            } else {
+                doesNotHave(index, value, callSiteFlags);
+            }
+
+            return;
+        }
+
+        final String propName = JSType.toString(key);
+        setObject(findProperty(propName, true), callSiteFlags, propName, JSType.toObject(value));
+    }
+</source>
+    </clone>
+    <clone nlines="18" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/internal/runtime/ScriptObject.java" startline="3290" endline="3307">
+    @Override
+    public void set(final double key, final long value, final int callSiteFlags) {
+        final int index = getArrayIndex(key);
+
+        if (isValidArrayIndex(index)) {
+            final ArrayData data = getArray();
+            if (data.has(index)) {
+                setArray(data.set(index, value, isStrictFlag(callSiteFlags)));
+            } else {
+                doesNotHave(index, value, callSiteFlags);
+            }
+
+            return;
+        }
+
+        final String propName = JSType.toString(key);
+        setObject(findProperty(propName, true), callSiteFlags, propName, JSType.toObject(value));
+    }
+</source>
+        <source file="jdk/nashorn/internal/runtime/ScriptObject.java" startline="3385" endline="3402">
+    @Override
+    public void set(final long key, final double value, final int callSiteFlags) {
+        final int index = getArrayIndex(key);
+
+        if (isValidArrayIndex(index)) {
+            final ArrayData data = getArray();
+            if (data.has(index)) {
+                setArray(data.set(index, value, isStrictFlag(callSiteFlags)));
+            } else {
+                doesNotHave(index, value, callSiteFlags);
+            }
+
+            return;
+        }
+
+        final String propName = JSType.toString(key);
+        setObject(findProperty(propName, true), callSiteFlags, propName, JSType.toObject(value));
+    }
+</source>
+    </clone>
+    <clone nlines="18" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/internal/runtime/ScriptObject.java" startline="3440" endline="3457">
+    @Override
+    public void set(final int key, final long value, final int callSiteFlags) {
+        final int index = getArrayIndex(key);
+
+        if (isValidArrayIndex(index)) {
+            final ArrayData data = getArray();
+            if (data.has(index)) {
+                setArray(data.set(index, value, isStrictFlag(callSiteFlags)));
+            } else {
+                doesNotHave(index, value, callSiteFlags);
+            }
+
+            return;
+        }
+
+        final String propName = JSType.toString(key);
+        setObject(findProperty(propName, true), callSiteFlags, propName, JSType.toObject(value));
+    }
+</source>
+        <source file="jdk/nashorn/internal/runtime/ScriptObject.java" startline="3459" endline="3476">
+    @Override
+    public void set(final int key, final double value, final int callSiteFlags) {
+        final int index = getArrayIndex(key);
+
+        if (isValidArrayIndex(index)) {
+            final ArrayData data = getArray();
+            if (data.has(index)) {
+                setArray(data.set(index, value, isStrictFlag(callSiteFlags)));
+            } else {
+                doesNotHave(index, value, callSiteFlags);
+            }
+
+            return;
+        }
+
+        final String propName = JSType.toString(key);
+        setObject(findProperty(propName, true), callSiteFlags, propName, JSType.toObject(value));
+    }
+</source>
+    </clone>
+    <clone nlines="18" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/internal/runtime/ScriptObject.java" startline="3309" endline="3326">
+    @Override
+    public void set(final double key, final double value, final int callSiteFlags) {
+        final int index = getArrayIndex(key);
+
+        if (isValidArrayIndex(index)) {
+            final ArrayData data = getArray();
+            if (data.has(index)) {
+                setArray(data.set(index, value, isStrictFlag(callSiteFlags)));
+            } else {
+                doesNotHave(index, value, callSiteFlags);
+            }
+
+            return;
+        }
+
+        final String propName = JSType.toString(key);
+        setObject(findProperty(propName, true), callSiteFlags, propName, JSType.toObject(value));
+    }
+</source>
+        <source file="jdk/nashorn/internal/runtime/ScriptObject.java" startline="3366" endline="3383">
+    @Override
+    public void set(final long key, final long value, final int callSiteFlags) {
+        final int index = getArrayIndex(key);
+
+        if (isValidArrayIndex(index)) {
+            final ArrayData data = getArray();
+            if (data.has(index)) {
+                setArray(data.set(index, value, isStrictFlag(callSiteFlags)));
+            } else {
+                doesNotHave(index, value, callSiteFlags);
+            }
+
+            return;
+        }
+
+        final String propName = JSType.toString(key);
+        setObject(findProperty(propName, true), callSiteFlags, propName, JSType.toObject(value));
+    }
+</source>
+    </clone>
+    <clone nlines="41" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/internal/ir/visitor/NodeOperatorVisitor.java" startline="47" endline="74">
+    @Override
+    public final boolean enterUnaryNode(final UnaryNode unaryNode) {
+        switch (unaryNode.tokenType()) {
+        case ADD:
+            return enterADD(unaryNode);
+        case BIT_NOT:
+            return enterBIT_NOT(unaryNode);
+        case DELETE:
+            return enterDELETE(unaryNode);
+        case NEW:
+            return enterNEW(unaryNode);
+        case NOT:
+            return enterNOT(unaryNode);
+        case SUB:
+            return enterSUB(unaryNode);
+        case TYPEOF:
+            return enterTYPEOF(unaryNode);
+        case VOID:
+            return enterVOID(unaryNode);
+        case DECPREFIX:
+        case DECPOSTFIX:
+        case INCPREFIX:
+        case INCPOSTFIX:
+            return enterDECINC(unaryNode);
+        default:
+            return super.enterUnaryNode(unaryNode);
+        }
+    }
+</source>
+        <source file="jdk/nashorn/internal/ir/visitor/NodeOperatorVisitor.java" startline="76" endline="103">
+    @Override
+    public final Node leaveUnaryNode(final UnaryNode unaryNode) {
+        switch (unaryNode.tokenType()) {
+        case ADD:
+            return leaveADD(unaryNode);
+        case BIT_NOT:
+            return leaveBIT_NOT(unaryNode);
+        case DELETE:
+            return leaveDELETE(unaryNode);
+        case NEW:
+            return leaveNEW(unaryNode);
+        case NOT:
+            return leaveNOT(unaryNode);
+        case SUB:
+            return leaveSUB(unaryNode);
+        case TYPEOF:
+            return leaveTYPEOF(unaryNode);
+        case VOID:
+            return leaveVOID(unaryNode);
+        case DECPREFIX:
+        case DECPOSTFIX:
+        case INCPREFIX:
+        case INCPOSTFIX:
+            return leaveDECINC(unaryNode);
+        default:
+            return super.leaveUnaryNode(unaryNode);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="17" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/internal/runtime/arrays/DeletedRangeArrayFilter.java" startline="129" endline="145">
+    @Override
+    public ArrayData set(final int index, final Object value, final boolean strict) {
+        final long longIndex = ArrayIndex.toLongIndex(index);
+        if (longIndex &lt; lo || longIndex &gt; hi) {
+            return super.set(index, value, strict);
+        } else if (longIndex &gt; lo &amp;&amp; longIndex &lt; hi) {
+            return getDeletedArrayFilter().set(index, value, strict);
+        }
+        if (longIndex == lo) {
+            lo++;
+        } else {
+            assert longIndex == hi;
+            hi--;
+        }
+
+        return isEmpty() ? getUnderlying().set(index, value, strict) : super.set(index, value, strict);
+    }
+</source>
+        <source file="jdk/nashorn/internal/runtime/arrays/DeletedRangeArrayFilter.java" startline="183" endline="199">
+    @Override
+    public ArrayData set(final int index, final double value, final boolean strict) {
+        final long longIndex = ArrayIndex.toLongIndex(index);
+        if (longIndex &lt; lo || longIndex &gt; hi) {
+            return super.set(index, value, strict);
+        } else if (longIndex &gt; lo &amp;&amp; longIndex &lt; hi) {
+            return getDeletedArrayFilter().set(index, value, strict);
+        }
+        if (longIndex == lo) {
+            lo++;
+        } else {
+            assert longIndex == hi;
+            hi--;
+        }
+
+        return isEmpty() ? getUnderlying().set(index, value, strict) : super.set(index, value, strict);
+    }
+</source>
+    </clone>
+    <clone nlines="19" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/internal/runtime/ScriptObject.java" startline="3211" endline="3229">
+    @Override
+    public void set(final Object key, final long value, final int callSiteFlags) {
+        final Object primitiveKey = JSType.toPrimitive(key, String.class);
+        final int    index        = getArrayIndex(primitiveKey);
+
+        if (isValidArrayIndex(index)) {
+            final ArrayData data = getArray();
+            if (data.has(index)) {
+                setArray(data.set(index, value, isStrictFlag(callSiteFlags)));
+            } else {
+                doesNotHave(index, value, callSiteFlags);
+            }
+
+            return;
+        }
+
+        final String propName = JSType.toString(primitiveKey);
+        setObject(findProperty(propName, true), callSiteFlags, propName, JSType.toObject(value));
+    }
+</source>
+        <source file="jdk/nashorn/internal/runtime/ScriptObject.java" startline="3231" endline="3249">
+    @Override
+    public void set(final Object key, final double value, final int callSiteFlags) {
+        final Object primitiveKey = JSType.toPrimitive(key, String.class);
+        final int    index        = getArrayIndex(primitiveKey);
+
+        if (isValidArrayIndex(index)) {
+            final ArrayData data = getArray();
+            if (data.has(index)) {
+                setArray(data.set(index, value, isStrictFlag(callSiteFlags)));
+            } else {
+                doesNotHave(index, value, callSiteFlags);
+            }
+
+            return;
+        }
+
+        final String propName = JSType.toString(primitiveKey);
+        setObject(findProperty(propName, true), callSiteFlags, propName, JSType.toObject(value));
+    }
+</source>
+    </clone>
+    <clone nlines="27" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/internal/runtime/arrays/NumberArrayData.java" startline="288" endline="314">
+    @Override
+    public ArrayData fastSplice(final int start, final int removed, final int added) throws UnsupportedOperationException {
+        final long oldLength = length();
+        final long newLength = oldLength - removed + added;
+        if (newLength &gt; SparseArrayData.MAX_DENSE_LENGTH &amp;&amp; newLength &gt; array.length) {
+            throw new UnsupportedOperationException();
+        }
+        final ArrayData returnValue = removed == 0 ?
+                EMPTY_ARRAY : new NumberArrayData(Arrays.copyOfRange(array, start, start + removed), removed);
+
+        if (newLength != oldLength) {
+            final double[] newArray;
+
+            if (newLength &gt; array.length) {
+                newArray = new double[ArrayData.nextSize((int)newLength)];
+                System.arraycopy(array, 0, newArray, 0, start);
+            } else {
+                newArray = array;
+            }
+
+            System.arraycopy(array, start + removed, newArray, start + added, (int)(oldLength - start - removed));
+            array = newArray;
+            setLength(newLength);
+        }
+
+        return returnValue;
+    }
+</source>
+        <source file="jdk/nashorn/internal/runtime/arrays/ObjectArrayData.java" startline="317" endline="343">
+    @Override
+    public ArrayData fastSplice(final int start, final int removed, final int added) throws UnsupportedOperationException {
+        final long oldLength = length();
+        final long newLength = oldLength - removed + added;
+        if (newLength &gt; SparseArrayData.MAX_DENSE_LENGTH &amp;&amp; newLength &gt; array.length) {
+            throw new UnsupportedOperationException();
+        }
+        final ArrayData returnValue = removed == 0 ?
+                EMPTY_ARRAY : new ObjectArrayData(Arrays.copyOfRange(array, start, start + removed), removed);
+
+        if (newLength != oldLength) {
+            final Object[] newArray;
+
+            if (newLength &gt; array.length) {
+                newArray = new Object[ArrayData.nextSize((int)newLength)];
+                System.arraycopy(array, 0, newArray, 0, start);
+            } else {
+                newArray = array;
+            }
+
+            System.arraycopy(array, start + removed, newArray, start + added, (int)(oldLength - start - removed));
+            array = newArray;
+            setLength(newLength);
+        }
+
+        return returnValue;
+    }
+</source>
+    </clone>
+    <clone nlines="122" similarity="100">
+        <!-- identifiers -->
+        <source file="jdk/nashorn/internal/ir/visitor/NodeOperatorVisitor.java" startline="105" endline="187">
+    @Override
+    public final boolean enterBinaryNode(final BinaryNode binaryNode) {
+        switch (binaryNode.tokenType()) {
+        case ADD:
+            return enterADD(binaryNode);
+        case AND:
+            return enterAND(binaryNode);
+        case ASSIGN:
+            return enterASSIGN(binaryNode);
+        case ASSIGN_ADD:
+            return enterASSIGN_ADD(binaryNode);
+        case ASSIGN_BIT_AND:
+            return enterASSIGN_BIT_AND(binaryNode);
+        case ASSIGN_BIT_OR:
+            return enterASSIGN_BIT_OR(binaryNode);
+        case ASSIGN_BIT_XOR:
+            return enterASSIGN_BIT_XOR(binaryNode);
+        case ASSIGN_DIV:
+            return enterASSIGN_DIV(binaryNode);
+        case ASSIGN_MOD:
+            return enterASSIGN_MOD(binaryNode);
+        case ASSIGN_MUL:
+            return enterASSIGN_MUL(binaryNode);
+        case ASSIGN_SAR:
+            return enterASSIGN_SAR(binaryNode);
+        case ASSIGN_SHL:
+            return enterASSIGN_SHL(binaryNode);
+        case ASSIGN_SHR:
+            return enterASSIGN_SHR(binaryNode);
+        case ASSIGN_SUB:
+            return enterASSIGN_SUB(binaryNode);
+        case BIND:
+            return enterBIND(binaryNode);
+        case BIT_AND:
+            return enterBIT_AND(binaryNode);
+        case BIT_OR:
+            return enterBIT_OR(binaryNode);
+        case BIT_XOR:
+            return enterBIT_XOR(binaryNode);
+        case COMMARIGHT:
+            return enterCOMMARIGHT(binaryNode);
+        case COMMALEFT:
+            return enterCOMMALEFT(binaryNode);
+        case DIV:
+            return enterDIV(binaryNode);
+        case EQ:
+            return enterEQ(binaryNode);
+        case EQ_STRICT:
+            return enterEQ_STRICT(binaryNode);
+        case GE:
+            return enterGE(binaryNode);
+        case GT:
+            return enterGT(binaryNode);
+        case IN:
+            return enterIN(binaryNode);
+        case INSTANCEOF:
+            return enterINSTANCEOF(binaryNode);
+        case LE:
+            return enterLE(binaryNode);
+        case LT:
+            return enterLT(binaryNode);
+        case MOD:
+            return enterMOD(binaryNode);
+        case MUL:
+            return enterMUL(binaryNode);
+        case NE:
+            return enterNE(binaryNode);
+        case NE_STRICT:
+            return enterNE_STRICT(binaryNode);
+        case OR:
+            return enterOR(binaryNode);
+        case SAR:
+            return enterSAR(binaryNode);
+        case SHL:
+            return enterSHL(binaryNode);
+        case SHR:
+            return enterSHR(binaryNode);
+        case SUB:
+            return enterSUB(binaryNode);
+        default:
+            return super.enterBinaryNode(binaryNode);
+        }
+    }
+</source>
+        <source file="jdk/nashorn/internal/ir/visitor/NodeOperatorVisitor.java" startline="189" endline="271">
+    @Override
+    public final Node leaveBinaryNode(final BinaryNode binaryNode) {
+        switch (binaryNode.tokenType()) {
+        case ADD:
+            return leaveADD(binaryNode);
+        case AND:
+            return leaveAND(binaryNode);
+        case ASSIGN:
+            return leaveASSIGN(binaryNode);
+        case ASSIGN_ADD:
+            return leaveASSIGN_ADD(binaryNode);
+        case ASSIGN_BIT_AND:
+            return leaveASSIGN_BIT_AND(binaryNode);
+        case ASSIGN_BIT_OR:
+            return leaveASSIGN_BIT_OR(binaryNode);
+        case ASSIGN_BIT_XOR:
+            return leaveASSIGN_BIT_XOR(binaryNode);
+        case ASSIGN_DIV:
+            return leaveASSIGN_DIV(binaryNode);
+        case ASSIGN_MOD:
+            return leaveASSIGN_MOD(binaryNode);
+        case ASSIGN_MUL:
+            return leaveASSIGN_MUL(binaryNode);
+        case ASSIGN_SAR:
+            return leaveASSIGN_SAR(binaryNode);
+        case ASSIGN_SHL:
+            return leaveASSIGN_SHL(binaryNode);
+        case ASSIGN_SHR:
+            return leaveASSIGN_SHR(binaryNode);
+        case ASSIGN_SUB:
+            return leaveASSIGN_SUB(binaryNode);
+        case BIND:
+            return leaveBIND(binaryNode);
+        case BIT_AND:
+            return leaveBIT_AND(binaryNode);
+        case BIT_OR:
+            return leaveBIT_OR(binaryNode);
+        case BIT_XOR:
+            return leaveBIT_XOR(binaryNode);
+        case COMMARIGHT:
+            return leaveCOMMARIGHT(binaryNode);
+        case COMMALEFT:
+            return leaveCOMMALEFT(binaryNode);
+        case DIV:
+            return leaveDIV(binaryNode);
+        case EQ:
+            return leaveEQ(binaryNode);
+        case EQ_STRICT:
+            return leaveEQ_STRICT(binaryNode);
+        case GE:
+            return leaveGE(binaryNode);
+        case GT:
+            return leaveGT(binaryNode);
+        case IN:
+            return leaveIN(binaryNode);
+        case INSTANCEOF:
+            return leaveINSTANCEOF(binaryNode);
+        case LE:
+            return leaveLE(binaryNode);
+        case LT:
+            return leaveLT(binaryNode);
+        case MOD:
+            return leaveMOD(binaryNode);
+        case MUL:
+            return leaveMUL(binaryNode);
+        case NE:
+            return leaveNE(binaryNode);
+        case NE_STRICT:
+            return leaveNE_STRICT(binaryNode);
+        case OR:
+            return leaveOR(binaryNode);
+        case SAR:
+            return leaveSAR(binaryNode);
+        case SHL:
+            return leaveSHL(binaryNode);
+        case SHR:
+            return leaveSHR(binaryNode);
+        case SUB:
+            return leaveSUB(binaryNode);
+        default:
+            return super.leaveBinaryNode(binaryNode);
+        }
+    }
+</source>
+    </clone>
+</clones>

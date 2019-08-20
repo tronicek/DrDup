@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- The clones reported by DrDup and not reported by Deckard
+5x     true clone
+-->
+<clones>
+    <clone nlines="21">
+        <!-- modification: List&lt;IdentNode&gt; to Class&lt;?&gt; -->
+        <source file="jdk/nashorn/internal/ir/FunctionNode.java" startline="1096" endline="1116">
+    public FunctionNode setParameters(final LexicalContext lc, final List&lt;IdentNode&gt; parameters) {
+        if (this.parameters == parameters) {
+            return this;
+        }
+        return Node.replaceInLexicalContext(
+                lc,
+                this,
+                new FunctionNode(
+                        this,
+                        lastToken,
+                        endParserState,
+                        flags,
+                        name,
+                        returnType,
+                        compileUnit,
+                        compilationState,
+                        body,
+                        parameters,
+                        thisProperties,
+                        rootClass, source, namespace));
+    }
+</source>
+        <source file="jdk/nashorn/internal/ir/FunctionNode.java" startline="1288" endline="1308">
+    public FunctionNode setRootClass(final LexicalContext lc, final Class&lt;?&gt; rootClass) {
+        if (this.rootClass == rootClass) {
+            return this;
+        }
+        return Node.replaceInLexicalContext(
+                lc,
+                this,
+                new FunctionNode(
+                        this,
+                        lastToken,
+                        endParserState,
+                        flags,
+                        name,
+                        returnType,
+                        compileUnit,
+                        compilationState,
+                        body,
+                        parameters,
+                        thisProperties,
+                        rootClass, source, namespace));
+    }
+</source>
+    </clone>
+    <clone nlines="20">
+        <!-- modification: createConverter(sourceType, targetType) to getTypeConverterNull(sourceType, targetType) != null -->
+        <source file="jdk/internal/dynalink/support/TypeConverterFactory.java" startline="116" endline="130">
+        @Override
+        protected ClassMap&lt;MethodHandle&gt; computeValue(final Class&lt;?&gt; sourceType) {
+            return new ClassMap&lt;MethodHandle&gt;(getClassLoader(sourceType)) {
+                @Override
+                protected MethodHandle computeValue(final Class&lt;?&gt; targetType) {
+                    try {
+                        return createConverter(sourceType, targetType);
+                    } catch (final RuntimeException e) {
+                        throw e;
+                    } catch (final Exception e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+            };
+        }
+</source>
+        <source file="jdk/internal/dynalink/support/TypeConverterFactory.java" startline="152" endline="166">
+        @Override
+        protected ClassMap&lt;Boolean&gt; computeValue(final Class&lt;?&gt; sourceType) {
+            return new ClassMap&lt;Boolean&gt;(getClassLoader(sourceType)) {
+                @Override
+                protected Boolean computeValue(final Class&lt;?&gt; targetType) {
+                    try {
+                        return getTypeConverterNull(sourceType, targetType) != null;
+                    } catch (final RuntimeException e) {
+                        throw e;
+                    } catch (final Exception e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+            };
+        }
+</source>
+    </clone>
+    <clone nlines="23">
+        <!-- modification: if (isInBitSet()) to if (!isInClassMB()) -->
+        <source file="jdk/nashorn/internal/runtime/regexp/joni/ByteCodeMachine.java" startline="498" endline="511">
+    private void opCClassMIXNot() {
+        if (s &gt;= range) {opFail(); return;}
+        if (chars[s] &gt; 0xff) {
+            ip += BitSet.BITSET_SIZE;
+            if (!isNotInClassMB()) {opFail(); return;}
+        } else {
+            if (isInBitSet()) {opFail(); return;}
+            ip += BitSet.BITSET_SIZE;
+            final int tlen = code[ip++];
+            ip += tlen;
+            s++;
+        }
+        sprev = sbegin; // break;
+    }
+</source>
+        <source file="jdk/nashorn/internal/runtime/regexp/joni/ByteCodeMachine.java" startline="440" endline="453">
+    private void opCClassMIX() {
+        if (s &gt;= range) {opFail(); return;}
+        if (chars[s] &gt; 0xff) {
+            ip += BitSet.BITSET_SIZE;
+            if (!isInClassMB()) {opFail(); return;}
+        } else {
+            if (!isInBitSet()) {opFail(); return;}
+            ip += BitSet.BITSET_SIZE;
+            final int tlen = code[ip++]; // by code range length
+            ip += tlen;
+            s++;
+        }
+        sprev = sbegin; // break;
+    }
+</source>
+    </clone>
+    <clone nlines="18">
+        <!-- modification: findStatic(lookup, clazz, name, MH.type(rtype, ptypes)) to findSpecial(lookup, clazz, name, MH.type(rtype, ptypes), clazz) -->
+        <source file="jdk/nashorn/internal/codegen/CompilerConstants.java" startline="572" endline="584">
+    public static Call staticCall(final MethodHandles.Lookup lookup, final Class&lt;?&gt; clazz, final String name, final Class&lt;?&gt; rtype, final Class&lt;?&gt;... ptypes) {
+        return new Call(MH.findStatic(lookup, clazz, name, MH.type(rtype, ptypes)), className(clazz), name, methodDescriptor(rtype, ptypes)) {
+            @Override
+            MethodEmitter invoke(final MethodEmitter method) {
+                return method.invokestatic(className, name, descriptor);
+            }
+
+            @Override
+            public void invoke(final MethodVisitor mv) {
+                mv.visitMethodInsn(Opcodes.INVOKESTATIC, className, name, descriptor, false);
+            }
+        };
+    }
+</source>
+        <source file="jdk/nashorn/internal/codegen/CompilerConstants.java" startline="623" endline="635">
+    public static Call specialCall(final MethodHandles.Lookup lookup, final Class&lt;?&gt; clazz, final String name, final Class&lt;?&gt; rtype, final Class&lt;?&gt;... ptypes) {
+        return new Call(MH.findSpecial(lookup, clazz, name, MH.type(rtype, ptypes), clazz), className(clazz), name, methodDescriptor(rtype, ptypes)) {
+            @Override
+            MethodEmitter invoke(final MethodEmitter method) {
+                return method.invokespecial(className, name, descriptor);
+            }
+
+            @Override
+            public void invoke(final MethodVisitor mv) {
+                mv.visitMethodInsn(Opcodes.INVOKESPECIAL, className, name, descriptor, false);
+            }
+        };
+    }
+</source>
+    </clone>
+    <clone nlines="18">
+        <!-- modification: findVirtual(lookup, clazz, name, MH.type(rtype, ptypes)) to findSpecial(lookup, clazz, name, MH.type(rtype, ptypes), clazz) -->
+        <source file="jdk/nashorn/internal/codegen/CompilerConstants.java" startline="597" endline="609">
+    public static Call virtualCall(final MethodHandles.Lookup lookup, final Class&lt;?&gt; clazz, final String name, final Class&lt;?&gt; rtype, final Class&lt;?&gt;... ptypes) {
+        return new Call(MH.findVirtual(lookup, clazz, name, MH.type(rtype, ptypes)), className(clazz), name, methodDescriptor(rtype, ptypes)) {
+            @Override
+            MethodEmitter invoke(final MethodEmitter method) {
+                return method.invokevirtual(className, name, descriptor);
+            }
+
+            @Override
+            public void invoke(final MethodVisitor mv) {
+                mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, className, name, descriptor, false);
+            }
+        };
+    }
+</source>
+        <source file="jdk/nashorn/internal/codegen/CompilerConstants.java" startline="623" endline="635">
+    public static Call specialCall(final MethodHandles.Lookup lookup, final Class&lt;?&gt; clazz, final String name, final Class&lt;?&gt; rtype, final Class&lt;?&gt;... ptypes) {
+        return new Call(MH.findSpecial(lookup, clazz, name, MH.type(rtype, ptypes), clazz), className(clazz), name, methodDescriptor(rtype, ptypes)) {
+            @Override
+            MethodEmitter invoke(final MethodEmitter method) {
+                return method.invokespecial(className, name, descriptor);
+            }
+
+            @Override
+            public void invoke(final MethodVisitor mv) {
+                mv.visitMethodInsn(Opcodes.INVOKESPECIAL, className, name, descriptor, false);
+            }
+        };
+    }
+</source>
+    </clone>
+</clones>

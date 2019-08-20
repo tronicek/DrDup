@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- The clones reported by DrDup and not reported by NiCad
+1x      true clone
+-->
+<clones>
+    <clone nlines="20">
+        <!-- modification: Object[] to int[] -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="506" endline="525">
+    public EqualsBuilder append(Object[] lhs, Object[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="568" endline="587">
+    public EqualsBuilder append(int[] lhs, int[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+</clones>

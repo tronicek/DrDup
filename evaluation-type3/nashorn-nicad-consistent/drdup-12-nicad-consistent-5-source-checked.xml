@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- The clones reported by DrDup and not reported by NiCad
+11x     true clone
+-->
+<clones>
+    <clone nlines="21">
+        <!-- modification: thisProperties changes from a field to a local variable -->
+        <source file="jdk/nashorn/internal/ir/FunctionNode.java" startline="1232" endline="1252">
+    public FunctionNode setCompileUnit(final LexicalContext lc, final CompileUnit compileUnit) {
+        if (this.compileUnit == compileUnit) {
+            return this;
+        }
+        return Node.replaceInLexicalContext(
+                lc,
+                this,
+                new FunctionNode(
+                        this,
+                        lastToken,
+                        endParserState,
+                        flags,
+                        name,
+                        returnType,
+                        compileUnit,
+                        compilationState,
+                        body,
+                        parameters,
+                        thisProperties,
+                        rootClass, source, namespace));
+    }
+</source>
+        <source file="jdk/nashorn/internal/ir/FunctionNode.java" startline="893" endline="913">
+    public FunctionNode setThisProperties(final LexicalContext lc, final int thisProperties) {
+        if (this.thisProperties == thisProperties) {
+            return this;
+        }
+        return Node.replaceInLexicalContext(
+                lc,
+                this,
+                new FunctionNode(
+                        this,
+                        lastToken,
+                        endParserState,
+                        flags,
+                        name,
+                        returnType,
+                        compileUnit,
+                        compilationState,
+                        body,
+                        parameters,
+                        thisProperties,
+                        rootClass, source, namespace));
+    }
+</source>
+    </clone>
+    <clone nlines="21">
+        <!-- modification: flags changes from a field to a local variable -->
+        <source file="jdk/nashorn/internal/ir/FunctionNode.java" startline="1232" endline="1252">
+    public FunctionNode setCompileUnit(final LexicalContext lc, final CompileUnit compileUnit) {
+        if (this.compileUnit == compileUnit) {
+            return this;
+        }
+        return Node.replaceInLexicalContext(
+                lc,
+                this,
+                new FunctionNode(
+                        this,
+                        lastToken,
+                        endParserState,
+                        flags,
+                        name,
+                        returnType,
+                        compileUnit,
+                        compilationState,
+                        body,
+                        parameters,
+                        thisProperties,
+                        rootClass, source, namespace));
+    }
+</source>
+        <source file="jdk/nashorn/internal/ir/FunctionNode.java" startline="655" endline="676">
+    @Override
+    public FunctionNode setFlags(final LexicalContext lc, final int flags) {
+        if (this.flags == flags) {
+            return this;
+        }
+        return Node.replaceInLexicalContext(
+                lc,
+                this,
+                new FunctionNode(
+                        this,
+                        lastToken,
+                        endParserState,
+                        flags,
+                        name,
+                        returnType,
+                        compileUnit,
+                        compilationState,
+                        body,
+                        parameters,
+                        thisProperties,
+                        rootClass, source, namespace));
+    }
+</source>
+    </clone>
+    <clone nlines="21">
+        <!-- modification: lastToken changes from a field to a local variable -->
+        <source file="jdk/nashorn/internal/ir/FunctionNode.java" startline="1232" endline="1252">
+    public FunctionNode setCompileUnit(final LexicalContext lc, final CompileUnit compileUnit) {
+        if (this.compileUnit == compileUnit) {
+            return this;
+        }
+        return Node.replaceInLexicalContext(
+                lc,
+                this,
+                new FunctionNode(
+                        this,
+                        lastToken,
+                        endParserState,
+                        flags,
+                        name,
+                        returnType,
+                        compileUnit,
+                        compilationState,
+                        body,
+                        parameters,
+                        thisProperties,
+                        rootClass, source, namespace));
+    }
+</source>
+        <source file="jdk/nashorn/internal/ir/FunctionNode.java" startline="954" endline="974">
+    public FunctionNode setLastToken(final LexicalContext lc, final long lastToken) {
+        if (this.lastToken == lastToken) {
+            return this;
+        }
+        return Node.replaceInLexicalContext(
+                lc,
+                this,
+                new FunctionNode(
+                        this,
+                        lastToken,
+                        endParserState,
+                        flags,
+                        name,
+                        returnType,
+                        compileUnit,
+                        compilationState,
+                        body,
+                        parameters,
+                        thisProperties,
+                        rootClass, source, namespace));
+    }
+</source>
+    </clone>
+    <clone nlines="21">
+        <!-- modification: thisProperties changes from a local variable to a field -->
+        <source file="jdk/nashorn/internal/ir/FunctionNode.java" startline="893" endline="913">
+    public FunctionNode setThisProperties(final LexicalContext lc, final int thisProperties) {
+        if (this.thisProperties == thisProperties) {
+            return this;
+        }
+        return Node.replaceInLexicalContext(
+                lc,
+                this,
+                new FunctionNode(
+                        this,
+                        lastToken,
+                        endParserState,
+                        flags,
+                        name,
+                        returnType,
+                        compileUnit,
+                        compilationState,
+                        body,
+                        parameters,
+                        thisProperties,
+                        rootClass, source, namespace));
+    }
+</source>
+        <source file="jdk/nashorn/internal/ir/FunctionNode.java" startline="990" endline="1012">
+    public FunctionNode setEndParserState(final LexicalContext lc, final Object endParserState) {
+        if (this.endParserState == endParserState) {
+            return this;
+        }
+        return Node.replaceInLexicalContext(
+                lc,
+                this,
+                new FunctionNode(
+                        this,
+                        lastToken,
+                        endParserState,
+                        flags,
+                        name,
+                        returnType,
+                        compileUnit,
+                        compilationState,
+                        body,
+                        parameters,
+                        thisProperties,
+                        rootClass,
+                        source,
+                        namespace));
+    }
+</source>
+    </clone>
+    <clone nlines="22">
+        <!-- modification: flags changes from a local variable to a field -->
+        <source file="jdk/nashorn/internal/ir/FunctionNode.java" startline="655" endline="676">
+    @Override
+    public FunctionNode setFlags(final LexicalContext lc, final int flags) {
+        if (this.flags == flags) {
+            return this;
+        }
+        return Node.replaceInLexicalContext(
+                lc,
+                this,
+                new FunctionNode(
+                        this,
+                        lastToken,
+                        endParserState,
+                        flags,
+                        name,
+                        returnType,
+                        compileUnit,
+                        compilationState,
+                        body,
+                        parameters,
+                        thisProperties,
+                        rootClass, source, namespace));
+    }
+</source>
+        <source file="jdk/nashorn/internal/ir/FunctionNode.java" startline="990" endline="1012">
+    public FunctionNode setEndParserState(final LexicalContext lc, final Object endParserState) {
+        if (this.endParserState == endParserState) {
+            return this;
+        }
+        return Node.replaceInLexicalContext(
+                lc,
+                this,
+                new FunctionNode(
+                        this,
+                        lastToken,
+                        endParserState,
+                        flags,
+                        name,
+                        returnType,
+                        compileUnit,
+                        compilationState,
+                        body,
+                        parameters,
+                        thisProperties,
+                        rootClass,
+                        source,
+                        namespace));
+    }
+</source>
+    </clone>
+    <clone nlines="21">
+        <!-- modification: endParserState changes from a local variable to a field -->
+        <source file="jdk/nashorn/internal/ir/FunctionNode.java" startline="990" endline="1012">
+    public FunctionNode setEndParserState(final LexicalContext lc, final Object endParserState) {
+        if (this.endParserState == endParserState) {
+            return this;
+        }
+        return Node.replaceInLexicalContext(
+                lc,
+                this,
+                new FunctionNode(
+                        this,
+                        lastToken,
+                        endParserState,
+                        flags,
+                        name,
+                        returnType,
+                        compileUnit,
+                        compilationState,
+                        body,
+                        parameters,
+                        thisProperties,
+                        rootClass,
+                        source,
+                        namespace));
+    }
+</source>
+        <source file="jdk/nashorn/internal/ir/FunctionNode.java" startline="954" endline="974">
+    public FunctionNode setLastToken(final LexicalContext lc, final long lastToken) {
+        if (this.lastToken == lastToken) {
+            return this;
+        }
+        return Node.replaceInLexicalContext(
+                lc,
+                this,
+                new FunctionNode(
+                        this,
+                        lastToken,
+                        endParserState,
+                        flags,
+                        name,
+                        returnType,
+                        compileUnit,
+                        compilationState,
+                        body,
+                        parameters,
+                        thisProperties,
+                        rootClass, source, namespace));
+    }
+</source>
+    </clone>
+    <clone nlines="13">
+        <!-- modification: UNDEFINED to ScriptRuntime.UNDEFINED, double elem to int elem -->
+        <source file="jdk/nashorn/internal/runtime/arrays/NumberArrayData.java" startline="267" endline="279">
+    @Override
+    public Object pop() {
+        final int len = (int)length();
+        if (len == 0) {
+            return UNDEFINED;
+        }
+
+        final int newLength = len - 1;
+        final double elem = array[newLength];
+        array[newLength] = 0;
+        setLength(newLength);
+        return elem;
+    }
+</source>
+        <source file="jdk/nashorn/internal/runtime/arrays/IntArrayData.java" startline="327" endline="340">
+    @Override
+    public Object pop() {
+        final int len = (int)length();
+        if (len == 0) {
+            return ScriptRuntime.UNDEFINED;
+        }
+
+        final int newLength = len - 1;
+        final int elem = array[newLength];
+        array[newLength] = 0;
+        setLength(newLength);
+
+        return elem;
+    }
+</source>
+    </clone>
+    <clone nlines="13">
+        <!-- modification: UNDEFINED to ScriptRuntime.UNDEFINED, double elem to long elem -->
+        <source file="jdk/nashorn/internal/runtime/arrays/NumberArrayData.java" startline="267" endline="279">
+    @Override
+    public Object pop() {
+        final int len = (int)length();
+        if (len == 0) {
+            return UNDEFINED;
+        }
+
+        final int newLength = len - 1;
+        final double elem = array[newLength];
+        array[newLength] = 0;
+        setLength(newLength);
+        return elem;
+    }
+</source>
+        <source file="jdk/nashorn/internal/runtime/arrays/LongArrayData.java" startline="287" endline="300">
+    @Override
+    public Object pop() {
+        final int len = (int)length();
+        if (len == 0) {
+            return ScriptRuntime.UNDEFINED;
+        }
+
+        final int newLength = len - 1;
+        final long elem = array[newLength];
+        array[newLength] = 0;
+        setLength(newLength);
+
+        return elem;
+    }
+</source>
+    </clone>
+    <clone nlines="17">
+        <!-- modification: "Object value" to "long value" -->
+        <source file="jdk/nashorn/internal/runtime/arrays/DeletedRangeArrayFilter.java" startline="129" endline="145">
+    @Override
+    public ArrayData set(final int index, final Object value, final boolean strict) {
+        final long longIndex = ArrayIndex.toLongIndex(index);
+        if (longIndex &lt; lo || longIndex &gt; hi) {
+            return super.set(index, value, strict);
+        } else if (longIndex &gt; lo &amp;&amp; longIndex &lt; hi) {
+            return getDeletedArrayFilter().set(index, value, strict);
+        }
+        if (longIndex == lo) {
+            lo++;
+        } else {
+            assert longIndex == hi;
+            hi--;
+        }
+
+        return isEmpty() ? getUnderlying().set(index, value, strict) : super.set(index, value, strict);
+    }
+</source>
+        <source file="jdk/nashorn/internal/runtime/arrays/DeletedRangeArrayFilter.java" startline="165" endline="181">
+    @Override
+    public ArrayData set(final int index, final long value, final boolean strict) {
+        final long longIndex = ArrayIndex.toLongIndex(index);
+        if (longIndex &lt; lo || longIndex &gt; hi) {
+            return super.set(index, value, strict);
+        } else if (longIndex &gt; lo &amp;&amp; longIndex &lt; hi) {
+            return getDeletedArrayFilter().set(index, value, strict);
+        }
+        if (longIndex == lo) {
+            lo++;
+        } else {
+            assert longIndex == hi;
+            hi--;
+        }
+
+        return isEmpty() ? getUnderlying().set(index, value, strict) : super.set(index, value, strict);
+    }
+</source>
+    </clone>
+    <clone nlines="17">
+        <!-- modification: "Object value" to "int value" -->
+        <source file="jdk/nashorn/internal/runtime/arrays/DeletedRangeArrayFilter.java" startline="129" endline="145">
+    @Override
+    public ArrayData set(final int index, final Object value, final boolean strict) {
+        final long longIndex = ArrayIndex.toLongIndex(index);
+        if (longIndex &lt; lo || longIndex &gt; hi) {
+            return super.set(index, value, strict);
+        } else if (longIndex &gt; lo &amp;&amp; longIndex &lt; hi) {
+            return getDeletedArrayFilter().set(index, value, strict);
+        }
+        if (longIndex == lo) {
+            lo++;
+        } else {
+            assert longIndex == hi;
+            hi--;
+        }
+
+        return isEmpty() ? getUnderlying().set(index, value, strict) : super.set(index, value, strict);
+    }
+</source>
+        <source file="jdk/nashorn/internal/runtime/arrays/DeletedRangeArrayFilter.java" startline="147" endline="163">
+    @Override
+    public ArrayData set(final int index, final int value, final boolean strict) {
+        final long longIndex = ArrayIndex.toLongIndex(index);
+        if (longIndex &lt; lo || longIndex &gt; hi) {
+            return super.set(index, value, strict);
+        } else if (longIndex &gt; lo &amp;&amp; longIndex &lt; hi) {
+            return getDeletedArrayFilter().set(index, value, strict);
+        }
+        if (longIndex == lo) {
+            lo++;
+        } else {
+            assert longIndex == hi;
+            hi--;
+        }
+
+        return isEmpty() ? getUnderlying().set(index, value, strict) : super.set(index, value, strict);
+    }
+</source>
+    </clone>
+    <clone nlines="22">
+        <!-- modification: isEquivalentTo to to.isEquivalentTo -->
+        <source file="jdk/nashorn/internal/codegen/types/BooleanType.java" startline="111" endline="132">
+    @Override
+    public Type convert(final MethodVisitor method, final Type to) {
+        if (isEquivalentTo(to)) {
+            return to;
+        }
+
+        if (to.isNumber()) {
+            method.visitInsn(I2D);
+        } else if (to.isLong()) {
+            method.visitInsn(I2L);
+        } else if (to.isInteger()) {
+            //nop
+        } else if (to.isString()) {
+            invokestatic(method, TO_STRING);
+        } else if (to.isObject()) {
+            invokestatic(method, VALUE_OF);
+        } else {
+            throw new UnsupportedOperationException("Illegal conversion " + this + " -&gt; " + to);
+        }
+
+        return to;
+    }
+</source>
+        <source file="jdk/nashorn/internal/codegen/types/IntType.java" startline="130" endline="151">
+    @Override
+    public Type convert(final MethodVisitor method, final Type to) {
+        if (to.isEquivalentTo(this)) {
+            return to;
+        }
+
+        if (to.isNumber()) {
+            method.visitInsn(I2D);
+        } else if (to.isLong()) {
+            method.visitInsn(I2L);
+        } else if (to.isBoolean()) {
+            //nop
+        } else if (to.isString()) {
+            invokestatic(method, TO_STRING);
+        } else if (to.isObject()) {
+            invokestatic(method, VALUE_OF);
+        } else {
+            throw new UnsupportedOperationException("Illegal conversion " + this + " -&gt; " + to);
+        }
+
+        return to;
+    }
+</source>
+    </clone>
+</clones>

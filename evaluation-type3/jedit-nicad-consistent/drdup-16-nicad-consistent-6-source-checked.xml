@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- The clones reported by DrDup and not reported by NiCad
+1x      true clone
+-->
+<clones>
+    <clone nlines="16">
+        <!-- modification: Position to int, &gt; to &gt;= -->
+        <source file="org/gjt/sp/jedit/buffer/JEditBuffer.java" startline="1423" endline="1438">
+	public Position createPosition(int offset)
+	{
+		try
+		{
+			readLock();
+
+			if(offset &lt; 0 || offset &gt; contentMgr.getLength())
+				throw new ArrayIndexOutOfBoundsException(offset);
+
+			return positionMgr.createPosition(offset);
+		}
+		finally
+		{
+			readUnlock();
+		}
+	} //}}}
+</source>
+        <source file="org/gjt/sp/jedit/buffer/JEditBuffer.java" startline="385" endline="400">
+	public int getLineEndOffset(int line)
+	{
+		try
+		{
+			readLock();
+
+			if(line &lt; 0 || line &gt;= lineMgr.getLineCount())
+				throw new ArrayIndexOutOfBoundsException(line);
+
+			return lineMgr.getLineEndOffset(line);
+		}
+		finally
+		{
+			readUnlock();
+		}
+	} //}}}
+</source>
+    </clone>
+</clones>

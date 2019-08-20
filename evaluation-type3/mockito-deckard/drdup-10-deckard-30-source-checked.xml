@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- The clones reported by DrDup and not reported by Deckard
+8x      true clone
+-->
+<clones>
+    <clone nlines="10">
+        <!-- modification: extra argument -->
+        <source file="java/org/mockito/internal/exceptions/Reporter.java" startline="138" endline="148">
+    public static MockitoException nullPassedToVerify() {
+        return new NullInsteadOfMockException(join(
+                "Argument passed to verify() should be a mock but is null!",
+                "Examples of correct verifications:",
+                "    verify(mock).someMethod();",
+                "    verify(mock, times(10)).someMethod();",
+                "    verify(mock, atLeastOnce()).someMethod();",
+                "    not: verify(mock.someMethod());",
+                "Also, if you use @Mock annotation don't miss initMocks()"
+        ));
+    }
+</source>
+        <source file="java/org/mockito/internal/exceptions/Reporter.java" startline="640" endline="649">
+    public static MockitoException atMostAndNeverShouldNotBeUsedWithTimeout() {
+        return new FriendlyReminderException(join("",
+                                                  "Don't panic! I'm just a friendly reminder!",
+                                                  "timeout() should not be used with atMost() or never() because...",
+                                                  "...it does not make much sense - the test would have passed immediately in concurency",
+                                                  "We kept this method only to avoid compilation errors when upgrading Mockito.",
+                                                  "In future release we will remove timeout(x).atMost(y) from the API.",
+                                                  "If you want to find out more please refer to issue 235",
+                                                  ""));
+    }
+</source>
+    </clone>
+    <clone nlines="11">
+        <!-- modification: extra arguments -->
+        <source file="java/org/mockito/internal/exceptions/Reporter.java" startline="138" endline="148">
+    public static MockitoException nullPassedToVerify() {
+        return new NullInsteadOfMockException(join(
+                "Argument passed to verify() should be a mock but is null!",
+                "Examples of correct verifications:",
+                "    verify(mock).someMethod();",
+                "    verify(mock, times(10)).someMethod();",
+                "    verify(mock, atLeastOnce()).someMethod();",
+                "    not: verify(mock.someMethod());",
+                "Also, if you use @Mock annotation don't miss initMocks()"
+        ));
+    }
+</source>
+        <source file="java/org/mockito/internal/exceptions/Reporter.java" startline="536" endline="549">
+    public static MockitoException noArgumentValueWasCaptured() {
+        return new MockitoException(join(
+                "No argument value was captured!",
+                "You might have forgotten to use argument.capture() in verify()...",
+                "...or you used capture() in stubbing but stubbed method was not called.",
+                "Be aware that it is recommended to use capture() only with verify()",
+                "",
+                "Examples of correct argument capturing:",
+                "    ArgumentCaptor&lt;Person&gt; argument = ArgumentCaptor.forClass(Person.class);",
+                "    verify(mock).doSomething(argument.capture());",
+                "    assertEquals(\"John\", argument.getValue().getName());",
+                ""
+        ));
+    }
+</source>
+    </clone>
+    <clone nlines="10">
+        <!-- modification: extra argument -->
+        <source file="java/org/mockito/internal/exceptions/Reporter.java" startline="464" endline="474">
+    public static MockitoException onlyVoidMethodsCanBeSetToDoNothing() {
+        return new MockitoException(join(
+                "Only void methods can doNothing()!",
+                "Example of correct use of doNothing():",
+                "    doNothing().",
+                "    doThrow(new RuntimeException())",
+                "    .when(mock).someVoidMethod();",
+                "Above means:",
+                "someVoidMethod() does nothing the 1st time but throws an exception the 2nd time is called"
+        ));
+    }
+</source>
+        <source file="java/org/mockito/internal/exceptions/Reporter.java" startline="640" endline="649">
+    public static MockitoException atMostAndNeverShouldNotBeUsedWithTimeout() {
+        return new FriendlyReminderException(join("",
+                                                  "Don't panic! I'm just a friendly reminder!",
+                                                  "timeout() should not be used with atMost() or never() because...",
+                                                  "...it does not make much sense - the test would have passed immediately in concurency",
+                                                  "We kept this method only to avoid compilation errors when upgrading Mockito.",
+                                                  "In future release we will remove timeout(x).atMost(y) from the API.",
+                                                  "If you want to find out more please refer to issue 235",
+                                                  ""));
+    }
+</source>
+    </clone>
+    <clone nlines="11">
+        <!-- modification: extra argument -->
+        <source file="java/org/mockito/internal/exceptions/Reporter.java" startline="464" endline="474">
+    public static MockitoException onlyVoidMethodsCanBeSetToDoNothing() {
+        return new MockitoException(join(
+                "Only void methods can doNothing()!",
+                "Example of correct use of doNothing():",
+                "    doNothing().",
+                "    doThrow(new RuntimeException())",
+                "    .when(mock).someVoidMethod();",
+                "Above means:",
+                "someVoidMethod() does nothing the 1st time but throws an exception the 2nd time is called"
+        ));
+    }
+</source>
+        <source file="java/org/mockito/internal/exceptions/Reporter.java" startline="536" endline="549">
+    public static MockitoException noArgumentValueWasCaptured() {
+        return new MockitoException(join(
+                "No argument value was captured!",
+                "You might have forgotten to use argument.capture() in verify()...",
+                "...or you used capture() in stubbing but stubbed method was not called.",
+                "Be aware that it is recommended to use capture() only with verify()",
+                "",
+                "Examples of correct argument capturing:",
+                "    ArgumentCaptor&lt;Person&gt; argument = ArgumentCaptor.forClass(Person.class);",
+                "    verify(mock).doSomething(argument.capture());",
+                "    assertEquals(\"John\", argument.getValue().getName());",
+                ""
+        ));
+    }
+</source>
+    </clone>
+    <clone nlines="10">
+        <!-- modification: extra arguments -->
+        <source file="java/org/mockito/internal/exceptions/Reporter.java" startline="640" endline="649">
+    public static MockitoException atMostAndNeverShouldNotBeUsedWithTimeout() {
+        return new FriendlyReminderException(join("",
+                                                  "Don't panic! I'm just a friendly reminder!",
+                                                  "timeout() should not be used with atMost() or never() because...",
+                                                  "...it does not make much sense - the test would have passed immediately in concurency",
+                                                  "We kept this method only to avoid compilation errors when upgrading Mockito.",
+                                                  "In future release we will remove timeout(x).atMost(y) from the API.",
+                                                  "If you want to find out more please refer to issue 235",
+                                                  ""));
+    }
+</source>
+        <source file="java/org/mockito/internal/exceptions/Reporter.java" startline="536" endline="549">
+    public static MockitoException noArgumentValueWasCaptured() {
+        return new MockitoException(join(
+                "No argument value was captured!",
+                "You might have forgotten to use argument.capture() in verify()...",
+                "...or you used capture() in stubbing but stubbed method was not called.",
+                "Be aware that it is recommended to use capture() only with verify()",
+                "",
+                "Examples of correct argument capturing:",
+                "    ArgumentCaptor&lt;Person&gt; argument = ArgumentCaptor.forClass(Person.class);",
+                "    verify(mock).doSomething(argument.capture());",
+                "    assertEquals(\"John\", argument.getValue().getName());",
+                ""
+        ));
+    }
+</source>
+    </clone>
+    <clone nlines="10">
+        <!-- modification: extra argument -->
+        <source file="java/org/mockito/internal/exceptions/Reporter.java" startline="127" endline="136">
+    public static MockitoException notAMockPassedToVerify(Class&lt;?&gt; type) {
+        return new NotAMockException(join(
+                "Argument passed to verify() is of type " + type.getSimpleName() + " and is not a mock!",
+                "Make sure you place the parenthesis correctly!",
+                "See the examples of correct verifications:",
+                "    verify(mock).someMethod();",
+                "    verify(mock, times(10)).someMethod();",
+                "    verify(mock, atLeastOnce()).someMethod();"
+        ));
+    }
+</source>
+        <source file="java/org/mockito/internal/exceptions/Reporter.java" startline="775" endline="785">
+    public static MockitoException serializableWontWorkForObjectsThatDontImplementSerializable(Class&lt;?&gt; classToMock) {
+        return new MockitoException(join(
+                "You are using the setting 'withSettings().serializable()' however the type you are trying to mock '" + classToMock.getSimpleName() + "'",
+                "do not implement Serializable AND do not have a no-arg constructor.",
+                "This combination is requested, otherwise you will get an 'java.io.InvalidClassException' when the mock will be serialized",
+                "",
+                "Also note that as requested by the Java serialization specification, the whole hierarchy need to implements Serializable,",
+                "i.e. the top-most superclass has to implements Serializable.",
+                ""
+        ));
+    }
+</source>
+    </clone>
+    <clone nlines="12">
+        <!-- modification: public to private -->
+        <source file="java/org/mockito/internal/util/reflection/Fields.java" startline="98" endline="104">
+    public static Filter&lt;InstanceField&gt; syntheticField() {
+        return new Filter&lt;InstanceField&gt;() {
+            public boolean isOut(InstanceField instanceField) {
+                return instanceField.isSynthetic();
+            }
+        };
+    }
+</source>
+        <source file="java/org/mockito/internal/util/reflection/Fields.java" startline="85" endline="91">
+    private static Filter&lt;InstanceField&gt; nullField() {
+        return new Filter&lt;InstanceField&gt;() {
+            public boolean isOut(InstanceField instanceField) {
+                return instanceField.isNull();
+            }
+        };
+    }
+</source>
+    </clone>
+    <clone nlines="10">
+        <!-- modification: public to private -->
+        <source file="java/org/mockito/internal/stubbing/StubberImpl.java" startline="59" endline="68">
+    public Stubber doThrow(Throwable... toBeThrown) {
+        if(toBeThrown == null) {
+            answers.add(new ThrowsException(null));
+            return this;
+        }
+        for (Throwable throwable : toBeThrown) {
+            answers.add(new ThrowsException(throwable));
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/stubbing/StubberImpl.java" startline="48" endline="57">
+    private StubberImpl doReturnValues(Object... toBeReturned) {
+        if(toBeReturned == null) {
+            answers.add(new Returns(null));
+            return this;
+        }
+        for (Object r : toBeReturned) {
+            answers.add(new Returns(r));
+        }
+        return this;
+    }
+</source>
+    </clone>
+</clones>

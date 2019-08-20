@@ -1,0 +1,1072 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- The clones reported by DrDup and not reported by NiCad
+13x     identifiers, literals
+8x      identifiers
+4x      identifiers, normalization
+1x      literals, normalization
+-->
+<clones>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/gjt/sp/jedit/gui/OptionsDialog.java" startline="584" endline="595">
+		@Override
+		public Object getChild(Object parent, int index)
+		{
+			if (parent instanceof OptionGroup)
+			{
+				return ((OptionGroup)parent).getMember(index);
+			}
+			else
+			{
+				return null;
+			}
+		}
+</source>
+        <source file="org/gjt/sp/jedit/gui/OptionsDialog.java" startline="610" endline="622">
+		@Override
+		public int getIndexOfChild(Object parent, Object child)
+		{
+			if (parent instanceof OptionGroup)
+			{
+				return ((OptionGroup)parent)
+					.getMemberIndex(child);
+			}
+			else
+			{
+				return -1;
+			}
+		}
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/gjt/sp/jedit/gui/OptionsDialog.java" startline="584" endline="595">
+		@Override
+		public Object getChild(Object parent, int index)
+		{
+			if (parent instanceof OptionGroup)
+			{
+				return ((OptionGroup)parent).getMember(index);
+			}
+			else
+			{
+				return null;
+			}
+		}
+</source>
+        <source file="org/jedit/options/OptionGroupPane.java" startline="431" endline="442">
+		public int getIndexOfChild(Object parent, Object child)
+		{
+			if (parent instanceof OptionGroup)
+			{
+				return ((OptionGroup)parent)
+					.getMemberIndex(child);
+			}
+			else
+			{
+				return -1;
+			}
+		}
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/gjt/sp/jedit/gui/OptionsDialog.java" startline="584" endline="595">
+		@Override
+		public Object getChild(Object parent, int index)
+		{
+			if (parent instanceof OptionGroup)
+			{
+				return ((OptionGroup)parent).getMember(index);
+			}
+			else
+			{
+				return null;
+			}
+		}
+</source>
+        <source file="org/jedit/options/PluginOptionGroup.java" startline="132" endline="143">
+		public int getIndexOfChild(Object parent, Object child)
+		{
+			if (parent instanceof OptionGroup)
+			{
+				return ((OptionGroup)parent)
+					.getMemberIndex(child);
+			}
+			else
+			{
+				return -1;
+			}
+		}
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/gjt/sp/jedit/gui/OptionsDialog.java" startline="610" endline="622">
+		@Override
+		public int getIndexOfChild(Object parent, Object child)
+		{
+			if (parent instanceof OptionGroup)
+			{
+				return ((OptionGroup)parent)
+					.getMemberIndex(child);
+			}
+			else
+			{
+				return -1;
+			}
+		}
+</source>
+        <source file="org/jedit/options/OptionGroupPane.java" startline="407" endline="417">
+		public Object getChild(Object parent, int index)
+		{
+			if (parent instanceof OptionGroup)
+			{
+				return ((OptionGroup)parent).getMember(index);
+			}
+			else
+			{
+				return null;
+			}
+		}
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/gjt/sp/jedit/gui/OptionsDialog.java" startline="610" endline="622">
+		@Override
+		public int getIndexOfChild(Object parent, Object child)
+		{
+			if (parent instanceof OptionGroup)
+			{
+				return ((OptionGroup)parent)
+					.getMemberIndex(child);
+			}
+			else
+			{
+				return -1;
+			}
+		}
+</source>
+        <source file="org/jedit/options/PluginOptionGroup.java" startline="108" endline="118">
+		public Object getChild(Object parent, int index)
+		{
+			if (parent instanceof OptionGroup)
+			{
+				return ((OptionGroup)parent).getMember(index);
+			}
+			else
+			{
+				return null;
+			}
+		}
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/jedit/options/OptionGroupPane.java" startline="407" endline="417">
+		public Object getChild(Object parent, int index)
+		{
+			if (parent instanceof OptionGroup)
+			{
+				return ((OptionGroup)parent).getMember(index);
+			}
+			else
+			{
+				return null;
+			}
+		}
+</source>
+        <source file="org/jedit/options/OptionGroupPane.java" startline="431" endline="442">
+		public int getIndexOfChild(Object parent, Object child)
+		{
+			if (parent instanceof OptionGroup)
+			{
+				return ((OptionGroup)parent)
+					.getMemberIndex(child);
+			}
+			else
+			{
+				return -1;
+			}
+		}
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/jedit/options/OptionGroupPane.java" startline="407" endline="417">
+		public Object getChild(Object parent, int index)
+		{
+			if (parent instanceof OptionGroup)
+			{
+				return ((OptionGroup)parent).getMember(index);
+			}
+			else
+			{
+				return null;
+			}
+		}
+</source>
+        <source file="org/jedit/options/PluginOptionGroup.java" startline="132" endline="143">
+		public int getIndexOfChild(Object parent, Object child)
+		{
+			if (parent instanceof OptionGroup)
+			{
+				return ((OptionGroup)parent)
+					.getMemberIndex(child);
+			}
+			else
+			{
+				return -1;
+			}
+		}
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/jedit/options/OptionGroupPane.java" startline="431" endline="442">
+		public int getIndexOfChild(Object parent, Object child)
+		{
+			if (parent instanceof OptionGroup)
+			{
+				return ((OptionGroup)parent)
+					.getMemberIndex(child);
+			}
+			else
+			{
+				return -1;
+			}
+		}
+</source>
+        <source file="org/jedit/options/PluginOptionGroup.java" startline="108" endline="118">
+		public Object getChild(Object parent, int index)
+		{
+			if (parent instanceof OptionGroup)
+			{
+				return ((OptionGroup)parent).getMember(index);
+			}
+			else
+			{
+				return null;
+			}
+		}
+</source>
+    </clone>
+    <clone nlines="11" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/jedit/options/PluginOptionGroup.java" startline="108" endline="118">
+		public Object getChild(Object parent, int index)
+		{
+			if (parent instanceof OptionGroup)
+			{
+				return ((OptionGroup)parent).getMember(index);
+			}
+			else
+			{
+				return null;
+			}
+		}
+</source>
+        <source file="org/jedit/options/PluginOptionGroup.java" startline="132" endline="143">
+		public int getIndexOfChild(Object parent, Object child)
+		{
+			if (parent instanceof OptionGroup)
+			{
+				return ((OptionGroup)parent)
+					.getMemberIndex(child);
+			}
+			else
+			{
+				return -1;
+			}
+		}
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers -->
+        <source file="installer/SwingInstall.java" startline="710" endline="719">
+		public void setMaximum(final int max)
+		{
+			SwingUtilities.invokeLater(new Runnable()
+			{
+				public void run()
+				{
+					progress.setMaximum(max);
+				}
+			});
+		}
+</source>
+        <source file="installer/SwingInstall.java" startline="768" endline="777">
+		public void message(final String message)
+		{
+			SwingUtilities.invokeLater(new Runnable()
+			{
+				public void run()
+				{
+					progress.setString(message);
+				}
+			});
+		}
+</source>
+    </clone>
+    <clone nlines="14" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/gjt/sp/jedit/bsh/Primitive.java" startline="714" endline="727">
+    static float floatUnaryOperation(Float F, int kind)
+    {
+        float operand = F.floatValue();
+
+        switch(kind)
+        {
+            case PLUS:
+                return operand;
+            case MINUS:
+                return -operand;
+            default:
+                throw new InterpreterError("bad float unaryOperation");
+        }
+    }
+</source>
+        <source file="org/gjt/sp/jedit/bsh/Primitive.java" startline="729" endline="742">
+    static double doubleUnaryOperation(Double D, int kind)
+    {
+        double operand = D.doubleValue();
+
+        switch(kind)
+        {
+            case PLUS:
+                return operand;
+            case MINUS:
+                return -operand;
+            default:
+                throw new InterpreterError("bad double unaryOperation");
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <!-- identifiers, normalization -->
+        <source file="org/gjt/sp/jedit/gui/BufferOptions.java" startline="126" endline="133">
+		public void actionPerformed(ActionEvent evt)
+		{
+			Object source = evt.getSource();
+			if(source == ok)
+				ok();
+			else if(source == cancel)
+				cancel();
+		} //}}}
+</source>
+        <source file="org/gjt/sp/jedit/gui/FilePropertiesDialog.java" startline="340" endline="353">
+		public void actionPerformed(ActionEvent evt)
+		{
+			Object source = evt.getSource();
+
+
+			if(source == okButton)
+			{
+				ok();
+			}
+			else if(source == cancelButton)
+			{
+				cancel();
+			}
+		}
+</source>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <!-- identifiers, normalization -->
+        <source file="org/gjt/sp/jedit/gui/FilePropertiesDialog.java" startline="340" endline="353">
+		public void actionPerformed(ActionEvent evt)
+		{
+			Object source = evt.getSource();
+
+
+			if(source == okButton)
+			{
+				ok();
+			}
+			else if(source == cancelButton)
+			{
+				cancel();
+			}
+		}
+</source>
+        <source file="org/gjt/sp/jedit/gui/PasteFromListDialog.java" startline="288" endline="295">
+		public void actionPerformed(ActionEvent evt)
+		{
+			Object source = evt.getSource();
+			if(source == insert)
+				ok();
+			else if(source == cancel)
+				cancel();
+		}
+</source>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <!-- identifiers, normalization -->
+        <source file="org/gjt/sp/jedit/gui/FilePropertiesDialog.java" startline="340" endline="353">
+		public void actionPerformed(ActionEvent evt)
+		{
+			Object source = evt.getSource();
+
+
+			if(source == okButton)
+			{
+				ok();
+			}
+			else if(source == cancelButton)
+			{
+				cancel();
+			}
+		}
+</source>
+        <source file="org/gjt/sp/jedit/gui/SelectLineRange.java" startline="125" endline="132">
+	public void actionPerformed(ActionEvent evt)
+	{
+		Object source = evt.getSource();
+		if(source == ok)
+			ok();
+		else if(source == cancel)
+			cancel();
+	} //}}}
+</source>
+    </clone>
+    <clone nlines="9" similarity="100">
+        <!-- identifiers -->
+        <source file="org/gjt/sp/jedit/bsh/LHS.java" startline="117" endline="125">
+	LHS( Object object, Field field )
+	{
+		if ( object == null)
+			throw new NullPointerException("constructed empty LHS");
+
+		type = FIELD;
+		this.object = object;
+		this.field = field;
+	}
+</source>
+        <source file="org/gjt/sp/jedit/bsh/LHS.java" startline="143" endline="151">
+	LHS( Object array, int index )
+	{
+		if(array == null)
+			throw new NullPointerException("constructed empty LHS");
+
+		type = INDEX;
+		this.object = array;
+		this.index = index;
+	}
+</source>
+    </clone>
+    <clone nlines="9" similarity="100">
+        <!-- identifiers -->
+        <source file="org/gjt/sp/jedit/bsh/LHS.java" startline="130" endline="138">
+	LHS( Object object, String propName )
+	{
+		if(object == null)
+			throw new NullPointerException("constructed empty LHS");
+
+		type = PROPERTY;
+		this.object = object;
+		this.propName = propName;
+	}
+</source>
+        <source file="org/gjt/sp/jedit/bsh/LHS.java" startline="143" endline="151">
+	LHS( Object array, int index )
+	{
+		if(array == null)
+			throw new NullPointerException("constructed empty LHS");
+
+		type = INDEX;
+		this.object = array;
+		this.index = index;
+	}
+</source>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <!-- literals, normalization -->
+        <source file="installer/OperatingSystem.java" startline="147" endline="156">
+			public String getDefaultDirectory(Install installer)
+			{
+				String dir = "/usr/local/";
+				if(!new File(dir).canWrite())
+				{
+					dir = System.getProperty("user.home");
+				}
+
+				return new File(dir,"bin").getPath();
+			}
+</source>
+        <source file="installer/OperatingSystem.java" startline="219" endline="226">
+			public String getDefaultDirectory(Install installer)
+			{
+				String dir = "/usr/local/";
+				if(!new File(dir).canWrite())
+					dir = System.getProperty("user.home");
+
+				return new File(dir,"man/man1").getPath();
+			}
+</source>
+    </clone>
+    <clone nlines="17" similarity="100">
+        <!-- identifiers -->
+        <source file="org/gjt/sp/jedit/jEdit.java" startline="765" endline="781">
+	public static int getIntegerProperty(String name, int def)
+	{
+		String value = getProperty(name);
+		if(value == null)
+			return def;
+		else
+		{
+			try
+			{
+				return Integer.parseInt(value.trim());
+			}
+			catch(NumberFormatException nf)
+			{
+				return def;
+			}
+		}
+	} //}}}
+</source>
+        <source file="org/gjt/sp/jedit/jEdit.java" startline="784" endline="800">
+	public static double getDoubleProperty(String name, double def)
+	{
+		String value = getProperty(name);
+		if(value == null)
+			return def;
+		else
+		{
+			try
+			{
+				return Double.parseDouble(value.trim());
+			}
+			catch(NumberFormatException nf)
+			{
+				return def;
+			}
+		}
+	}
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers, normalization -->
+        <source file="org/gjt/sp/jedit/bsh/classpath/ClassManagerImpl.java" startline="244" endline="253">
+	public URL getResource( String path ) 
+	{
+		URL url = null;
+		if ( baseLoader != null )
+			// classloader wants no leading slash
+			url = baseLoader.getResource( path.substring(1) );
+		if ( url == null )
+			url = super.getResource( path );
+		return url;
+	}
+</source>
+        <source file="org/gjt/sp/jedit/bsh/classpath/ClassManagerImpl.java" startline="259" endline="272">
+	public InputStream getResourceAsStream( String path ) 
+	{
+		InputStream in = null;
+		if ( baseLoader != null )
+		{
+			// classloader wants no leading slash
+			in = baseLoader.getResourceAsStream( path.substring(1) );
+		}
+		if ( in == null )
+		{
+			in = super.getResourceAsStream( path );
+		}
+		return in;
+	}
+</source>
+    </clone>
+    <clone nlines="14" similarity="100">
+        <!-- identifiers -->
+        <source file="org/gjt/sp/jedit/BeanShell.java" startline="212" endline="225">
+	public static void runScript(View view, String path, Reader in,
+		boolean ownNamespace)
+	{
+		try
+		{
+			_runScript(view,path,in,ownNamespace);
+		}
+		catch(Throwable e)
+		{
+			Log.log(Log.ERROR,BeanShell.class,e);
+
+			bsh.handleException(view,path,e);
+		}
+	} //}}}
+</source>
+        <source file="org/gjt/sp/jedit/BeanShell.java" startline="247" endline="260">
+	public static void runScript(View view, String path, Reader in,
+		NameSpace namespace)
+	{
+		try
+		{
+			_runScript(view,path,in,namespace);
+		}
+		catch(Throwable e)
+		{
+			Log.log(Log.ERROR,BeanShell.class,e);
+
+			bsh.handleException(view,path,e);
+		}
+	} //}}}
+</source>
+    </clone>
+    <clone nlines="23" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/gjt/sp/jedit/bsh/Primitive.java" startline="672" endline="691">
+    static int intUnaryOperation(Integer I, int kind)
+    {
+        int operand = I.intValue();
+
+        switch(kind)
+        {
+            case PLUS:
+                return operand;
+            case MINUS:
+                return -operand;
+            case TILDE:
+                return ~operand;
+            case INCR:
+                return operand + 1;
+            case DECR:
+                return operand - 1;
+            default:
+                throw new InterpreterError("bad integer unaryOperation");
+        }
+    }
+</source>
+        <source file="org/gjt/sp/jedit/bsh/Primitive.java" startline="693" endline="712">
+    static long longUnaryOperation(Long L, int kind)
+    {
+        long operand = L.longValue();
+
+        switch(kind)
+        {
+            case PLUS:
+                return operand;
+            case MINUS:
+                return -operand;
+            case TILDE:
+                return ~operand;
+            case INCR:
+                return operand + 1;
+            case DECR:
+                return operand - 1;
+            default:
+                throw new InterpreterError("bad long unaryOperation");
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="19" similarity="100">
+        <!-- identifiers -->
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="5411" endline="5429">
+	private void fireStatusChanged(int flag, boolean value)
+	{
+		Object[] listeners = listenerList.getListenerList();
+		for(int i = listeners.length - 2; i &gt;= 0; i--)
+		{
+			if(listeners[i] == StatusListener.class)
+			{
+				try
+				{
+					((StatusListener)listeners[i+1])
+						.statusChanged(this,flag,value);
+				}
+				catch(Throwable t)
+				{
+					Log.log(Log.ERROR,this,t);
+				}
+			}
+		}
+	} //}}}
+</source>
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="5432" endline="5450">
+	private void fireBracketSelected(int line, String text)
+	{
+		Object[] listeners = listenerList.getListenerList();
+		for(int i = listeners.length - 2; i &gt;= 0; i--)
+		{
+			if(listeners[i] == StatusListener.class)
+			{
+				try
+				{
+					((StatusListener)listeners[i+1])
+						.bracketSelected(this,line,text);
+				}
+				catch(Throwable t)
+				{
+					Log.log(Log.ERROR,this,t);
+				}
+			}
+		}
+	} //}}}
+</source>
+    </clone>
+    <clone nlines="16" similarity="100">
+        <!-- identifiers -->
+        <source file="de/masters_of_disaster/ant/tasks/ar/ArUtils.java" startline="87" endline="102">
+    public static int getLongBytes(long value, byte[] buf, int offset, int length) {
+        int i;
+        String tmp = Long.toString(value);
+        int c = tmp.length();
+
+        for (i=0 ; i&lt;length &amp;&amp; i&lt;c ; i++) {
+            buf[offset+i] = (byte) tmp.charAt(i);
+        }
+
+        while (i&lt;length) {
+            buf[offset+i] = (byte) ' ';
+            i++;
+        }
+
+        return offset + length;
+    }
+</source>
+        <source file="de/masters_of_disaster/ant/tasks/ar/ArUtils.java" startline="113" endline="128">
+    public static int getIntegerBytes(int value, byte[] buf, int offset, int length) {
+        int i;
+        String tmp = Integer.toString(value);
+        int c = tmp.length();
+
+        for (i=0 ; i&lt;length &amp;&amp; i&lt;c ; i++) {
+            buf[offset+i] = (byte) tmp.charAt(i);
+        }
+
+        while (i&lt;length) {
+            buf[offset+i] = (byte) ' ';
+            i++;
+        }
+
+        return offset + length;
+    }
+</source>
+    </clone>
+    <clone nlines="16" similarity="100">
+        <!-- identifiers -->
+        <source file="de/masters_of_disaster/ant/tasks/ar/ArUtils.java" startline="113" endline="128">
+    public static int getIntegerBytes(int value, byte[] buf, int offset, int length) {
+        int i;
+        String tmp = Integer.toString(value);
+        int c = tmp.length();
+
+        for (i=0 ; i&lt;length &amp;&amp; i&lt;c ; i++) {
+            buf[offset+i] = (byte) tmp.charAt(i);
+        }
+
+        while (i&lt;length) {
+            buf[offset+i] = (byte) ' ';
+            i++;
+        }
+
+        return offset + length;
+    }
+</source>
+        <source file="de/masters_of_disaster/ant/tasks/ar/ArUtils.java" startline="139" endline="154">
+    public static int getOctalBytes(long value, byte[] buf, int offset, int length) {
+        int i;
+        String tmp = Long.toOctalString(value);
+        int c = tmp.length();
+
+        for (i=0 ; i&lt;length &amp;&amp; i&lt;c ; i++) {
+            buf[offset+i] = (byte) tmp.charAt(i);
+        }
+
+        while (i&lt;length) {
+            buf[offset+i] = (byte) ' ';
+            i++;
+        }
+
+        return offset + length;
+    }
+</source>
+    </clone>
+    <clone nlines="63" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/gjt/sp/jedit/bsh/Primitive.java" startline="437" endline="497">
+    static Object doubleBinaryOperation(Double D1, Double D2, int kind)
+        throws UtilEvalError
+    {
+        double lhs = D1.doubleValue();
+        double rhs = D2.doubleValue();
+
+        switch(kind)
+        {
+            // boolean
+            case LT:
+            case LTX:
+                return new Boolean(lhs &lt; rhs);
+
+            case GT:
+            case GTX:
+                return new Boolean(lhs &gt; rhs);
+
+            case EQ:
+                return new Boolean(lhs == rhs);
+
+            case LE:
+            case LEX:
+                return new Boolean(lhs &lt;= rhs);
+
+            case GE:
+            case GEX:
+                return new Boolean(lhs &gt;= rhs);
+
+            case NE:
+                return new Boolean(lhs != rhs);
+
+            // arithmetic
+            case PLUS:
+                return new Double(lhs + rhs);
+
+            case MINUS:
+                return new Double(lhs - rhs);
+
+            case STAR:
+                return new Double(lhs * rhs);
+
+            case SLASH:
+                return new Double(lhs / rhs);
+
+            case MOD:
+                return new Double(lhs % rhs);
+
+            // can't shift floating-point values
+            case LSHIFT:
+            case LSHIFTX:
+            case RSIGNEDSHIFT:
+            case RSIGNEDSHIFTX:
+            case RUNSIGNEDSHIFT:
+            case RUNSIGNEDSHIFTX:
+                throw new UtilEvalError("Can't shift doubles");
+
+            default:
+                throw new InterpreterError(
+					"Unimplemented binary double operator");
+        }
+    }
+</source>
+        <source file="org/gjt/sp/jedit/bsh/Primitive.java" startline="499" endline="559">
+    static Object floatBinaryOperation(Float F1, Float F2, int kind)
+        throws UtilEvalError
+    {
+        float lhs = F1.floatValue();
+        float rhs = F2.floatValue();
+
+        switch(kind)
+        {
+            // boolean
+            case LT:
+            case LTX:
+                return new Boolean(lhs &lt; rhs);
+
+            case GT:
+            case GTX:
+                return new Boolean(lhs &gt; rhs);
+
+            case EQ:
+                return new Boolean(lhs == rhs);
+
+            case LE:
+            case LEX:
+                return new Boolean(lhs &lt;= rhs);
+
+            case GE:
+            case GEX:
+                return new Boolean(lhs &gt;= rhs);
+
+            case NE:
+                return new Boolean(lhs != rhs);
+
+            // arithmetic
+            case PLUS:
+                return new Float(lhs + rhs);
+
+            case MINUS:
+                return new Float(lhs - rhs);
+
+            case STAR:
+                return new Float(lhs * rhs);
+
+            case SLASH:
+                return new Float(lhs / rhs);
+
+            case MOD:
+                return new Float(lhs % rhs);
+
+            // can't shift floats
+            case LSHIFT:
+            case LSHIFTX:
+            case RSIGNEDSHIFT:
+            case RSIGNEDSHIFTX:
+            case RUNSIGNEDSHIFT:
+            case RUNSIGNEDSHIFTX:
+                throw new UtilEvalError("Can't shift floats ");
+
+            default:
+                throw new InterpreterError(
+					"Unimplemented binary float operator");
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="78" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/gjt/sp/jedit/bsh/Primitive.java" startline="283" endline="357">
+    static Object longBinaryOperation(Long L1, Long L2, int kind)
+    {
+        long lhs = L1.longValue();
+        long rhs = L2.longValue();
+
+        switch(kind)
+        {
+            // boolean
+            case LT:
+            case LTX:
+                return new Boolean(lhs &lt; rhs);
+
+            case GT:
+            case GTX:
+                return new Boolean(lhs &gt; rhs);
+
+            case EQ:
+                return new Boolean(lhs == rhs);
+
+            case LE:
+            case LEX:
+                return new Boolean(lhs &lt;= rhs);
+
+            case GE:
+            case GEX:
+                return new Boolean(lhs &gt;= rhs);
+
+            case NE:
+                return new Boolean(lhs != rhs);
+
+            // arithmetic
+            case PLUS:
+                return new Long(lhs + rhs);
+
+            case MINUS:
+                return new Long(lhs - rhs);
+
+            case STAR:
+                return new Long(lhs * rhs);
+
+            case SLASH:
+                return new Long(lhs / rhs);
+
+            case MOD:
+                return new Long(lhs % rhs);
+
+            // bitwise
+            case LSHIFT:
+            case LSHIFTX:
+                return new Long(lhs &lt;&lt; rhs);
+
+            case RSIGNEDSHIFT:
+            case RSIGNEDSHIFTX:
+                return new Long(lhs &gt;&gt; rhs);
+
+            case RUNSIGNEDSHIFT:
+            case RUNSIGNEDSHIFTX:
+                return new Long(lhs &gt;&gt;&gt; rhs);
+
+            case BIT_AND:
+            case BIT_ANDX:
+                return new Long(lhs &amp; rhs);
+
+            case BIT_OR:
+            case BIT_ORX:
+                return new Long(lhs | rhs);
+
+            case XOR:
+                return new Long(lhs ^ rhs);
+
+            default:
+                throw new InterpreterError(
+					"Unimplemented binary long operator");
+        }
+    }
+</source>
+        <source file="org/gjt/sp/jedit/bsh/Primitive.java" startline="360" endline="434">
+    static Object intBinaryOperation(Integer I1, Integer I2, int kind)
+    {
+        int lhs = I1.intValue();
+        int rhs = I2.intValue();
+
+        switch(kind)
+        {
+            // boolean
+            case LT:
+            case LTX:
+                return new Boolean(lhs &lt; rhs);
+
+            case GT:
+            case GTX:
+                return new Boolean(lhs &gt; rhs);
+
+            case EQ:
+                return new Boolean(lhs == rhs);
+
+            case LE:
+            case LEX:
+                return new Boolean(lhs &lt;= rhs);
+
+            case GE:
+            case GEX:
+                return new Boolean(lhs &gt;= rhs);
+
+            case NE:
+                return new Boolean(lhs != rhs);
+
+            // arithmetic
+            case PLUS:
+                return new Integer(lhs + rhs);
+
+            case MINUS:
+                return new Integer(lhs - rhs);
+
+            case STAR:
+                return new Integer(lhs * rhs);
+
+            case SLASH:
+                return new Integer(lhs / rhs);
+
+            case MOD:
+                return new Integer(lhs % rhs);
+
+            // bitwise
+            case LSHIFT:
+            case LSHIFTX:
+                return new Integer(lhs &lt;&lt; rhs);
+
+            case RSIGNEDSHIFT:
+            case RSIGNEDSHIFTX:
+                return new Integer(lhs &gt;&gt; rhs);
+
+            case RUNSIGNEDSHIFT:
+            case RUNSIGNEDSHIFTX:
+                return new Integer(lhs &gt;&gt;&gt; rhs);
+
+            case BIT_AND:
+            case BIT_ANDX:
+                return new Integer(lhs &amp; rhs);
+
+            case BIT_OR:
+            case BIT_ORX:
+                return new Integer(lhs | rhs);
+
+            case XOR:
+                return new Integer(lhs ^ rhs);
+
+            default:
+                throw new InterpreterError(
+					"Unimplemented binary integer operator");
+        }
+    }
+</source>
+    </clone>
+</clones>

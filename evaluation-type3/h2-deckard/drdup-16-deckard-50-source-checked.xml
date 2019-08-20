@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- The clones reported by DrDup and not reported by Deckard
+5x    true clone
+-->
+<clones>
+    <clone nlines="17">
+        <!-- modification: public, extra true -->
+        <source file="org/h2/jdbc/JdbcConnection.java" startline="901" endline="918">
+    @Override
+    public CallableStatement prepareCall(String sql) throws SQLException {
+        try {
+            int id = getNextId(TraceObject.CALLABLE_STATEMENT);
+            if (isDebugEnabled()) {
+                debugCodeAssign("CallableStatement",
+                        TraceObject.CALLABLE_STATEMENT, id, "prepareCall(" +
+                                quote(sql) + ")");
+            }
+            checkClosed();
+            sql = translateSQL(sql);
+            return new JdbcCallableStatement(this, sql, id,
+                    ResultSet.TYPE_FORWARD_ONLY,
+                    Constants.DEFAULT_RESULT_SET_CONCURRENCY);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcConnection.java" startline="303" endline="319">
+    PreparedStatement prepareAutoCloseStatement(String sql) throws SQLException {
+        try {
+            int id = getNextId(TraceObject.PREPARED_STATEMENT);
+            if (isDebugEnabled()) {
+                debugCodeAssign("PreparedStatement",
+                        TraceObject.PREPARED_STATEMENT, id,
+                        "prepareStatement(" + quote(sql) + ")");
+            }
+            checkClosed();
+            sql = translateSQL(sql);
+            return new JdbcPreparedStatement(this, sql, id,
+                    ResultSet.TYPE_FORWARD_ONLY,
+                    Constants.DEFAULT_RESULT_SET_CONCURRENCY, true);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="18">
+        <!-- modification: extra false -->
+        <source file="org/h2/jdbc/JdbcConnection.java" startline="901" endline="918">
+    @Override
+    public CallableStatement prepareCall(String sql) throws SQLException {
+        try {
+            int id = getNextId(TraceObject.CALLABLE_STATEMENT);
+            if (isDebugEnabled()) {
+                debugCodeAssign("CallableStatement",
+                        TraceObject.CALLABLE_STATEMENT, id, "prepareCall(" +
+                                quote(sql) + ")");
+            }
+            checkClosed();
+            sql = translateSQL(sql);
+            return new JdbcCallableStatement(this, sql, id,
+                    ResultSet.TYPE_FORWARD_ONLY,
+                    Constants.DEFAULT_RESULT_SET_CONCURRENCY);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcConnection.java" startline="277" endline="294">
+    @Override
+    public PreparedStatement prepareStatement(String sql) throws SQLException {
+        try {
+            int id = getNextId(TraceObject.PREPARED_STATEMENT);
+            if (isDebugEnabled()) {
+                debugCodeAssign("PreparedStatement",
+                        TraceObject.PREPARED_STATEMENT, id,
+                        "prepareStatement(" + quote(sql) + ")");
+            }
+            checkClosed();
+            sql = translateSQL(sql);
+            return new JdbcPreparedStatement(this, sql, id,
+                    ResultSet.TYPE_FORWARD_ONLY,
+                    Constants.DEFAULT_RESULT_SET_CONCURRENCY, false);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="17">
+        <!-- modification: public -->
+        <source file="org/h2/jdbc/JdbcConnection.java" startline="303" endline="319">
+    PreparedStatement prepareAutoCloseStatement(String sql) throws SQLException {
+        try {
+            int id = getNextId(TraceObject.PREPARED_STATEMENT);
+            if (isDebugEnabled()) {
+                debugCodeAssign("PreparedStatement",
+                        TraceObject.PREPARED_STATEMENT, id,
+                        "prepareStatement(" + quote(sql) + ")");
+            }
+            checkClosed();
+            sql = translateSQL(sql);
+            return new JdbcPreparedStatement(this, sql, id,
+                    ResultSet.TYPE_FORWARD_ONLY,
+                    Constants.DEFAULT_RESULT_SET_CONCURRENCY, true);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcConnection.java" startline="277" endline="294">
+    @Override
+    public PreparedStatement prepareStatement(String sql) throws SQLException {
+        try {
+            int id = getNextId(TraceObject.PREPARED_STATEMENT);
+            if (isDebugEnabled()) {
+                debugCodeAssign("PreparedStatement",
+                        TraceObject.PREPARED_STATEMENT, id,
+                        "prepareStatement(" + quote(sql) + ")");
+            }
+            checkClosed();
+            sql = translateSQL(sql);
+            return new JdbcPreparedStatement(this, sql, id,
+                    ResultSet.TYPE_FORWARD_ONLY,
+                    Constants.DEFAULT_RESULT_SET_CONCURRENCY, false);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="20">
+        <!-- modification: extra false -->
+        <source file="org/h2/jdbc/JdbcConnection.java" startline="932" endline="951">
+    @Override
+    public CallableStatement prepareCall(String sql, int resultSetType,
+            int resultSetConcurrency) throws SQLException {
+        try {
+            int id = getNextId(TraceObject.CALLABLE_STATEMENT);
+            if (isDebugEnabled()) {
+                debugCodeAssign("CallableStatement",
+                        TraceObject.CALLABLE_STATEMENT, id, "prepareCall(" +
+                                quote(sql) + ", " + resultSetType + ", " +
+                                resultSetConcurrency + ")");
+            }
+            checkTypeConcurrency(resultSetType, resultSetConcurrency);
+            checkClosed();
+            sql = translateSQL(sql);
+            return new JdbcCallableStatement(this, sql, id, resultSetType,
+                    resultSetConcurrency);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcConnection.java" startline="663" endline="682">
+    @Override
+    public PreparedStatement prepareStatement(String sql, int resultSetType,
+            int resultSetConcurrency) throws SQLException {
+        try {
+            int id = getNextId(TraceObject.PREPARED_STATEMENT);
+            if (isDebugEnabled()) {
+                debugCodeAssign("PreparedStatement", TraceObject.PREPARED_STATEMENT, id,
+                        "prepareStatement(" + quote(sql) + ", " +
+                                resultSetType + ", " + resultSetConcurrency +
+                                ")");
+            }
+            checkTypeConcurrency(resultSetType, resultSetConcurrency);
+            checkClosed();
+            sql = translateSQL(sql);
+            return new JdbcPreparedStatement(this, sql, id, resultSetType,
+                    resultSetConcurrency, false);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="22">
+        <!-- modification: extra false -->
+        <source file="org/h2/jdbc/JdbcConnection.java" startline="966" endline="987">
+    @Override
+    public CallableStatement prepareCall(String sql, int resultSetType,
+            int resultSetConcurrency, int resultSetHoldability) throws SQLException {
+        try {
+            int id = getNextId(TraceObject.CALLABLE_STATEMENT);
+            if (isDebugEnabled()) {
+                debugCodeAssign("CallableStatement",
+                        TraceObject.CALLABLE_STATEMENT, id, "prepareCall(" +
+                                quote(sql) + ", " + resultSetType + ", " +
+                                resultSetConcurrency + ", " +
+                                resultSetHoldability + ")");
+            }
+            checkTypeConcurrency(resultSetType, resultSetConcurrency);
+            checkHoldability(resultSetHoldability);
+            checkClosed();
+            sql = translateSQL(sql);
+            return new JdbcCallableStatement(this, sql, id, resultSetType,
+                    resultSetConcurrency);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcConnection.java" startline="1097" endline="1118">
+    @Override
+    public PreparedStatement prepareStatement(String sql, int resultSetType,
+            int resultSetConcurrency, int resultSetHoldability)
+            throws SQLException {
+        try {
+            int id = getNextId(TraceObject.PREPARED_STATEMENT);
+            if (isDebugEnabled()) {
+                debugCodeAssign("PreparedStatement", TraceObject.PREPARED_STATEMENT, id,
+                        "prepareStatement(" + quote(sql) + ", " +
+                        resultSetType + ", " + resultSetConcurrency + ", " +
+                        resultSetHoldability + ")");
+            }
+            checkTypeConcurrency(resultSetType, resultSetConcurrency);
+            checkHoldability(resultSetHoldability);
+            checkClosed();
+            sql = translateSQL(sql);
+            return new JdbcPreparedStatement(this, sql, id,
+                    resultSetType, resultSetConcurrency, false);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+</clones>

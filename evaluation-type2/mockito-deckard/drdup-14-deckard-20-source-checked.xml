@@ -1,0 +1,1698 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- The clones reported by DrDup and not reported by Deckard
+36x     identifiers
+-->
+<clones>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="506" endline="525">
+    public EqualsBuilder append(Object[] lhs, Object[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="537" endline="556">
+    public EqualsBuilder append(long[] lhs, long[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="506" endline="525">
+    public EqualsBuilder append(Object[] lhs, Object[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="568" endline="587">
+    public EqualsBuilder append(int[] lhs, int[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="506" endline="525">
+    public EqualsBuilder append(Object[] lhs, Object[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="599" endline="618">
+    public EqualsBuilder append(short[] lhs, short[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="506" endline="525">
+    public EqualsBuilder append(Object[] lhs, Object[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="630" endline="649">
+    public EqualsBuilder append(char[] lhs, char[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="506" endline="525">
+    public EqualsBuilder append(Object[] lhs, Object[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="661" endline="680">
+    public EqualsBuilder append(byte[] lhs, byte[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="506" endline="525">
+    public EqualsBuilder append(Object[] lhs, Object[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="692" endline="711">
+    public EqualsBuilder append(double[] lhs, double[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="506" endline="525">
+    public EqualsBuilder append(Object[] lhs, Object[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="723" endline="742">
+    public EqualsBuilder append(float[] lhs, float[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="506" endline="525">
+    public EqualsBuilder append(Object[] lhs, Object[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="754" endline="773">
+    public EqualsBuilder append(boolean[] lhs, boolean[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="537" endline="556">
+    public EqualsBuilder append(long[] lhs, long[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="568" endline="587">
+    public EqualsBuilder append(int[] lhs, int[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="537" endline="556">
+    public EqualsBuilder append(long[] lhs, long[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="599" endline="618">
+    public EqualsBuilder append(short[] lhs, short[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="537" endline="556">
+    public EqualsBuilder append(long[] lhs, long[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="630" endline="649">
+    public EqualsBuilder append(char[] lhs, char[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="537" endline="556">
+    public EqualsBuilder append(long[] lhs, long[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="661" endline="680">
+    public EqualsBuilder append(byte[] lhs, byte[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="537" endline="556">
+    public EqualsBuilder append(long[] lhs, long[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="692" endline="711">
+    public EqualsBuilder append(double[] lhs, double[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="537" endline="556">
+    public EqualsBuilder append(long[] lhs, long[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="723" endline="742">
+    public EqualsBuilder append(float[] lhs, float[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="537" endline="556">
+    public EqualsBuilder append(long[] lhs, long[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="754" endline="773">
+    public EqualsBuilder append(boolean[] lhs, boolean[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="568" endline="587">
+    public EqualsBuilder append(int[] lhs, int[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="599" endline="618">
+    public EqualsBuilder append(short[] lhs, short[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="568" endline="587">
+    public EqualsBuilder append(int[] lhs, int[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="630" endline="649">
+    public EqualsBuilder append(char[] lhs, char[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="568" endline="587">
+    public EqualsBuilder append(int[] lhs, int[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="661" endline="680">
+    public EqualsBuilder append(byte[] lhs, byte[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="568" endline="587">
+    public EqualsBuilder append(int[] lhs, int[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="692" endline="711">
+    public EqualsBuilder append(double[] lhs, double[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="568" endline="587">
+    public EqualsBuilder append(int[] lhs, int[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="723" endline="742">
+    public EqualsBuilder append(float[] lhs, float[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="568" endline="587">
+    public EqualsBuilder append(int[] lhs, int[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="754" endline="773">
+    public EqualsBuilder append(boolean[] lhs, boolean[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="599" endline="618">
+    public EqualsBuilder append(short[] lhs, short[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="630" endline="649">
+    public EqualsBuilder append(char[] lhs, char[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="599" endline="618">
+    public EqualsBuilder append(short[] lhs, short[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="661" endline="680">
+    public EqualsBuilder append(byte[] lhs, byte[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="599" endline="618">
+    public EqualsBuilder append(short[] lhs, short[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="692" endline="711">
+    public EqualsBuilder append(double[] lhs, double[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="599" endline="618">
+    public EqualsBuilder append(short[] lhs, short[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="723" endline="742">
+    public EqualsBuilder append(float[] lhs, float[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="599" endline="618">
+    public EqualsBuilder append(short[] lhs, short[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="754" endline="773">
+    public EqualsBuilder append(boolean[] lhs, boolean[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="630" endline="649">
+    public EqualsBuilder append(char[] lhs, char[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="661" endline="680">
+    public EqualsBuilder append(byte[] lhs, byte[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="630" endline="649">
+    public EqualsBuilder append(char[] lhs, char[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="692" endline="711">
+    public EqualsBuilder append(double[] lhs, double[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="630" endline="649">
+    public EqualsBuilder append(char[] lhs, char[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="723" endline="742">
+    public EqualsBuilder append(float[] lhs, float[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="630" endline="649">
+    public EqualsBuilder append(char[] lhs, char[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="754" endline="773">
+    public EqualsBuilder append(boolean[] lhs, boolean[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="661" endline="680">
+    public EqualsBuilder append(byte[] lhs, byte[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="692" endline="711">
+    public EqualsBuilder append(double[] lhs, double[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="661" endline="680">
+    public EqualsBuilder append(byte[] lhs, byte[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="723" endline="742">
+    public EqualsBuilder append(float[] lhs, float[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="661" endline="680">
+    public EqualsBuilder append(byte[] lhs, byte[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="754" endline="773">
+    public EqualsBuilder append(boolean[] lhs, boolean[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="692" endline="711">
+    public EqualsBuilder append(double[] lhs, double[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="723" endline="742">
+    public EqualsBuilder append(float[] lhs, float[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="692" endline="711">
+    public EqualsBuilder append(double[] lhs, double[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="754" endline="773">
+    public EqualsBuilder append(boolean[] lhs, boolean[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+    <clone nlines="20" similarity="100">
+        <!-- identifiers -->
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="723" endline="742">
+    public EqualsBuilder append(float[] lhs, float[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+        <source file="java/org/mockito/internal/matchers/apachecommons/EqualsBuilder.java" startline="754" endline="773">
+    public EqualsBuilder append(boolean[] lhs, boolean[] rhs) {
+        if (!isEquals) {
+            return this;
+        }
+        if (lhs == rhs) {
+            return this;
+        }
+        if (lhs == null || rhs == null) {
+            this.setEquals(false);
+            return this;
+        }
+        if (lhs.length != rhs.length) {
+            this.setEquals(false);
+            return this;
+        }
+        for (int i = 0; i &lt; lhs.length &amp;&amp; isEquals; ++i) {
+            append(lhs[i], rhs[i]);
+        }
+        return this;
+    }
+</source>
+    </clone>
+</clones>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- The clones reported by Deckard and not reported by DrDup
+3x      false positive
+-->
+<clones>
+    <clone nlines="22" similarity="100">
+        <!-- false positive -->
+        <source file="org/h2/expression/Rownum.java" startline="80" endline="99">
+    @Override
+    public boolean isEverything(ExpressionVisitor visitor) {
+        switch (visitor.getType()) {
+        case ExpressionVisitor.QUERY_COMPARABLE:
+        case ExpressionVisitor.OPTIMIZABLE_MIN_MAX_COUNT_ALL:
+        case ExpressionVisitor.DETERMINISTIC:
+        case ExpressionVisitor.INDEPENDENT:
+            return false;
+        case ExpressionVisitor.EVALUATABLE:
+        case ExpressionVisitor.READONLY:
+        case ExpressionVisitor.NOT_FROM_RESOLVER:
+        case ExpressionVisitor.GET_DEPENDENCIES:
+        case ExpressionVisitor.SET_MAX_DATA_MODIFICATION_ID:
+        case ExpressionVisitor.GET_COLUMNS:
+            // if everything else is the same, the rownum is the same
+            return true;
+        default:
+            throw DbException.throwInternalError("type="+visitor.getType());
+        }
+    }
+</source>
+        <source file="org/h2/expression/Variable.java" startline="64" endline="85">
+    @Override
+    public boolean isEverything(ExpressionVisitor visitor) {
+        switch (visitor.getType()) {
+        case ExpressionVisitor.EVALUATABLE:
+            // the value will be evaluated at execute time
+        case ExpressionVisitor.SET_MAX_DATA_MODIFICATION_ID:
+            // it is checked independently if the value is the same as the last
+            // time
+        case ExpressionVisitor.OPTIMIZABLE_MIN_MAX_COUNT_ALL:
+        case ExpressionVisitor.READONLY:
+        case ExpressionVisitor.INDEPENDENT:
+        case ExpressionVisitor.NOT_FROM_RESOLVER:
+        case ExpressionVisitor.QUERY_COMPARABLE:
+        case ExpressionVisitor.GET_DEPENDENCIES:
+        case ExpressionVisitor.GET_COLUMNS:
+            return true;
+        case ExpressionVisitor.DETERMINISTIC:
+            return false;
+        default:
+            throw DbException.throwInternalError("type="+visitor.getType());
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="14" similarity="100">
+        <!-- false positive -->
+        <source file="org/h2/store/fs/FilePathMem.java" startline="51" endline="64">
+    @Override
+    public void moveTo(FilePath newName, boolean atomicReplace) {
+        synchronized (MEMORY_FILES) {
+            if (!atomicReplace &amp;&amp; !newName.name.equals(name) &amp;&amp;
+                    MEMORY_FILES.containsKey(newName.name)) {
+                throw DbException.get(ErrorCode.FILE_RENAME_FAILED_2,
+                        new String[] { name, newName + " (exists)" });
+            }
+            FileMemData f = getMemoryFile();
+            f.setName(newName.name);
+            MEMORY_FILES.remove(name);
+            MEMORY_FILES.put(newName.name, f);
+        }
+    }
+</source>
+        <source file="org/h2/store/fs/FilePathNioMem.java" startline="54" endline="67">
+    @Override
+    public void moveTo(FilePath newName, boolean atomicReplace) {
+        synchronized (MEMORY_FILES) {
+            if (!atomicReplace &amp;&amp; !name.equals(newName.name) &amp;&amp;
+                    MEMORY_FILES.containsKey(newName.name)) {
+                throw DbException.get(ErrorCode.FILE_RENAME_FAILED_2,
+                        new String[] { name, newName + " (exists)" });
+            }
+            FileNioMemData f = getMemoryFile();
+            f.setName(newName.name);
+            MEMORY_FILES.remove(name);
+            MEMORY_FILES.put(newName.name, f);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="13" similarity="100">
+        <!-- false positive -->
+        <source file="org/h2/mvstore/rtree/SpatialDataType.java" startline="139" endline="151">
+    public boolean isOverlap(Object objA, Object objB) {
+        SpatialKey a = (SpatialKey) objA;
+        SpatialKey b = (SpatialKey) objB;
+        if (a.isNull() || b.isNull()) {
+            return false;
+        }
+        for (int i = 0; i &lt; dimensions; i++) {
+            if (a.max(i) &lt; b.min(i) || a.min(i) &gt; b.max(i)) {
+                return false;
+            }
+        }
+        return true;
+    }
+</source>
+        <source file="org/h2/mvstore/rtree/SpatialDataType.java" startline="243" endline="255">
+    public boolean contains(Object objA, Object objB) {
+        SpatialKey a = (SpatialKey) objA;
+        SpatialKey b = (SpatialKey) objB;
+        if (a.isNull() || b.isNull()) {
+            return false;
+        }
+        for (int i = 0; i &lt; dimensions; i++) {
+            if (a.min(i) &gt; b.min(i) || a.max(i) &lt; b.max(i)) {
+                return false;
+            }
+        }
+        return true;
+    }
+</source>
+    </clone>
+</clones>

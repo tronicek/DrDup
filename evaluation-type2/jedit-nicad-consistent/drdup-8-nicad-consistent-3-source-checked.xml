@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- The clones reported by DrDup and not reported by NiCad
+12x     identifiers
+4x      identifiers, normalization
+2x      identifiers, literals
+1x      literals, normalization
+-->
+<clones>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers -->
+        <source file="installer/SwingInstall.java" startline="710" endline="719">
+		public void setMaximum(final int max)
+		{
+			SwingUtilities.invokeLater(new Runnable()
+			{
+				public void run()
+				{
+					progress.setMaximum(max);
+				}
+			});
+		}
+</source>
+        <source file="installer/SwingInstall.java" startline="768" endline="777">
+		public void message(final String message)
+		{
+			SwingUtilities.invokeLater(new Runnable()
+			{
+				public void run()
+				{
+					progress.setString(message);
+				}
+			});
+		}
+</source>
+    </clone>
+    <clone nlines="14" similarity="100">
+        <!-- identifiers -->
+        <source file="org/gjt/sp/jedit/options/AbbrevsOptionPane.java" startline="410" endline="422">
+		public Object getValueAt(int row, int col)
+		{
+			Abbrev abbrev = abbrevs.get(row);
+			switch(col)
+			{
+				case 0:
+					return abbrev.abbrev;
+				case 1:
+					return abbrev.expand;
+				default:
+					return null;
+			}
+		} //}}}
+</source>
+        <source file="org/gjt/sp/jedit/options/BrowserColorsOptionPane.java" startline="291" endline="304">
+	public Object getValueAt(int row, int col)
+	{
+		Entry entry = entries.get(row);
+
+		switch(col)
+		{
+		case 0:
+			return entry.glob;
+		case 1:
+			return entry.color;
+		default:
+			return null;
+		}
+	} //}}}
+</source>
+    </clone>
+    <clone nlines="14" similarity="100">
+        <!-- identifiers -->
+        <source file="org/gjt/sp/jedit/options/AbbrevsOptionPane.java" startline="410" endline="422">
+		public Object getValueAt(int row, int col)
+		{
+			Abbrev abbrev = abbrevs.get(row);
+			switch(col)
+			{
+				case 0:
+					return abbrev.abbrev;
+				case 1:
+					return abbrev.expand;
+				default:
+					return null;
+			}
+		} //}}}
+</source>
+        <source file="org/gjt/sp/jedit/options/SyntaxHiliteOptionPane.java" startline="179" endline="191">
+		public Object getValueAt(int row, int col)
+		{
+			StyleChoice ch = styleChoices.get(row);
+			switch(col)
+			{
+				case 0:
+					return ch.label;
+				case 1:
+					return ch.style;
+				default:
+					return null;
+			}
+		} //}}}
+</source>
+    </clone>
+    <clone nlines="14" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/gjt/sp/jedit/bsh/Primitive.java" startline="714" endline="727">
+    static float floatUnaryOperation(Float F, int kind)
+    {
+        float operand = F.floatValue();
+
+        switch(kind)
+        {
+            case PLUS:
+                return operand;
+            case MINUS:
+                return -operand;
+            default:
+                throw new InterpreterError("bad float unaryOperation");
+        }
+    }
+</source>
+        <source file="org/gjt/sp/jedit/bsh/Primitive.java" startline="729" endline="742">
+    static double doubleUnaryOperation(Double D, int kind)
+    {
+        double operand = D.doubleValue();
+
+        switch(kind)
+        {
+            case PLUS:
+                return operand;
+            case MINUS:
+                return -operand;
+            default:
+                throw new InterpreterError("bad double unaryOperation");
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <!-- identifiers, normalization -->
+        <source file="org/gjt/sp/jedit/gui/BufferOptions.java" startline="126" endline="133">
+		public void actionPerformed(ActionEvent evt)
+		{
+			Object source = evt.getSource();
+			if(source == ok)
+				ok();
+			else if(source == cancel)
+				cancel();
+		} //}}}
+</source>
+        <source file="org/gjt/sp/jedit/gui/FilePropertiesDialog.java" startline="340" endline="353">
+		public void actionPerformed(ActionEvent evt)
+		{
+			Object source = evt.getSource();
+
+
+			if(source == okButton)
+			{
+				ok();
+			}
+			else if(source == cancelButton)
+			{
+				cancel();
+			}
+		}
+</source>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <!-- identifiers -->
+        <source file="org/gjt/sp/jedit/gui/BufferOptions.java" startline="126" endline="133">
+		public void actionPerformed(ActionEvent evt)
+		{
+			Object source = evt.getSource();
+			if(source == ok)
+				ok();
+			else if(source == cancel)
+				cancel();
+		} //}}}
+</source>
+        <source file="org/gjt/sp/jedit/gui/PasteFromListDialog.java" startline="288" endline="295">
+		public void actionPerformed(ActionEvent evt)
+		{
+			Object source = evt.getSource();
+			if(source == insert)
+				ok();
+			else if(source == cancel)
+				cancel();
+		}
+</source>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <!-- identifiers, normalization -->
+        <source file="org/gjt/sp/jedit/gui/FilePropertiesDialog.java" startline="340" endline="353">
+		public void actionPerformed(ActionEvent evt)
+		{
+			Object source = evt.getSource();
+
+
+			if(source == okButton)
+			{
+				ok();
+			}
+			else if(source == cancelButton)
+			{
+				cancel();
+			}
+		}
+</source>
+        <source file="org/gjt/sp/jedit/gui/PasteFromListDialog.java" startline="288" endline="295">
+		public void actionPerformed(ActionEvent evt)
+		{
+			Object source = evt.getSource();
+			if(source == insert)
+				ok();
+			else if(source == cancel)
+				cancel();
+		}
+</source>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <!-- identifiers, normalization -->
+        <source file="org/gjt/sp/jedit/gui/FilePropertiesDialog.java" startline="340" endline="353">
+		public void actionPerformed(ActionEvent evt)
+		{
+			Object source = evt.getSource();
+
+
+			if(source == okButton)
+			{
+				ok();
+			}
+			else if(source == cancelButton)
+			{
+				cancel();
+			}
+		}
+</source>
+        <source file="org/gjt/sp/jedit/gui/SelectLineRange.java" startline="125" endline="132">
+	public void actionPerformed(ActionEvent evt)
+	{
+		Object source = evt.getSource();
+		if(source == ok)
+			ok();
+		else if(source == cancel)
+			cancel();
+	} //}}}
+</source>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <!-- identifiers -->
+        <source file="org/gjt/sp/jedit/gui/PasteFromListDialog.java" startline="288" endline="295">
+		public void actionPerformed(ActionEvent evt)
+		{
+			Object source = evt.getSource();
+			if(source == insert)
+				ok();
+			else if(source == cancel)
+				cancel();
+		}
+</source>
+        <source file="org/gjt/sp/jedit/gui/SelectLineRange.java" startline="125" endline="132">
+	public void actionPerformed(ActionEvent evt)
+	{
+		Object source = evt.getSource();
+		if(source == ok)
+			ok();
+		else if(source == cancel)
+			cancel();
+	} //}}}
+</source>
+    </clone>
+    <clone nlines="9" similarity="100">
+        <!-- identifiers -->
+        <source file="org/gjt/sp/jedit/bsh/LHS.java" startline="117" endline="125">
+	LHS( Object object, Field field )
+	{
+		if ( object == null)
+			throw new NullPointerException("constructed empty LHS");
+
+		type = FIELD;
+		this.object = object;
+		this.field = field;
+	}
+</source>
+        <source file="org/gjt/sp/jedit/bsh/LHS.java" startline="143" endline="151">
+	LHS( Object array, int index )
+	{
+		if(array == null)
+			throw new NullPointerException("constructed empty LHS");
+
+		type = INDEX;
+		this.object = array;
+		this.index = index;
+	}
+</source>
+    </clone>
+    <clone nlines="9" similarity="100">
+        <!-- identifiers -->
+        <source file="org/gjt/sp/jedit/bsh/LHS.java" startline="130" endline="138">
+	LHS( Object object, String propName )
+	{
+		if(object == null)
+			throw new NullPointerException("constructed empty LHS");
+
+		type = PROPERTY;
+		this.object = object;
+		this.propName = propName;
+	}
+</source>
+        <source file="org/gjt/sp/jedit/bsh/LHS.java" startline="143" endline="151">
+	LHS( Object array, int index )
+	{
+		if(array == null)
+			throw new NullPointerException("constructed empty LHS");
+
+		type = INDEX;
+		this.object = array;
+		this.index = index;
+	}
+</source>
+    </clone>
+    <clone nlines="12" similarity="100">
+        <!-- identifiers -->
+        <source file="org/gjt/sp/jedit/options/ToolBarOptionPane.java" startline="290" endline="301">
+		public Component getListCellRendererComponent(JList list,
+			Object value, int index, boolean isSelected,
+			boolean cellHasFocus)
+		{
+			super.getListCellRendererComponent(list,value,index,
+				isSelected,cellHasFocus);
+
+			Button button = (Button)value;
+			setIcon(button.icon);
+
+			return this;
+		}
+</source>
+        <source file="org/gjt/sp/jedit/options/ToolBarOptionPane.java" startline="307" endline="318">
+		public Component getListCellRendererComponent(JList list,
+			Object value, int index, boolean isSelected,
+			boolean cellHasFocus)
+		{
+			super.getListCellRendererComponent(list,value,index,
+				isSelected,cellHasFocus);
+
+			IconListEntry icon = (IconListEntry)value;
+			setIcon(icon.icon);
+
+			return this;
+		}
+</source>
+    </clone>
+    <clone nlines="8" similarity="100">
+        <!-- literals, normalization -->
+        <source file="installer/OperatingSystem.java" startline="147" endline="156">
+			public String getDefaultDirectory(Install installer)
+			{
+				String dir = "/usr/local/";
+				if(!new File(dir).canWrite())
+				{
+					dir = System.getProperty("user.home");
+				}
+
+				return new File(dir,"bin").getPath();
+			}
+</source>
+        <source file="installer/OperatingSystem.java" startline="219" endline="226">
+			public String getDefaultDirectory(Install installer)
+			{
+				String dir = "/usr/local/";
+				if(!new File(dir).canWrite())
+					dir = System.getProperty("user.home");
+
+				return new File(dir,"man/man1").getPath();
+			}
+</source>
+    </clone>
+    <clone nlines="17" similarity="100">
+        <!-- identifiers -->
+        <source file="org/gjt/sp/jedit/jEdit.java" startline="765" endline="781">
+	public static int getIntegerProperty(String name, int def)
+	{
+		String value = getProperty(name);
+		if(value == null)
+			return def;
+		else
+		{
+			try
+			{
+				return Integer.parseInt(value.trim());
+			}
+			catch(NumberFormatException nf)
+			{
+				return def;
+			}
+		}
+	} //}}}
+</source>
+        <source file="org/gjt/sp/jedit/jEdit.java" startline="784" endline="800">
+	public static double getDoubleProperty(String name, double def)
+	{
+		String value = getProperty(name);
+		if(value == null)
+			return def;
+		else
+		{
+			try
+			{
+				return Double.parseDouble(value.trim());
+			}
+			catch(NumberFormatException nf)
+			{
+				return def;
+			}
+		}
+	}
+</source>
+    </clone>
+    <clone nlines="10" similarity="100">
+        <!-- identifiers, normalization -->
+        <source file="org/gjt/sp/jedit/bsh/classpath/ClassManagerImpl.java" startline="244" endline="253">
+	public URL getResource( String path ) 
+	{
+		URL url = null;
+		if ( baseLoader != null )
+			// classloader wants no leading slash
+			url = baseLoader.getResource( path.substring(1) );
+		if ( url == null )
+			url = super.getResource( path );
+		return url;
+	}
+</source>
+        <source file="org/gjt/sp/jedit/bsh/classpath/ClassManagerImpl.java" startline="259" endline="272">
+	public InputStream getResourceAsStream( String path ) 
+	{
+		InputStream in = null;
+		if ( baseLoader != null )
+		{
+			// classloader wants no leading slash
+			in = baseLoader.getResourceAsStream( path.substring(1) );
+		}
+		if ( in == null )
+		{
+			in = super.getResourceAsStream( path );
+		}
+		return in;
+	}
+</source>
+    </clone>
+    <clone nlines="14" similarity="100">
+        <!-- identifiers -->
+        <source file="org/gjt/sp/jedit/BeanShell.java" startline="212" endline="225">
+	public static void runScript(View view, String path, Reader in,
+		boolean ownNamespace)
+	{
+		try
+		{
+			_runScript(view,path,in,ownNamespace);
+		}
+		catch(Throwable e)
+		{
+			Log.log(Log.ERROR,BeanShell.class,e);
+
+			bsh.handleException(view,path,e);
+		}
+	} //}}}
+</source>
+        <source file="org/gjt/sp/jedit/BeanShell.java" startline="247" endline="260">
+	public static void runScript(View view, String path, Reader in,
+		NameSpace namespace)
+	{
+		try
+		{
+			_runScript(view,path,in,namespace);
+		}
+		catch(Throwable e)
+		{
+			Log.log(Log.ERROR,BeanShell.class,e);
+
+			bsh.handleException(view,path,e);
+		}
+	} //}}}
+</source>
+    </clone>
+    <clone nlines="29" similarity="100">
+        <!-- identifiers -->
+        <source file="org/gjt/sp/jedit/Macros.java" startline="151" endline="181">
+	public static void message(final Component comp, final String message)
+	{
+		if (EventQueue.isDispatchThread())
+		{
+			GUIUtilities.hideSplashScreen();
+	
+			JOptionPane.showMessageDialog(comp,message,
+				jEdit.getProperty("macro-message.title"),
+				JOptionPane.INFORMATION_MESSAGE);
+		}
+		else
+		{
+			try
+			{
+				EventQueue.invokeAndWait(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						message(comp, message);
+					}
+				});
+			}
+			catch (Exception e)
+			{
+				// ignored
+			}
+		}
+		
+		
+	} //}}}
+</source>
+        <source file="org/gjt/sp/jedit/Macros.java" startline="191" endline="219">
+	public static void error(final Component comp, final String message)
+	{
+		if (EventQueue.isDispatchThread())
+		{
+			GUIUtilities.hideSplashScreen();
+	
+			JOptionPane.showMessageDialog(comp,message,
+				jEdit.getProperty("macro-message.title"),
+				JOptionPane.ERROR_MESSAGE);
+		}
+		else
+		{
+			try
+			{
+				EventQueue.invokeAndWait(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						message(comp, message);
+					}
+				});
+			}
+			catch (Exception e)
+			{
+				// ignored
+			}
+		}
+	} //}}}
+</source>
+    </clone>
+    <clone nlines="19" similarity="100">
+        <!-- identifiers -->
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="5411" endline="5429">
+	private void fireStatusChanged(int flag, boolean value)
+	{
+		Object[] listeners = listenerList.getListenerList();
+		for(int i = listeners.length - 2; i &gt;= 0; i--)
+		{
+			if(listeners[i] == StatusListener.class)
+			{
+				try
+				{
+					((StatusListener)listeners[i+1])
+						.statusChanged(this,flag,value);
+				}
+				catch(Throwable t)
+				{
+					Log.log(Log.ERROR,this,t);
+				}
+			}
+		}
+	} //}}}
+</source>
+        <source file="org/gjt/sp/jedit/textarea/TextArea.java" startline="5432" endline="5450">
+	private void fireBracketSelected(int line, String text)
+	{
+		Object[] listeners = listenerList.getListenerList();
+		for(int i = listeners.length - 2; i &gt;= 0; i--)
+		{
+			if(listeners[i] == StatusListener.class)
+			{
+				try
+				{
+					((StatusListener)listeners[i+1])
+						.bracketSelected(this,line,text);
+				}
+				catch(Throwable t)
+				{
+					Log.log(Log.ERROR,this,t);
+				}
+			}
+		}
+	} //}}}
+</source>
+    </clone>
+    <clone nlines="63" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/gjt/sp/jedit/bsh/Primitive.java" startline="437" endline="497">
+    static Object doubleBinaryOperation(Double D1, Double D2, int kind)
+        throws UtilEvalError
+    {
+        double lhs = D1.doubleValue();
+        double rhs = D2.doubleValue();
+
+        switch(kind)
+        {
+            // boolean
+            case LT:
+            case LTX:
+                return new Boolean(lhs &lt; rhs);
+
+            case GT:
+            case GTX:
+                return new Boolean(lhs &gt; rhs);
+
+            case EQ:
+                return new Boolean(lhs == rhs);
+
+            case LE:
+            case LEX:
+                return new Boolean(lhs &lt;= rhs);
+
+            case GE:
+            case GEX:
+                return new Boolean(lhs &gt;= rhs);
+
+            case NE:
+                return new Boolean(lhs != rhs);
+
+            // arithmetic
+            case PLUS:
+                return new Double(lhs + rhs);
+
+            case MINUS:
+                return new Double(lhs - rhs);
+
+            case STAR:
+                return new Double(lhs * rhs);
+
+            case SLASH:
+                return new Double(lhs / rhs);
+
+            case MOD:
+                return new Double(lhs % rhs);
+
+            // can't shift floating-point values
+            case LSHIFT:
+            case LSHIFTX:
+            case RSIGNEDSHIFT:
+            case RSIGNEDSHIFTX:
+            case RUNSIGNEDSHIFT:
+            case RUNSIGNEDSHIFTX:
+                throw new UtilEvalError("Can't shift doubles");
+
+            default:
+                throw new InterpreterError(
+					"Unimplemented binary double operator");
+        }
+    }
+</source>
+        <source file="org/gjt/sp/jedit/bsh/Primitive.java" startline="499" endline="559">
+    static Object floatBinaryOperation(Float F1, Float F2, int kind)
+        throws UtilEvalError
+    {
+        float lhs = F1.floatValue();
+        float rhs = F2.floatValue();
+
+        switch(kind)
+        {
+            // boolean
+            case LT:
+            case LTX:
+                return new Boolean(lhs &lt; rhs);
+
+            case GT:
+            case GTX:
+                return new Boolean(lhs &gt; rhs);
+
+            case EQ:
+                return new Boolean(lhs == rhs);
+
+            case LE:
+            case LEX:
+                return new Boolean(lhs &lt;= rhs);
+
+            case GE:
+            case GEX:
+                return new Boolean(lhs &gt;= rhs);
+
+            case NE:
+                return new Boolean(lhs != rhs);
+
+            // arithmetic
+            case PLUS:
+                return new Float(lhs + rhs);
+
+            case MINUS:
+                return new Float(lhs - rhs);
+
+            case STAR:
+                return new Float(lhs * rhs);
+
+            case SLASH:
+                return new Float(lhs / rhs);
+
+            case MOD:
+                return new Float(lhs % rhs);
+
+            // can't shift floats
+            case LSHIFT:
+            case LSHIFTX:
+            case RSIGNEDSHIFT:
+            case RSIGNEDSHIFTX:
+            case RUNSIGNEDSHIFT:
+            case RUNSIGNEDSHIFTX:
+                throw new UtilEvalError("Can't shift floats ");
+
+            default:
+                throw new InterpreterError(
+					"Unimplemented binary float operator");
+        }
+    }
+</source>
+    </clone>
+</clones>

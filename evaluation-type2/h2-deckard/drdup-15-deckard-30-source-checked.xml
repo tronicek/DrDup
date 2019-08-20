@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- The clones reported by DrDup and not reported by Deckard
+6x      identifiers, literals
+4x      identifiers, literals, normalization
+2x      identifiers
+-->
+<clones>
+    <clone nlines="17" similarity="100">
+        <!-- identifiers -->
+        <source file="org/h2/util/IOUtils.java" startline="340" endline="356">
+    public static int readFully(InputStream in, byte[] buffer, int max)
+            throws IOException {
+        try {
+            int result = 0, len = Math.min(max, buffer.length);
+            while (len &gt; 0) {
+                int l = in.read(buffer, result, len);
+                if (l &lt; 0) {
+                    break;
+                }
+                result += l;
+                len -= l;
+            }
+            return result;
+        } catch (Exception e) {
+            throw DbException.convertToIOException(e);
+        }
+    }
+</source>
+        <source file="org/h2/util/IOUtils.java" startline="368" endline="384">
+    public static int readFully(Reader in, char[] buffer, int max)
+            throws IOException {
+        try {
+            int result = 0, len = Math.min(max, buffer.length);
+            while (len &gt; 0) {
+                int l = in.read(buffer, result, len);
+                if (l &lt; 0) {
+                    break;
+                }
+                result += l;
+                len -= l;
+            }
+            return result;
+        } catch (Exception e) {
+            throw DbException.convertToIOException(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="19" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/command/Parser.java" startline="3137" endline="3155">
+    private int readInt() {
+        boolean minus = false;
+        if (currentTokenType == MINUS) {
+            minus = true;
+            read();
+        } else if (currentTokenType == PLUS) {
+            read();
+        }
+        if (currentTokenType != VALUE) {
+            throw DbException.getSyntaxError(sqlCommand, parseIndex, "integer");
+        }
+        if (minus) {
+            // must do that now, otherwise Integer.MIN_VALUE would not work
+            currentValue = currentValue.negate();
+        }
+        int i = currentValue.getInt();
+        read();
+        return i;
+    }
+</source>
+        <source file="org/h2/command/Parser.java" startline="3157" endline="3175">
+    private long readLong() {
+        boolean minus = false;
+        if (currentTokenType == MINUS) {
+            minus = true;
+            read();
+        } else if (currentTokenType == PLUS) {
+            read();
+        }
+        if (currentTokenType != VALUE) {
+            throw DbException.getSyntaxError(sqlCommand, parseIndex, "long");
+        }
+        if (minus) {
+            // must do that now, otherwise Long.MIN_VALUE would not work
+            currentValue = currentValue.negate();
+        }
+        long i = currentValue.getLong();
+        read();
+        return i;
+    }
+</source>
+    </clone>
+    <clone nlines="23" similarity="100">
+        <!-- identifiers, literals, normalization -->
+        <source file="org/h2/jdbc/JdbcDatabaseMetaData.java" startline="1017" endline="1043">
+    @Override
+    public ResultSet getVersionColumns(String catalog, String schema,
+            String tableName) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("getVersionColumns("
+                        +quote(catalog)+", "
+                        +quote(schema)+", "
+                        +quote(tableName)+");");
+            }
+            checkClosed();
+            PreparedStatement prep = conn.prepareAutoCloseStatement("SELECT "
+                    + "ZERO() SCOPE, "
+                    + "COLUMN_NAME, "
+                    + "CAST(DATA_TYPE AS INT) DATA_TYPE, "
+                    + "TYPE_NAME, "
+                    + "NUMERIC_PRECISION COLUMN_SIZE, "
+                    + "NUMERIC_PRECISION BUFFER_LENGTH, "
+                    + "NUMERIC_PRECISION DECIMAL_DIGITS, "
+                    + "ZERO() PSEUDO_COLUMN "
+                    + "FROM INFORMATION_SCHEMA.COLUMNS "
+                    + "WHERE FALSE");
+            return prep.executeQuery();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcDatabaseMetaData.java" startline="2843" endline="2865">
+    @Override
+    public ResultSet getSuperTables(String catalog, String schemaPattern,
+            String tableNamePattern) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("getSuperTables("
+                        +quote(catalog)+", "
+                        +quote(schemaPattern)+", "
+                        +quote(tableNamePattern)+");");
+            }
+            checkClosed();
+            PreparedStatement prep = conn.prepareAutoCloseStatement("SELECT "
+                    + "CATALOG_NAME TABLE_CAT, "
+                    + "CATALOG_NAME TABLE_SCHEM, "
+                    + "CATALOG_NAME TABLE_NAME, "
+                    + "CATALOG_NAME SUPERTABLE_NAME "
+                    + "FROM INFORMATION_SCHEMA.CATALOGS "
+                    + "WHERE FALSE");
+            return prep.executeQuery();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="18" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="1532" endline="1549">
+    @Override
+    public void setNClob(int parameterIndex, NClob x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setNClob("+parameterIndex+", x);");
+            }
+            checkClosedForWrite();
+            Value v;
+            if (x == null) {
+                v = ValueNull.INSTANCE;
+            } else {
+                v = conn.createClob(x.getCharacterStream(), -1);
+            }
+            setParameter(parameterIndex, v);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="2295" endline="2312">
+    @Override
+    public void updateBlob(int columnIndex, Blob x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateBlob("+columnIndex+", x);");
+            }
+            checkClosed();
+            Value v;
+            if (x == null) {
+                v = ValueNull.INSTANCE;
+            } else {
+                v = conn.createBlob(x.getBinaryStream(), -1);
+            }
+            update(columnIndex, v);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="18" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcPreparedStatement.java" startline="1532" endline="1549">
+    @Override
+    public void setNClob(int parameterIndex, NClob x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("setNClob("+parameterIndex+", x);");
+            }
+            checkClosedForWrite();
+            Value v;
+            if (x == null) {
+                v = ValueNull.INSTANCE;
+            } else {
+                v = conn.createClob(x.getCharacterStream(), -1);
+            }
+            setParameter(parameterIndex, v);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="2382" endline="2399">
+    @Override
+    public void updateClob(int columnIndex, Clob x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateClob("+columnIndex+", x);");
+            }
+            checkClosed();
+            Value v;
+            if (x == null) {
+                v = ValueNull.INSTANCE;
+            } else {
+                v = conn.createClob(x.getCharacterStream(), -1);
+            }
+            update(columnIndex, v);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="18" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="2295" endline="2312">
+    @Override
+    public void updateBlob(int columnIndex, Blob x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateBlob("+columnIndex+", x);");
+            }
+            checkClosed();
+            Value v;
+            if (x == null) {
+                v = ValueNull.INSTANCE;
+            } else {
+                v = conn.createBlob(x.getBinaryStream(), -1);
+            }
+            update(columnIndex, v);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="2382" endline="2399">
+    @Override
+    public void updateClob(int columnIndex, Clob x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateClob("+columnIndex+", x);");
+            }
+            checkClosed();
+            Value v;
+            if (x == null) {
+                v = ValueNull.INSTANCE;
+            } else {
+                v = conn.createClob(x.getCharacterStream(), -1);
+            }
+            update(columnIndex, v);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="18" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="2321" endline="2338">
+    @Override
+    public void updateBlob(String columnLabel, Blob x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateBlob("+quote(columnLabel)+", x);");
+            }
+            checkClosed();
+            Value v;
+            if (x == null) {
+                v = ValueNull.INSTANCE;
+            } else {
+                v = conn.createBlob(x.getBinaryStream(), -1);
+            }
+            update(columnLabel, v);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcResultSet.java" startline="2443" endline="2460">
+    @Override
+    public void updateClob(String columnLabel, Clob x) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("updateClob("+quote(columnLabel)+", x);");
+            }
+            checkClosed();
+            Value v;
+            if (x == null) {
+                v = ValueNull.INSTANCE;
+            } else {
+                v = conn.createClob(x.getCharacterStream(), -1);
+            }
+            update(columnLabel, v);
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="19" similarity="100">
+        <!-- identifiers, literals -->
+        <source file="org/h2/jdbc/JdbcConnection.java" startline="1561" endline="1579">
+    @Override
+    public Clob createClob() throws SQLException {
+        try {
+            int id = getNextId(TraceObject.CLOB);
+            debugCodeAssign("Clob", TraceObject.CLOB, id, "createClob()");
+            checkClosedForWrite();
+            try {
+                Value v = session.getDataHandler().getLobStorage().createClob(
+                        new InputStreamReader(
+                        new ByteArrayInputStream(Utils.EMPTY_BYTES)), 0);
+                session.addTemporaryLob(v);
+                return new JdbcClob(this, v, id);
+            } finally {
+                afterWriting();
+            }
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcConnection.java" startline="1610" endline="1628">
+    @Override
+    public NClob createNClob() throws SQLException {
+        try {
+            int id = getNextId(TraceObject.CLOB);
+            debugCodeAssign("NClob", TraceObject.CLOB, id, "createNClob()");
+            checkClosedForWrite();
+            try {
+                Value v = session.getDataHandler().getLobStorage().createClob(
+                        new InputStreamReader(
+                        new ByteArrayInputStream(Utils.EMPTY_BYTES)), 0);
+                session.addTemporaryLob(v);
+                return new JdbcClob(this, v, id);
+            } finally {
+                afterWriting();
+            }
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="25" similarity="100">
+        <!-- identifiers -->
+        <source file="org/h2/command/dml/ScriptCommand.java" startline="529" endline="553">
+            @Override
+            public int read() throws IOException {
+                while (true) {
+                    try {
+                        if (current == null) {
+                            if (closed) {
+                                return -1;
+                            }
+                            if (!rs.next()) {
+                                close();
+                                return -1;
+                            }
+                            current = rs.getBinaryStream(1);
+                            current = new BufferedInputStream(current);
+                        }
+                        int x = current.read();
+                        if (x &gt;= 0) {
+                            return x;
+                        }
+                        current = null;
+                    } catch (SQLException e) {
+                        throw DbException.convertToIOException(e);
+                    }
+                }
+            }
+</source>
+        <source file="org/h2/command/dml/ScriptCommand.java" startline="585" endline="609">
+            @Override
+            public int read() throws IOException {
+                while (true) {
+                    try {
+                        if (current == null) {
+                            if (closed) {
+                                return -1;
+                            }
+                            if (!rs.next()) {
+                                close();
+                                return -1;
+                            }
+                            current = rs.getCharacterStream(1);
+                            current = new BufferedReader(current);
+                        }
+                        int x = current.read();
+                        if (x &gt;= 0) {
+                            return x;
+                        }
+                        current = null;
+                    } catch (SQLException e) {
+                        throw DbException.convertToIOException(e);
+                    }
+                }
+            }
+</source>
+    </clone>
+    <clone nlines="34" similarity="100">
+        <!-- identifiers, literals, normalization -->
+        <source file="org/h2/jdbc/JdbcDatabaseMetaData.java" startline="395" endline="428">
+    @Override
+    public ResultSet getPrimaryKeys(String catalogPattern,
+            String schemaPattern, String tableName) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("getPrimaryKeys("
+                        +quote(catalogPattern)+", "
+                        +quote(schemaPattern)+", "
+                        +quote(tableName)+");");
+            }
+            checkClosed();
+            PreparedStatement prep = conn.prepareAutoCloseStatement("SELECT "
+                    + "TABLE_CATALOG TABLE_CAT, "
+                    + "TABLE_SCHEMA TABLE_SCHEM, "
+                    + "TABLE_NAME, "
+                    + "COLUMN_NAME, "
+                    + "ORDINAL_POSITION KEY_SEQ, "
+                    + "IFNULL(CONSTRAINT_NAME, INDEX_NAME) PK_NAME "
+                    + "FROM INFORMATION_SCHEMA.INDEXES "
+                    + "WHERE TABLE_CATALOG LIKE ? ESCAPE ? "
+                    + "AND TABLE_SCHEMA LIKE ? ESCAPE ? "
+                    + "AND TABLE_NAME = ? "
+                    + "AND PRIMARY_KEY = TRUE "
+                    + "ORDER BY COLUMN_NAME");
+            prep.setString(1, getCatalogPattern(catalogPattern));
+            prep.setString(2, "\\");
+            prep.setString(3, getSchemaPattern(schemaPattern));
+            prep.setString(4, "\\");
+            prep.setString(5, tableName);
+            return prep.executeQuery();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcDatabaseMetaData.java" startline="1076" endline="1116">
+    @Override
+    public ResultSet getImportedKeys(String catalogPattern,
+            String schemaPattern, String tableName) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("getImportedKeys("
+                        +quote(catalogPattern)+", "
+                        +quote(schemaPattern)+", "
+                        +quote(tableName)+");");
+            }
+            checkClosed();
+            PreparedStatement prep = conn.prepareAutoCloseStatement("SELECT "
+                    + "PKTABLE_CATALOG PKTABLE_CAT, "
+                    + "PKTABLE_SCHEMA PKTABLE_SCHEM, "
+                    + "PKTABLE_NAME PKTABLE_NAME, "
+                    + "PKCOLUMN_NAME, "
+                    + "FKTABLE_CATALOG FKTABLE_CAT, "
+                    + "FKTABLE_SCHEMA FKTABLE_SCHEM, "
+                    + "FKTABLE_NAME, "
+                    + "FKCOLUMN_NAME, "
+                    + "ORDINAL_POSITION KEY_SEQ, "
+                    + "UPDATE_RULE, "
+                    + "DELETE_RULE, "
+                    + "FK_NAME, "
+                    + "PK_NAME, "
+                    + "DEFERRABILITY "
+                    + "FROM INFORMATION_SCHEMA.CROSS_REFERENCES "
+                    + "WHERE FKTABLE_CATALOG LIKE ? ESCAPE ? "
+                    + "AND FKTABLE_SCHEMA LIKE ? ESCAPE ? "
+                    + "AND FKTABLE_NAME = ? "
+                    + "ORDER BY PKTABLE_CAT, PKTABLE_SCHEM, PKTABLE_NAME, FK_NAME, KEY_SEQ");
+            prep.setString(1, getCatalogPattern(catalogPattern));
+            prep.setString(2, "\\");
+            prep.setString(3, getSchemaPattern(schemaPattern));
+            prep.setString(4, "\\");
+            prep.setString(5, tableName);
+            return prep.executeQuery();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="34" similarity="100">
+        <!-- identifiers, literals, normalization -->
+        <source file="org/h2/jdbc/JdbcDatabaseMetaData.java" startline="395" endline="428">
+    @Override
+    public ResultSet getPrimaryKeys(String catalogPattern,
+            String schemaPattern, String tableName) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("getPrimaryKeys("
+                        +quote(catalogPattern)+", "
+                        +quote(schemaPattern)+", "
+                        +quote(tableName)+");");
+            }
+            checkClosed();
+            PreparedStatement prep = conn.prepareAutoCloseStatement("SELECT "
+                    + "TABLE_CATALOG TABLE_CAT, "
+                    + "TABLE_SCHEMA TABLE_SCHEM, "
+                    + "TABLE_NAME, "
+                    + "COLUMN_NAME, "
+                    + "ORDINAL_POSITION KEY_SEQ, "
+                    + "IFNULL(CONSTRAINT_NAME, INDEX_NAME) PK_NAME "
+                    + "FROM INFORMATION_SCHEMA.INDEXES "
+                    + "WHERE TABLE_CATALOG LIKE ? ESCAPE ? "
+                    + "AND TABLE_SCHEMA LIKE ? ESCAPE ? "
+                    + "AND TABLE_NAME = ? "
+                    + "AND PRIMARY_KEY = TRUE "
+                    + "ORDER BY COLUMN_NAME");
+            prep.setString(1, getCatalogPattern(catalogPattern));
+            prep.setString(2, "\\");
+            prep.setString(3, getSchemaPattern(schemaPattern));
+            prep.setString(4, "\\");
+            prep.setString(5, tableName);
+            return prep.executeQuery();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcDatabaseMetaData.java" startline="1149" endline="1189">
+    @Override
+    public ResultSet getExportedKeys(String catalogPattern,
+            String schemaPattern, String tableName) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("getExportedKeys("
+                        +quote(catalogPattern)+", "
+                        +quote(schemaPattern)+", "
+                        +quote(tableName)+");");
+            }
+            checkClosed();
+            PreparedStatement prep = conn.prepareAutoCloseStatement("SELECT "
+                    + "PKTABLE_CATALOG PKTABLE_CAT, "
+                    + "PKTABLE_SCHEMA PKTABLE_SCHEM, "
+                    + "PKTABLE_NAME PKTABLE_NAME, "
+                    + "PKCOLUMN_NAME, "
+                    + "FKTABLE_CATALOG FKTABLE_CAT, "
+                    + "FKTABLE_SCHEMA FKTABLE_SCHEM, "
+                    + "FKTABLE_NAME, "
+                    + "FKCOLUMN_NAME, "
+                    + "ORDINAL_POSITION KEY_SEQ, "
+                    + "UPDATE_RULE, "
+                    + "DELETE_RULE, "
+                    + "FK_NAME, "
+                    + "PK_NAME, "
+                    + "DEFERRABILITY "
+                    + "FROM INFORMATION_SCHEMA.CROSS_REFERENCES "
+                    + "WHERE PKTABLE_CATALOG LIKE ? ESCAPE ? "
+                    + "AND PKTABLE_SCHEMA LIKE ? ESCAPE ? "
+                    + "AND PKTABLE_NAME = ? "
+                    + "ORDER BY FKTABLE_CAT, FKTABLE_SCHEM, FKTABLE_NAME, FK_NAME, KEY_SEQ");
+            prep.setString(1, getCatalogPattern(catalogPattern));
+            prep.setString(2, "\\");
+            prep.setString(3, getSchemaPattern(schemaPattern));
+            prep.setString(4, "\\");
+            prep.setString(5, tableName);
+            return prep.executeQuery();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+    <clone nlines="35" similarity="100">
+        <!-- identifiers, literals, normalization -->
+        <source file="org/h2/jdbc/JdbcDatabaseMetaData.java" startline="582" endline="618">
+    @Override
+    public ResultSet getProcedures(String catalogPattern, String schemaPattern,
+            String procedureNamePattern) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("getProcedures("
+                        +quote(catalogPattern)+", "
+                        +quote(schemaPattern)+", "
+                        +quote(procedureNamePattern)+");");
+            }
+            checkClosed();
+            PreparedStatement prep = conn.prepareAutoCloseStatement("SELECT "
+                    + "ALIAS_CATALOG PROCEDURE_CAT, "
+                    + "ALIAS_SCHEMA PROCEDURE_SCHEM, "
+                    + "ALIAS_NAME PROCEDURE_NAME, "
+                    + "COLUMN_COUNT NUM_INPUT_PARAMS, "
+                    + "ZERO() NUM_OUTPUT_PARAMS, "
+                    + "ZERO() NUM_RESULT_SETS, "
+                    + "REMARKS, "
+                    + "RETURNS_RESULT PROCEDURE_TYPE, "
+                    + "ALIAS_NAME SPECIFIC_NAME "
+                    + "FROM INFORMATION_SCHEMA.FUNCTION_ALIASES "
+                    + "WHERE ALIAS_CATALOG LIKE ? ESCAPE ? "
+                    + "AND ALIAS_SCHEMA LIKE ? ESCAPE ? "
+                    + "AND ALIAS_NAME LIKE ? ESCAPE ? "
+                    + "ORDER BY PROCEDURE_SCHEM, PROCEDURE_NAME, NUM_INPUT_PARAMS");
+            prep.setString(1, getCatalogPattern(catalogPattern));
+            prep.setString(2, "\\");
+            prep.setString(3, getSchemaPattern(schemaPattern));
+            prep.setString(4, "\\");
+            prep.setString(5, getPattern(procedureNamePattern));
+            prep.setString(6, "\\");
+            return prep.executeQuery();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+        <source file="org/h2/jdbc/JdbcDatabaseMetaData.java" startline="888" endline="922">
+    @Override
+    public ResultSet getTablePrivileges(String catalogPattern,
+            String schemaPattern, String tableNamePattern) throws SQLException {
+        try {
+            if (isDebugEnabled()) {
+                debugCode("getTablePrivileges("
+                        +quote(catalogPattern)+", "
+                        +quote(schemaPattern)+", "
+                        +quote(tableNamePattern)+");");
+            }
+            checkClosed();
+            PreparedStatement prep = conn.prepareAutoCloseStatement("SELECT "
+                    + "TABLE_CATALOG TABLE_CAT, "
+                    + "TABLE_SCHEMA TABLE_SCHEM, "
+                    + "TABLE_NAME, "
+                    + "GRANTOR, "
+                    + "GRANTEE, "
+                    + "PRIVILEGE_TYPE PRIVILEGE, "
+                    + "IS_GRANTABLE "
+                    + "FROM INFORMATION_SCHEMA.TABLE_PRIVILEGES "
+                    + "WHERE TABLE_CATALOG LIKE ? ESCAPE ? "
+                    + "AND TABLE_SCHEMA LIKE ? ESCAPE ? "
+                    + "AND TABLE_NAME LIKE ? ESCAPE ? "
+                    + "ORDER BY TABLE_SCHEM, TABLE_NAME, PRIVILEGE");
+            prep.setString(1, getCatalogPattern(catalogPattern));
+            prep.setString(2, "\\");
+            prep.setString(3, getSchemaPattern(schemaPattern));
+            prep.setString(4, "\\");
+            prep.setString(5, getPattern(tableNamePattern));
+            prep.setString(6, "\\");
+            return prep.executeQuery();
+        } catch (Exception e) {
+            throw logAndConvert(e);
+        }
+    }
+</source>
+    </clone>
+</clones>

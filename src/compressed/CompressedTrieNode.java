@@ -51,24 +51,12 @@ public class CompressedTrieNode implements Serializable {
         return null;
     }
 
-//    public CompressedTrieEdge addEdge(List<String> linearization, int start, int end, Pos pos) {
-//        CompressedTrieNode dst = new CompressedTrieNode();
-//        logger.printf("adding edge %d -> %d %s%n", num, dst.num, linearization.subList(start, end));
-//        CompressedTrieEdge edge = new CompressedTrieEdge(linearization, start, end, dst);
-//        addEdge(edge);
-//        edge.addPosition(pos);
-//        return edge;
-//    }
     public CompressedTrieEdge addEdge(List<String> linearization, int ind, Pos pos) {
         String label = linearization.get(ind);
-//        logger.printf("addChild: %s, %s%n", label, pos);
-//        CompressedTrieEdge e = findEdge(label);
-//        if (e == null) {
         CompressedTrieNode dst = new CompressedTrieNode();
         logger.printf("adding edge %d -> %d (%s)%n", num, dst.num, label);
         CompressedTrieEdge e = new CompressedTrieEdge(linearization, ind, ind + 1, dst);
         addEdge(e);
-//        }
         e.addPosition(pos);
         return e;
     }

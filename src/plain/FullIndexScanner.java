@@ -174,7 +174,6 @@ public class FullIndexScanner extends IndexScanner {
 
     @Override
     public void visitAnnotation(JCAnnotation t) {
-        // ignore annotations
         scan(t.annotationType);
         scan(t.args);
     }
@@ -305,7 +304,6 @@ public class FullIndexScanner extends IndexScanner {
 
     @Override
     public void visitClassDef(JCClassDecl t) {
-        logger.enterClass(t);
         if (inMethod == 0) {
             scan(t.mods);
             scan(t.typarams);
@@ -331,7 +329,6 @@ public class FullIndexScanner extends IndexScanner {
             addChildEnd(t);
             stack.pop();
         }
-        logger.exitClass(t);
     }
 
     @Override
@@ -532,7 +529,6 @@ public class FullIndexScanner extends IndexScanner {
             return;
         }
         methodCount++;
-        logger.enterMethod(t);
         inMethod++;
         renameStrategy.enterMethod();
         stack.push(trie.root, pos(t));
@@ -559,7 +555,6 @@ public class FullIndexScanner extends IndexScanner {
         stack.pop();
         renameStrategy.exitMethod();
         inMethod--;
-        logger.exitMethod(t);
     }
 
     @Override
@@ -628,8 +623,7 @@ public class FullIndexScanner extends IndexScanner {
         scan(t.encl);
         scanConstructor(t.clazz);
         if (!ignoreTypeArgs) {
-            //t.typeargs is empty
-            //scan(t.typeargs);
+            // t.typeargs is empty
             parseTypeArgs(t.clazz.type.getTypeArguments());
         }
         addChild("ARGS");

@@ -1,7 +1,6 @@
 package index.rename;
 
 import javax.lang.model.element.ElementKind;
-import javax.lang.model.type.TypeKind;
 
 /**
  * The blind rename strategy.

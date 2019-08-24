@@ -65,7 +65,7 @@ public class NiCadConvertor {
                 String file = src.getFile();
                 Integer startline = src.getStartline();
                 Integer endline = src.getEndline();
-                String code = readFile(file, startline.intValue(), endline.intValue());
+                String code = readFile(file, startline, endline);
                 src.setSourceCode(code);
             }
         }

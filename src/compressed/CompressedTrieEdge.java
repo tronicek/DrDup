@@ -21,7 +21,6 @@ public class CompressedTrieEdge implements Serializable {
     private int positionsCount;
 
     public CompressedTrieEdge(List<String> linearization, int start, int end, CompressedTrieNode destination) {
-        //System.out.printf("new edge: %d, %d, %s%n", start, end, linearization.subList(start, end));
         this.linearization = linearization;
         this.start = start;
         this.end = end;
@@ -51,7 +50,6 @@ public class CompressedTrieEdge implements Serializable {
     }
 
     public void setEnd(int end) {
-        //System.out.printf("changing end from %d to %d%n", this.end, end);
         this.end = end;
     }
     
@@ -79,10 +77,6 @@ public class CompressedTrieEdge implements Serializable {
         System.arraycopy(positions, 0, pp, 0, positionsCount);
         return pp;
     }
-
-//    public Pos getLastAddedPosition() {
-//        return positions[positionsCount - 1];
-//    }
 
     public void addPosition(Pos position) {
         if (positionsCount > 0 && positions[positionsCount - 1].equals(position)) {

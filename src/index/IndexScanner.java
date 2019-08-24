@@ -11,7 +11,7 @@ import java.util.Properties;
  */
 public abstract class IndexScanner extends TreeScanner {
 
-    protected static final Logger logger = Logger.getInstance();
+    //protected static final Logger logger = Logger.getInstance();
     protected final String srcDir;
     protected final RenameStrategy renameStrategy;
     protected final boolean ignoreTypeArgs;

@@ -3,6 +3,11 @@ package index;
 import clones.CloneSet;
 import java.io.IOException;
 
+/**
+ * The AST index.
+ *
+ * @author Zdenek Tronicek, tronicek@tarleton.edu
+ */
 public interface Index {
 
     public void print();

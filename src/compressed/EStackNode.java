@@ -35,6 +35,5 @@ public class EStackNode {
     @Override
     public String toString() {
         return String.format("%s:%d", edge, current);
-        //return String.format("-> %d", edge.getDestination().getNum());
     }
 }

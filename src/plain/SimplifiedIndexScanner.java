@@ -174,7 +174,6 @@ public class SimplifiedIndexScanner extends IndexScanner {
 
     @Override
     public void visitAnnotation(JCAnnotation t) {
-        // ignore annotations
         scan(t.annotationType);
         scan(t.args);
     }
@@ -287,7 +286,6 @@ public class SimplifiedIndexScanner extends IndexScanner {
 
     @Override
     public void visitClassDef(JCClassDecl t) {
-        logger.enterClass(t);
         if (inMethod == 0) {
             scan(t.mods);
             scan(t.typarams);
@@ -311,7 +309,6 @@ public class SimplifiedIndexScanner extends IndexScanner {
             scan(t.defs);
             addChildEnd(t);
         }
-        logger.exitClass(t);
     }
 
     @Override
@@ -489,7 +486,6 @@ public class SimplifiedIndexScanner extends IndexScanner {
             return;
         }
         methodCount++;
-        logger.enterMethod(t);
         inMethod++;
         renameStrategy.enterMethod();
         stack.push(trie.root, pos(t));
@@ -516,7 +512,6 @@ public class SimplifiedIndexScanner extends IndexScanner {
         stack.pop();
         renameStrategy.exitMethod();
         inMethod--;
-        logger.exitMethod(t);
     }
 
     @Override
@@ -583,8 +578,7 @@ public class SimplifiedIndexScanner extends IndexScanner {
         scan(t.encl);
         scanConstructor(t.clazz);
         if (!ignoreTypeArgs) {
-            //t.typeargs is empty
-            //scan(t.typeargs);
+            // t.typeargs is empty
             parseTypeArgs(t.clazz.type.getTypeArguments());
         }
         addChild("ARGS");
@@ -879,7 +873,6 @@ public class SimplifiedIndexScanner extends IndexScanner {
             return;
         }
         addChild(t);
-        logger.println(t);
         scan(t.mods);
         scan(t.vartype);
         ElementKind k = t.sym.getKind();

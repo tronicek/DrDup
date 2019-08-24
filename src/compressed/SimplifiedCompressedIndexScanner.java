@@ -91,7 +91,6 @@ public class SimplifiedCompressedIndexScanner extends IndexScanner {
 
     @Override
     public CompressedTrie getTrie() {
-        //trie.checkDegreeSimplified();
         return trie;
     }
 
@@ -138,7 +137,6 @@ public class SimplifiedCompressedIndexScanner extends IndexScanner {
             edge.addPosition(pos);
             stack.push(new EStackNode(edge, edge.getStart() + 1, pos));
         }
-        //trie.print();
     }
 
     private void addChild(JCTree t) {
@@ -156,7 +154,6 @@ public class SimplifiedCompressedIndexScanner extends IndexScanner {
     }
 
     private void extendTrie(String label) {
-        //System.out.printf("extendTrie: %s, stack: %s%n", label, stack);
         int bufferSize = buffer.size();
         buffer.add(label);
         EStack newStack = new EStack();
@@ -242,7 +239,6 @@ public class SimplifiedCompressedIndexScanner extends IndexScanner {
 
     @Override
     public void visitAnnotation(JCAnnotation t) {
-        // ignore annotations
         scan(t.annotationType);
         scan(t.args);
     }
@@ -355,7 +351,6 @@ public class SimplifiedCompressedIndexScanner extends IndexScanner {
 
     @Override
     public void visitClassDef(JCClassDecl t) {
-        logger.enterClass(t);
         if (inMethod == 0) {
             scan(t.mods);
             scan(t.typarams);
@@ -379,7 +374,6 @@ public class SimplifiedCompressedIndexScanner extends IndexScanner {
             scan(t.defs);
             addChildEnd(t);
         }
-        logger.exitClass(t);
     }
 
     @Override
@@ -556,7 +550,6 @@ public class SimplifiedCompressedIndexScanner extends IndexScanner {
             return;
         }
         methodCount++;
-        logger.enterMethod(t);
         inMethod++;
         renameStrategy.enterMethod();
         addChildRoot(t, pos(t));
@@ -582,7 +575,6 @@ public class SimplifiedCompressedIndexScanner extends IndexScanner {
         stack.pop();
         renameStrategy.exitMethod();
         inMethod--;
-        logger.exitMethod(t);
     }
 
     @Override
@@ -648,8 +640,7 @@ public class SimplifiedCompressedIndexScanner extends IndexScanner {
         scan(t.encl);
         scanConstructor(t.clazz);
         if (!ignoreTypeArgs) {
-            //t.typeargs is empty
-            //scan(t.typeargs);
+            // t.typeargs is empty
             parseTypeArgs(t.clazz.type.getTypeArguments());
         }
         addChild("ARGS");

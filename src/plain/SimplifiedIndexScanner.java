@@ -242,14 +242,23 @@ public class SimplifiedIndexScanner extends IndexScanner {
 
     @Override
     public void visitBlock(JCBlock t) {
-        if (inMethod == 0) {
+        boolean isStatic = t.isStatic();
+        if (!isStatic && inMethod == 0) {
             return;
+        }
+        if (isStatic) {
+            inMethod++;
+            renameStrategy.enterMethod();
         }
         renameStrategy.enterBlock();
         addChild(t);
         scan(t.stats);
         addChildEnd(t);
         renameStrategy.exitBlock();
+        if (isStatic) {
+            renameStrategy.exitMethod();
+            inMethod--;
+        }
     }
 
     @Override
@@ -823,7 +832,7 @@ public class SimplifiedIndexScanner extends IndexScanner {
                 return type;
         }
     }
-    
+
     @Override
     public void visitTypeIntersection(JCTypeIntersection t) {
         if (inMethod == 0) {

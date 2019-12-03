@@ -252,8 +252,13 @@ public class FullIndexScanner extends IndexScanner {
 
     @Override
     public void visitBlock(JCBlock t) {
-        if (inMethod == 0) {
+        boolean isStatic = t.isStatic();
+        if (!isStatic && inMethod == 0) {
             return;
+        }
+        if (isStatic) {
+            inMethod++;
+            renameStrategy.enterMethod();
         }
         stack.push(trie.root, pos(t));
         renameStrategy.enterBlock();
@@ -262,6 +267,10 @@ public class FullIndexScanner extends IndexScanner {
         addChildEnd(t);
         renameStrategy.exitBlock();
         stack.pop();
+        if (isStatic) {
+            renameStrategy.exitMethod();
+            inMethod--;
+        }
     }
 
     @Override
@@ -870,7 +879,7 @@ public class FullIndexScanner extends IndexScanner {
         addChild(s);
         stack.pop();
     }
-    
+
     private String toWrapperClass(String type) {
         switch (type) {
             case "boolean":

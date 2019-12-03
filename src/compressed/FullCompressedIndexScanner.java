@@ -325,8 +325,13 @@ public class FullCompressedIndexScanner extends IndexScanner {
 
     @Override
     public void visitBlock(JCBlock t) {
-        if (inMethod == 0) {
+        boolean isStatic = t.isStatic();
+        if (!isStatic && inMethod == 0) {
             return;
+        }
+        if (isStatic) {
+            inMethod++;
+            renameStrategy.enterMethod();
         }
         renameStrategy.enterBlock();
         addChildRoot(t, pos(t));
@@ -334,6 +339,10 @@ public class FullCompressedIndexScanner extends IndexScanner {
         addChildEnd(t);
         renameStrategy.exitBlock();
         stack.pop();
+        if (isStatic) {
+            renameStrategy.exitMethod();
+            inMethod--;
+        }
     }
 
     @Override

@@ -673,4 +673,20 @@ public class EngineTestType2 {
         c = perform("consistent", "test/src/76");
         assertEquals(1, c);
     }
+
+    @Test
+    public void testPerform77() throws Exception {
+        int c = perform("blind", "test/src/77");
+        assertEquals(1, c);
+        c = perform("consistent", "test/src/77");
+        assertEquals(1, c);
+    }
+
+//    @Test
+//    public void testPerform78() throws Exception {
+//        int c = perform("blind", "test/src/78");
+//        assertEquals(1, c);
+//        c = perform("consistent", "test/src/78");
+//        assertEquals(1, c);
+//    }
 }
